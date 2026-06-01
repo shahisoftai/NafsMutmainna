@@ -19,7 +19,20 @@ import type {
     AIResponse,
     DateFilter,
     ChatMessage,
+    NafsAttribute,
+    NafsAttributeCategory,
 } from '../entities';
+
+export interface INafsAttributeRepository {
+    /** Fetch all 200 nafs attributes from Supabase */
+    getAll(): Promise<NafsAttribute[]>;
+    /** Fetch only negative (100) or positive (100) traits */
+    getByCategory(category: NafsAttributeCategory): Promise<NafsAttribute[]>;
+    /** Fetch a single trait by its exact name */
+    getByName(name: string): Promise<NafsAttribute | null>;
+    /** Fetch the positive counterpart of a negative trait by name */
+    getOpposite(oppositeName: string): Promise<NafsAttribute | null>;
+}
 
 export interface INafsRepository {
     /**

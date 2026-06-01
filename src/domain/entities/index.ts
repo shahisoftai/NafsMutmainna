@@ -45,6 +45,21 @@ export interface EmotionInsights {
     progressTrend: 'improving' | 'stable' | 'declining';
 }
 
+// ─── NafsAttribute ───────────────────────────────────────────────────────────
+// Mirrors the nafs_attributes table in Supabase
+
+export interface NafsAttribute {
+    id: string;
+    name: string;
+    category: 'negative' | 'positive';
+    description: string;
+    opposite_to: string;
+    quran_ref: string[];
+    hadith_ref: string[];
+}
+
+export type NafsAttributeCategory = 'negative' | 'positive';
+
 export type TraitType = 'anger' | 'envy' | 'anxiety' | 'greed' | 'pride' | 'ostentation' | 'ignorance' | 'despair';
 
 export interface Trait {

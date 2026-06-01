@@ -3,9 +3,10 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { COLORS, TRAITS } from '../../src/shared/constants';
+import { COLORS } from '../../src/shared/constants';
 import { useAppStore } from '../../src/infrastructure/store';
-import type { EmotionEntry, TraitType } from '../../src/domain/entities';
+import { useNafsAttributeByName } from '../../src/data/datasources/hooks';
+import type { EmotionEntry } from '../../src/domain/entities';
 import { v4 as uuidv4 } from 'uuid';
 
 const EMOTION_OPTIONS = [
@@ -19,15 +20,16 @@ const EMOTION_OPTIONS = [
     { id: 'discontent', label: '😒 Discontent', color: '#90A4AE' },
 ];
 
-const TRAIT_MAP: Record<string, TraitType> = {
-    anger: 'anger',
-    envy: 'envy',
-    anxiety: 'anxiety',
-    greed: 'greed',
-    pride: 'pride',
-    sadness: 'anxiety',
-    frustration: 'anger',
-    discontent: 'anxiety',
+/** Maps emotion IDs to exact nafs_attribute names in Supabase */
+const EMOTION_TO_NAFS_NAME: Record<string, string> = {
+    anger: 'Ghadab (Anger)',
+    envy: 'Hasad (Envy)',
+    anxiety: 'Jaza (Chronic Anxiety)',
+    sadness: 'Huzn al-Mamduh (Paralyzing Despair)',
+    greed: 'Tama (Covetousness)',
+    pride: 'Kibr (Arrogance)',
+    frustration: 'Ghadab (Anger)',
+    discontent: 'Malal (Spiritual Boredom)',
 };
 
 export default function EmotionsScreen() {
@@ -40,19 +42,20 @@ export default function EmotionsScreen() {
     const [notes, setNotes] = useState('');
     const [showSuccess, setShowSuccess] = useState(false);
 
+    // Fetch the matched nafs_attribute from Supabase for the selected emotion
+    const nafsName = selectedEmotion ? (EMOTION_TO_NAFS_NAME[selectedEmotion] ?? '') : '';
+    const { data: nafsAttribute } = useNafsAttributeByName(nafsName);
+
     const handleLogEmotion = () => {
         if (!selectedEmotion) return;
-
-        const trait = TRAIT_MAP[selectedEmotion] || 'anger';
-        const traitInfo = TRAITS.find((t) => t.id === trait);
 
         const entry: EmotionEntry = {
             id: uuidv4(),
             emotion: selectedEmotion,
             intensity,
             trigger,
-            mappedTrait: trait,
-            oppositeTrait: traitInfo?.oppositeTrait || 'Patience',
+            mappedTrait: nafsName,
+            oppositeTrait: nafsAttribute?.opposite_to ?? 'Patience',
             timestamp: new Date(),
             notes,
         };

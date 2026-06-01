@@ -4,7 +4,7 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { repositories } from '../repositories';
 import { useAppStore } from '../../infrastructure/store';
-import type { DateFilter, TraitType, EmotionEntry, JournalEntry } from '../../domain/entities';
+import type { DateFilter, TraitType, EmotionEntry, JournalEntry, NafsAttributeCategory } from '../../domain/entities';
 
 // ─── Cache Keys ───────────────────────────────────────────────────────────────
 
@@ -19,6 +19,9 @@ export const QUERY_KEYS = {
     journalEntries: (filter?: DateFilter) => ['journal', filter],
     progress: ['progress'],
     badges: ['badges'],
+    nafsAttributes: ['nafs', 'attributes'] as const,
+    nafsAttributesByCategory: (category: NafsAttributeCategory) => ['nafs', 'attributes', category] as const,
+    nafsAttributeByName: (name: string) => ['nafs', 'attribute', name] as const,
 } as const;
 
 // ─── Nafs Hooks ───────────────────────────────────────────────────────────────
@@ -110,5 +113,35 @@ export function useAllBadges() {
         queryKey: QUERY_KEYS.badges,
         queryFn: () => repositories.progress.getAllBadges(),
         staleTime: Infinity,
+    });
+}
+
+// ─── NafsAttribute Hooks (Supabase) ───────────────────────────────────────────
+
+/** All 200 traits from Supabase */
+export function useNafsAttributes() {
+    return useQuery({
+        queryKey: QUERY_KEYS.nafsAttributes,
+        queryFn: () => repositories.nafsAttribute.getAll(),
+        staleTime: Infinity,
+    });
+}
+
+/** 100 negative or 100 positive traits */
+export function useNafsAttributesByCategory(category: NafsAttributeCategory) {
+    return useQuery({
+        queryKey: QUERY_KEYS.nafsAttributesByCategory(category),
+        queryFn: () => repositories.nafsAttribute.getByCategory(category),
+        staleTime: Infinity,
+    });
+}
+
+/** Single trait by exact name, e.g. 'Ghadab (Anger)' */
+export function useNafsAttributeByName(name: string) {
+    return useQuery({
+        queryKey: QUERY_KEYS.nafsAttributeByName(name),
+        queryFn: () => repositories.nafsAttribute.getByName(name),
+        staleTime: Infinity,
+        enabled: !!name,
     });
 }

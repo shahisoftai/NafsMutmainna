@@ -22,9 +22,13 @@ import type {
     UserProgress,
     Badge,
     DateFilter,
+    NafsAttribute,
+    NafsAttributeCategory,
 } from '../../domain/entities';
+import type { INafsAttributeRepository } from '../../domain/repositories';
 import { apiGet, apiPost } from '../../infrastructure/api/client';
 import { TRAITS, BADGES, JOURNAL_PROMPTS } from '../../shared/constants';
+import { supabase } from '../../infrastructure/supabase/client';
 
 // ─── Nafs Repository ──────────────────────────────────────────────────────────
 
@@ -179,6 +183,50 @@ export class ProgressRepository implements IProgressRepository {
     }
 }
 
+// ─── NafsAttribute Repository ─────────────────────────────────────────────────
+// Reads directly from Supabase — no backend proxy needed
+
+export class NafsAttributeRepository implements INafsAttributeRepository {
+    async getAll(): Promise<NafsAttribute[]> {
+        const { data, error } = await supabase
+            .from('nafs_attributes')
+            .select('*')
+            .order('name');
+        if (error) throw new Error(error.message);
+        return data as NafsAttribute[];
+    }
+
+    async getByCategory(category: NafsAttributeCategory): Promise<NafsAttribute[]> {
+        const { data, error } = await supabase
+            .from('nafs_attributes')
+            .select('*')
+            .eq('category', category)
+            .order('name');
+        if (error) throw new Error(error.message);
+        return data as NafsAttribute[];
+    }
+
+    async getByName(name: string): Promise<NafsAttribute | null> {
+        const { data, error } = await supabase
+            .from('nafs_attributes')
+            .select('*')
+            .eq('name', name)
+            .maybeSingle();
+        if (error) throw new Error(error.message);
+        return data as NafsAttribute | null;
+    }
+
+    async getOpposite(oppositeName: string): Promise<NafsAttribute | null> {
+        const { data, error } = await supabase
+            .from('nafs_attributes')
+            .select('*')
+            .eq('name', oppositeName)
+            .maybeSingle();
+        if (error) throw new Error(error.message);
+        return data as NafsAttribute | null;
+    }
+}
+
 // ─── Repository Factory (Dependency Inversion) ────────────────────────────────
 
 export const repositories = {
@@ -187,4 +235,5 @@ export const repositories = {
     rectification: new RectificationRepository(),
     journal: new JournalRepository(),
     progress: new ProgressRepository(),
+    nafsAttribute: new NafsAttributeRepository(),
 } as const;
