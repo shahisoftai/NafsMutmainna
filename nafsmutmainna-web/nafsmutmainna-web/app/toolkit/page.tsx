@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/AuthProvider";
 
 interface NafsAttribute {
     id: string;
@@ -43,6 +45,8 @@ const DEFAULT_DHIKR = [
 
 export default function ToolkitPage() {
     const supabase = createClient();
+    const router = useRouter();
+    const { user, isLoading: authLoading } = useAuth();
     const [traits, setTraits] = useState<NafsAttribute[]>([]);
     const [loading, setLoading] = useState(true);
     const [selected, setSelected] = useState<NafsAttribute | null>(null);
@@ -50,12 +54,14 @@ export default function ToolkitPage() {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
+        if (authLoading) return;
+        if (!user) { router.push("/auth/login"); return; }
         supabase
             .from("nafs_attributes")
             .select("id, name, category, description, opposite_to, quran_ref, hadith_ref")
             .order("name")
             .then(({ data }) => { setTraits(data ?? []); setLoading(false); });
-    }, []);
+    }, [user, authLoading]);
 
     const filtered = traits.filter((t) => {
         const matchCat = filter === "all" || t.category === filter;

@@ -2,26 +2,23 @@
 
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { getLocalCheckin, getAllCheckinDates, getEmotionFrequency, getLocalCheckinRange, type LocalCheckin } from "@/lib/localDB";
+import { getLocalCheckin, getAllCheckinDates, getEmotionFrequency, type LocalCheckin } from "@/lib/localDB";
+import { useAuth } from "@/contexts/AuthProvider";
 
 type NafsStage = "ammarah" | "lawwamah" | "mutmainna";
 
-interface DailyCheckin {
-    overall_mood: number | null;
-    nafs_stage_today: string;
-}
-
 interface Profile {
     full_name: string | null;
-    nafs_stage: string;
+    nafs_stage: string | null;
 }
 
 interface NafsAttribute {
     id: string;
     name: string;
     description: string;
+    category: "negative" | "positive";
 }
 
 // Emotion → Nafs attribute name mapping for Option C
@@ -34,13 +31,6 @@ const EMOTION_NAFS_MAP: Record<string, string[]> = {
     pride: ["Kibr (Arrogance)"],
     frustration: ["Ghadab (Anger)"],
     discontent: ["Malal (Spiritual Boredom)"],
-};
-
-// Which negative nafs traits to recommend per Nafs stage
-const STAGE_FOCUS_TRAITS: Record<NafsStage, string[]> = {
-    ammarah: [],  // filled from Supabase — all negative traits
-    lawwamah: [], // filled from Supabase
-    mutmainna: [], // filled from Supabase
 };
 
 const STAGE_DHIKR: Record<NafsStage, { dhikr: string; arabic: string; count: number; note: string }[]> = {
@@ -88,9 +78,11 @@ const STAGE_DHIKR: Record<NafsStage, { dhikr: string; arabic: string; count: num
     ],
 };
 
-const STAGE_INFO: Record<NafsStage, {
-    label: string; colorClass: string; bgClass: string; borderClass: string; emoji: string; desc: string; pct: number;
-}> = {
+interface StageInfo {
+    label: string; colorClass: string; bgClass: string; borderClass: string; emoji: string; desc: string;
+}
+
+const STAGE_INFO: Record<NafsStage, StageInfo> = {
     ammarah: {
         label: "Nafs Ammarah",
         colorClass: "text-red-600 dark:text-red-400",
@@ -98,7 +90,6 @@ const STAGE_INFO: Record<NafsStage, {
         borderClass: "border-red-200 dark:border-red-800",
         emoji: "🔴",
         desc: "The commanding soul — prone to base desires",
-        pct: 16,
     },
     lawwamah: {
         label: "Nafs Lawwamah",
@@ -107,7 +98,6 @@ const STAGE_INFO: Record<NafsStage, {
         borderClass: "border-amber-200 dark:border-amber-800",
         emoji: "🟡",
         desc: "The self-reproaching soul — aware and striving",
-        pct: 50,
     },
     mutmainna: {
         label: "Nafs Mutmainna",
@@ -116,7 +106,6 @@ const STAGE_INFO: Record<NafsStage, {
         borderClass: "border-emerald-200 dark:border-emerald-800",
         emoji: "🟢",
         desc: "The tranquil soul — at peace with Allah",
-        pct: 84,
     },
 };
 
@@ -142,70 +131,101 @@ function normalizeStage(s: string | null | undefined): NafsStage {
     return "ammarah";
 }
 
+// Stage → Nafs meter position (0-100). Maps the user's resolved stage
+// to the gradient track position. mutmainna = far right, ammarah = far left.
+function stageToMeterPct(stage: NafsStage): number {
+    return { ammarah: 18, lawwamah: 50, mutmainna: 84 }[stage];
+}
+
 export default function DashboardPage() {
-    const supabase = createClient();
+    const supabase = useMemo(() => createClient(), []);
     const router = useRouter();
+    const { user, isLoading: authLoading, signOut } = useAuth();
     const [loading, setLoading] = useState(true);
-    const [user, setUser] = useState<any>(null);
+    const [error, setError] = useState<string | null>(null);
     const [profile, setProfile] = useState<Profile | null>(null);
-    const [todayCheckin, setTodayCheckin] = useState<DailyCheckin | null>(null);
+    const [todayCheckin, setTodayCheckin] = useState<LocalCheckin | null>(null);
     const [focusTraits, setFocusTraits] = useState<NafsAttribute[]>([]);
     const [journalStreak, setJournalStreak] = useState(0);
+    const [showSignOutConfirm, setShowSignOutConfirm] = useState(false);
 
     useEffect(() => {
+        if (authLoading) return;
+        if (!user) { router.push("/auth/login"); return; }
+
+        let cancelled = false;
         async function load() {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) { router.push("/auth/login"); return; }
-            setUser(user);
+            if (!user) return;
 
             const today = new Date().toISOString().slice(0, 10);
 
             const [profileRes, traitsRes] = await Promise.all([
                 supabase.from("profiles").select("full_name, nafs_stage").eq("user_id", user.id).maybeSingle(),
-                supabase.from("nafs_attributes").select("id, name, description, category").eq("category", "negative").order("name"),
+                supabase.from("nafs_attributes").select("id, name, description, category"),
             ]);
 
-            setProfile(profileRes.data);
+            if (cancelled) return;
+
+            if (profileRes.error) {
+                console.error("[Dashboard] profile error:", profileRes.error);
+                setError("Failed to load profile");
+            }
+            if (traitsRes.error) {
+                console.error("[Dashboard] traits error:", traitsRes.error);
+            }
+
+            setProfile(profileRes.data as Profile | null);
 
             // ── Journal streak from localDB ─────────────────────────────────
             const allCheckinDates = getAllCheckinDates(user.id);
             if (allCheckinDates.length > 0) {
                 let streak = 0;
-                let cursor = new Date();
-                cursor.setHours(0, 0, 0, 0);
-                for (const dateStr of allCheckinDates.slice().sort().reverse()) {
-                    const d = new Date(dateStr + "T00:00:00");
-                    const diff = Math.round((cursor.getTime() - d.getTime()) / 86400000);
-                    if (diff <= 1) { streak++; cursor = d; }
-                    else break;
+                const todayMs = new Date(today + "T00:00:00").getTime();
+                const sorted = allCheckinDates.slice().sort().reverse();
+                // Streak counts back from the most recent check-in. If the most
+                // recent is more than 1 day old, streak is broken (0).
+                const mostRecent = new Date(sorted[0] + "T00:00:00").getTime();
+                const gapFromToday = Math.round((todayMs - mostRecent) / 86400000);
+                if (gapFromToday <= 1) {
+                    streak = 1;
+                    for (let i = 1; i < sorted.length; i++) {
+                        const cur = new Date(sorted[i] + "T00:00:00").getTime();
+                        const prev = new Date(sorted[i - 1] + "T00:00:00").getTime();
+                        const diff = Math.round((prev - cur) / 86400000);
+                        if (diff === 1) streak++;
+                        else break;
+                    }
                 }
                 setJournalStreak(streak);
             }
 
-            // ── Option C: emotion-based traits (14+ days of data) ───────────
-            const fourteenDaysAgo = new Date();
-            fourteenDaysAgo.setDate(fourteenDaysAgo.getDate() - 13);
-            const last14 = Array.from({ length: 14 }, (_, i) => {
-                const d = new Date(fourteenDaysAgo);
-                d.setDate(fourteenDaysAgo.getDate() + i);
-                return d.toISOString().slice(0, 10);
-            });
-            const emotionFreq = getEmotionFrequency(user.id, last14);
-            const emotionDaysCount = Object.keys(emotionFreq).length;
-
-            // ── Option A: stage-based traits (always available) ──────────────
+            // ── Determine active stage (local check-in wins, then profile) ──
             const localCheckin = getLocalCheckin(user.id, today);
-            const activeStage = (localCheckin?.stage ?? profileRes.data?.nafs_stage ?? "ammarah") as NafsStage;
-            const moodScore = localCheckin?.mood ?? 0;
+            const activeStage = normalizeStage(
+                localCheckin?.stage ?? profileRes.data?.nafs_stage ?? null
+            );
 
-            setTodayCheckin(localCheckin ? { overall_mood: localCheckin.mood, nafs_stage_today: localCheckin.stage } : null);
+            setTodayCheckin(localCheckin);
 
-            // ── Build focus traits list ───────────────────────────────────────
+            // ── Build focus traits list ────────────────────────────────────
+            // Option C (14+ days of emotion data): top emotions → mapped traits
+            // Option A (default): stage-appropriate traits, rotated daily
             if (traitsRes.data) {
+                const allTraits = traitsRes.data as NafsAttribute[];
+                const today_seed = Math.floor(Date.now() / 86400000);
+
+                const last14: string[] = [];
+                for (let i = 13; i >= 0; i--) {
+                    const d = new Date();
+                    d.setDate(d.getDate() - i);
+                    last14.push(d.toISOString().slice(0, 10));
+                }
+                const emotionFreq = getEmotionFrequency(user.id, last14);
+                const emotionDaysCount = Object.keys(emotionFreq).length;
+
                 let traits: NafsAttribute[] = [];
 
                 if (emotionDaysCount >= 14) {
-                    // Option C: top emotions from last 14 days → map to nafs traits
                     const sortedEmotions = Object.entries(emotionFreq)
                         .sort((a, b) => b[1] - a[1])
                         .map(([emotion]) => emotion)
@@ -215,44 +235,33 @@ export default function DashboardPage() {
                     for (const emotion of sortedEmotions) {
                         const nafsNames = EMOTION_NAFS_MAP[emotion] ?? [];
                         for (const name of nafsNames) {
-                            const t = traitsRes.data.find((tr: any) => tr.name === name);
+                            const t = allTraits.find((tr) => tr.name === name);
                             if (t) matchedTraitNames.add(name);
                         }
                     }
-
-                    // Fill remaining from stage traits
                     if (matchedTraitNames.size < 3) {
-                        const stageTraits = traitsRes.data.filter((t: any) => t.stage === activeStage);
+                        const stageTraits = allTraits.filter(
+                            (t) => t.category === "negative"
+                        );
                         for (const t of stageTraits) {
                             if (matchedTraitNames.size >= 3) break;
                             matchedTraitNames.add(t.name);
                         }
                     }
-
-                    traits = traitsRes.data.filter((t: any) => matchedTraitNames.has(t.name)).slice(0, 3);
+                    traits = allTraits.filter((t) => matchedTraitNames.has(t.name)).slice(0, 3);
                 } else {
-                    // Option A: stage-based — negative traits filtered by current stage
-                    // Map stage to approximate Nafs level for filtering
-                    const stageLevel: Record<NafsStage, number> = { ammarah: 1, lawwamah: 2, mutmainna: 3 };
-                    const level = stageLevel[activeStage];
-                    // For ammarah stage, show traits most commonly problematic
-                    // Use mood as sub-signal: low mood → more remedial traits
-                    const allNeg = traitsRes.data as NafsAttribute[];
-                    if (level === 1) {
-                        // Ammarah — pick from a seed, split by mood
-                        const seed = Math.floor(Date.now() / 86400000);
-                        const start = (seed * 3) % Math.max(1, allNeg.length - 2);
-                        traits = allNeg.slice(start, start + 3);
-                    } else if (level === 2) {
-                        // Lawwamah — pick middle-tier traits (seeded rotation)
-                        const seed = Math.floor(Date.now() / 86400000);
-                        const start = (seed * 3) % Math.max(1, allNeg.length - 2);
-                        traits = allNeg.slice(start, start + 3);
-                    } else {
-                        // Mutmainna — suggest positive reinforcement traits (fallback to negative for reference)
-                        const seed = Math.floor(Date.now() / 86400000);
-                        const start = (seed * 3) % Math.max(1, allNeg.length - 2);
-                        traits = allNeg.slice(start, start + 3);
+                    // Stage-appropriate: ammarah/lawwamah → negative traits,
+                    // mutmainna → positive traits. Rotated daily by a date seed.
+                    const preferredCategory = activeStage === "mutmainna" ? "positive" : "negative";
+                    let pool = allTraits.filter((t) => t.category === preferredCategory);
+                    if (pool.length < 3) {
+                        // Fallback: mix in traits from the other category
+                        pool = [...pool, ...allTraits.filter((t) => t.category !== preferredCategory)];
+                    }
+                    const start = (today_seed * 3) % Math.max(1, pool.length - 2);
+                    traits = pool.slice(start, start + 3);
+                    if (traits.length < 3) {
+                        traits = [...traits, ...pool.slice(0, 3 - traits.length)];
                     }
                 }
 
@@ -262,11 +271,12 @@ export default function DashboardPage() {
             setLoading(false);
         }
         load();
-    }, []);
+        return () => { cancelled = true; };
+    }, [user, authLoading, supabase, router]);
 
     const handleSignOut = async () => {
-        await supabase.auth.signOut();
-        window.location.href = "/";
+        setShowSignOutConfirm(false);
+        await signOut();
     };
 
     if (loading) {
@@ -279,11 +289,13 @@ export default function DashboardPage() {
 
     if (!user) return null;
 
-    const activeStage = normalizeStage(todayCheckin?.nafs_stage_today ?? profile?.nafs_stage);
+    const activeStage = normalizeStage(todayCheckin?.stage ?? profile?.nafs_stage ?? null);
     const stageInfo = STAGE_INFO[activeStage];
     const dhikrList = STAGE_DHIKR[activeStage];
-    const displayName = profile?.full_name ?? user.email?.split("@")[0] ?? "Friend";
-    const moodScore = todayCheckin?.overall_mood ?? 0;
+    // Privacy-safe: only show the user's profile name, never the email.
+    const displayName = profile?.full_name?.trim() || "Friend";
+    const moodScore = todayCheckin?.mood ?? 0;
+    const meterPct = stageToMeterPct(activeStage);
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-white dark:from-zinc-950 dark:to-zinc-900">
@@ -295,9 +307,30 @@ export default function DashboardPage() {
                         <span className={`hidden sm:inline-block text-xs font-semibold px-2.5 py-1 rounded-full border ${stageInfo.bgClass} ${stageInfo.colorClass} ${stageInfo.borderClass}`}>
                             {stageInfo.emoji} {stageInfo.label}
                         </span>
-                        <button onClick={handleSignOut} className="text-xs text-zinc-400 hover:text-red-500 transition-colors">
-                            Sign out
-                        </button>
+                        {showSignOutConfirm ? (
+                            <div className="flex items-center gap-2">
+                                <span className="text-xs text-zinc-500">Sign out?</span>
+                                <button
+                                    onClick={handleSignOut}
+                                    className="text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded font-medium transition-colors"
+                                >
+                                    Yes
+                                </button>
+                                <button
+                                    onClick={() => setShowSignOutConfirm(false)}
+                                    className="text-xs bg-zinc-200 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300 px-2 py-1 rounded font-medium transition-colors"
+                                >
+                                    No
+                                </button>
+                            </div>
+                        ) : (
+                            <button
+                                onClick={() => setShowSignOutConfirm(true)}
+                                className="text-xs text-zinc-400 hover:text-red-500 transition-colors"
+                            >
+                                Sign out
+                            </button>
+                        )}
                     </div>
                 </div>
 
@@ -319,6 +352,14 @@ export default function DashboardPage() {
                     </div>
                 </div>
             </header>
+
+            {error && (
+                <div className="container mx-auto px-4 max-w-5xl mt-4">
+                    <div className="bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 p-3 rounded-lg text-sm">
+                        {error}
+                    </div>
+                </div>
+            )}
 
             <main className="container mx-auto px-4 py-8 max-w-5xl">
                 {/* Greeting + streak */}
@@ -356,7 +397,7 @@ export default function DashboardPage() {
                         <div className="h-5 rounded-full bg-gradient-to-r from-red-400 via-amber-400 to-emerald-500 shadow-inner">
                             <div
                                 className="absolute top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-white border-4 border-zinc-700 dark:border-zinc-200 shadow-lg transition-all duration-700"
-                                style={{ left: `calc(${stageInfo.pct}% - 14px)` }}
+                                style={{ left: `calc(${meterPct}% - 14px)` }}
                             />
                         </div>
                         <div className="flex justify-between mt-2.5 text-xs font-semibold">

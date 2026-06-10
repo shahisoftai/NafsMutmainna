@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/AuthProvider";
 
 interface CheckinRow {
     checkin_date: string;
@@ -48,14 +49,16 @@ function formatDate(dateStr: string) {
 export default function AnalyticsPage() {
     const supabase = createClient();
     const router = useRouter();
+    const { user, isLoading: authLoading } = useAuth();
     const [loading, setLoading] = useState(true);
     const [checkins, setCheckins] = useState<CheckinRow[]>([]);
     const [emotions, setEmotions] = useState<EmotionRow[]>([]);
 
     useEffect(() => {
+        if (authLoading) return;
+        if (!user) { router.push("/auth/login"); return; }
         async function load() {
-            const { data: { user } } = await supabase.auth.getUser();
-            if (!user) { router.push("/auth/login"); return; }
+            if (!user) return;
 
             const sevenDaysAgo = new Date();
             sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 6);
@@ -82,7 +85,7 @@ export default function AnalyticsPage() {
             setLoading(false);
         }
         load();
-    }, []);
+    }, [user, authLoading]);
 
     const last7 = getLast7Days();
     const checkinMap = Object.fromEntries(checkins.map((c) => [c.checkin_date, c]));

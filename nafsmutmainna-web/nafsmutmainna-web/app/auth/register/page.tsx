@@ -1,44 +1,60 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-import { createClient } from "@/lib/supabase/client";
+ import { useState } from "react";
+ import Link from "next/link";
+ import { createClient } from "@/lib/supabase/client";
 
-export default function RegisterPage() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
-    const [success, setSuccess] = useState(false);
-    const supabase = createClient();
+ function validatePassword(password: string): string | null {
+     if (password.length < 8) return "Password must be at least 8 characters";
+     if (!/[A-Z]/.test(password)) return "Password must contain an uppercase letter";
+     if (!/[a-z]/.test(password)) return "Password must contain a lowercase letter";
+     if (!/[0-9]/.test(password)) return "Password must contain a number";
+     if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) return "Password must contain a special character";
+     return null;
+ }
 
-    const handleRegister = async (e: React.FormEvent) => {
-        e.preventDefault();
+ export default function RegisterPage() {
+     const [email, setEmail] = useState("");
+     const [password, setPassword] = useState("");
+     const [confirmPassword, setConfirmPassword] = useState("");
+     const [loading, setLoading] = useState(false);
+     const [error, setError] = useState("");
+     const [success, setSuccess] = useState(false);
+     const [agreed, setAgreed] = useState(false);
+     const supabase = createClient();
 
-        if (password !== confirmPassword) {
-            setError("Passwords do not match");
-            return;
-        }
+     const handleRegister = async (e: React.FormEvent) => {
+         e.preventDefault();
 
-        if (password.length < 6) {
-            setError("Password must be at least 6 characters");
-            return;
-        }
+         if (password !== confirmPassword) {
+             setError("Passwords do not match");
+             return;
+         }
 
-        setLoading(true);
-        setError("");
+         const pwError = validatePassword(password);
+         if (pwError) {
+             setError(pwError);
+             return;
+         }
 
-        try {
-            const { error } = await supabase.auth.signUp({
-                email,
-                password,
-                options: {
-                    data: {
-                        display_name: email.split("@")[0],
-                    },
-                },
-            });
+         if (!agreed) {
+             setError("You must agree to the Terms of Service and Privacy Policy");
+             return;
+         }
+
+         setLoading(true);
+         setError("");
+
+         try {
+             const { error } = await supabase.auth.signUp({
+                 email,
+                 password,
+                 options: {
+                     data: {
+                         display_name: email.split("@")[0].replace(/[^a-zA-Z0-9]/g, "").slice(0, 20) || "User",
+                     },
+                 },
+             });
 
             if (error) {
                 setError(error.message);
@@ -52,14 +68,36 @@ export default function RegisterPage() {
         }
     };
 
-    const handleGoogleRegister = async () => {
-        await supabase.auth.signInWithOAuth({
-            provider: "google",
-            options: {
-                redirectTo: `${window.location.origin}/dashboard`,
-            },
-        });
-    };
+     const handleGoogleRegister = async () => {
+         setLoading(true);
+         setError("");
+
+         try {
+             const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
+                 provider: "google",
+                 options: {
+                     redirectTo: `${window.location.origin}/auth/callback`,
+                     queryParams: {
+                         access_type: "offline",
+                         prompt: "consent",
+                     },
+                 },
+             });
+
+             if (oauthError) {
+                 setError(oauthError.message);
+                 return;
+             }
+
+             if (data?.url) {
+                 window.location.href = data.url;
+             }
+         } catch (err) {
+             setError("An unexpected error occurred");
+         } finally {
+             setLoading(false);
+         }
+     };
 
     if (success) {
         return (
@@ -124,9 +162,25 @@ export default function RegisterPage() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-600 bg-white dark:bg-zinc-700 text-zinc-900 dark:text-zinc-100 focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
-                                placeholder="Min. 6 characters"
+                                placeholder="Min. 8 chars with uppercase, number, special"
                                 required
                             />
+                            {password.length > 0 && (
+                                <div className="mt-1.5 flex gap-1">
+                                    {["upper", "lower", "digit", "special", "length"].map((req) => {
+                                        const checks = {
+                                            upper: /[A-Z]/.test(password),
+                                            lower: /[a-z]/.test(password),
+                                            digit: /[0-9]/.test(password),
+                                            special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+                                            length: password.length >= 8,
+                                        };
+                                        return (
+                                            <div key={req} className={`h-1 flex-1 rounded-full ${checks[req as keyof typeof checks] ? "bg-emerald-500" : "bg-zinc-200 dark:bg-zinc-600"}`} />
+                                        );
+                                    })}
+                                </div>
+                            )}
                         </div>
 
                         <div>
@@ -144,9 +198,24 @@ export default function RegisterPage() {
                             />
                         </div>
 
+                        <label className="flex items-start gap-3 cursor-pointer">
+                            <input
+                                type="checkbox"
+                                checked={agreed}
+                                onChange={(e) => setAgreed(e.target.checked)}
+                                className="mt-0.5 w-4 h-4 rounded border-zinc-300 text-emerald-600 focus:ring-emerald-500"
+                            />
+                            <span className="text-xs text-zinc-600 dark:text-zinc-400 leading-snug">
+                                I agree to the{" "}
+                                <Link href="/terms" className="text-emerald-600 hover:underline">Terms of Service</Link>
+                                {" "}and{" "}
+                                <Link href="/privacy" className="text-emerald-600 hover:underline">Privacy Policy</Link>
+                            </span>
+                        </label>
+
                         <button
                             type="submit"
-                            disabled={loading}
+                            disabled={loading || !agreed}
                             className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-medium transition-colors disabled:opacity-50"
                         >
                             {loading ? "Creating account..." : "Create Account"}

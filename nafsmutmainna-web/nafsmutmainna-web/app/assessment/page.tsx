@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { saveLocalCheckin } from "@/lib/localDB";
+import { useAuth } from "@/contexts/AuthProvider";
 
 const NAFS_STAGES = [
     {
@@ -41,6 +42,7 @@ const MOOD_LABELS: Record<number, string> = {
 export default function AssessmentPage() {
     const router = useRouter();
     const supabase = createClient();
+    const { user, isLoading: authLoading } = useAuth();
 
     const [step, setStep] = useState<"mood" | "stage" | "notes" | "done">("mood");
     const [mood, setMood] = useState<number | null>(null);
@@ -49,11 +51,15 @@ export default function AssessmentPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
+    useEffect(() => {
+        if (authLoading) return;
+        if (!user) { router.push("/auth/login"); }
+    }, [user, authLoading]);
+
     const handleSubmit = async () => {
+        if (!user) { router.push("/auth/login"); return; }
         setLoading(true);
         setError("");
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { router.push("/auth/login"); return; }
 
         const today = new Date().toISOString().split("T")[0];
 

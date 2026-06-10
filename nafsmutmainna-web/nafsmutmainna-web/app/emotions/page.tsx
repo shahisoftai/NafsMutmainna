@@ -5,6 +5,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { appendLocalEmotionLog } from "@/lib/localDB";
+import { useAuth } from "@/contexts/AuthProvider";
 
 const EMOTION_OPTIONS = [
     { id: "anger", label: "😤 Anger", nafsName: "Ghadab (Anger)", color: "#E57373" },
@@ -37,6 +38,7 @@ interface NafsAttribute {
 export default function EmotionsPage() {
     const router = useRouter();
     const supabase = createClient();
+    const { user, isLoading: authLoading } = useAuth();
 
     const [selectedEmotion, setSelectedEmotion] = useState<(typeof EMOTION_OPTIONS)[0] | null>(null);
     const [intensity, setIntensity] = useState(3);
@@ -60,12 +62,16 @@ export default function EmotionsPage() {
             .then(({ data }) => { setNafsAttr(data); setLoadingAttr(false); });
     }, [selectedEmotion]);
 
+    useEffect(() => {
+        if (authLoading) return;
+        if (!user) { router.push("/auth/login"); }
+    }, [user, authLoading]);
+
     const handleSubmit = async () => {
         if (!selectedEmotion) return;
+        if (!user) { router.push("/auth/login"); return; }
         setSaving(true);
         setError("");
-        const { data: { user } } = await supabase.auth.getUser();
-        if (!user) { router.push("/auth/login"); return; }
 
         // Save to local DB — stays on device, never leaves browser
         appendLocalEmotionLog(user.id, new Date().toISOString().split("T")[0], {

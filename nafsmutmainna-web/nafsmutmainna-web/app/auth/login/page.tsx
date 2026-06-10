@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
@@ -10,6 +10,12 @@ export default function LoginPage() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const supabase = createClient();
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const urlError = params.get("error");
+        if (urlError) setError(decodeURIComponent(urlError));
+    }, []);
 
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -35,12 +41,34 @@ export default function LoginPage() {
     };
 
     const handleGoogleLogin = async () => {
-        await supabase.auth.signInWithOAuth({
-            provider: "google",
-            options: {
-                redirectTo: `${window.location.origin}/dashboard`,
-            },
-        });
+        setLoading(true);
+        setError("");
+
+        try {
+            const { data, error: oauthError } = await supabase.auth.signInWithOAuth({
+                provider: "google",
+                options: {
+                    redirectTo: `${window.location.origin}/auth/callback`,
+                    queryParams: {
+                        access_type: "offline",
+                        prompt: "consent",
+                    },
+                },
+            });
+
+            if (oauthError) {
+                setError(oauthError.message);
+                return;
+            }
+
+            if (data?.url) {
+                window.location.href = data.url;
+            }
+        } catch (err) {
+            setError("An unexpected error occurred");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -100,6 +128,7 @@ export default function LoginPage() {
                         >
                             {loading ? "Signing in..." : "Sign In"}
                         </button>
+
                     </form>
 
                     {/* Divider */}

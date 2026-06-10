@@ -34,10 +34,10 @@ const createApiClient = (): AxiosInstance => {
         async (error: AxiosError) => {
             const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
 
-            // Handle 401 - try to refresh anonymous ID
+            // Handle 401 - clear stale anonymous ID and retry once
             if (error.response?.status === 401 && !originalRequest._retry) {
                 originalRequest._retry = true;
-                // Would trigger re-authentication here
+                useAppStore.getState().setAnonymousId(null as any);
                 return client(originalRequest);
             }
 
