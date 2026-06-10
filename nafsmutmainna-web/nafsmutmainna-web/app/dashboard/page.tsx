@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/client";
 import { useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getLocalCheckin, getAllCheckinDates, getEmotionFrequency, type LocalCheckin } from "@/lib/localDB";
+import { translate } from "@/lib/translations";
 import { useAuth } from "@/contexts/AuthProvider";
 
 type NafsStage = "ammarah" | "lawwamah" | "mutmainna";
@@ -470,7 +471,9 @@ export default function DashboardPage() {
                                     ))}
                                 </div>
                             ) : (
-                                focusTraits.map((t, i) => (
+                                focusTraits.map((t, i) => {
+                                    const t_tr = translate(t.name);
+                                    return (
                                     <Link
                                         key={t.id}
                                         href="/toolkit"
@@ -480,11 +483,20 @@ export default function DashboardPage() {
                                             {i + 1}
                                         </span>
                                         <div className="flex-1 min-w-0">
-                                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">{t.name}</p>
-                                            <p className="text-xs text-zinc-500 mt-0.5 line-clamp-2">{t.description}</p>
+                                            <p className="text-sm font-semibold text-zinc-800 dark:text-zinc-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors">
+                                                {t.name}
+                                            </p>
+                                            <p dir="rtl" className="text-sm font-medium text-emerald-700 dark:text-emerald-400 mt-0.5" lang="ar">
+                                                {t_tr.ar}
+                                            </p>
+                                            <p dir="rtl" className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5" lang="ur">
+                                                {t_tr.ur}
+                                            </p>
+                                            <p className="text-xs text-zinc-500 mt-1 line-clamp-2">{t.description}</p>
                                         </div>
                                     </Link>
-                                ))
+                                    );
+                                })
                             )}
                         </div>
                         <Link href="/toolkit" className="mt-4 inline-block text-xs text-emerald-600 hover:text-emerald-700 font-medium">

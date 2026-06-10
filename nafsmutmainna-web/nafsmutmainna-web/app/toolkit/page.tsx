@@ -5,6 +5,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/contexts/AuthProvider";
+import { translate } from "@/lib/translations";
 
 interface NafsAttribute {
     id: string;
@@ -127,18 +128,25 @@ export default function ToolkitPage() {
                                 <div className="p-8 text-center text-zinc-400 text-sm">No traits found</div>
                             ) : (
                                 <div className="divide-y divide-zinc-100 dark:divide-zinc-700 max-h-[65vh] overflow-y-auto">
-                                    {filtered.map((t) => (
+                                    {filtered.map((t) => {
+                                        const t_tr = translate(t.name);
+                                        return (
                                         <button
                                             key={t.id}
                                             onClick={() => setSelected(t)}
                                             className={`w-full text-left px-4 py-3 transition-colors ${selected?.id === t.id ? "bg-emerald-50 dark:bg-emerald-900/30" : "hover:bg-zinc-50 dark:hover:bg-zinc-700"}`}
                                         >
-                                            <div className="flex items-center gap-2">
-                                                <span className={`w-2 h-2 rounded-full flex-shrink-0 ${t.category === "negative" ? "bg-red-400" : "bg-emerald-500"}`}></span>
-                                                <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200">{t.name}</span>
+                                            <div className="flex items-start gap-2">
+                                                <span className={`w-2 h-2 rounded-full flex-shrink-0 mt-1.5 ${t.category === "negative" ? "bg-red-400" : "bg-emerald-500"}`}></span>
+                                                <div className="flex-1 min-w-0">
+                                                    <span className="text-sm font-medium text-zinc-800 dark:text-zinc-200 block">{t.name}</span>
+                                                    <span dir="rtl" lang="ar" className="text-xs text-emerald-700 dark:text-emerald-400 block mt-0.5">{t_tr.ar}</span>
+                                                    <span dir="rtl" lang="ur" className="text-xs text-zinc-500 dark:text-zinc-400 block mt-0.5">{t_tr.ur}</span>
+                                                </div>
                                             </div>
                                         </button>
-                                    ))}
+                                        );
+                                    })}
                                 </div>
                             )}
                         </div>
@@ -154,21 +162,35 @@ export default function ToolkitPage() {
                         ) : (
                             <div className="space-y-5">
                                 {/* Trait Header */}
+                                {(() => {
+                                    const s_tr = translate(selected.name);
+                                    const o_tr = translate(selected.opposite_to);
+                                    return (
                                 <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-sm">
                                     <div className="flex items-start justify-between mb-3">
-                                        <div>
+                                        <div className="flex-1">
                                             <span className={`inline-block text-xs font-bold px-3 py-1 rounded-full mb-3 ${selected.category === "negative" ? "bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400" : "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400"}`}>
                                                 {selected.category === "negative" ? "Blameworthy (Madhmum)" : "Praiseworthy (Mahmud)"}
                                             </span>
                                             <h2 className="text-2xl font-bold text-zinc-800 dark:text-zinc-200">{selected.name}</h2>
+                                            <p dir="rtl" lang="ar" className="text-lg font-semibold text-emerald-700 dark:text-emerald-400 mt-1">{s_tr.ar}</p>
+                                            <p dir="rtl" lang="ur" className="text-sm text-zinc-600 dark:text-zinc-400 mt-0.5">{s_tr.ur}</p>
                                         </div>
                                     </div>
                                     <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">{selected.description}</p>
-                                    <div className="flex items-center gap-2 p-3 bg-zinc-50 dark:bg-zinc-700 rounded-lg">
-                                        <span className="text-sm text-zinc-500">Opposite virtue/vice:</span>
-                                        <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400">{selected.opposite_to}</span>
+                                    <div className="p-3 bg-zinc-50 dark:bg-zinc-700 rounded-lg">
+                                        <span className="text-sm text-zinc-500 block mb-1">Opposite virtue/vice:</span>
+                                        <span className="text-sm font-semibold text-emerald-700 dark:text-emerald-400 block">{selected.opposite_to}</span>
+                                        {o_tr.ar && (
+                                            <span dir="rtl" lang="ar" className="text-sm text-emerald-700 dark:text-emerald-400 block mt-0.5">{o_tr.ar}</span>
+                                        )}
+                                        {o_tr.ur && (
+                                            <span dir="rtl" lang="ur" className="text-xs text-zinc-500 dark:text-zinc-400 block mt-0.5">{o_tr.ur}</span>
+                                        )}
                                     </div>
                                 </div>
+                                    );
+                                })()}
 
                                 {/* Dhikr Remedies */}
                                 <div className="bg-white dark:bg-zinc-800 rounded-xl p-6 shadow-sm">
