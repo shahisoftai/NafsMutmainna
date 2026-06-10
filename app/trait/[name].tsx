@@ -1,31 +1,41 @@
 // Trait Detail Screen — app/trait/[name].tsx
 // Dynamic route: /trait/Ghadab%20(Anger)
+// Updates: theme + accessibility
 
 import { View, Text, StyleSheet, ScrollView, Pressable, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useNafsAttributeByName } from '../../src/data/datasources/hooks';
-import { COLORS } from '../../src/shared/constants';
+import { useTheme } from '../../src/presentation/theme';
+import { useSettingsStore } from '../../src/infrastructure/store/settingsStore';
+import { getLocalizedName } from '../../src/shared/i18n/translations';
 
 export default function TraitDetailScreen() {
     const { name } = useLocalSearchParams<{ name: string }>();
     const router = useRouter();
+    const theme = useTheme();
+    const language = useSettingsStore((s) => s.language);
     const { data: trait, isLoading, error } = useNafsAttributeByName(decodeURIComponent(name ?? ''));
 
     if (isLoading) {
         return (
-            <SafeAreaView style={styles.container}>
-                <ActivityIndicator size="large" color={COLORS.primary} style={{ marginTop: 40 }} />
+            <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]}>
+                <ActivityIndicator size="large" color={theme.colors.primary} style={{ marginTop: 40 }} />
             </SafeAreaView>
         );
     }
 
     if (error || !trait) {
         return (
-            <SafeAreaView style={styles.container}>
+            <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]}>
                 <View style={styles.errorContainer}>
-                    <Text style={styles.errorText}>Trait not found.</Text>
-                    <Pressable style={styles.backButton} onPress={() => router.back()}>
+                    <Text style={[styles.errorText, { color: theme.colors.textSecondary }]}>Trait not found.</Text>
+                    <Pressable
+                        style={[styles.backButton, { backgroundColor: theme.colors.primary }]}
+                        onPress={() => router.back()}
+                        accessibilityRole="button"
+                        accessibilityLabel="Go back"
+                    >
                         <Text style={styles.backButtonText}>← Go Back</Text>
                     </Pressable>
                 </View>
@@ -34,19 +44,38 @@ export default function TraitDetailScreen() {
     }
 
     const isNegative = trait.category === 'negative';
-    const categoryColor = isNegative ? '#E57373' : '#81C784';
+    const categoryColor = isNegative ? theme.colors.ammarah : theme.colors.mutmainna;
+    const localized = getLocalizedName(trait.name, language);
+    const showLocalized = language !== 'en' && localized !== trait.name;
 
     return (
-        <SafeAreaView style={styles.container} edges={['top']}>
+        <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]} edges={['top']}>
             <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.content}>
-                {/* Back Nav */}
-                <Pressable style={styles.backRow} onPress={() => router.back()}>
-                    <Text style={styles.backText}>← Back</Text>
+                <Pressable
+                    style={styles.backRow}
+                    onPress={() => router.back()}
+                    accessibilityRole="button"
+                    accessibilityLabel="Go back"
+                    hitSlop={8}
+                >
+                    <Text style={[styles.backText, { color: theme.colors.primary }]}>← Back</Text>
                 </Pressable>
 
-                {/* Name & Category Badge */}
                 <View style={styles.header}>
-                    <Text style={styles.name}>{trait.name}</Text>
+                    <Text style={[styles.name, { color: theme.colors.text }]}>{trait.name}</Text>
+                    {showLocalized && (
+                        <Text
+                            style={[
+                                styles.localized,
+                                {
+                                    color: theme.colors.primary,
+                                    writingDirection: language === 'ar' || language === 'ur' ? 'rtl' : 'ltr',
+                                },
+                            ]}
+                        >
+                            {localized}
+                        </Text>
+                    )}
                     <View style={[styles.badge, { backgroundColor: categoryColor + '25', borderColor: categoryColor }]}>
                         <Text style={[styles.badgeText, { color: categoryColor }]}>
                             {isNegative ? 'Blameworthy (Madhmum)' : 'Praiseworthy (Mahmud)'}
@@ -54,43 +83,39 @@ export default function TraitDetailScreen() {
                     </View>
                 </View>
 
-                {/* Description */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Description</Text>
-                    <Text style={styles.bodyText}>{trait.description}</Text>
+                    <Text style={[styles.sectionTitle, { color: theme.colors.textSecondary }]}>Description</Text>
+                    <Text style={[styles.bodyText, { color: theme.colors.text }]}>{trait.description}</Text>
                 </View>
 
-                {/* Opposite Virtue / Vice */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>
+                    <Text style={[styles.sectionTitle, { color: theme.colors.textSecondary }]}>
                         {isNegative ? 'Its Opposite Virtue' : 'Its Opposite Vice'}
                     </Text>
-                    <View style={styles.oppositeChip}>
-                        <Text style={styles.oppositeText}>{trait.opposite_to}</Text>
+                    <View style={[styles.oppositeChip, { backgroundColor: theme.colors.surface }]}>
+                        <Text style={[styles.oppositeText, { color: theme.colors.text }]}>{trait.opposite_to}</Text>
                     </View>
                 </View>
 
-                {/* Quranic References */}
                 {trait.quran_ref.length > 0 && (
                     <View style={styles.section}>
-                        <Text style={styles.sectionTitle}>Quranic References</Text>
+                        <Text style={[styles.sectionTitle, { color: theme.colors.textSecondary }]}>Quranic References</Text>
                         {trait.quran_ref.map((ref, i) => (
                             <View key={i} style={styles.refRow}>
                                 <Text style={styles.refIcon}>📖</Text>
-                                <Text style={styles.refText}>{ref}</Text>
+                                <Text style={[styles.refText, { color: theme.colors.text }]}>{ref}</Text>
                             </View>
                         ))}
                     </View>
                 )}
 
-                {/* Hadith References */}
                 {trait.hadith_ref.length > 0 && (
                     <View style={styles.section}>
-                        <Text style={styles.sectionTitle}>Hadith References</Text>
+                        <Text style={[styles.sectionTitle, { color: theme.colors.textSecondary }]}>Hadith References</Text>
                         {trait.hadith_ref.map((ref, i) => (
                             <View key={i} style={styles.refRow}>
                                 <Text style={styles.refIcon}>📜</Text>
-                                <Text style={styles.refText}>{ref}</Text>
+                                <Text style={[styles.refText, { color: theme.colors.text }]}>{ref}</Text>
                             </View>
                         ))}
                     </View>
@@ -103,7 +128,6 @@ export default function TraitDetailScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: COLORS.background,
     },
     content: {
         paddingBottom: 40,
@@ -114,7 +138,6 @@ const styles = StyleSheet.create({
     },
     backText: {
         fontSize: 16,
-        color: COLORS.primary,
         fontWeight: '500',
     },
     header: {
@@ -125,8 +148,11 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 26,
         fontWeight: '700',
-        color: COLORS.text,
         lineHeight: 34,
+    },
+    localized: {
+        fontSize: 22,
+        fontWeight: '600',
     },
     badge: {
         alignSelf: 'flex-start',
@@ -146,18 +172,15 @@ const styles = StyleSheet.create({
     sectionTitle: {
         fontSize: 13,
         fontWeight: '700',
-        color: COLORS.textSecondary,
         textTransform: 'uppercase',
         letterSpacing: 0.8,
         marginBottom: 8,
     },
     bodyText: {
         fontSize: 16,
-        color: COLORS.text,
         lineHeight: 25,
     },
     oppositeChip: {
-        backgroundColor: COLORS.surface,
         borderRadius: 10,
         paddingVertical: 10,
         paddingHorizontal: 14,
@@ -165,7 +188,6 @@ const styles = StyleSheet.create({
     },
     oppositeText: {
         fontSize: 15,
-        color: COLORS.text,
         fontWeight: '500',
     },
     refRow: {
@@ -181,7 +203,6 @@ const styles = StyleSheet.create({
     refText: {
         flex: 1,
         fontSize: 14,
-        color: COLORS.text,
         lineHeight: 22,
     },
     errorContainer: {
@@ -192,12 +213,10 @@ const styles = StyleSheet.create({
     },
     errorText: {
         fontSize: 16,
-        color: COLORS.textSecondary,
     },
     backButton: {
         paddingVertical: 10,
         paddingHorizontal: 20,
-        backgroundColor: COLORS.primary,
         borderRadius: 8,
     },
     backButtonText: {

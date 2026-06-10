@@ -1,29 +1,27 @@
-// Main Tab Navigation
+// Main Tab Navigation — themed, accessible
 
 import { Tabs } from 'expo-router';
-import { useColorScheme } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { COLORS } from '../../src/shared/constants';
+import { useTheme } from '../../src/presentation/theme';
 
 export default function TabLayout() {
-    const colorScheme = useColorScheme();
-    const isDark = colorScheme === 'dark';
+    const theme = useTheme();
 
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: COLORS.primary,
-                tabBarInactiveTintColor: COLORS.textSecondary,
+                tabBarActiveTintColor: theme.colors.primary,
+                tabBarInactiveTintColor: theme.colors.textSecondary,
                 tabBarStyle: {
-                    backgroundColor: isDark ? '#1A1A1A' : COLORS.surface,
-                    borderTopColor: isDark ? '#333' : '#E0E0E0',
+                    backgroundColor: theme.colors.surface,
+                    borderTopColor: theme.colors.border,
                     paddingBottom: 8,
                     paddingTop: 8,
-                    height: 60,
+                    height: 64,
                 },
                 tabBarLabelStyle: {
                     fontSize: 11,
-                    fontWeight: '500',
+                    fontWeight: '600',
                 },
                 headerShown: false,
             }}
@@ -32,35 +30,40 @@ export default function TabLayout() {
                 name="index"
                 options={{
                     title: 'Home',
-                    tabBarIcon: ({ color, size }) => <Ionicons name="home-outline" size={size} color={color} />,
+                    tabBarAccessibilityLabel: 'Home dashboard',
+                    tabBarIcon: ({ color, size }) => <Ionicons name="home-outline" size={size} color={color} accessibilityLabel="Home" />,
                 }}
             />
             <Tabs.Screen
                 name="emotions"
                 options={{
                     title: 'Feelings',
-                    tabBarIcon: ({ color, size }) => <Ionicons name="heart-outline" size={size} color={color} />,
+                    tabBarAccessibilityLabel: 'Log emotions',
+                    tabBarIcon: ({ color, size }) => <Ionicons name="heart-outline" size={size} color={color} accessibilityLabel="Feelings" />,
                 }}
             />
             <Tabs.Screen
                 name="toolkit"
                 options={{
                     title: 'Toolkit',
-                    tabBarIcon: ({ color, size }) => <Ionicons name="construct-outline" size={size} color={color} />,
+                    tabBarAccessibilityLabel: 'Rectification toolkit',
+                    tabBarIcon: ({ color, size }) => <Ionicons name="construct-outline" size={size} color={color} accessibilityLabel="Toolkit" />,
                 }}
             />
             <Tabs.Screen
                 name="learn"
                 options={{
                     title: 'Learn',
-                    tabBarIcon: ({ color, size }) => <Ionicons name="book-outline" size={size} color={color} />,
+                    tabBarAccessibilityLabel: 'Learn about Nafs',
+                    tabBarIcon: ({ color, size }) => <Ionicons name="book-outline" size={size} color={color} accessibilityLabel="Learn" />,
                 }}
             />
             <Tabs.Screen
                 name="journal"
                 options={{
                     title: 'Journal',
-                    tabBarIcon: ({ color, size }) => <Ionicons name="journal-outline" size={size} color={color} />,
+                    tabBarAccessibilityLabel: 'Muhasabah journal',
+                    tabBarIcon: ({ color, size }) => <Ionicons name="journal-outline" size={size} color={color} accessibilityLabel="Journal" />,
                 }}
             />
         </Tabs>

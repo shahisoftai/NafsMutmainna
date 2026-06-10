@@ -1,4 +1,5 @@
 // AI Chat Modal - Islamic Coach powered by MiniMax-M2.5
+// Updates: theme + accessibility
 
 import { useState, useRef, useEffect } from 'react';
 import {
@@ -10,6 +11,7 @@ import { useRouter } from 'expo-router';
 import { COLORS } from '../src/shared/constants';
 import { useAppStore, useChatHistory, useNafsState, useActiveTraits } from '../src/infrastructure/store';
 import { chatWithCoach, getReflectionQuestions } from '../src/infrastructure/ai/coach';
+import { useTheme } from '../src/presentation/theme';
 import type { ChatMessage } from '../src/domain/entities';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -24,6 +26,7 @@ const SUGGESTED_TOPICS = [
 
 export default function ChatScreen() {
     const router = useRouter();
+    const theme = useTheme();
     const chatHistory = useChatHistory();
     const nafsState = useNafsState();
     const activeTraits = useActiveTraits();
@@ -99,24 +102,36 @@ export default function ChatScreen() {
     };
 
     return (
-        <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
+        <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]} edges={['top', 'bottom']}>
             {/* Header */}
-            <View style={styles.header}>
-                <Pressable onPress={() => router.back()} style={styles.backButton}>
-                    <Text style={styles.backIcon}>✕</Text>
+            <View style={[styles.header, { backgroundColor: theme.colors.surface, borderBottomColor: theme.colors.border }]}>
+                <Pressable
+                    onPress={() => router.back()}
+                    style={styles.backButton}
+                    accessibilityRole="button"
+                    accessibilityLabel="Close chat"
+                    hitSlop={8}
+                >
+                    <Text style={[styles.backIcon, { color: theme.colors.textSecondary }]}>✕</Text>
                 </Pressable>
                 <View style={styles.headerCenter}>
-                    <Text style={styles.headerTitle}>Islamic AI Coach</Text>
-                    <Text style={styles.headerSubtitle}>Powered by MiniMax-M2.5</Text>
+                    <Text style={[styles.headerTitle, { color: theme.colors.text }]}>Islamic AI Coach</Text>
+                    <Text style={[styles.headerSubtitle, { color: theme.colors.textSecondary }]}>Powered by MiniMax-M2.5</Text>
                 </View>
-                <Pressable onPress={() => useAppStore.getState().clearChatHistory()} style={styles.clearButton}>
-                    <Text style={styles.clearText}>Clear</Text>
+                <Pressable
+                    onPress={() => useAppStore.getState().clearChatHistory()}
+                    style={styles.clearButton}
+                    accessibilityRole="button"
+                    accessibilityLabel="Clear chat history"
+                    hitSlop={8}
+                >
+                    <Text style={[styles.clearText, { color: theme.colors.textSecondary }]}>Clear</Text>
                 </Pressable>
             </View>
 
             {/* Disclaimer Banner */}
-            <View style={styles.disclaimerBanner}>
-                <Text style={styles.disclaimerText}>
+            <View style={[styles.disclaimerBanner, { backgroundColor: theme.colors.primary + '10' }]}>
+                <Text style={[styles.disclaimerText, { color: theme.colors.primary }]}>
                     📚 All Islamic references are from authentic sources. For religious rulings (fatwa), please consult a qualified scholar.
                 </Text>
             </View>
@@ -131,9 +146,9 @@ export default function ChatScreen() {
                 >
                     {/* Welcome message */}
                     {chatHistory.length === 0 && (
-                        <View style={styles.welcomeMsg}>
-                            <Text style={styles.welcomeArabic}>السَّلاَمُ عَلَيْكُمْ</Text>
-                            <Text style={styles.welcomeText}>
+                        <View style={[styles.welcomeMsg, { backgroundColor: theme.colors.primary }]}>
+                            <Text style={[styles.welcomeArabic, { color: '#FFF' }]}>السَّلاَمُ عَلَيْكُمْ</Text>
+                            <Text style={[styles.welcomeText, { color: '#FFFFFFCC' }]}>
                                 As-salamu Alaykum! I'm your Tazkiyah coach. Share what's on your heart,
                                 and I'll guide you with wisdom from the Quran and authentic Hadith.
                             </Text>
@@ -143,10 +158,18 @@ export default function ChatScreen() {
                     {/* Suggested topics */}
                     {showSuggestions && (
                         <View style={styles.suggestionsContainer}>
-                            <Text style={styles.suggestionsTitle}>How can I help?</Text>
+                            <Text style={[styles.suggestionsTitle, { color: theme.colors.textSecondary }]}>
+                                How can I help?
+                            </Text>
                             {SUGGESTED_TOPICS.map((topic, i) => (
-                                <Pressable key={i} style={styles.suggestionChip} onPress={() => handleSend(topic)}>
-                                    <Text style={styles.suggestionText}>{topic}</Text>
+                                <Pressable
+                                    key={i}
+                                    style={[styles.suggestionChip, { backgroundColor: theme.colors.surface, borderColor: theme.colors.border }]}
+                                    onPress={() => handleSend(topic)}
+                                    accessibilityRole="button"
+                                    accessibilityLabel={topic}
+                                >
+                                    <Text style={[styles.suggestionText, { color: theme.colors.text }]}>{topic}</Text>
                                 </Pressable>
                             ))}
                         </View>
@@ -156,15 +179,20 @@ export default function ChatScreen() {
                     {chatHistory.map((msg) => (
                         <View
                             key={msg.id}
-                            style={[styles.bubble, msg.role === 'user' ? styles.userBubble : styles.aiBubble]}
+                            style={[
+                                styles.bubble,
+                                msg.role === 'user'
+                                    ? [styles.userBubble, { backgroundColor: theme.colors.primary }]
+                                    : [styles.aiBubble, { backgroundColor: theme.colors.surface }],
+                            ]}
                         >
                             {msg.role === 'assistant' && (
-                                <Text style={styles.aiLabel}>🤲 Coach</Text>
+                                <Text style={[styles.aiLabel, { color: theme.colors.primary }]}>🤲 Coach</Text>
                             )}
-                            <Text style={[styles.bubbleText, msg.role === 'user' && styles.userBubbleText]}>
+                            <Text style={[styles.bubbleText, { color: theme.colors.text }, msg.role === 'user' && styles.userBubbleText]}>
                                 {msg.content}
                             </Text>
-                            <Text style={[styles.timestamp, msg.role === 'user' && styles.userTimestamp]}>
+                            <Text style={[styles.timestamp, { color: theme.colors.textSecondary }, msg.role === 'user' && styles.userTimestamp]}>
                                 {new Date(msg.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                             </Text>
                         </View>
@@ -172,30 +200,39 @@ export default function ChatScreen() {
 
                     {/* Loading indicator */}
                     {isLoading && (
-                        <View style={styles.aiBubble}>
-                            <ActivityIndicator color={COLORS.primary} size="small" />
-                            <Text style={styles.thinkingText}>Reflecting...</Text>
+                        <View style={[styles.aiBubble, { backgroundColor: theme.colors.surface }]}>
+                            <ActivityIndicator color={theme.colors.primary} size="small" />
+                            <Text style={[styles.thinkingText, { color: theme.colors.textSecondary }]}>
+                                Reflecting...
+                            </Text>
                         </View>
                     )}
                 </ScrollView>
 
                 {/* Input */}
-                <View style={styles.inputRow}>
+                <View style={[styles.inputRow, { backgroundColor: theme.colors.surface, borderTopColor: theme.colors.border }]}>
                     <TextInput
-                        style={styles.textInput}
+                        style={[styles.textInput, { backgroundColor: theme.colors.background, color: theme.colors.text }]}
                         value={input}
                         onChangeText={setInput}
                         placeholder="Share what's on your heart..."
-                        placeholderTextColor={COLORS.textSecondary}
+                        placeholderTextColor={theme.colors.textSecondary}
                         multiline
                         maxLength={500}
                         returnKeyType="send"
                         onSubmitEditing={() => handleSend()}
+                        accessibilityLabel="Chat message input"
                     />
                     <Pressable
-                        style={[styles.sendButton, (!input.trim() || isLoading) && styles.sendButtonDisabled]}
+                        style={[
+                            styles.sendButton,
+                            { backgroundColor: theme.colors.primary },
+                            (!input.trim() || isLoading) && styles.sendButtonDisabled,
+                        ]}
                         onPress={() => handleSend()}
                         disabled={!input.trim() || isLoading}
+                        accessibilityRole="button"
+                        accessibilityLabel="Send message"
                     >
                         <Text style={styles.sendIcon}>→</Text>
                     </Pressable>

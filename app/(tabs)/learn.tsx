@@ -1,9 +1,11 @@
 // Educational Hub Screen - Learn about Nafs stages
+// Updates: theme-aware styles, proper RTL container for Arabic, accessibility
 
 import { useState } from 'react';
 import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { COLORS, DAILY_VERSES, DAILY_HADITH } from '../../src/shared/constants';
+import { useTheme } from '../../src/presentation/theme';
 
 const NAFS_STAGES = [
     {
@@ -93,98 +95,123 @@ const DAILY_LESSONS = [
 ];
 
 export default function LearnScreen() {
+    const theme = useTheme();
     const [selectedStage, setSelectedStage] = useState<string | null>(null);
 
     const stage = NAFS_STAGES.find((s) => s.id === selectedStage);
 
     return (
-        <SafeAreaView style={styles.container} edges={['top']}>
+        <SafeAreaView style={[styles.container, { backgroundColor: theme.colors.background }]} edges={['top']}>
             <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={styles.header}>
-                    <Text style={styles.title}>Educational Hub</Text>
-                    <Text style={styles.subtitle}>Learn from authentic Islamic scholarship</Text>
+                    <Text style={[styles.title, { color: theme.colors.text }]}>Educational Hub</Text>
+                    <Text style={[styles.subtitle, { color: theme.colors.textSecondary }]}>
+                        Learn from authentic Islamic scholarship
+                    </Text>
                 </View>
 
                 {/* Nafs Stages */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>The Three Stages of Nafs</Text>
+                    <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>The Three Stages of Nafs</Text>
                     {NAFS_STAGES.map((s) => (
-                        <Pressable key={s.id} style={styles.stageCard} onPress={() => setSelectedStage(selectedStage === s.id ? null : s.id)}>
+                        <Pressable
+                            key={s.id}
+                            style={[styles.stageCard, { backgroundColor: theme.colors.surface }]}
+                            onPress={() => setSelectedStage(selectedStage === s.id ? null : s.id)}
+                            accessibilityRole="button"
+                            accessibilityLabel={s.label}
+                            accessibilityState={{ expanded: selectedStage === s.id }}
+                        >
                             <View style={[styles.stageIndicator, { backgroundColor: s.color }]} />
                             <View style={styles.stageContent}>
-                                <Text style={styles.stageLabel}>{s.label}</Text>
-                                <Text style={styles.stageArabic}>{s.arabic}</Text>
-                                <Text style={styles.stageVerseRef}>{s.verseRef}</Text>
+                                <Text style={[styles.stageLabel, { color: theme.colors.text }]}>{s.label}</Text>
+                                <Text style={[styles.stageArabic, { color: theme.colors.primary, writingDirection: 'rtl' as const }]}>
+                                    {s.arabic}
+                                </Text>
+                                <Text style={[styles.stageVerseRef, { color: theme.colors.textSecondary }]}>
+                                    {s.verseRef}
+                                </Text>
                             </View>
-                            <Text style={styles.expandIcon}>{selectedStage === s.id ? '▲' : '▼'}</Text>
+                            <Text style={[styles.expandIcon, { color: theme.colors.textSecondary }]}>
+                                {selectedStage === s.id ? '▲' : '▼'}
+                            </Text>
                         </Pressable>
                     ))}
 
                     {/* Expanded Stage Detail */}
                     {stage && (
-                        <View style={[styles.stageDetail, { borderLeftColor: stage.color }]}>
-                            {/* Quran Verse */}
-                            <Text style={styles.detailArabic}>{stage.verse}</Text>
-                            <Text style={styles.detailVerseRef}>{stage.verseRef}</Text>
-                            <Text style={styles.detailTranslation}>{stage.verseTranslation}</Text>
+                        <View
+                            style={[
+                                styles.stageDetail,
+                                { backgroundColor: theme.colors.surface, borderLeftColor: stage.color },
+                            ]}
+                        >
+                            <View style={styles.rtlContainer}>
+                                <Text style={[styles.detailArabic, { color: theme.colors.primary, writingDirection: 'rtl' as const }]}>{stage.verse}</Text>
+                            </View>
+                            <Text style={[styles.detailVerseRef, { color: theme.colors.accent }]}>{stage.verseRef}</Text>
+                            <Text style={[styles.detailTranslation, { color: theme.colors.text }]}>
+                                {stage.verseTranslation}
+                            </Text>
 
-                            {/* Description */}
-                            <Text style={styles.detailDescription}>{stage.description}</Text>
+                            <Text style={[styles.detailDescription, { color: theme.colors.textSecondary }]}>
+                                {stage.description}
+                            </Text>
 
-                            {/* Characteristics */}
-                            <Text style={styles.detailHeading}>Characteristics</Text>
+                            <Text style={[styles.detailHeading, { color: theme.colors.text }]}>Characteristics</Text>
                             {stage.characteristics.map((c, i) => (
                                 <View key={i} style={styles.charRow}>
-                                    <Text style={styles.charDot}>•</Text>
-                                    <Text style={styles.charText}>{c}</Text>
+                                    <Text style={[styles.charDot, { color: theme.colors.primary }]}>•</Text>
+                                    <Text style={[styles.charText, { color: theme.colors.text }]}>{c}</Text>
                                 </View>
                             ))}
 
-                            {/* Sahaba Example */}
-                            <View style={styles.sahabaBox}>
-                                <Text style={styles.sahabaLabel}>📜 From the Sahaba</Text>
-                                <Text style={styles.sahabaText}>{stage.sahabaExample}</Text>
+                            <View style={[styles.sahabaBox, { backgroundColor: theme.colors.primary + '10' }]}>
+                                <Text style={[styles.sahabaLabel, { color: theme.colors.primary }]}>📜 From the Sahaba</Text>
+                                <Text style={[styles.sahabaText, { color: theme.colors.text }]}>{stage.sahabaExample}</Text>
                             </View>
 
-                            {/* Remedy */}
-                            <View style={styles.remedyBox}>
-                                <Text style={styles.remedyLabel}>💊 Remedy</Text>
-                                <Text style={styles.remedyText}>{stage.remedy}</Text>
+                            <View style={[styles.remedyBox, { backgroundColor: theme.colors.success + '15' }]}>
+                                <Text style={[styles.remedyLabel, { color: theme.colors.success }]}>💊 Remedy</Text>
+                                <Text style={[styles.remedyText, { color: theme.colors.text }]}>{stage.remedy}</Text>
                             </View>
 
-                            {/* Source */}
-                            <Text style={styles.sourceText}>— {stage.source}</Text>
+                            <Text style={[styles.sourceText, { color: theme.colors.textSecondary }]}>— {stage.source}</Text>
                         </View>
                     )}
                 </View>
 
                 {/* Daily Lessons */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Daily Lessons</Text>
+                    <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>Daily Lessons</Text>
                     {DAILY_LESSONS.map((lesson) => (
-                        <View key={lesson.id} style={styles.lessonCard}>
-                            <Text style={styles.lessonTitle}>{lesson.title}</Text>
-                            <Text style={styles.lessonContent}>{lesson.content}</Text>
-                            <Text style={styles.lessonSource}>— {lesson.source}</Text>
+                        <View key={lesson.id} style={[styles.lessonCard, { backgroundColor: theme.colors.surface }]}>
+                            <Text style={[styles.lessonTitle, { color: theme.colors.primary }]}>{lesson.title}</Text>
+                            <Text style={[styles.lessonContent, { color: theme.colors.text }]}>{lesson.content}</Text>
+                            <Text style={[styles.lessonSource, { color: theme.colors.textSecondary }]}>— {lesson.source}</Text>
                         </View>
                     ))}
                 </View>
 
                 {/* Today's Reflection Verse */}
                 <View style={styles.section}>
-                    <Text style={styles.sectionTitle}>Today's Reflection</Text>
-                    <View style={styles.verseCard}>
-                        <Text style={styles.verseLabel}>Surah Al-Fajr 89:27-30</Text>
-                        <Text style={styles.verseArabic}>
-                            يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ{'\n'}
-                            ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَّرْضِيَّةً{'\n'}
-                            فَادْخُلِي فِي عِبَادِي{'\n'}
-                            وَادْخُلِي جَنَّتِي
-                        </Text>
-                        <Text style={styles.verseTranslation}>
+                    <Text style={[styles.sectionTitle, { color: theme.colors.text }]}>Today's Reflection</Text>
+                    <View style={[styles.verseCard, { backgroundColor: theme.colors.primary }]}>
+                        <Text style={[styles.verseLabel, { color: theme.colors.accent }]}>Surah Al-Fajr 89:27-30</Text>
+                        <View>
+                            <Text style={[styles.verseArabic, { color: '#FFF', writingDirection: 'rtl' as const }]}>
+                                يَا أَيَّتُهَا النَّفْسُ الْمُطْمَئِنَّةُ{'\n'}
+                                ارْجِعِي إِلَى رَبِّكِ رَاضِيَةً مَّرْضِيَّةً{'\n'}
+                                فَادْخُلِي فِي عَبَادِي{'\n'}
+                                وَادْخُلِي جَنَّتِي
+                            </Text>
+                        </View>
+                        <Text style={[styles.verseTranslation, { color: '#FFFFFFCC' }]}>
                             "O soul that has achieved equilibrium! Return to your Lord, well-pleased and well-pleasing. Enter among My servants. Enter My Paradise."
                         </Text>
-                        <Text style={styles.verseSource}>Ibn Kathir Tafsir — The goal of every believer’s journey.</Text>
+                        <Text style={[styles.verseSource, { color: '#FFFFFF80' }]}>
+                            Ibn Kathir Tafsir — The goal of every believer's journey.
+                        </Text>
                     </View>
                 </View>
 
@@ -212,6 +239,7 @@ const styles = StyleSheet.create({
     stageLabel: { fontSize: 16, fontWeight: '600', color: COLORS.text },
     stageArabic: { fontSize: 16, color: COLORS.primary, marginTop: 2 },
     stageVerseRef: { fontSize: 12, color: COLORS.textSecondary, marginTop: 2 },
+    rtlContainer: { alignItems: 'center' },
     expandIcon: { fontSize: 12, color: COLORS.textSecondary },
     stageDetail: {
         backgroundColor: COLORS.surface, borderRadius: 16, padding: 20,

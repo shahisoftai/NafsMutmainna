@@ -18,6 +18,7 @@ interface AppState {
     // User State
     anonymousId: string | null;
     isOnboarded: boolean;
+    lastSyncedAt: string | null;
 
     // Nafs State
     nafsState: NafsState | null;
@@ -36,6 +37,7 @@ interface AppState {
     // Actions - User
     setAnonymousId: (id: string) => void;
     setOnboarded: (value: boolean) => void;
+    setLastSyncedAt: (iso: string) => void;
 
     // Actions - Nafs
     setNafsState: (state: NafsState) => void;
@@ -74,6 +76,7 @@ export const useAppStore = create<AppState>()(
             // Initial State
             anonymousId: null,
             isOnboarded: false,
+            lastSyncedAt: null,
             nafsState: null,
             progress: null,
             recentEmotions: [],
@@ -84,13 +87,13 @@ export const useAppStore = create<AppState>()(
             // User Actions
             setAnonymousId: (id) => set({ anonymousId: id }),
             setOnboarded: (value) => set({ isOnboarded: value }),
+            setLastSyncedAt: (iso) => set({ lastSyncedAt: iso }),
 
             // Nafs Actions
             setNafsState: (state) => set({ nafsState: state }),
             updateNafsFromCheckin: (mood) =>
                 set((s) => {
                     if (!s.nafsState) return s;
-                    // Update based on mood check-in
                     const moodImpact = (mood - 3) * 5; // -10 to +10
                     const newScore = Math.max(0, Math.min(100, s.nafsState.score + moodImpact));
                     return {
@@ -101,7 +104,7 @@ export const useAppStore = create<AppState>()(
             // Emotion Actions
             addEmotion: (emotion) =>
                 set((s) => ({
-                    recentEmotions: [emotion, ...s.recentEmotions].slice(0, 50), // Keep last 50
+                    recentEmotions: [emotion, ...s.recentEmotions].slice(0, 50),
                 })),
             clearRecentEmotions: () => set({ recentEmotions: [] }),
 
@@ -136,16 +139,8 @@ export const useAppStore = create<AppState>()(
                         .split('T')[0];
 
                     let newStreak = s.progress.streak;
-                    if (lastActive === today) {
-                        // Already updated today
-                        return s;
-                    } else if (lastActive === yesterday) {
-                        // Consecutive day
-                        newStreak = s.progress.streak + 1;
-                    } else {
-                        // Streak broken
-                        newStreak = 1;
-                    }
+                    if (lastActive === today) return s;
+                    newStreak = lastActive === yesterday ? s.progress.streak + 1 : 1;
 
                     return {
                         progress: {
@@ -163,7 +158,7 @@ export const useAppStore = create<AppState>()(
             // Chat Actions
             addChatMessage: (message) =>
                 set((s) => ({
-                    chatHistory: [...s.chatHistory, message].slice(-100), // Keep last 100
+                    chatHistory: [...s.chatHistory, message].slice(-100),
                 })),
             clearChatHistory: () => set({ chatHistory: [] }),
 
@@ -181,6 +176,7 @@ export const useAppStore = create<AppState>()(
                 nafsState: state.nafsState,
                 progress: state.progress,
                 activeTraits: state.activeTraits,
+                lastSyncedAt: state.lastSyncedAt,
             }),
         }
     )
@@ -193,3 +189,4 @@ export const useRecentEmotions = () => useAppStore((s) => s.recentEmotions);
 export const useIsOnboarded = () => useAppStore((s) => s.isOnboarded);
 export const useChatHistory = () => useAppStore((s) => s.chatHistory);
 export const useActiveTraits = () => useAppStore((s) => s.activeTraits);
+export const useLastSyncedAt = () => useAppStore((s) => s.lastSyncedAt);

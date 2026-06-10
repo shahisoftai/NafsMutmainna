@@ -1,13 +1,16 @@
 import { ExpoConfig, ConfigContext } from 'expo/config';
 
+const APP_SCHEME = 'nafsmutmainna';
+
 export default ({ config }: ConfigContext): ExpoConfig => ({
     ...config,
     name: 'NafsMutmainna',
     slug: 'nafsmutmainna',
+    scheme: APP_SCHEME,
     version: '1.0.0',
     orientation: 'portrait',
     icon: './assets/icon.png',
-    userInterfaceStyle: 'light',
+    userInterfaceStyle: 'automatic',
     splash: {
         image: './assets/splash.png',
         resizeMode: 'contain',
@@ -17,6 +20,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     ios: {
         supportsTablet: false,
         bundleIdentifier: 'com.nafsmutmainna.app',
+        associatedDomains: [`applinks:${APP_SCHEME}.com`],
     },
     android: {
         adaptiveIcon: {
@@ -24,6 +28,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
             backgroundColor: '#1B4D3E',
         },
         package: 'com.nafsmutmainna.app',
+        intentFilters: [
+            {
+                action: 'VIEW',
+                autoVerify: false,
+                data: [{ scheme: APP_SCHEME }],
+                category: ['BROWSABLE', 'DEFAULT'],
+            },
+        ],
     },
     web: {
         favicon: './assets/favicon.png',
@@ -38,5 +50,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
         eas: {
             projectId: 'nafsmutmainna',
         },
+        appScheme: APP_SCHEME,
+        authCallbackPath: `${APP_SCHEME}://auth/callback`,
     },
 });
