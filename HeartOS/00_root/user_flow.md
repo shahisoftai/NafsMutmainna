@@ -129,13 +129,27 @@ This loop is the **spine** of the app. Everything else (habits, pathways, analyt
 ## 4 · First-run experience
 
 ```
-  Splash  →  Onboarding (3 cards: Why? What? How?)
-          →  Permission (notifications — opt-in)
-          →  Seed check-in (free-text or pick a starter emotion)
-          →  Home (with the Nafs meter initialised at Lawwamah)
+  Splash  →  Onboarding (7 swipable flash cards)
+          →  Home
 ```
 
-The seed check-in is **optional** — the user can skip straight to Home. If skipped, the Nafs meter defaults to a balanced Lawwamah baseline (50/30/15/5).
+The onboarding is shown **once** on a fresh install. A Skip button on every card and a Get-Started button on the last card both close the flow and write the `hasSeenOnboarding` flag to the `prefs` Hive box. On every subsequent launch the splash routes straight to Home.
+
+### 4.1 The 7 onboarding cards
+
+| # | Headline | Core message |
+|---|----------|-------------|
+| 1 | Welcome to HeartOS | Privacy-first · offline · no account · no ads |
+| 2 | Check In With Your Heart | 3-step daily check-in (emotion → intensity → note) under 60 seconds |
+| 3 | See What Your Heart Reveals | 3–5 heart attributes detected per check-in · growth path through the Nafs |
+| 4 | A Prescription Just for You | 6 intervention types (Quran · Hadith · Dua · Allah Names · Dhikr · Action) |
+| 5 | Your Nafs Meter | 4 stations of the soul · daily check-in moves the needle |
+| 6 | Your 15-Day Journey | Trend chart · Allah Names patterns · day-by-day breakdown |
+| 7 | The 8 Master Pathways | Every struggle has a mapped path · example: Ghadab → Sabr → Hilm → Rifq → Rahmah |
+
+Full implementation reference (visual design, persistence, state machine, file map) is in [`onboarding_flash_cards.md`](onboarding_flash_cards.md).
+
+The seed check-in is **no longer required** as part of first run — the user lands on Home where the Nafs meter initialises at the Lawwamah baseline (50/30/15/5) if no history exists. The user can complete their first check-in at any time from the Home CTA.
 
 ---
 

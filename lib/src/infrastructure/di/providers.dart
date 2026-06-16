@@ -163,3 +163,27 @@ late Box<String> _authBox;
 void setAuthBox(Box<String> box) {
   _authBox = box;
 }
+
+// ============================================================================
+// Onboarding / app-preferences
+// ============================================================================
+//
+// A small Hive box used for app-level boolean flags. Currently used to
+// track whether the user has completed the onboarding flow. The box is
+// opened in main.dart and re-used by the provider below.
+const String kPrefsBoxName = 'prefs';
+const String kOnboardingSeenKey = 'hasSeenOnboarding';
+
+/// Async provider for the app-preferences Hive box.
+final prefsBoxProvider = FutureProvider<Box<String>>((ref) async {
+  if (Hive.isBoxOpen(kPrefsBoxName)) {
+    return Hive.box<String>(kPrefsBoxName);
+  }
+  return Hive.openBox<String>(kPrefsBoxName);
+});
+
+/// True when the user has completed the onboarding flow at least once.
+final hasSeenOnboardingProvider = FutureProvider<bool>((ref) async {
+  final box = await ref.watch(prefsBoxProvider.future);
+  return box.get(kOnboardingSeenKey) == '1';
+});

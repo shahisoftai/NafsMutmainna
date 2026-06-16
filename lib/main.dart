@@ -12,6 +12,8 @@ Future<void> main() async {
   await Hive.initFlutter();
   final authBox = await Hive.openBox<String>('auth');
   di.setAuthBox(authBox);
+  // Eagerly open the prefs box so the first onboarding check is instant.
+  await Hive.openBox<String>(di.kPrefsBoxName);
   runApp(const ProviderScope(child: HeartOsApp()));
 }
 

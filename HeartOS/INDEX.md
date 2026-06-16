@@ -10,13 +10,14 @@
 HeartOS/
 ├── INDEX.md                          ← you are here
 │
-├── 00_root/                          · 7 files · top-level overview
+├── 00_root/                          · 8 files · top-level overview
 │   ├── README.md                       entry point
 │   ├── architecture.md                 four-layer model
 │   ├── user_flow.md                    the 5-screen loop
 │   ├── erd.md                          entity-relationship diagram
 │   ├── heart_graph.md                  the directed graph
 │   ├── scoring_engine.md               the Nafs meter algorithm
+│   ├── onboarding_flash_cards.md       the 7-card first-run flow
 │   └── roadmap.md                      v1 / v1.1 / v1.2 / v2
 │
 ├── 01_core_tables/                  · 4 files · foundational tables
@@ -82,7 +83,7 @@ HeartOS/
     └── synchronization.md              opt-in cloud sync (v2.1)
 ```
 
-**Total: 52 markdown files** (51 docs + AUDIT_REPORT.md) across 9 sections.
+**Total: 53 markdown files** (52 docs + AUDIT_REPORT.md) across 9 sections.
 
 ---
 
@@ -94,6 +95,7 @@ HeartOS/
 | **See the data model** | [`00_root/erd.md`](00_root/erd.md) |
 | **See the architecture** | [`00_root/architecture.md`](00_root/architecture.md) |
 | **Walk through the user experience** | [`00_root/user_flow.md`](00_root/user_flow.md) |
+| **See the first-run onboarding flow** | [`00_root/onboarding_flash_cards.md`](00_root/onboarding_flash_cards.md) |
 | **Understand the recommendation engine** | [`00_root/heart_graph.md`](00_root/heart_graph.md) + [`08_algorithms/recommendation_algorithm.md`](08_algorithms/recommendation_algorithm.md) |
 | **Understand the Nafs meter** | [`00_root/scoring_engine.md`](00_root/scoring_engine.md) + [`03_nafs_engine/nafs_meter_algorithm.md`](03_nafs_engine/nafs_meter_algorithm.md) |
 | **See a specific table** | [`01_core_tables/`](01_core_tables/) or [`04_user_tables/`](04_user_tables/) |
@@ -110,9 +112,9 @@ HeartOS/
 
 | Metric | Value |
 |---|---|
-| Total markdown files | **51** |
+| Total markdown files | **52** |
 | Audit report | 1 (added 2026-06-12) |
-| Total lines of documentation | **~9 500** |
+| Total lines of documentation | **~10 200** |
 | Attributes documented | **200** (with Quran/Hadith/Allah Names) |
 | Emotions documented | **50** (with growth paths) |
 | Nafs states documented | **4** (Ammarah · Lawwamah · Mulhamah · Mutmainnah) |
@@ -132,8 +134,8 @@ HeartOS/
 ```
 INDEX.md
 │
-├── 00_root/ ──────────── Overview (7 files)
-│     README ── architecture ── user_flow ── erd ── heart_graph ── scoring_engine ── roadmap
+├── 00_root/ ──────────── Overview (8 files)
+│     README ── architecture ── user_flow ── erd ── heart_graph ── scoring_engine ── onboarding_flash_cards ── roadmap
 │
 ├── 01_core_tables/ ───── Foundation (4 files)
 │     emotions ── attributes ── domains ── nafs_states

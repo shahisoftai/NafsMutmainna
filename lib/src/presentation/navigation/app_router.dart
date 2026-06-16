@@ -15,11 +15,13 @@ import '../screens/splash/splash_screen.dart';
 import '../screens/habits/habits_screen.dart';
 import '../screens/profile/profile_screen.dart';
 import '../screens/profile/settings_screen.dart';
+import '../screens/onboarding/onboarding_screen.dart';
 
 class AppRouter {
   AppRouter._();
 
   static const String splash = '/';
+  static const String onboarding = '/onboarding';
   static const String home = '/home';
   static const String checkin = '/checkin';
   static const String insight = '/insight';
@@ -38,6 +40,7 @@ class AppRouter {
     debugLogDiagnostics: false,
     routes: [
       GoRoute(path: splash, name: 'splash', builder: (_, __) => const SplashScreen()),
+      GoRoute(path: onboarding, name: 'onboarding', builder: (_, __) => const OnboardingScreen()),
       GoRoute(path: home, name: 'home', builder: (_, __) => const HomeScreen()),
       GoRoute(path: checkin, name: 'checkin', builder: (_, __) => const CheckinScreen()),
       GoRoute(

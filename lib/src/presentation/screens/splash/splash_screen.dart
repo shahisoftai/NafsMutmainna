@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../../core/logger/logger.dart';
 import '../../../infrastructure/di/providers.dart';
+import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../viewmodels/checkin_view_model.dart';
 
@@ -38,7 +39,20 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       }
     }
     if (!mounted) return;
-    context.go('/home');
+
+    // Route to onboarding on first launch; home on every subsequent launch.
+    // The `hasSeenOnboardingProvider` reads from the prefs Hive box opened
+    // in main(). If reading fails for any reason we fall back to home so the
+    // user is never stranded on the splash.
+    bool hasSeenOnboarding = false;
+    try {
+      final seen = await ref.read(hasSeenOnboardingProvider.future);
+      hasSeenOnboarding = seen;
+    } catch (e) {
+      Logger.error('hasSeenOnboarding read failed: $e');
+    }
+    if (!mounted) return;
+    context.go(hasSeenOnboarding ? AppRouter.home : AppRouter.onboarding);
   }
 
   @override
