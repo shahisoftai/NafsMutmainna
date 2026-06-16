@@ -1,0 +1,458 @@
+import '../../../../domain/entities/nafs_history.dart';
+import '../../../../domain/entities/vector4.dart';
+import '../../../../domain/repositories/checkin_repository.dart';
+import '../../../../domain/repositories/emotion_repository.dart';
+import '../../../../domain/repositories/nafs_history_repository.dart';
+
+/// Source of the dhikr shown in the "Today's Practice" hero card.
+enum DhikrSource {
+  /// Derived from today's most recent check-in emotion.
+  todayCheckin,
+
+  /// Curated fallback based on the user's dominant Nafs state.
+  nafsStateBased,
+}
+
+/// Trend direction for Nafs movement.
+enum NafsTrendDirection { up, down, flat }
+
+/// 15-day Nafs trend data for the chart.
+class NafsTrendData {
+  /// Positive score per day (mutmainnah + mulhamah) * 100, for chart plotting.
+  final List<int> dailyScores;
+
+  /// Trend direction compared to 7 days ago.
+  final NafsTrendDirection direction;
+
+  /// Change in percentage points vs 7 days ago.
+  final int deltaPercent;
+
+  /// Whether we have enough data to show the chart.
+  final bool hasEnoughData;
+
+  const NafsTrendData({
+    required this.dailyScores,
+    required this.direction,
+    required this.deltaPercent,
+    required this.hasEnoughData,
+  });
+
+  static const NafsTrendData empty = NafsTrendData(
+    dailyScores: [],
+    direction: NafsTrendDirection.flat,
+    deltaPercent: 0,
+    hasEnoughData: false,
+  );
+}
+
+const Map<String, String> _englishToArabicNames = {
+  'Al-Malik': 'الملك',
+  'Al-Rahman': 'الرحمن',
+  'Al-Rahim': 'الرحيم',
+  'Al-Quddus': 'القدوس',
+  'Al-Salam': 'السلام',
+  'Al-Mu\'min': 'المؤمن',
+  'Al-Muhaymin': 'المهيمن',
+  'Al-\'Aziz': 'العزيز',
+  'Al-Jabbar': 'الجبار',
+  'Al-Mutakabbir': 'المتكبر',
+  'Al-Khaliq': 'الخالق',
+  'Al-Bari\'': 'البارئ',
+  'Al-Musawwir': 'المصور',
+  'Al-Ghaffar': 'الغفار',
+  'Al-Qahhar': 'القهار',
+  'Al-Razzzaq': 'الرزاق',
+  'Al-Fattah': 'الفتاح',
+  'Al-\'Alim': 'العليم',
+  'Al-Qabid': 'القابض',
+  'Al-Basit': 'الباسط',
+  'Al-Khafid': 'الخافض',
+  'Al-Rafi\'': 'الرافع',
+  'Al-Mu\'izz': 'المعز',
+  'Al-Mudhill': 'المذل',
+  'Al-Sami\'': 'السميع',
+  'Al-Basir': 'البصير',
+  'Al-Hakam': 'الحكم',
+  'Al-\'Adl': 'العدل',
+  'Al-Latif': 'اللطيف',
+  'Al-Khabir': 'الخبير',
+  'Al-Halim': 'الحليم',
+  'Al-\'Azim': 'العظيم',
+  'Al-Ghafor': 'الغفور',
+  'Al-Shakur': 'الشكور',
+  'Al-Aliyy': 'العلي',
+  'Al-Kabir': 'الكبير',
+  'Al-Wahid': 'الواحد',
+  'Al-Samad': 'الصمد',
+  'Al-Qadir': 'القادر',
+  'Al-Muqtadir': 'المقتدر',
+  'Al-Muqaddim': 'المقدم',
+  'Al-Mu\'akhkhir': 'المؤخر',
+  'Al-Awwal': 'الأول',
+  'Al-Akhir': 'الآخر',
+  'Al-Zahir': 'الظاهر',
+  'Al-Batin': 'الباطن',
+  'Al-Wali': 'الوالي',
+  'Al-Muta\'ali': 'المتعالي',
+  'Al-Barr': 'البر',
+  'Al-Tawwab': 'التواب',
+  'Al-Muntaqim': 'المنتقم',
+  'Al-\'Afuww': 'العفو',
+  'Al-Ra\'uf': 'الرؤوف',
+  'Al-Dhul-Jalal': 'ذو الجلال',
+  'Al-Ilm': 'العلم',
+  'Al-Haya': 'الحيا',
+  'Al-Kafi': 'الكافي',
+  'Al-Wakil': 'الوكيل',
+  'Al-Matin': 'المتين',
+  'Al-Hafiz': 'الحفيظ',
+  'Al-Jami\'': 'الجامع',
+  'Al-Ghani': 'الغني',
+  'Al-Mughni': 'المغني',
+  'Al-Wahhab': 'الوهاب',
+  'Al-Muhsi': 'المحصي',
+  'Al-Muhyi': 'المحيي',
+  'Al-Mumit': 'المميت',
+  'Al-Hayy': 'الحي',
+  'Al-Qayyum': 'القيوم',
+  'Al-Wajid': 'الواجد',
+  'Al-Majid': 'الماجد',
+  'As-Samad': 'الصمد',
+  'Al-Adl': 'العدل',
+  'Al-Afuww': 'العفو',
+  'Al-Alim': 'العليم',
+  'Al-Azim': 'العظيم',
+  'Al-Ghafur': 'الغفور',
+  'Al-Hadi': 'الهادي',
+  'Al-Hakim': 'الحاكم',
+  'Al-Haqq': 'الحق',
+  'Al-Jalil': 'الجليل',
+  'Al-Karim': 'الكريم',
+  'Al-Qawiyy': 'القوي',
+  'Al-Wadud': 'الودود',
+  'Al-Warith': 'الوارث',
+  'An-Nur': 'النور',
+  'Ar-Rafiq': 'الرفيق',
+  'Ar-Rahim': 'الرحيم',
+  'Ar-Rahman': 'الرحمن',
+  'Ar-Razzaq': 'الرزاق',
+  'Ash-Shahid': 'الشاهد',
+  'As-Sabur': 'الصبور',
+  'As-Salam': 'السلام',
+  'At-Tawwab': 'التواب',
+};
+
+/// A single dhikr / remembrance item.
+class DhikrItem {
+  final String arabic;
+  final String transliteration;
+  final String meaning;
+  final DhikrSource source;
+  final String sourceLabel;
+
+  const DhikrItem({
+    required this.arabic,
+    required this.transliteration,
+    required this.meaning,
+    required this.source,
+    required this.sourceLabel,
+  });
+}
+
+/// A historical aggregation of an Allah Name across a time window.
+class DhikrHistoryItem {
+  final String arabic;
+  final String transliteration;
+  final String meaning;
+  final int timesSuggested;
+  final DateTime lastSuggested;
+  final String lastEmotionContext;
+
+  const DhikrHistoryItem({
+    required this.arabic,
+    required this.transliteration,
+    required this.meaning,
+    required this.timesSuggested,
+    required this.lastSuggested,
+    required this.lastEmotionContext,
+  });
+}
+
+/// The full result rendered by the Daily Dhikr section.
+class DailyDhikr {
+  final DhikrItem? today;
+  final List<DhikrHistoryItem> history;
+  final bool hasAnyCheckins;
+  final NafsTrendData nafsTrend;
+
+  const DailyDhikr({
+    required this.today,
+    required this.history,
+    required this.hasAnyCheckins,
+    required this.nafsTrend,
+  });
+
+  static const DailyDhikr empty = DailyDhikr(
+    today: null,
+    history: [],
+    hasAnyCheckins: false,
+    nafsTrend: NafsTrendData.empty,
+  );
+}
+
+/// Pure resolver for the Daily Dhikr section.
+///
+/// Single Responsibility: given the user's check-in history, emotions, and
+/// current Nafs state, compute today's dhikr + the 15-day aggregation of
+/// Allah Names. All side effects (DB / network) are abstracted behind the
+/// repository interfaces passed in.
+class DailyDhikrResolver {
+  final CheckinRepositoryInterface _checkins;
+  final EmotionRepositoryInterface _emotions;
+  final NafsHistoryRepositoryInterface? _history;
+  final int historyWindowDays;
+  final int maxHistoryItems;
+
+  const DailyDhikrResolver({
+    required CheckinRepositoryInterface checkins,
+    required EmotionRepositoryInterface emotions,
+    NafsHistoryRepositoryInterface? history,
+    this.historyWindowDays = 15,
+    this.maxHistoryItems = 5,
+  })  : _checkins = checkins,
+        _emotions = emotions,
+        _history = history;
+
+  /// Build the full [DailyDhikr] for [today].
+  Future<DailyDhikr> resolve({
+    required DateTime today,
+    required NafsType dominantNafs,
+  }) async {
+    final todayItem = await _resolveToday(today: today, dominantNafs: dominantNafs);
+    final (history, hasAny) = await _resolveHistory(today: today);
+    final nafsTrend = await _resolveNafsTrend(today: today);
+    return DailyDhikr(
+      today: todayItem,
+      history: history,
+      hasAnyCheckins: hasAny,
+      nafsTrend: nafsTrend,
+    );
+  }
+
+  /// Look up today's NafsHistory and return its dominant Nafs type.
+  /// Falls back to Lawwamah (the most common baseline) if no history exists.
+  Future<NafsType> resolveDominantNafs({required DateTime today}) async {
+    if (_history == null) return NafsType.lawwamah;
+    final h = await _history.findForDate(today);
+    return _dominantFromHistory(h);
+  }
+
+  static NafsType _dominantFromHistory(NafsHistory? h) {
+    if (h == null) return NafsType.lawwamah;
+    final v = Vector4(h.ammarah, h.lawwamah, h.mulhamah, h.mutmainnah);
+    return v.dominant;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Today's practice
+  // ---------------------------------------------------------------------------
+
+  Future<DhikrItem?> _resolveToday({
+    required DateTime today,
+    required NafsType dominantNafs,
+  }) async {
+    final todayCheckins = await _checkins.findForDate(today);
+    if (todayCheckins.isNotEmpty) {
+      // Use the most recent check-in's emotion.
+      final latest = todayCheckins.last;
+      final emotion = await _emotions.getById(latest.emotionId);
+      if (emotion != null && emotion.recommendedDhikr.trim().isNotEmpty) {
+        return DhikrItem(
+          arabic: emotion.recommendedDhikr,
+          transliteration: _transliterate(emotion.recommendedDhikr),
+          meaning: _meaningFromEmotion(emotion),
+          source: DhikrSource.todayCheckin,
+          sourceLabel: 'From ${emotion.name.toLowerCase()}',
+        );
+      }
+    }
+    // Fallback: derive from dominant Nafs state.
+    return nafsStateDhikr(dominantNafs);
+  }
+
+  // ---------------------------------------------------------------------------
+  // 15-day history aggregation
+  // ---------------------------------------------------------------------------
+
+  Future<(List<DhikrHistoryItem>, bool)> _resolveHistory({
+    required DateTime today,
+  }) async {
+    final start = today.subtract(Duration(days: historyWindowDays));
+    final recent = await _checkins.findBetween(start, today);
+    if (recent.isEmpty) {
+      return (const <DhikrHistoryItem>[], false);
+    }
+
+    // Aggregate by Arabic key, tracking count + most-recent context.
+    final Map<String, _HistAccumulator> acc = {};
+    for (final c in recent) {
+      final emotion = await _emotions.getById(c.emotionId);
+      if (emotion == null) continue;
+      final names = parseAllahNames(emotion.recommendedAllahNames);
+      for (final n in names) {
+        final key = n.arabic;
+        final existing = acc[key];
+        if (existing == null) {
+          acc[key] = _HistAccumulator(
+            name: n,
+            count: 1,
+            last: c.date,
+            lastEmotion: emotion.name,
+          );
+        } else {
+          existing.count += 1;
+          if (c.date.isAfter(existing.last)) {
+            existing.last = c.date;
+            existing.lastEmotion = emotion.name;
+          }
+        }
+      }
+    }
+
+    final sorted = acc.values.toList()
+      ..sort((a, b) => b.count.compareTo(a.count));
+    final history = sorted
+        .take(maxHistoryItems)
+        .map((a) => DhikrHistoryItem(
+              arabic: a.name.arabic,
+              transliteration: a.name.transliteration,
+              meaning: a.name.meaning,
+              timesSuggested: a.count,
+              lastSuggested: a.last,
+              lastEmotionContext: a.lastEmotion,
+            ))
+        .toList();
+    return (history, true);
+  }
+}
+
+// =============================================================================
+// Internal helpers
+// =============================================================================
+
+class _HistAccumulator {
+  final AllahName name;
+  int count;
+  DateTime last;
+  String lastEmotion;
+  _HistAccumulator({
+    required this.name,
+    required this.count,
+    required this.last,
+    required this.lastEmotion,
+  });
+}
+
+class AllahName {
+  final String arabic;
+  final String transliteration;
+  final String meaning;
+  const AllahName(this.arabic, this.transliteration, this.meaning);
+}
+
+/// Parse a delimited `recommendedAllahNames` string into a list of names.
+///
+/// The seed data uses a mix of separators (commas, semicolons, newlines, pipes).
+/// We split on any of them, trim whitespace, and drop empties.
+List<AllahName> parseAllahNames(String raw) {
+  if (raw.trim().isEmpty) return const [];
+  final parts = raw.split(RegExp(r'[,;\n|]'));
+  final result = <AllahName>[];
+  for (final p in parts) {
+    final trimmed = p.trim();
+    if (trimmed.isEmpty) continue;
+    final arabic = _englishToArabicNames[trimmed] ?? trimmed;
+    result.add(AllahName(
+      arabic,
+      trimmed,
+      _bestEffortMeaning(arabic),
+    ));
+  }
+  return result;
+}
+
+/// Best-effort transliteration. The Arabic text itself is the canonical
+/// representation; this is shown as a hint when the user can't read Arabic.
+String _bestEffortTransliterate(String arabic) {
+  // Strip diacritics for display.
+  return arabic
+      .replaceAll(RegExp(r'[\u064B-\u0652\u0670\u0640]'), '')
+      .trim();
+}
+
+/// Best-effort meaning. The DB does not store English meanings per Name
+/// (only the Arabic form), so we return the Arabic form as the meaning
+/// label. This is intentionally honest rather than fabricated.
+String _bestEffortMeaning(String arabic) => arabic;
+
+String _transliterate(String arabic) => _bestEffortTransliterate(arabic);
+
+String _meaningFromEmotion(dynamic emotion) {
+  // The emotion carries `recommendedDhikr` (Arabic) and `dailyAction` (English).
+  // We surface the daily action as the practical "what to do" for this dhikr.
+  try {
+    final action = (emotion.dailyAction as String?) ?? '';
+    if (action.trim().isNotEmpty) return action;
+  } catch (_) {
+    // ignore — emotion may not have dailyAction
+  }
+  return '';
+}
+
+// =============================================================================
+// Nafs-state-based curated dhikr (public, testable)
+// =============================================================================
+
+/// Curated dhikr per dominant Nafs station. Each was chosen to *move* the
+/// user toward the next station on the Nafs journey:
+///
+/// - Ammarah   → Astaghfirullah (turning back to Allah)
+/// - Lawwamah  → Dua of Yunus (seeking peace in self-criticism)
+/// - Mulhamah  → Alhamdulillah (gratitude, the gateway to inspiration)
+/// - Mutmainnah → SubhanAllahi wa bihamdihi (tranquil remembrance)
+DhikrItem nafsStateDhikr(NafsType nafs) {
+  switch (nafs) {
+    case NafsType.ammarah:
+      return const DhikrItem(
+        arabic: 'أَسْتَغْفِرُ اللَّهَ',
+        transliteration: 'Astaghfirullah',
+        meaning: 'I seek forgiveness from Allah',
+        source: DhikrSource.nafsStateBased,
+        sourceLabel: 'For Ammarah (turning back)',
+      );
+    case NafsType.lawwamah:
+      return const DhikrItem(
+        arabic: 'لَا إِلَهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ',
+        transliteration: "La ilaha illa Anta, Subhanaka, inni kuntu min adh-dhalimin",
+        meaning: 'There is no deity except You; glory be to You; I was among the wrongdoers',
+        source: DhikrSource.nafsStateBased,
+        sourceLabel: 'For Lawwamah (Dua of Yunus)',
+      );
+    case NafsType.mulhamah:
+      return const DhikrItem(
+        arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+        transliteration: 'Alhamdulillah rabbil alameen',
+        meaning: 'All praise is for Allah, Lord of all worlds',
+        source: DhikrSource.nafsStateBased,
+        sourceLabel: 'For Mulhamah (gratitude)',
+      );
+    case NafsType.mutmainnah:
+      return const DhikrItem(
+        arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+        transliteration: 'SubhanAllahi wa bihamdihi',
+        meaning: 'Glory be to Allah and praise be to Him',
+        source: DhikrSource.nafsStateBased,
+        sourceLabel: 'For Mutmainnah (tranquility)',
+      );
+  }
+}

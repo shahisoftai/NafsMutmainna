@@ -1,0 +1,30 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Nafs_ID": 1,
+      "Name": "Ammarah",
+      "Arabic_Name": "النفس الأمّارة",
+      "Description": "The base-desire-driven state. The self follows every whim; the whisper of Shaytan is louder than the whisper of faith."
+    },
+    {
+      "Nafs_ID": 2,
+      "Name": "Lawwamah",
+      "Arabic_Name": "النفس اللوّامة",
+      "Description": "The believer's normal state. The self commits sin, then immediately feels guilt. The conscience is active and loud."
+    },
+    {
+      "Nafs_ID": 3,
+      "Name": "Mulhamah",
+      "Arabic_Name": "النفس الملهمة",
+      "Description": "The soul that has been inspired to distinguish good from evil. It receives ilham from Allah. It is rare and precious."
+    },
+    {
+      "Nafs_ID": 4,
+      "Name": "Mutmainnah",
+      "Arabic_Name": "النفس المطمئنة",
+      "Description": "The highest station attainable in this life. The soul is at peace with Allah, with His decree, and with His creation."
+    }
+  ]
+}

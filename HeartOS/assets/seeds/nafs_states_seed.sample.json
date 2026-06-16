@@ -1,0 +1,35 @@
+{
+  "_comment": "Sample seed for nafs_states (4 rows). Full file in assets/data/nafs_states_seed.json.",
+  "_schema_version": "1.0.0",
+  "_generated": "2026-06-12",
+  "_audited": "2026-06-12",
+  "_audit_reference": "HeartOS/AUDIT_REPORT.md — §2 Source-of-Truth Verification, §5 Statistics",
+  "_source": "HeartOS/01_core_tables/nafs_states.md. The four canonical stations of the soul are Ammarah (12:53), Lawwamah (75:2), Mulhamah (91:7-8), and Mutmainnah (89:27-30).",
+  "_authentication_standard": "All four Quran references are verified against the Mushaf: 12:53 (Ammarah — 'the soul is a persistent enjoiner of evil'), 75:2 (Lawwamah — 'I swear by the self-reproaching soul'), 91:7-8 (Mulhamah — 'the soul at rest and proportioned, then He inspired it'), 89:27-30 (Mutmainnah — 'O soul at peace, return to your Lord'). These are the canonical Quranic anchors of the four-station taxonomy in the Islamic tradition. See HeartOS/GLOSSARY.md for the full description of each state.",
+  "nafs_states": [
+    {
+      "Nafs_ID": 1,
+      "Name": "Ammarah",
+      "Arabic_Name": "النفس الأمّارة",
+      "Description": "The soul that commands evil — base desires dominate. The Quran says: 'Indeed, the soul is a persistent enjoiner of evil — except those upon which my Lord has bestowed mercy.' (12:53)"
+    },
+    {
+      "Nafs_ID": 2,
+      "Name": "Lawwamah",
+      "Arabic_Name": "النفس اللوّامة",
+      "Description": "The self-reproaching soul. The Quran swears by it: 'And I swear by the self-reproaching soul.' (75:2) The default starting state for a new user."
+    },
+    {
+      "Nafs_ID": 3,
+      "Name": "Mulhamah",
+      "Arabic_Name": "النفس الملهمة",
+      "Description": "The inspired soul. The soul that has been inspired to distinguish good from evil and receives ilham from Allah. A rare and precious state."
+    },
+    {
+      "Nafs_ID": 4,
+      "Name": "Mutmainnah",
+      "Arabic_Name": "النفس المطمئنة",
+      "Description": "The tranquil soul. The highest station attainable in this life. The Quran says: 'O soul at peace, return to your Lord, well-pleased and well-pleasing to Him.' (89:27-30)"
+    }
+  ]
+}

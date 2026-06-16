@@ -1,0 +1,21 @@
+{
+  "_comment": "Sample seed for the 10 domains. Full file in assets/data/domains_seed.json.",
+  "_schema_version": "1.0.0",
+  "_generated": "2026-06-12",
+  "_audited": "2026-06-12",
+  "_audit_reference": "HeartOS/AUDIT_REPORT.md — §2 Source-of-Truth Verification, §3.4 Per-File Revisions, §5 Statistics",
+  "_source": "Compiled from HeartOS/01_core_tables/domains.md and HeartOS/07_appendices/domain_structure.md. The 10 runtime domains are the canonical split used by the app; the 5 narrative macro-domains in domain_structure.md §C.1 are coarser and used only for documentation.",
+  "_authentication_standard": "All domain names and descriptions are derived from classical Islamic terminology. No Quran or hadith references are embedded in this seed. See HeartOS/GLOSSARY.md for the canonical definitions of each domain's underlying concepts.",
+  "domains": [
+    { "Domain_ID": 1,  "Domain_Name": "Iman",                      "Arabic_Name": "الإيمان",          "Description": "Faith itself — its presence, growth, and protection. Includes Tawheed, Yaqeen, and the rejection of Shirk." },
+    { "Domain_ID": 2,  "Domain_Name": "Tawheed & Yaqeen",          "Arabic_Name": "التوحيد واليقين",  "Description": "The oneness of Allah and the certainty of faith. Anchors the entire belief system." },
+    { "Domain_ID": 3,  "Domain_Name": "Worship",                   "Arabic_Name": "العبادة",          "Description": "The five pillars and the voluntary acts — prayer, fasting, zakat, hajj, and the smaller sunan." },
+    { "Domain_ID": 4,  "Domain_Name": "Dhikr & Quran",             "Arabic_Name": "الذكر والقرآن",    "Description": "Remembrance of Allah and recitation / reflection on the Quran. The nourishment of the heart." },
+    { "Domain_ID": 5,  "Domain_Name": "Character",                 "Arabic_Name": "الأخلاق",          "Description": "Akhlaq — patience, honesty, humility, generosity, gentleness, and their opposites." },
+    { "Domain_ID": 6,  "Domain_Name": "Relationships",             "Arabic_Name": "العلاقات",         "Description": "How we treat family, neighbours, spouses, the poor, the wronged, the living, and the dead." },
+    { "Domain_ID": 7,  "Domain_Name": "Dunya",                     "Arabic_Name": "الدنيا",            "Description": "Attitude toward the material world — wealth, status, time, body, and possessions." },
+    { "Domain_ID": 8,  "Domain_Name": "Sabr & Tawakkul",           "Arabic_Name": "الصبر والتوكل",     "Description": "Patience in trials and reliance on Allah. The two pillars of the tested soul." },
+    { "Domain_ID": 9,  "Domain_Name": "Diseases of Heart",         "Arabic_Name": "أمراض القلب",      "Description": "The classical amradh al-qalb — Riya, Kibr, Hasad, Nifaq, Ujb, Hiqd, and their remedies." },
+    { "Domain_ID": 10, "Domain_Name": "Love of Allah & Akhirah",   "Arabic_Name": "محبة الله والآخرة", "Description": "Mahabbah — love of Allah, longing for the Akhirah, fear, hope, and tawakkul." }
+  ]
+}

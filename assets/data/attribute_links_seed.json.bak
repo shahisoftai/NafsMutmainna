@@ -1,0 +1,1532 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Link_ID": 1,
+      "Source_Attribute_ID": 1,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.95,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 2,
+      "Source_Attribute_ID": 2,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.95,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 3,
+      "Source_Attribute_ID": 3,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 4,
+      "Source_Attribute_ID": 4,
+      "Target_Attribute_ID": 73,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 5,
+      "Source_Attribute_ID": 5,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 6,
+      "Source_Attribute_ID": 6,
+      "Target_Attribute_ID": 76,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 7,
+      "Source_Attribute_ID": 7,
+      "Target_Attribute_ID": 107,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 8,
+      "Source_Attribute_ID": 8,
+      "Target_Attribute_ID": 80,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 9,
+      "Source_Attribute_ID": 9,
+      "Target_Attribute_ID": 92,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 10,
+      "Source_Attribute_ID": 10,
+      "Target_Attribute_ID": 161,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 11,
+      "Source_Attribute_ID": 11,
+      "Target_Attribute_ID": 168,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 12,
+      "Source_Attribute_ID": 12,
+      "Target_Attribute_ID": 81,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 13,
+      "Source_Attribute_ID": 13,
+      "Target_Attribute_ID": 74,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 14,
+      "Source_Attribute_ID": 14,
+      "Target_Attribute_ID": 79,
+      "Weight": 0.95,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 15,
+      "Source_Attribute_ID": 15,
+      "Target_Attribute_ID": 196,
+      "Weight": 0.95,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 16,
+      "Source_Attribute_ID": 16,
+      "Target_Attribute_ID": 101,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 17,
+      "Source_Attribute_ID": 17,
+      "Target_Attribute_ID": 119,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 18,
+      "Source_Attribute_ID": 18,
+      "Target_Attribute_ID": 95,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 19,
+      "Source_Attribute_ID": 19,
+      "Target_Attribute_ID": 112,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 20,
+      "Source_Attribute_ID": 20,
+      "Target_Attribute_ID": 139,
+      "Weight": 0.75,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 21,
+      "Source_Attribute_ID": 21,
+      "Target_Attribute_ID": 76,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 22,
+      "Source_Attribute_ID": 22,
+      "Target_Attribute_ID": 89,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 23,
+      "Source_Attribute_ID": 23,
+      "Target_Attribute_ID": 86,
+      "Weight": 0.95,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 24,
+      "Source_Attribute_ID": 24,
+      "Target_Attribute_ID": 117,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 25,
+      "Source_Attribute_ID": 25,
+      "Target_Attribute_ID": 118,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 26,
+      "Source_Attribute_ID": 26,
+      "Target_Attribute_ID": 82,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 27,
+      "Source_Attribute_ID": 27,
+      "Target_Attribute_ID": 81,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 28,
+      "Source_Attribute_ID": 29,
+      "Target_Attribute_ID": 73,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 29,
+      "Source_Attribute_ID": 30,
+      "Target_Attribute_ID": 113,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 30,
+      "Source_Attribute_ID": 31,
+      "Target_Attribute_ID": 146,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 31,
+      "Source_Attribute_ID": 32,
+      "Target_Attribute_ID": 138,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 32,
+      "Source_Attribute_ID": 33,
+      "Target_Attribute_ID": 144,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 33,
+      "Source_Attribute_ID": 34,
+      "Target_Attribute_ID": 155,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 34,
+      "Source_Attribute_ID": 35,
+      "Target_Attribute_ID": 84,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 35,
+      "Source_Attribute_ID": 36,
+      "Target_Attribute_ID": 85,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 36,
+      "Source_Attribute_ID": 37,
+      "Target_Attribute_ID": 88,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 37,
+      "Source_Attribute_ID": 39,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 38,
+      "Source_Attribute_ID": 40,
+      "Target_Attribute_ID": 119,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 39,
+      "Source_Attribute_ID": 41,
+      "Target_Attribute_ID": 73,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 40,
+      "Source_Attribute_ID": 42,
+      "Target_Attribute_ID": 114,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 41,
+      "Source_Attribute_ID": 43,
+      "Target_Attribute_ID": 85,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 42,
+      "Source_Attribute_ID": 44,
+      "Target_Attribute_ID": 119,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 43,
+      "Source_Attribute_ID": 46,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 44,
+      "Source_Attribute_ID": 47,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 45,
+      "Source_Attribute_ID": 48,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 46,
+      "Source_Attribute_ID": 49,
+      "Target_Attribute_ID": 81,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 47,
+      "Source_Attribute_ID": 50,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 48,
+      "Source_Attribute_ID": 51,
+      "Target_Attribute_ID": 139,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 49,
+      "Source_Attribute_ID": 52,
+      "Target_Attribute_ID": 77,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 50,
+      "Source_Attribute_ID": 53,
+      "Target_Attribute_ID": 115,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 51,
+      "Source_Attribute_ID": 54,
+      "Target_Attribute_ID": 82,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 52,
+      "Source_Attribute_ID": 55,
+      "Target_Attribute_ID": 150,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 53,
+      "Source_Attribute_ID": 56,
+      "Target_Attribute_ID": 150,
+      "Weight": 0.75,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 54,
+      "Source_Attribute_ID": 58,
+      "Target_Attribute_ID": 118,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 55,
+      "Source_Attribute_ID": 59,
+      "Target_Attribute_ID": 112,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 56,
+      "Source_Attribute_ID": 60,
+      "Target_Attribute_ID": 79,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 57,
+      "Source_Attribute_ID": 61,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 58,
+      "Source_Attribute_ID": 62,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 59,
+      "Source_Attribute_ID": 63,
+      "Target_Attribute_ID": 107,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 60,
+      "Source_Attribute_ID": 64,
+      "Target_Attribute_ID": 161,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 61,
+      "Source_Attribute_ID": 65,
+      "Target_Attribute_ID": 94,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 62,
+      "Source_Attribute_ID": 66,
+      "Target_Attribute_ID": 80,
+      "Weight": 0.9,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 63,
+      "Source_Attribute_ID": 67,
+      "Target_Attribute_ID": 73,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 64,
+      "Source_Attribute_ID": 68,
+      "Target_Attribute_ID": 121,
+      "Weight": 0.8,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 65,
+      "Source_Attribute_ID": 69,
+      "Target_Attribute_ID": 76,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 66,
+      "Source_Attribute_ID": 70,
+      "Target_Attribute_ID": 75,
+      "Weight": 0.85,
+      "Relationship": "Cure"
+    },
+    {
+      "Link_ID": 67,
+      "Source_Attribute_ID": 23,
+      "Target_Attribute_ID": 75,
+      "Weight": 0.95,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 68,
+      "Source_Attribute_ID": 75,
+      "Target_Attribute_ID": 86,
+      "Weight": 0.9,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 69,
+      "Source_Attribute_ID": 86,
+      "Target_Attribute_ID": 85,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 70,
+      "Source_Attribute_ID": 85,
+      "Target_Attribute_ID": 87,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 71,
+      "Source_Attribute_ID": 21,
+      "Target_Attribute_ID": 76,
+      "Weight": 0.9,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 72,
+      "Source_Attribute_ID": 76,
+      "Target_Attribute_ID": 82,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 73,
+      "Source_Attribute_ID": 82,
+      "Target_Attribute_ID": 100,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 74,
+      "Source_Attribute_ID": 2,
+      "Target_Attribute_ID": 98,
+      "Weight": 0.9,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 75,
+      "Source_Attribute_ID": 98,
+      "Target_Attribute_ID": 72,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 76,
+      "Source_Attribute_ID": 72,
+      "Target_Attribute_ID": 96,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 77,
+      "Source_Attribute_ID": 96,
+      "Target_Attribute_ID": 91,
+      "Weight": 0.75,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 78,
+      "Source_Attribute_ID": 77,
+      "Target_Attribute_ID": 80,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 79,
+      "Source_Attribute_ID": 80,
+      "Target_Attribute_ID": 99,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 80,
+      "Source_Attribute_ID": 71,
+      "Target_Attribute_ID": 93,
+      "Weight": 0.9,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 81,
+      "Source_Attribute_ID": 93,
+      "Target_Attribute_ID": 79,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 82,
+      "Source_Attribute_ID": 79,
+      "Target_Attribute_ID": 91,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 83,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 198,
+      "Weight": 0.75,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 84,
+      "Source_Attribute_ID": 10,
+      "Target_Attribute_ID": 161,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 85,
+      "Source_Attribute_ID": 161,
+      "Target_Attribute_ID": 94,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 86,
+      "Source_Attribute_ID": 94,
+      "Target_Attribute_ID": 171,
+      "Weight": 0.75,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 87,
+      "Source_Attribute_ID": 171,
+      "Target_Attribute_ID": 90,
+      "Weight": 0.7,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 88,
+      "Source_Attribute_ID": 27,
+      "Target_Attribute_ID": 159,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 89,
+      "Source_Attribute_ID": 159,
+      "Target_Attribute_ID": 100,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 90,
+      "Source_Attribute_ID": 103,
+      "Target_Attribute_ID": 107,
+      "Weight": 0.85,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 91,
+      "Source_Attribute_ID": 107,
+      "Target_Attribute_ID": 80,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 92,
+      "Source_Attribute_ID": 101,
+      "Target_Attribute_ID": 198,
+      "Weight": 0.7,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 93,
+      "Source_Attribute_ID": 90,
+      "Target_Attribute_ID": 91,
+      "Weight": 0.8,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 94,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 198,
+      "Weight": 0.75,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 95,
+      "Source_Attribute_ID": 198,
+      "Target_Attribute_ID": 193,
+      "Weight": 0.7,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 96,
+      "Source_Attribute_ID": 193,
+      "Target_Attribute_ID": 191,
+      "Weight": 0.65,
+      "Relationship": "Leads_To"
+    },
+    {
+      "Link_ID": 97,
+      "Source_Attribute_ID": 72,
+      "Target_Attribute_ID": 131,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 98,
+      "Source_Attribute_ID": 98,
+      "Target_Attribute_ID": 97,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 99,
+      "Source_Attribute_ID": 75,
+      "Target_Attribute_ID": 165,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 100,
+      "Source_Attribute_ID": 77,
+      "Target_Attribute_ID": 133,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 101,
+      "Source_Attribute_ID": 76,
+      "Target_Attribute_ID": 187,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 102,
+      "Source_Attribute_ID": 99,
+      "Target_Attribute_ID": 185,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 103,
+      "Source_Attribute_ID": 80,
+      "Target_Attribute_ID": 44,
+      "Weight": 0.65,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 104,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 180,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 105,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 181,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 106,
+      "Source_Attribute_ID": 96,
+      "Target_Attribute_ID": 140,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 107,
+      "Source_Attribute_ID": 74,
+      "Target_Attribute_ID": 121,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 108,
+      "Source_Attribute_ID": 74,
+      "Target_Attribute_ID": 83,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 109,
+      "Source_Attribute_ID": 74,
+      "Target_Attribute_ID": 158,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 110,
+      "Source_Attribute_ID": 90,
+      "Target_Attribute_ID": 194,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 111,
+      "Source_Attribute_ID": 90,
+      "Target_Attribute_ID": 175,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 112,
+      "Source_Attribute_ID": 139,
+      "Target_Attribute_ID": 121,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 113,
+      "Source_Attribute_ID": 107,
+      "Target_Attribute_ID": 108,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 114,
+      "Source_Attribute_ID": 107,
+      "Target_Attribute_ID": 162,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 115,
+      "Source_Attribute_ID": 118,
+      "Target_Attribute_ID": 132,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 116,
+      "Source_Attribute_ID": 125,
+      "Target_Attribute_ID": 195,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 117,
+      "Source_Attribute_ID": 196,
+      "Target_Attribute_ID": 125,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 118,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 102,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 119,
+      "Source_Attribute_ID": 78,
+      "Target_Attribute_ID": 168,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 120,
+      "Source_Attribute_ID": 168,
+      "Target_Attribute_ID": 169,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 121,
+      "Source_Attribute_ID": 85,
+      "Target_Attribute_ID": 156,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 122,
+      "Source_Attribute_ID": 87,
+      "Target_Attribute_ID": 86,
+      "Weight": 0.65,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 123,
+      "Source_Attribute_ID": 155,
+      "Target_Attribute_ID": 175,
+      "Weight": 0.7,
+      "Relationship": "Strengthens"
+    },
+    {
+      "Link_ID": 124,
+      "Source_Attribute_ID": 1,
+      "Target_Attribute_ID": 72,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 125,
+      "Source_Attribute_ID": 2,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 126,
+      "Source_Attribute_ID": 3,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 127,
+      "Source_Attribute_ID": 4,
+      "Target_Attribute_ID": 73,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 128,
+      "Source_Attribute_ID": 5,
+      "Target_Attribute_ID": 72,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 129,
+      "Source_Attribute_ID": 6,
+      "Target_Attribute_ID": 76,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 130,
+      "Source_Attribute_ID": 7,
+      "Target_Attribute_ID": 107,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 131,
+      "Source_Attribute_ID": 8,
+      "Target_Attribute_ID": 80,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 132,
+      "Source_Attribute_ID": 9,
+      "Target_Attribute_ID": 92,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 133,
+      "Source_Attribute_ID": 10,
+      "Target_Attribute_ID": 161,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 134,
+      "Source_Attribute_ID": 11,
+      "Target_Attribute_ID": 168,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 135,
+      "Source_Attribute_ID": 12,
+      "Target_Attribute_ID": 81,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 136,
+      "Source_Attribute_ID": 13,
+      "Target_Attribute_ID": 74,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 137,
+      "Source_Attribute_ID": 14,
+      "Target_Attribute_ID": 79,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 138,
+      "Source_Attribute_ID": 15,
+      "Target_Attribute_ID": 196,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 139,
+      "Source_Attribute_ID": 16,
+      "Target_Attribute_ID": 101,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 140,
+      "Source_Attribute_ID": 17,
+      "Target_Attribute_ID": 119,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 141,
+      "Source_Attribute_ID": 18,
+      "Target_Attribute_ID": 95,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 142,
+      "Source_Attribute_ID": 19,
+      "Target_Attribute_ID": 112,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 143,
+      "Source_Attribute_ID": 22,
+      "Target_Attribute_ID": 89,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 144,
+      "Source_Attribute_ID": 23,
+      "Target_Attribute_ID": 86,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 145,
+      "Source_Attribute_ID": 24,
+      "Target_Attribute_ID": 117,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 146,
+      "Source_Attribute_ID": 25,
+      "Target_Attribute_ID": 118,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 147,
+      "Source_Attribute_ID": 26,
+      "Target_Attribute_ID": 82,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 148,
+      "Source_Attribute_ID": 27,
+      "Target_Attribute_ID": 81,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 149,
+      "Source_Attribute_ID": 29,
+      "Target_Attribute_ID": 73,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 150,
+      "Source_Attribute_ID": 30,
+      "Target_Attribute_ID": 113,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 151,
+      "Source_Attribute_ID": 31,
+      "Target_Attribute_ID": 146,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 152,
+      "Source_Attribute_ID": 32,
+      "Target_Attribute_ID": 138,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 153,
+      "Source_Attribute_ID": 33,
+      "Target_Attribute_ID": 144,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 154,
+      "Source_Attribute_ID": 34,
+      "Target_Attribute_ID": 155,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 155,
+      "Source_Attribute_ID": 35,
+      "Target_Attribute_ID": 84,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 156,
+      "Source_Attribute_ID": 36,
+      "Target_Attribute_ID": 85,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 157,
+      "Source_Attribute_ID": 38,
+      "Target_Attribute_ID": 119,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 158,
+      "Source_Attribute_ID": 39,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 159,
+      "Source_Attribute_ID": 41,
+      "Target_Attribute_ID": 73,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 160,
+      "Source_Attribute_ID": 42,
+      "Target_Attribute_ID": 114,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 161,
+      "Source_Attribute_ID": 43,
+      "Target_Attribute_ID": 85,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 162,
+      "Source_Attribute_ID": 44,
+      "Target_Attribute_ID": 119,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 163,
+      "Source_Attribute_ID": 46,
+      "Target_Attribute_ID": 72,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 164,
+      "Source_Attribute_ID": 47,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 165,
+      "Source_Attribute_ID": 48,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 166,
+      "Source_Attribute_ID": 49,
+      "Target_Attribute_ID": 81,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 167,
+      "Source_Attribute_ID": 50,
+      "Target_Attribute_ID": 72,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 168,
+      "Source_Attribute_ID": 51,
+      "Target_Attribute_ID": 139,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 169,
+      "Source_Attribute_ID": 53,
+      "Target_Attribute_ID": 115,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 170,
+      "Source_Attribute_ID": 54,
+      "Target_Attribute_ID": 82,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 171,
+      "Source_Attribute_ID": 57,
+      "Target_Attribute_ID": 104,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 172,
+      "Source_Attribute_ID": 59,
+      "Target_Attribute_ID": 112,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 173,
+      "Source_Attribute_ID": 60,
+      "Target_Attribute_ID": 79,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 174,
+      "Source_Attribute_ID": 61,
+      "Target_Attribute_ID": 72,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 175,
+      "Source_Attribute_ID": 62,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 176,
+      "Source_Attribute_ID": 63,
+      "Target_Attribute_ID": 107,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 177,
+      "Source_Attribute_ID": 64,
+      "Target_Attribute_ID": 161,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 178,
+      "Source_Attribute_ID": 66,
+      "Target_Attribute_ID": 80,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 179,
+      "Source_Attribute_ID": 67,
+      "Target_Attribute_ID": 73,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 180,
+      "Source_Attribute_ID": 68,
+      "Target_Attribute_ID": 121,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 181,
+      "Source_Attribute_ID": 69,
+      "Target_Attribute_ID": 76,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 182,
+      "Source_Attribute_ID": 70,
+      "Target_Attribute_ID": 75,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 183,
+      "Source_Attribute_ID": 72,
+      "Target_Attribute_ID": 131,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 184,
+      "Source_Attribute_ID": 73,
+      "Target_Attribute_ID": 131,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 185,
+      "Source_Attribute_ID": 74,
+      "Target_Attribute_ID": 121,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 186,
+      "Source_Attribute_ID": 75,
+      "Target_Attribute_ID": 165,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 187,
+      "Source_Attribute_ID": 76,
+      "Target_Attribute_ID": 187,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 188,
+      "Source_Attribute_ID": 77,
+      "Target_Attribute_ID": 133,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 189,
+      "Source_Attribute_ID": 78,
+      "Target_Attribute_ID": 168,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 190,
+      "Source_Attribute_ID": 79,
+      "Target_Attribute_ID": 110,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 191,
+      "Source_Attribute_ID": 80,
+      "Target_Attribute_ID": 110,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 192,
+      "Source_Attribute_ID": 81,
+      "Target_Attribute_ID": 159,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 193,
+      "Source_Attribute_ID": 82,
+      "Target_Attribute_ID": 154,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 194,
+      "Source_Attribute_ID": 83,
+      "Target_Attribute_ID": 158,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 195,
+      "Source_Attribute_ID": 84,
+      "Target_Attribute_ID": 120,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 196,
+      "Source_Attribute_ID": 85,
+      "Target_Attribute_ID": 151,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 197,
+      "Source_Attribute_ID": 86,
+      "Target_Attribute_ID": 152,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 198,
+      "Source_Attribute_ID": 87,
+      "Target_Attribute_ID": 156,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 199,
+      "Source_Attribute_ID": 88,
+      "Target_Attribute_ID": 89,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 200,
+      "Source_Attribute_ID": 90,
+      "Target_Attribute_ID": 175,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 201,
+      "Source_Attribute_ID": 91,
+      "Target_Attribute_ID": 180,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 202,
+      "Source_Attribute_ID": 93,
+      "Target_Attribute_ID": 164,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 203,
+      "Source_Attribute_ID": 94,
+      "Target_Attribute_ID": 160,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 204,
+      "Source_Attribute_ID": 96,
+      "Target_Attribute_ID": 174,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 205,
+      "Source_Attribute_ID": 97,
+      "Target_Attribute_ID": 98,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 206,
+      "Source_Attribute_ID": 98,
+      "Target_Attribute_ID": 167,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 207,
+      "Source_Attribute_ID": 99,
+      "Target_Attribute_ID": 185,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 208,
+      "Source_Attribute_ID": 100,
+      "Target_Attribute_ID": 177,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 209,
+      "Source_Attribute_ID": 101,
+      "Target_Attribute_ID": 182,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 210,
+      "Source_Attribute_ID": 105,
+      "Target_Attribute_ID": 183,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 211,
+      "Source_Attribute_ID": 107,
+      "Target_Attribute_ID": 186,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 212,
+      "Source_Attribute_ID": 108,
+      "Target_Attribute_ID": 162,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 213,
+      "Source_Attribute_ID": 117,
+      "Target_Attribute_ID": 149,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 214,
+      "Source_Attribute_ID": 121,
+      "Target_Attribute_ID": 184,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 215,
+      "Source_Attribute_ID": 122,
+      "Target_Attribute_ID": 139,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 216,
+      "Source_Attribute_ID": 127,
+      "Target_Attribute_ID": 181,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 217,
+      "Source_Attribute_ID": 133,
+      "Target_Attribute_ID": 176,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    },
+    {
+      "Link_ID": 218,
+      "Source_Attribute_ID": 136,
+      "Target_Attribute_ID": 138,
+      "Weight": 1.0,
+      "Relationship": "Opposes"
+    }
+  ]
+}

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Heart OS v1 — Database Architecture</title>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #1e293b;
+    --panel-2: #273449;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --know: #f59e0b;   /* Knowledge  - amber  */
+    --graph: #8b5cf6;  /* Graph       - violet */
+    --nafs: #10b981;   /* Nafs        - emerald */
+    --user: #3b82f6;   /* User        - blue   */
+    --opt:  #64748b;   /* Optional    - slate  */
+    --border: #334155;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  header {
+    text-align: center;
+    padding: 2.5rem 1rem 1rem;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa, #34d399);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  header p { color: var(--muted); margin: .4rem 0 0; }
+  nav {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem;
+    padding: 1rem; background: var(--panel); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 10;
+  }
+  nav a {
+    color: var(--text); text-decoration: none;
+    padding: .4rem .9rem; border-radius: 999px;
+    background: var(--panel-2); font-size: .9rem;
+    border: 1px solid var(--border);
+  }
+  nav a:hover { background: var(--accent); color: #0f172a; }
+  main { max-width: 1400px; margin: 0 auto; padding: 2rem 1rem 4rem; }
+  section { margin-bottom: 3rem; }
+  section h2 {
+    font-size: 1.5rem;
+    border-left: 4px solid var(--accent);
+    padding-left: .8rem;
+    margin-bottom: 1rem;
+  }
+  .layers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  .layer {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem;
+    border-top: 4px solid;
+  }
+  .layer.know { border-top-color: var(--know); }
+  .layer.graph { border-top-color: var(--graph); }
+  .layer.nafs { border-top-color: var(--nafs); }
+  .layer.user { border-top-color: var(--user); }
+  .layer.opt { border-top-color: var(--opt); }
+  .layer h3 { margin: 0 0 .6rem; font-size: 1.1rem; }
+  .layer ul { padding-left: 1.1rem; margin: 0; color: var(--muted); }
+  .layer li { margin: .25rem 0; font-size: .92rem; }
+  .layer li b { color: var(--text); }
+  .diagram {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+  }
+  .flow {
+    display: flex; flex-direction: column; gap: .8rem;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.5rem;
+  }
+  .flow-step {
+    background: var(--panel-2);
+    border-left: 4px solid var(--accent);
+    padding: .9rem 1.1rem; border-radius: 8px;
+    position: relative;
+  }
+  .flow-step .num {
+    position: absolute; right: 1rem; top: 50%;
+    transform: translateY(-50%);
+    background: var(--accent); color: #0f172a;
+    font-weight: 700; border-radius: 50%;
+    width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+    font-size: .85rem;
+  }
+  .flow-step h4 { margin: 0 0 .3rem; }
+  .flow-step p { margin: 0; color: var(--muted); font-size: .9rem; }
+  .arrow-down {
+    text-align: center; color: var(--accent); font-size: 1.2rem; margin: -.3rem 0;
+  }
+  .example {
+    background: var(--panel-2);
+    border: 1px dashed var(--border);
+    border-radius: 8px; padding: 1rem; margin-top: 1rem;
+  }
+  .example code {
+    color: #fbbf24; background: #0f172a;
+    padding: .15rem .45rem; border-radius: 4px; font-size: .9rem;
+  }
+  .tbl-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: .8rem; margin-top: 1rem;
+  }
+  .tbl {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: .8rem;
+    font-size: .88rem;
+  }
+  .tbl h5 { margin: 0 0 .4rem; color: var(--accent); }
+  .tbl .col { color: var(--muted); }
+  .note {
+    background: rgba(245, 158, 11, .1);
+    border: 1px solid var(--know);
+    border-radius: 8px; padding: 1rem; margin-top: 1rem;
+    color: #fde68a; font-size: .9rem;
+  }
+  footer {
+    text-align: center; color: var(--muted);
+    padding: 2rem 1rem; border-top: 1px solid var(--border);
+    font-size: .85rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Heart OS v1 — Database Architecture</h1>
+  <p>14 core tables · 4 layers · 100% offline · Flutter + SQLite</p>
+</header>
+
+<nav>
+  <a href="#layers">Layers</a>
+  <a href="#erd">ER Diagram</a>
+  <a href="#flow">Data Flow</a>
+  <a href="#graph">Heart Graph</a>
+  <a href="#tables">Tables</a>
+</nav>
+
+<main>
+
+<!-- ============================================================ -->
+<section id="layers">
+  <h2>1 · The 4 Layers</h2>
+  <div class="layers">
+
+    <div class="layer know">
+      <h3>🟡 Knowledge Layer</h3>
+      <p style="color:var(--muted);font-size:.9rem">Static Islamic content (seed once).</p>
+      <ul>
+        <li><b>attributes</b> — 200 records</li>
+        <li><b>emotions</b> — 50 records</li>
+      </ul>
+    </div>
+
+    <div class="layer graph">
+      <h3>🟣 Graph Layer</h3>
+      <p style="color:var(--muted);font-size:.9rem">Relationships &amp; intelligence.</p>
+      <ul>
+        <li><b>emotion_attribute_links</b></li>
+        <li><b>attribute_links</b> (Heart Graph)</li>
+        <li><b>domains</b> — 10 records</li>
+        <li><b>domain_attribute_links</b></li>
+        <li><b>domain_emotion_links</b></li>
+      </ul>
+    </div>
+
+    <div class="layer nafs">
+      <h3>🟢 Nafs Layer</h3>
+      <p style="color:var(--muted);font-size:.9rem">Spiritual-state calculations.</p>
+      <ul>
+        <li><b>nafs_states</b> — 4 records</li>
+        <li><b>attribute_nafs_weights</b></li>
+        <li><b>emotion_nafs_weights</b></li>
+      </ul>
+    </div>
+
+    <div class="layer user">
+      <h3>🔵 User Layer</h3>
+      <p style="color:var(--muted);font-size:.9rem">Daily activity &amp; history.</p>
+      <ul>
+        <li><b>checkins</b></li>
+        <li><b>detected_attributes</b></li>
+        <li><b>nafs_history</b></li>
+        <li><b>interventions_history</b></li>
+        <li><b>habits</b></li>
+        <li><b>habit_logs</b></li>
+      </ul>
+    </div>
+
+    <div class="layer opt">
+      <h3>⚪ Optional / Future</h3>
+      <p style="color:var(--muted);font-size:.9rem">Add later without redesign.</p>
+      <ul>
+        <li><b>master_pathways</b></li>
+        <li><b>user_goals</b></li>
+        <li><b>milestones</b></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="erd">
+  <h2>2 · Entity-Relationship Diagram</h2>
+  <p style="color:var(--muted)">All 14 core tables with primary keys (PK), foreign keys (FK), and the cardinality between them.</p>
+
+  <div class="diagram">
+<pre class="mermaid">
+erDiagram
+    EMOTIONS ||--o{ EMOTION_ATTRIBUTE_LINKS : "has"
+    ATTRIBUTES ||--o{ EMOTION_ATTRIBUTE_LINKS : "has"
+    ATTRIBUTES ||--o{ ATTRIBUTE_LINKS : "source"
+    ATTRIBUTES ||--o{ ATTRIBUTE_LINKS : "target"
+    DOMAINS ||--o{ DOMAIN_ATTRIBUTE_LINKS : "groups"
+    ATTRIBUTES ||--o{ DOMAIN_ATTRIBUTE_LINKS : "belongs"
+    DOMAINS ||--o{ DOMAIN_EMOTION_LINKS : "groups"
+    EMOTIONS ||--o{ DOMAIN_EMOTION_LINKS : "belongs"
+    NAFS_STATES ||--o{ ATTRIBUTE_NAFS_WEIGHTS : "weights"
+    ATTRIBUTES ||--o{ ATTRIBUTE_NAFS_WEIGHTS : "scored"
+    NAFS_STATES ||--o{ EMOTION_NAFS_WEIGHTS : "weights"
+    EMOTIONS ||--o{ EMOTION_NAFS_WEIGHTS : "scored"
+    EMOTIONS ||--o{ CHECKINS : "logged"
+    EMOTIONS ||--o{ DETECTED_ATTRIBUTES : "derives"
+    ATTRIBUTES ||--o{ DETECTED_ATTRIBUTES : "scored"
+    CHECKINS ||--o{ DETECTED_ATTRIBUTES : "produces"
+    CHECKINS ||--o{ INTERVENTIONS_HISTORY : "triggers"
+    EMOTIONS ||--o{ INTERVENTIONS_HISTORY : "targets"
+    ATTRIBUTES ||--o{ INTERVENTIONS_HISTORY : "targets"
+    HABITS ||--o{ HABIT_LOGS : "tracked"
+
+    EMOTIONS {
+        int Emotion_ID PK
+        string Name
+        string Arabic_Name
+        text Description
+        text Triggers
+        text Growth_Path
+        string Intervention_Type
+    }
+
+    ATTRIBUTES {
+        int Attribute_ID PK
+        string Name
+        string Arabic_Name
+        text Quran
+        text Hadith
+        text Dua
+        text Allah_Names
+        text Description
+    }
+
+    EMOTION_ATTRIBUTE_LINKS {
+        int Link_ID PK
+        int Emotion_ID FK
+        int Attribute_ID FK
+        float Weight
+        string Role "Disease|Treatment|Strengthens|Core"
+    }
+
+    ATTRIBUTE_LINKS {
+        int Link_ID PK
+        int Source_Attribute_ID FK
+        int Target_Attribute_ID FK
+        float Weight
+        string Relationship "Cure|Leads_To|Strengthens|Opposes"
+    }
+
+    DOMAINS {
+        int Domain_ID PK
+        string Domain_Name
+        string Arabic_Name
+        text Description
+    }
+
+    DOMAIN_ATTRIBUTE_LINKS {
+        int Link_ID PK
+        int Domain_ID FK
+        int Attribute_ID FK
+        float Weight
+    }
+
+    DOMAIN_EMOTION_LINKS {
+        int Link_ID PK
+        int Domain_ID FK
+        int Emotion_ID FK
+        float Weight
+    }
+
+    NAFS_STATES {
+        int Nafs_ID PK
+        string Name "Ammarah|Lawwamah|Mulhamah|Mutmainnah"
+        string Arabic_Name
+        text Description
+    }
+
+    ATTRIBUTE_NAFS_WEIGHTS {
+        int Attribute_ID PK_FK
+        float Ammarah
+        float Lawwamah
+        float Mulhamah
+        float Mutmainnah
+    }
+
+    EMOTION_NAFS_WEIGHTS {
+        int Emotion_ID PK_FK
+        float Ammarah
+        float Lawwamah
+        float Mulhamah
+        float Mutmainnah
+    }
+
+    CHECKINS {
+        int Checkin_ID PK
+        date Date
+        int Emotion_ID FK
+        int Intensity "1-10"
+        text Notes
+    }
+
+    DETECTED_ATTRIBUTES {
+        int Record_ID PK
+        date Date
+        int Attribute_ID FK
+        float Score
+    }
+
+    NAFS_HISTORY {
+        int Record_ID PK
+        date Date
+        float Ammarah
+        float Lawwamah
+        float Mulhamah
+        float Mutmainnah
+    }
+
+    INTERVENTIONS_HISTORY {
+        int Record_ID PK
+        date Date
+        int Emotion_ID FK
+        int Attribute_ID FK
+        string Intervention_Type
+        bool Completed
+    }
+
+    HABITS {
+        int Habit_ID PK
+        string Name
+        string Category "Prayer|Quran|Dhikr|Charity|Exercise"
+    }
+
+    HABIT_LOGS {
+        int Record_ID PK
+        date Date
+        int Habit_ID FK
+        bool Completed
+    }
+</pre>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="flow">
+  <h2>3 · Data Flow (User Journey)</h2>
+
+  <div class="flow">
+    <div class="flow-step">
+      <span class="num">1</span>
+      <h4>User — Daily Check-In</h4>
+      <p>User selects an emotion + intensity + optional notes → <code>checkins</code></p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">2</span>
+      <h4>Emotion → Attributes</h4>
+      <p>Lookup <code>emotion_attribute_links</code> by <em>Emotion_ID</em> → affected <code>attributes</code></p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">3</span>
+      <h4>Attributes → Growth Path</h4>
+      <p>Traverse <code>attribute_links</code> (Heart Graph) to find cure / next-step attribute</p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">4</span>
+      <h4>Domain Analysis</h4>
+      <p>Use <code>domain_attribute_links</code> + <code>domain_emotion_links</code> to surface the top 10 domains affected</p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">5</span>
+      <h4>Nafs Calculation</h4>
+      <p>Multiply emotion/attribute by <code>attribute_nafs_weights</code> / <code>emotion_nafs_weights</code> → write to <code>nafs_history</code></p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">6</span>
+      <h4>Recommendations</h4>
+      <p>Pull Quran · Hadith · Dua · Allah Names for the target attribute → log in <code>interventions_history</code></p>
+    </div>
+    <div class="arrow-down">▼</div>
+    <div class="flow-step">
+      <span class="num">7</span>
+      <h4>User Feedback → 15-Day Nafs Meter</h4>
+      <p>Rolling window over <code>nafs_history</code> renders the Ammarah → Mutmainnah meter</p>
+    </div>
+  </div>
+
+  <div class="example">
+    <b>Example trace</b> — User feels <code>Ghadab</code> (anger) at intensity 7:
+    <br/><br/>
+    1. Insert into <code>checkins</code><br/>
+    2. <code>emotion_attribute_links</code> returns <code>Ghadab</code> + <code>Sabr</code> (Disease + Treatment)<br/>
+    3. <code>attribute_links</code> graph returns path: <code>Ghadab → Sabr → Hilm → Rifq → Rahmah</code><br/>
+    4. <code>domain_attribute_links</code> classifies these as <em>Character</em> + <em>Relationships</em><br/>
+    5. <code>emotion_nafs_weights</code> on <code>Ghadab</code> → Ammarah +0.6, Lawwamah +0.3<br/>
+    6. Show "Patience verses" + dua for Sabr, log to <code>interventions_history</code><br/>
+    7. After 15 days of consistent check-ins, Nafs meter shifts toward Mulhamah
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="graph">
+  <h2>4 · The Heart Graph (Conceptual)</h2>
+  <p style="color:var(--muted)">The directional graph of <em>attribute_links</em> is the real brain of the app.</p>
+
+  <div class="diagram">
+<pre class="mermaid">
+flowchart LR
+    E["EMOTIONS<br/>(50)"]:::know
+    A["ATTRIBUTES<br/>(200)"]:::know
+    D["DOMAINS<br/>(10)"]:::graph
+    N["NAFS STATES<br/>(4)"]:::nafs
+    R["RECOMMENDATIONS<br/>Quran · Hadith · Dua"]:::graph
+    U["USER ACTIONS<br/>Check-in · Habit"]:::user
+    H["HEART HISTORY"]:::user
+    M["NAFS METER"]:::nafs
+
+    E -- emotion_attribute_links --> A
+    A -- attribute_links --> A
+    A -- domain_attribute_links --> D
+    A -- attribute_nafs_weights --> N
+    E -- emotion_nafs_weights --> N
+    A --> R
+    R --> U
+    U --> H
+    H --> M
+    M -.feedback.-> U
+
+    classDef know fill:#fef3c7,stroke:#f59e0b,color:#78350f
+    classDef graph fill:#ede9fe,stroke:#8b5cf6,color:#4c1d95
+    classDef nafs fill:#d1fae5,stroke:#10b981,color:#064e3b
+    classDef user fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+</pre>
+  </div>
+
+  <div class="example">
+    <b>Sample growth path</b> from the attribute graph:
+    <br/><br/>
+    <code>Ghadab</code> (Anger)
+     &nbsp;→&nbsp; <code>Sabr</code> (Patience)
+     &nbsp;→&nbsp; <code>Hilm</code> (Forbearance)
+     &nbsp;→&nbsp; <code>Rifq</code> (Gentleness)
+     &nbsp;→&nbsp; <code>Rahmah</code> (Mercy)
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<section id="tables">
+  <h2>5 · All Tables at a Glance</h2>
+
+  <div class="tbl-grid">
+    <div class="tbl"><h5>1 · attributes</h5><div class="col">Attribute_ID · Name · Arabic_Name · Quran · Hadith · Dua · Allah_Names</div></div>
+    <div class="tbl"><h5>2 · emotions</h5><div class="col">Emotion_ID · Name · Description · Triggers · Growth_Path · Intervention_Type</div></div>
+    <div class="tbl"><h5>3 · emotion_attribute_links</h5><div class="col">Link_ID · Emotion_ID · Attribute_ID · Weight · Role</div></div>
+    <div class="tbl"><h5>4 · attribute_links</h5><div class="col">Link_ID · Source_ID · Target_ID · Weight · Relationship</div></div>
+    <div class="tbl"><h5>5 · domains</h5><div class="col">Domain_ID · Domain_Name · Arabic_Name</div></div>
+    <div class="tbl"><h5>6 · domain_attribute_links</h5><div class="col">Link_ID · Domain_ID · Attribute_ID · Weight</div></div>
+    <div class="tbl"><h5>7 · domain_emotion_links</h5><div class="col">Link_ID · Domain_ID · Emotion_ID · Weight</div></div>
+    <div class="tbl"><h5>8 · nafs_states</h5><div class="col">Nafs_ID · Name · Arabic_Name · Description</div></div>
+    <div class="tbl"><h5>9 · attribute_nafs_weights</h5><div class="col">Attribute_ID · Ammarah · Lawwamah · Mulhamah · Mutmainnah</div></div>
+    <div class="tbl"><h5>10 · emotion_nafs_weights</h5><div class="col">Emotion_ID · Ammarah · Lawwamah · Mulhamah · Mutmainnah</div></div>
+    <div class="tbl"><h5>11 · checkins</h5><div class="col">Checkin_ID · Date · Emotion_ID · Intensity · Notes</div></div>
+    <div class="tbl"><h5>12 · detected_attributes</h5><div class="col">Record_ID · Date · Attribute_ID · Score</div></div>
+    <div class="tbl"><h5>13 · nafs_history</h5><div class="col">Record_ID · Date · Ammarah · Lawwamah · Mulhamah · Mutmainnah</div></div>
+    <div class="tbl"><h5>14 · interventions_history</h5><div class="col">Record_ID · Date · Emotion_ID · Attribute_ID · Type · Completed</div></div>
+    <div class="tbl"><h5>15 · habits</h5><div class="col">Habit_ID · Name · Category</div></div>
+    <div class="tbl"><h5>16 · habit_logs</h5><div class="col">Record_ID · Date · Habit_ID · Completed</div></div>
+  </div>
+
+  <div class="note">
+    <b>Recommended v1 scope:</b> ship tables <b>1 – 14</b> first. They cover offline operation, AI-independent
+    recommendations, the Heart Graph, daily check-ins, the 15-day Nafs meter, and personalised interventions.
+    Tables 15-19 (habits, pathways, goals, milestones) can be added later without redesigning the schema.
+  </div>
+</section>
+
+</main>
+
+<footer>
+  Heart OS v1 · Database Architecture · Flutter + SQLite (offline-first)
+</footer>
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'default',
+    securityLevel: 'loose',
+    flowchart: { curve: 'basis', padding: 12 },
+    er: { layoutDirection: 'TB' }
+  });
+</script>
+
+</body>
+</html>

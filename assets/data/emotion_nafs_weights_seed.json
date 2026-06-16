@@ -1,0 +1,356 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Emotion_ID": 1,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 2,
+      "Ammarah": 60,
+      "Lawwamah": 30,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 3,
+      "Ammarah": 20,
+      "Lawwamah": 65,
+      "Mulhamah": 12,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 4,
+      "Ammarah": 20,
+      "Lawwamah": 65,
+      "Mulhamah": 12,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 5,
+      "Ammarah": 15,
+      "Lawwamah": 65,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 6,
+      "Ammarah": 25,
+      "Lawwamah": 60,
+      "Mulhamah": 12,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 7,
+      "Ammarah": 10,
+      "Lawwamah": 70,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 8,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 9,
+      "Ammarah": 15,
+      "Lawwamah": 65,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 10,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 11,
+      "Ammarah": 65,
+      "Lawwamah": 28,
+      "Mulhamah": 5,
+      "Mutmainnah": 2
+    },
+    {
+      "Emotion_ID": 12,
+      "Ammarah": 60,
+      "Lawwamah": 32,
+      "Mulhamah": 6,
+      "Mutmainnah": 2
+    },
+    {
+      "Emotion_ID": 13,
+      "Ammarah": 60,
+      "Lawwamah": 30,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 14,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 15,
+      "Ammarah": 60,
+      "Lawwamah": 30,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 16,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 17,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 18,
+      "Ammarah": 15,
+      "Lawwamah": 65,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 19,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 20,
+      "Ammarah": 15,
+      "Lawwamah": 65,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 21,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 22,
+      "Ammarah": 25,
+      "Lawwamah": 60,
+      "Mulhamah": 12,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 23,
+      "Ammarah": 15,
+      "Lawwamah": 65,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 24,
+      "Ammarah": 60,
+      "Lawwamah": 30,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 25,
+      "Ammarah": 55,
+      "Lawwamah": 35,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 26,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 27,
+      "Ammarah": 60,
+      "Lawwamah": 30,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Emotion_ID": 28,
+      "Ammarah": 10,
+      "Lawwamah": 70,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 29,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 30,
+      "Ammarah": 20,
+      "Lawwamah": 60,
+      "Mulhamah": 15,
+      "Mutmainnah": 5
+    },
+    {
+      "Emotion_ID": 31,
+      "Ammarah": 1,
+      "Lawwamah": 8,
+      "Mulhamah": 50,
+      "Mutmainnah": 41
+    },
+    {
+      "Emotion_ID": 32,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 67
+    },
+    {
+      "Emotion_ID": 33,
+      "Ammarah": 1,
+      "Lawwamah": 5,
+      "Mulhamah": 55,
+      "Mutmainnah": 39
+    },
+    {
+      "Emotion_ID": 34,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 25,
+      "Mutmainnah": 73
+    },
+    {
+      "Emotion_ID": 35,
+      "Ammarah": 1,
+      "Lawwamah": 5,
+      "Mulhamah": 55,
+      "Mutmainnah": 39
+    },
+    {
+      "Emotion_ID": 36,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 67
+    },
+    {
+      "Emotion_ID": 37,
+      "Ammarah": 2,
+      "Lawwamah": 8,
+      "Mulhamah": 50,
+      "Mutmainnah": 40
+    },
+    {
+      "Emotion_ID": 38,
+      "Ammarah": 1,
+      "Lawwamah": 5,
+      "Mulhamah": 50,
+      "Mutmainnah": 44
+    },
+    {
+      "Emotion_ID": 39,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 67
+    },
+    {
+      "Emotion_ID": 40,
+      "Ammarah": 1,
+      "Lawwamah": 5,
+      "Mulhamah": 50,
+      "Mutmainnah": 44
+    },
+    {
+      "Emotion_ID": 41,
+      "Ammarah": 1,
+      "Lawwamah": 5,
+      "Mulhamah": 50,
+      "Mutmainnah": 44
+    },
+    {
+      "Emotion_ID": 42,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 25,
+      "Mutmainnah": 73
+    },
+    {
+      "Emotion_ID": 43,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 30,
+      "Mutmainnah": 68
+    },
+    {
+      "Emotion_ID": 44,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 25,
+      "Mutmainnah": 73
+    },
+    {
+      "Emotion_ID": 45,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 20,
+      "Mutmainnah": 78
+    },
+    {
+      "Emotion_ID": 46,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 25,
+      "Mutmainnah": 73
+    },
+    {
+      "Emotion_ID": 47,
+      "Ammarah": 1,
+      "Lawwamah": 8,
+      "Mulhamah": 50,
+      "Mutmainnah": 41
+    },
+    {
+      "Emotion_ID": 48,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 20,
+      "Mutmainnah": 78
+    },
+    {
+      "Emotion_ID": 49,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 25,
+      "Mutmainnah": 73
+    },
+    {
+      "Emotion_ID": 50,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 20,
+      "Mutmainnah": 78
+    }
+  ]
+}

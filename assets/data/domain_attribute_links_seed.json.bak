@@ -1,0 +1,1380 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Link_ID": 1,
+      "Domain_ID": 9,
+      "Attribute_ID": 1,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 2,
+      "Domain_ID": 9,
+      "Attribute_ID": 2,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 3,
+      "Domain_ID": 5,
+      "Attribute_ID": 2,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 4,
+      "Domain_ID": 9,
+      "Attribute_ID": 3,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 5,
+      "Domain_ID": 5,
+      "Attribute_ID": 3,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 6,
+      "Domain_ID": 9,
+      "Attribute_ID": 4,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 7,
+      "Domain_ID": 9,
+      "Attribute_ID": 5,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 8,
+      "Domain_ID": 9,
+      "Attribute_ID": 6,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 9,
+      "Domain_ID": 9,
+      "Attribute_ID": 7,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 10,
+      "Domain_ID": 9,
+      "Attribute_ID": 8,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 11,
+      "Domain_ID": 9,
+      "Attribute_ID": 9,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 12,
+      "Domain_ID": 9,
+      "Attribute_ID": 10,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 13,
+      "Domain_ID": 9,
+      "Attribute_ID": 11,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 14,
+      "Domain_ID": 9,
+      "Attribute_ID": 12,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 15,
+      "Domain_ID": 9,
+      "Attribute_ID": 13,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 16,
+      "Domain_ID": 9,
+      "Attribute_ID": 14,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 17,
+      "Domain_ID": 9,
+      "Attribute_ID": 15,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 18,
+      "Domain_ID": 9,
+      "Attribute_ID": 16,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 19,
+      "Domain_ID": 9,
+      "Attribute_ID": 17,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 20,
+      "Domain_ID": 9,
+      "Attribute_ID": 18,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 21,
+      "Domain_ID": 5,
+      "Attribute_ID": 18,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 22,
+      "Domain_ID": 9,
+      "Attribute_ID": 19,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 23,
+      "Domain_ID": 9,
+      "Attribute_ID": 20,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 24,
+      "Domain_ID": 9,
+      "Attribute_ID": 21,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 25,
+      "Domain_ID": 6,
+      "Attribute_ID": 21,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 26,
+      "Domain_ID": 9,
+      "Attribute_ID": 22,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 27,
+      "Domain_ID": 6,
+      "Attribute_ID": 22,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 28,
+      "Domain_ID": 9,
+      "Attribute_ID": 23,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 29,
+      "Domain_ID": 6,
+      "Attribute_ID": 23,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 30,
+      "Domain_ID": 9,
+      "Attribute_ID": 24,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 31,
+      "Domain_ID": 6,
+      "Attribute_ID": 24,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 32,
+      "Domain_ID": 9,
+      "Attribute_ID": 25,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 33,
+      "Domain_ID": 6,
+      "Attribute_ID": 25,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 34,
+      "Domain_ID": 9,
+      "Attribute_ID": 26,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 35,
+      "Domain_ID": 7,
+      "Attribute_ID": 27,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 36,
+      "Domain_ID": 7,
+      "Attribute_ID": 28,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 37,
+      "Domain_ID": 9,
+      "Attribute_ID": 29,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 38,
+      "Domain_ID": 9,
+      "Attribute_ID": 30,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 39,
+      "Domain_ID": 6,
+      "Attribute_ID": 31,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 40,
+      "Domain_ID": 6,
+      "Attribute_ID": 32,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 41,
+      "Domain_ID": 6,
+      "Attribute_ID": 33,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 42,
+      "Domain_ID": 6,
+      "Attribute_ID": 34,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 43,
+      "Domain_ID": 9,
+      "Attribute_ID": 35,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 44,
+      "Domain_ID": 6,
+      "Attribute_ID": 36,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 45,
+      "Domain_ID": 6,
+      "Attribute_ID": 37,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 46,
+      "Domain_ID": 9,
+      "Attribute_ID": 38,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 47,
+      "Domain_ID": 9,
+      "Attribute_ID": 39,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 48,
+      "Domain_ID": 9,
+      "Attribute_ID": 40,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 49,
+      "Domain_ID": 5,
+      "Attribute_ID": 41,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 50,
+      "Domain_ID": 5,
+      "Attribute_ID": 42,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 51,
+      "Domain_ID": 5,
+      "Attribute_ID": 43,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 52,
+      "Domain_ID": 5,
+      "Attribute_ID": 44,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 53,
+      "Domain_ID": 6,
+      "Attribute_ID": 45,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 54,
+      "Domain_ID": 5,
+      "Attribute_ID": 46,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 55,
+      "Domain_ID": 9,
+      "Attribute_ID": 46,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 56,
+      "Domain_ID": 5,
+      "Attribute_ID": 47,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 57,
+      "Domain_ID": 5,
+      "Attribute_ID": 48,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 58,
+      "Domain_ID": 7,
+      "Attribute_ID": 49,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 59,
+      "Domain_ID": 5,
+      "Attribute_ID": 50,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 60,
+      "Domain_ID": 9,
+      "Attribute_ID": 50,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 61,
+      "Domain_ID": 5,
+      "Attribute_ID": 51,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 62,
+      "Domain_ID": 5,
+      "Attribute_ID": 52,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 63,
+      "Domain_ID": 5,
+      "Attribute_ID": 53,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 64,
+      "Domain_ID": 7,
+      "Attribute_ID": 54,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 65,
+      "Domain_ID": 7,
+      "Attribute_ID": 55,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 66,
+      "Domain_ID": 7,
+      "Attribute_ID": 56,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 67,
+      "Domain_ID": 5,
+      "Attribute_ID": 57,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 68,
+      "Domain_ID": 5,
+      "Attribute_ID": 58,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 69,
+      "Domain_ID": 5,
+      "Attribute_ID": 59,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 70,
+      "Domain_ID": 5,
+      "Attribute_ID": 60,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 71,
+      "Domain_ID": 8,
+      "Attribute_ID": 61,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 72,
+      "Domain_ID": 9,
+      "Attribute_ID": 61,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 73,
+      "Domain_ID": 8,
+      "Attribute_ID": 62,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 74,
+      "Domain_ID": 8,
+      "Attribute_ID": 63,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 75,
+      "Domain_ID": 8,
+      "Attribute_ID": 64,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 76,
+      "Domain_ID": 8,
+      "Attribute_ID": 65,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 77,
+      "Domain_ID": 8,
+      "Attribute_ID": 66,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 78,
+      "Domain_ID": 8,
+      "Attribute_ID": 67,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 79,
+      "Domain_ID": 8,
+      "Attribute_ID": 68,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 80,
+      "Domain_ID": 8,
+      "Attribute_ID": 69,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 81,
+      "Domain_ID": 8,
+      "Attribute_ID": 70,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 82,
+      "Domain_ID": 8,
+      "Attribute_ID": 71,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 83,
+      "Domain_ID": 1,
+      "Attribute_ID": 72,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 84,
+      "Domain_ID": 9,
+      "Attribute_ID": 72,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 85,
+      "Domain_ID": 1,
+      "Attribute_ID": 73,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 86,
+      "Domain_ID": 1,
+      "Attribute_ID": 74,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 87,
+      "Domain_ID": 8,
+      "Attribute_ID": 75,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 88,
+      "Domain_ID": 8,
+      "Attribute_ID": 76,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 89,
+      "Domain_ID": 8,
+      "Attribute_ID": 77,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 90,
+      "Domain_ID": 8,
+      "Attribute_ID": 78,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 91,
+      "Domain_ID": 8,
+      "Attribute_ID": 79,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 92,
+      "Domain_ID": 8,
+      "Attribute_ID": 80,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 93,
+      "Domain_ID": 1,
+      "Attribute_ID": 80,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 94,
+      "Domain_ID": 6,
+      "Attribute_ID": 81,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 95,
+      "Domain_ID": 7,
+      "Attribute_ID": 81,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 96,
+      "Domain_ID": 6,
+      "Attribute_ID": 82,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 97,
+      "Domain_ID": 6,
+      "Attribute_ID": 83,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 98,
+      "Domain_ID": 6,
+      "Attribute_ID": 84,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 99,
+      "Domain_ID": 6,
+      "Attribute_ID": 85,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 100,
+      "Domain_ID": 6,
+      "Attribute_ID": 86,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 101,
+      "Domain_ID": 6,
+      "Attribute_ID": 87,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 102,
+      "Domain_ID": 6,
+      "Attribute_ID": 88,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 103,
+      "Domain_ID": 6,
+      "Attribute_ID": 89,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 104,
+      "Domain_ID": 6,
+      "Attribute_ID": 90,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 105,
+      "Domain_ID": 10,
+      "Attribute_ID": 91,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 106,
+      "Domain_ID": 6,
+      "Attribute_ID": 92,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 107,
+      "Domain_ID": 6,
+      "Attribute_ID": 93,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 108,
+      "Domain_ID": 4,
+      "Attribute_ID": 94,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 109,
+      "Domain_ID": 6,
+      "Attribute_ID": 95,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 110,
+      "Domain_ID": 6,
+      "Attribute_ID": 96,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 111,
+      "Domain_ID": 6,
+      "Attribute_ID": 97,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 112,
+      "Domain_ID": 6,
+      "Attribute_ID": 98,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 113,
+      "Domain_ID": 5,
+      "Attribute_ID": 98,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 114,
+      "Domain_ID": 6,
+      "Attribute_ID": 99,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 115,
+      "Domain_ID": 8,
+      "Attribute_ID": 99,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 116,
+      "Domain_ID": 6,
+      "Attribute_ID": 100,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 117,
+      "Domain_ID": 8,
+      "Attribute_ID": 100,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 118,
+      "Domain_ID": 10,
+      "Attribute_ID": 101,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 119,
+      "Domain_ID": 10,
+      "Attribute_ID": 102,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 120,
+      "Domain_ID": 4,
+      "Attribute_ID": 103,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 121,
+      "Domain_ID": 4,
+      "Attribute_ID": 104,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 122,
+      "Domain_ID": 8,
+      "Attribute_ID": 105,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 123,
+      "Domain_ID": 10,
+      "Attribute_ID": 106,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 124,
+      "Domain_ID": 6,
+      "Attribute_ID": 107,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 125,
+      "Domain_ID": 6,
+      "Attribute_ID": 108,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 126,
+      "Domain_ID": 6,
+      "Attribute_ID": 109,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 127,
+      "Domain_ID": 2,
+      "Attribute_ID": 110,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 128,
+      "Domain_ID": 1,
+      "Attribute_ID": 110,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 129,
+      "Domain_ID": 6,
+      "Attribute_ID": 111,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 130,
+      "Domain_ID": 6,
+      "Attribute_ID": 112,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 131,
+      "Domain_ID": 6,
+      "Attribute_ID": 113,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 132,
+      "Domain_ID": 6,
+      "Attribute_ID": 114,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 133,
+      "Domain_ID": 6,
+      "Attribute_ID": 115,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 134,
+      "Domain_ID": 6,
+      "Attribute_ID": 116,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 135,
+      "Domain_ID": 6,
+      "Attribute_ID": 117,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 136,
+      "Domain_ID": 6,
+      "Attribute_ID": 118,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 137,
+      "Domain_ID": 6,
+      "Attribute_ID": 119,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 138,
+      "Domain_ID": 6,
+      "Attribute_ID": 120,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 139,
+      "Domain_ID": 2,
+      "Attribute_ID": 121,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 140,
+      "Domain_ID": 2,
+      "Attribute_ID": 122,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 141,
+      "Domain_ID": 2,
+      "Attribute_ID": 123,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 142,
+      "Domain_ID": 2,
+      "Attribute_ID": 124,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 143,
+      "Domain_ID": 3,
+      "Attribute_ID": 125,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 144,
+      "Domain_ID": 2,
+      "Attribute_ID": 126,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 145,
+      "Domain_ID": 2,
+      "Attribute_ID": 127,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 146,
+      "Domain_ID": 9,
+      "Attribute_ID": 127,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 147,
+      "Domain_ID": 2,
+      "Attribute_ID": 128,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 148,
+      "Domain_ID": 2,
+      "Attribute_ID": 129,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 149,
+      "Domain_ID": 2,
+      "Attribute_ID": 130,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 150,
+      "Domain_ID": 9,
+      "Attribute_ID": 130,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 151,
+      "Domain_ID": 2,
+      "Attribute_ID": 131,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 152,
+      "Domain_ID": 9,
+      "Attribute_ID": 131,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 153,
+      "Domain_ID": 2,
+      "Attribute_ID": 132,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 154,
+      "Domain_ID": 6,
+      "Attribute_ID": 132,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 155,
+      "Domain_ID": 8,
+      "Attribute_ID": 133,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 156,
+      "Domain_ID": 2,
+      "Attribute_ID": 134,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 157,
+      "Domain_ID": 2,
+      "Attribute_ID": 135,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 158,
+      "Domain_ID": 6,
+      "Attribute_ID": 136,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 159,
+      "Domain_ID": 6,
+      "Attribute_ID": 137,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 160,
+      "Domain_ID": 6,
+      "Attribute_ID": 138,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 161,
+      "Domain_ID": 2,
+      "Attribute_ID": 139,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 162,
+      "Domain_ID": 2,
+      "Attribute_ID": 140,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 163,
+      "Domain_ID": 2,
+      "Attribute_ID": 141,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 164,
+      "Domain_ID": 2,
+      "Attribute_ID": 142,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 165,
+      "Domain_ID": 2,
+      "Attribute_ID": 143,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 166,
+      "Domain_ID": 6,
+      "Attribute_ID": 144,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 167,
+      "Domain_ID": 2,
+      "Attribute_ID": 145,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 168,
+      "Domain_ID": 2,
+      "Attribute_ID": 146,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 169,
+      "Domain_ID": 2,
+      "Attribute_ID": 147,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 170,
+      "Domain_ID": 2,
+      "Attribute_ID": 148,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 171,
+      "Domain_ID": 2,
+      "Attribute_ID": 149,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 172,
+      "Domain_ID": 7,
+      "Attribute_ID": 150,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 173,
+      "Domain_ID": 2,
+      "Attribute_ID": 151,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 174,
+      "Domain_ID": 2,
+      "Attribute_ID": 152,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 175,
+      "Domain_ID": 2,
+      "Attribute_ID": 153,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 176,
+      "Domain_ID": 2,
+      "Attribute_ID": 154,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 177,
+      "Domain_ID": 2,
+      "Attribute_ID": 155,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 178,
+      "Domain_ID": 2,
+      "Attribute_ID": 156,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 179,
+      "Domain_ID": 2,
+      "Attribute_ID": 157,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 180,
+      "Domain_ID": 2,
+      "Attribute_ID": 158,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 181,
+      "Domain_ID": 7,
+      "Attribute_ID": 159,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 182,
+      "Domain_ID": 4,
+      "Attribute_ID": 160,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 183,
+      "Domain_ID": 3,
+      "Attribute_ID": 161,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 184,
+      "Domain_ID": 3,
+      "Attribute_ID": 162,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 185,
+      "Domain_ID": 3,
+      "Attribute_ID": 163,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 186,
+      "Domain_ID": 3,
+      "Attribute_ID": 164,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 187,
+      "Domain_ID": 8,
+      "Attribute_ID": 165,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 188,
+      "Domain_ID": 3,
+      "Attribute_ID": 166,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 189,
+      "Domain_ID": 3,
+      "Attribute_ID": 167,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 190,
+      "Domain_ID": 5,
+      "Attribute_ID": 167,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 191,
+      "Domain_ID": 10,
+      "Attribute_ID": 168,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 192,
+      "Domain_ID": 10,
+      "Attribute_ID": 169,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 193,
+      "Domain_ID": 10,
+      "Attribute_ID": 170,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 194,
+      "Domain_ID": 4,
+      "Attribute_ID": 171,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 195,
+      "Domain_ID": 3,
+      "Attribute_ID": 172,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 196,
+      "Domain_ID": 3,
+      "Attribute_ID": 173,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 197,
+      "Domain_ID": 3,
+      "Attribute_ID": 174,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 198,
+      "Domain_ID": 3,
+      "Attribute_ID": 175,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 199,
+      "Domain_ID": 8,
+      "Attribute_ID": 176,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 200,
+      "Domain_ID": 8,
+      "Attribute_ID": 177,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 201,
+      "Domain_ID": 10,
+      "Attribute_ID": 178,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 202,
+      "Domain_ID": 10,
+      "Attribute_ID": 179,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 203,
+      "Domain_ID": 10,
+      "Attribute_ID": 180,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 204,
+      "Domain_ID": 9,
+      "Attribute_ID": 180,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 205,
+      "Domain_ID": 10,
+      "Attribute_ID": 181,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 206,
+      "Domain_ID": 9,
+      "Attribute_ID": 181,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 207,
+      "Domain_ID": 10,
+      "Attribute_ID": 182,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 208,
+      "Domain_ID": 8,
+      "Attribute_ID": 183,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 209,
+      "Domain_ID": 3,
+      "Attribute_ID": 184,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 210,
+      "Domain_ID": 3,
+      "Attribute_ID": 185,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 211,
+      "Domain_ID": 8,
+      "Attribute_ID": 185,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 212,
+      "Domain_ID": 3,
+      "Attribute_ID": 186,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 213,
+      "Domain_ID": 3,
+      "Attribute_ID": 187,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 214,
+      "Domain_ID": 3,
+      "Attribute_ID": 188,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 215,
+      "Domain_ID": 3,
+      "Attribute_ID": 189,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 216,
+      "Domain_ID": 3,
+      "Attribute_ID": 190,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 217,
+      "Domain_ID": 3,
+      "Attribute_ID": 191,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 218,
+      "Domain_ID": 10,
+      "Attribute_ID": 192,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 219,
+      "Domain_ID": 10,
+      "Attribute_ID": 193,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 220,
+      "Domain_ID": 3,
+      "Attribute_ID": 194,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 221,
+      "Domain_ID": 3,
+      "Attribute_ID": 195,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 222,
+      "Domain_ID": 2,
+      "Attribute_ID": 196,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 223,
+      "Domain_ID": 1,
+      "Attribute_ID": 196,
+      "Weight": 0.5
+    },
+    {
+      "Link_ID": 224,
+      "Domain_ID": 1,
+      "Attribute_ID": 197,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 225,
+      "Domain_ID": 1,
+      "Attribute_ID": 198,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 226,
+      "Domain_ID": 10,
+      "Attribute_ID": 198,
+      "Weight": 0.6
+    },
+    {
+      "Link_ID": 227,
+      "Domain_ID": 10,
+      "Attribute_ID": 199,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 228,
+      "Domain_ID": 10,
+      "Attribute_ID": 200,
+      "Weight": 0.8
+    },
+    {
+      "Link_ID": 229,
+      "Domain_ID": 7,
+      "Attribute_ID": 200,
+      "Weight": 0.5
+    }
+  ]
+}

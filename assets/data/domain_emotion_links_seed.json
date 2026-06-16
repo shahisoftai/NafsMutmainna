@@ -1,0 +1,606 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Link_ID": 1,
+      "Domain_ID": 9,
+      "Emotion_ID": 1,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 2,
+      "Domain_ID": 5,
+      "Emotion_ID": 1,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 3,
+      "Domain_ID": 9,
+      "Emotion_ID": 2,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 4,
+      "Domain_ID": 6,
+      "Emotion_ID": 2,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 5,
+      "Domain_ID": 8,
+      "Emotion_ID": 3,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 6,
+      "Domain_ID": 1,
+      "Emotion_ID": 3,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 7,
+      "Domain_ID": 8,
+      "Emotion_ID": 4,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 8,
+      "Domain_ID": 1,
+      "Emotion_ID": 4,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 9,
+      "Domain_ID": 8,
+      "Emotion_ID": 5,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 10,
+      "Domain_ID": 10,
+      "Emotion_ID": 5,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 11,
+      "Domain_ID": 8,
+      "Emotion_ID": 6,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 12,
+      "Domain_ID": 10,
+      "Emotion_ID": 6,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 13,
+      "Domain_ID": 9,
+      "Emotion_ID": 7,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 14,
+      "Domain_ID": 10,
+      "Emotion_ID": 7,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 15,
+      "Domain_ID": 9,
+      "Emotion_ID": 8,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 16,
+      "Domain_ID": 3,
+      "Emotion_ID": 8,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 17,
+      "Domain_ID": 10,
+      "Emotion_ID": 9,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 18,
+      "Domain_ID": 4,
+      "Emotion_ID": 9,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 19,
+      "Domain_ID": 9,
+      "Emotion_ID": 10,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 20,
+      "Domain_ID": 4,
+      "Emotion_ID": 10,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 21,
+      "Domain_ID": 9,
+      "Emotion_ID": 11,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 22,
+      "Domain_ID": 5,
+      "Emotion_ID": 11,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 23,
+      "Domain_ID": 9,
+      "Emotion_ID": 12,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 24,
+      "Domain_ID": 5,
+      "Emotion_ID": 12,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 25,
+      "Domain_ID": 9,
+      "Emotion_ID": 13,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 26,
+      "Domain_ID": 4,
+      "Emotion_ID": 13,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 27,
+      "Domain_ID": 7,
+      "Emotion_ID": 14,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 28,
+      "Domain_ID": 9,
+      "Emotion_ID": 14,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 29,
+      "Domain_ID": 7,
+      "Emotion_ID": 15,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 30,
+      "Domain_ID": 10,
+      "Emotion_ID": 15,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 31,
+      "Domain_ID": 9,
+      "Emotion_ID": 16,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 32,
+      "Domain_ID": 6,
+      "Emotion_ID": 16,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 33,
+      "Domain_ID": 9,
+      "Emotion_ID": 17,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 34,
+      "Domain_ID": 6,
+      "Emotion_ID": 17,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 35,
+      "Domain_ID": 9,
+      "Emotion_ID": 18,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 36,
+      "Domain_ID": 6,
+      "Emotion_ID": 18,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 37,
+      "Domain_ID": 1,
+      "Emotion_ID": 19,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 38,
+      "Domain_ID": 2,
+      "Emotion_ID": 19,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 39,
+      "Domain_ID": 1,
+      "Emotion_ID": 20,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 40,
+      "Domain_ID": 2,
+      "Emotion_ID": 20,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 41,
+      "Domain_ID": 9,
+      "Emotion_ID": 21,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 42,
+      "Domain_ID": 4,
+      "Emotion_ID": 21,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 43,
+      "Domain_ID": 1,
+      "Emotion_ID": 22,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 44,
+      "Domain_ID": 8,
+      "Emotion_ID": 22,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 45,
+      "Domain_ID": 8,
+      "Emotion_ID": 23,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 46,
+      "Domain_ID": 5,
+      "Emotion_ID": 23,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 47,
+      "Domain_ID": 9,
+      "Emotion_ID": 24,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 48,
+      "Domain_ID": 4,
+      "Emotion_ID": 24,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 49,
+      "Domain_ID": 7,
+      "Emotion_ID": 25,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 50,
+      "Domain_ID": 6,
+      "Emotion_ID": 25,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 51,
+      "Domain_ID": 7,
+      "Emotion_ID": 26,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 52,
+      "Domain_ID": 10,
+      "Emotion_ID": 26,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 53,
+      "Domain_ID": 7,
+      "Emotion_ID": 27,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 54,
+      "Domain_ID": 9,
+      "Emotion_ID": 27,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 55,
+      "Domain_ID": 9,
+      "Emotion_ID": 28,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 56,
+      "Domain_ID": 10,
+      "Emotion_ID": 28,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 57,
+      "Domain_ID": 8,
+      "Emotion_ID": 29,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 58,
+      "Domain_ID": 1,
+      "Emotion_ID": 29,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 59,
+      "Domain_ID": 8,
+      "Emotion_ID": 30,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 60,
+      "Domain_ID": 4,
+      "Emotion_ID": 30,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 61,
+      "Domain_ID": 10,
+      "Emotion_ID": 31,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 62,
+      "Domain_ID": 1,
+      "Emotion_ID": 31,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 63,
+      "Domain_ID": 10,
+      "Emotion_ID": 32,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 64,
+      "Domain_ID": 3,
+      "Emotion_ID": 32,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 65,
+      "Domain_ID": 8,
+      "Emotion_ID": 33,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 66,
+      "Domain_ID": 5,
+      "Emotion_ID": 33,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 67,
+      "Domain_ID": 10,
+      "Emotion_ID": 34,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 68,
+      "Domain_ID": 1,
+      "Emotion_ID": 34,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 69,
+      "Domain_ID": 1,
+      "Emotion_ID": 35,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 70,
+      "Domain_ID": 4,
+      "Emotion_ID": 35,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 71,
+      "Domain_ID": 6,
+      "Emotion_ID": 36,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 72,
+      "Domain_ID": 3,
+      "Emotion_ID": 36,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 73,
+      "Domain_ID": 5,
+      "Emotion_ID": 37,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 74,
+      "Domain_ID": 8,
+      "Emotion_ID": 37,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 75,
+      "Domain_ID": 5,
+      "Emotion_ID": 38,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 76,
+      "Domain_ID": 6,
+      "Emotion_ID": 38,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 77,
+      "Domain_ID": 8,
+      "Emotion_ID": 39,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 78,
+      "Domain_ID": 7,
+      "Emotion_ID": 39,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 79,
+      "Domain_ID": 3,
+      "Emotion_ID": 40,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 80,
+      "Domain_ID": 1,
+      "Emotion_ID": 40,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 81,
+      "Domain_ID": 5,
+      "Emotion_ID": 41,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 82,
+      "Domain_ID": 9,
+      "Emotion_ID": 41,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 83,
+      "Domain_ID": 1,
+      "Emotion_ID": 42,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 84,
+      "Domain_ID": 9,
+      "Emotion_ID": 42,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 85,
+      "Domain_ID": 8,
+      "Emotion_ID": 43,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 86,
+      "Domain_ID": 1,
+      "Emotion_ID": 43,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 87,
+      "Domain_ID": 1,
+      "Emotion_ID": 44,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 88,
+      "Domain_ID": 8,
+      "Emotion_ID": 44,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 89,
+      "Domain_ID": 10,
+      "Emotion_ID": 45,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 90,
+      "Domain_ID": 1,
+      "Emotion_ID": 45,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 91,
+      "Domain_ID": 8,
+      "Emotion_ID": 46,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 92,
+      "Domain_ID": 10,
+      "Emotion_ID": 46,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 93,
+      "Domain_ID": 10,
+      "Emotion_ID": 47,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 94,
+      "Domain_ID": 1,
+      "Emotion_ID": 47,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 95,
+      "Domain_ID": 10,
+      "Emotion_ID": 48,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 96,
+      "Domain_ID": 1,
+      "Emotion_ID": 48,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 97,
+      "Domain_ID": 3,
+      "Emotion_ID": 49,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 98,
+      "Domain_ID": 10,
+      "Emotion_ID": 49,
+      "Weight": 0.45
+    },
+    {
+      "Link_ID": 99,
+      "Domain_ID": 10,
+      "Emotion_ID": 50,
+      "Weight": 0.75
+    },
+    {
+      "Link_ID": 100,
+      "Domain_ID": 1,
+      "Emotion_ID": 50,
+      "Weight": 0.45
+    }
+  ]
+}

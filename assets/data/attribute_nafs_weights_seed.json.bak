@@ -1,0 +1,1406 @@
+{
+  "_schema_version": "1.0.0",
+  "_generated_at": "2026-06-13",
+  "rows": [
+    {
+      "Attribute_ID": 1,
+      "Ammarah": 61,
+      "Lawwamah": 34,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 2,
+      "Ammarah": 62,
+      "Lawwamah": 33,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 3,
+      "Ammarah": 63,
+      "Lawwamah": 32,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 4,
+      "Ammarah": 64,
+      "Lawwamah": 31,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 5,
+      "Ammarah": 65,
+      "Lawwamah": 30,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 6,
+      "Ammarah": 66,
+      "Lawwamah": 29,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 7,
+      "Ammarah": 67,
+      "Lawwamah": 28,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 8,
+      "Ammarah": 68,
+      "Lawwamah": 27,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 9,
+      "Ammarah": 69,
+      "Lawwamah": 26,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 10,
+      "Ammarah": 45,
+      "Lawwamah": 45,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Attribute_ID": 11,
+      "Ammarah": 71,
+      "Lawwamah": 24,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 12,
+      "Ammarah": 72,
+      "Lawwamah": 23,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 13,
+      "Ammarah": 73,
+      "Lawwamah": 22,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 14,
+      "Ammarah": 74,
+      "Lawwamah": 21,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 15,
+      "Ammarah": 75,
+      "Lawwamah": 20,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 16,
+      "Ammarah": 76,
+      "Lawwamah": 19,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 17,
+      "Ammarah": 77,
+      "Lawwamah": 18,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 18,
+      "Ammarah": 78,
+      "Lawwamah": 17,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 19,
+      "Ammarah": 79,
+      "Lawwamah": 16,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 20,
+      "Ammarah": 60,
+      "Lawwamah": 35,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 21,
+      "Ammarah": 61,
+      "Lawwamah": 34,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 22,
+      "Ammarah": 50,
+      "Lawwamah": 40,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Attribute_ID": 23,
+      "Ammarah": 63,
+      "Lawwamah": 32,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 24,
+      "Ammarah": 64,
+      "Lawwamah": 31,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 25,
+      "Ammarah": 65,
+      "Lawwamah": 30,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 26,
+      "Ammarah": 66,
+      "Lawwamah": 29,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 27,
+      "Ammarah": 67,
+      "Lawwamah": 28,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 28,
+      "Ammarah": 68,
+      "Lawwamah": 27,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 29,
+      "Ammarah": 69,
+      "Lawwamah": 26,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 30,
+      "Ammarah": 70,
+      "Lawwamah": 25,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 31,
+      "Ammarah": 71,
+      "Lawwamah": 24,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 32,
+      "Ammarah": 72,
+      "Lawwamah": 23,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 33,
+      "Ammarah": 50,
+      "Lawwamah": 40,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Attribute_ID": 34,
+      "Ammarah": 74,
+      "Lawwamah": 21,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 35,
+      "Ammarah": 75,
+      "Lawwamah": 20,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 36,
+      "Ammarah": 76,
+      "Lawwamah": 19,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 37,
+      "Ammarah": 77,
+      "Lawwamah": 18,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 38,
+      "Ammarah": 78,
+      "Lawwamah": 17,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 39,
+      "Ammarah": 79,
+      "Lawwamah": 16,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 40,
+      "Ammarah": 60,
+      "Lawwamah": 35,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 41,
+      "Ammarah": 61,
+      "Lawwamah": 34,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 42,
+      "Ammarah": 62,
+      "Lawwamah": 33,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 43,
+      "Ammarah": 63,
+      "Lawwamah": 32,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 44,
+      "Ammarah": 64,
+      "Lawwamah": 31,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 45,
+      "Ammarah": 65,
+      "Lawwamah": 30,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 46,
+      "Ammarah": 66,
+      "Lawwamah": 29,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 47,
+      "Ammarah": 67,
+      "Lawwamah": 28,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 48,
+      "Ammarah": 68,
+      "Lawwamah": 27,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 49,
+      "Ammarah": 69,
+      "Lawwamah": 26,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 50,
+      "Ammarah": 70,
+      "Lawwamah": 25,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 51,
+      "Ammarah": 71,
+      "Lawwamah": 24,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 52,
+      "Ammarah": 72,
+      "Lawwamah": 23,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 53,
+      "Ammarah": 73,
+      "Lawwamah": 22,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 54,
+      "Ammarah": 74,
+      "Lawwamah": 21,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 55,
+      "Ammarah": 75,
+      "Lawwamah": 20,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 56,
+      "Ammarah": 76,
+      "Lawwamah": 19,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 57,
+      "Ammarah": 77,
+      "Lawwamah": 18,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 58,
+      "Ammarah": 78,
+      "Lawwamah": 17,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 59,
+      "Ammarah": 79,
+      "Lawwamah": 16,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 60,
+      "Ammarah": 60,
+      "Lawwamah": 35,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 61,
+      "Ammarah": 61,
+      "Lawwamah": 34,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 62,
+      "Ammarah": 62,
+      "Lawwamah": 33,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 63,
+      "Ammarah": 63,
+      "Lawwamah": 32,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 64,
+      "Ammarah": 45,
+      "Lawwamah": 45,
+      "Mulhamah": 7,
+      "Mutmainnah": 3
+    },
+    {
+      "Attribute_ID": 65,
+      "Ammarah": 65,
+      "Lawwamah": 30,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 66,
+      "Ammarah": 66,
+      "Lawwamah": 29,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 67,
+      "Ammarah": 67,
+      "Lawwamah": 28,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 68,
+      "Ammarah": 68,
+      "Lawwamah": 27,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 69,
+      "Ammarah": 69,
+      "Lawwamah": 26,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 70,
+      "Ammarah": 70,
+      "Lawwamah": 25,
+      "Mulhamah": 3,
+      "Mutmainnah": 2
+    },
+    {
+      "Attribute_ID": 71,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 72,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 73,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 74,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 75,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 76,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 77,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 78,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 79,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 21,
+      "Mutmainnah": 74
+    },
+    {
+      "Attribute_ID": 80,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 81,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 39,
+      "Mutmainnah": 56
+    },
+    {
+      "Attribute_ID": 82,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 38,
+      "Mutmainnah": 57
+    },
+    {
+      "Attribute_ID": 83,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 84,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 85,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 35,
+      "Mutmainnah": 60
+    },
+    {
+      "Attribute_ID": 86,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 87,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 88,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 89,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 90,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 91,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 75
+    },
+    {
+      "Attribute_ID": 92,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 93,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 94,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 95,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 96,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 24,
+      "Mutmainnah": 71
+    },
+    {
+      "Attribute_ID": 97,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 23,
+      "Mutmainnah": 72
+    },
+    {
+      "Attribute_ID": 98,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 99,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 100,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 101,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 39,
+      "Mutmainnah": 56
+    },
+    {
+      "Attribute_ID": 102,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 75
+    },
+    {
+      "Attribute_ID": 103,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 104,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 105,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 35,
+      "Mutmainnah": 60
+    },
+    {
+      "Attribute_ID": 106,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 107,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 108,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 109,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 110,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 65
+    },
+    {
+      "Attribute_ID": 111,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 112,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 113,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 114,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 115,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 116,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 24,
+      "Mutmainnah": 71
+    },
+    {
+      "Attribute_ID": 117,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 23,
+      "Mutmainnah": 72
+    },
+    {
+      "Attribute_ID": 118,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 119,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 21,
+      "Mutmainnah": 74
+    },
+    {
+      "Attribute_ID": 120,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 40,
+      "Mutmainnah": 55
+    },
+    {
+      "Attribute_ID": 121,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 39,
+      "Mutmainnah": 56
+    },
+    {
+      "Attribute_ID": 122,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 38,
+      "Mutmainnah": 57
+    },
+    {
+      "Attribute_ID": 123,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 124,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 125,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 35,
+      "Mutmainnah": 60
+    },
+    {
+      "Attribute_ID": 126,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 127,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 128,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 129,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 130,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 65
+    },
+    {
+      "Attribute_ID": 131,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 132,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 133,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 134,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 135,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 136,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 24,
+      "Mutmainnah": 71
+    },
+    {
+      "Attribute_ID": 137,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 23,
+      "Mutmainnah": 72
+    },
+    {
+      "Attribute_ID": 138,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 139,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 21,
+      "Mutmainnah": 74
+    },
+    {
+      "Attribute_ID": 140,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 40,
+      "Mutmainnah": 55
+    },
+    {
+      "Attribute_ID": 141,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 39,
+      "Mutmainnah": 56
+    },
+    {
+      "Attribute_ID": 142,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 38,
+      "Mutmainnah": 57
+    },
+    {
+      "Attribute_ID": 143,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 144,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 145,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 35,
+      "Mutmainnah": 60
+    },
+    {
+      "Attribute_ID": 146,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 147,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 148,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 149,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 150,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 65
+    },
+    {
+      "Attribute_ID": 151,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 152,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 153,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 154,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 155,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 156,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 24,
+      "Mutmainnah": 71
+    },
+    {
+      "Attribute_ID": 157,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 23,
+      "Mutmainnah": 72
+    },
+    {
+      "Attribute_ID": 158,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 159,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 21,
+      "Mutmainnah": 74
+    },
+    {
+      "Attribute_ID": 160,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 40,
+      "Mutmainnah": 55
+    },
+    {
+      "Attribute_ID": 161,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 39,
+      "Mutmainnah": 56
+    },
+    {
+      "Attribute_ID": 162,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 38,
+      "Mutmainnah": 57
+    },
+    {
+      "Attribute_ID": 163,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 164,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 165,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 35,
+      "Mutmainnah": 60
+    },
+    {
+      "Attribute_ID": 166,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 167,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 168,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 169,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 170,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 65
+    },
+    {
+      "Attribute_ID": 171,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 172,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 173,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 174,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 175,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 176,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 24,
+      "Mutmainnah": 71
+    },
+    {
+      "Attribute_ID": 177,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 20,
+      "Mutmainnah": 78
+    },
+    {
+      "Attribute_ID": 178,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 73
+    },
+    {
+      "Attribute_ID": 179,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 21,
+      "Mutmainnah": 74
+    },
+    {
+      "Attribute_ID": 180,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 75
+    },
+    {
+      "Attribute_ID": 181,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 75
+    },
+    {
+      "Attribute_ID": 182,
+      "Ammarah": 0,
+      "Lawwamah": 3,
+      "Mulhamah": 22,
+      "Mutmainnah": 75
+    },
+    {
+      "Attribute_ID": 183,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 37,
+      "Mutmainnah": 58
+    },
+    {
+      "Attribute_ID": 184,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 36,
+      "Mutmainnah": 59
+    },
+    {
+      "Attribute_ID": 185,
+      "Ammarah": 1,
+      "Lawwamah": 4,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 186,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 34,
+      "Mutmainnah": 61
+    },
+    {
+      "Attribute_ID": 187,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 33,
+      "Mutmainnah": 62
+    },
+    {
+      "Attribute_ID": 188,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 32,
+      "Mutmainnah": 63
+    },
+    {
+      "Attribute_ID": 189,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 31,
+      "Mutmainnah": 64
+    },
+    {
+      "Attribute_ID": 190,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 30,
+      "Mutmainnah": 65
+    },
+    {
+      "Attribute_ID": 191,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 29,
+      "Mutmainnah": 66
+    },
+    {
+      "Attribute_ID": 192,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 28,
+      "Mutmainnah": 67
+    },
+    {
+      "Attribute_ID": 193,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 27,
+      "Mutmainnah": 68
+    },
+    {
+      "Attribute_ID": 194,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 26,
+      "Mutmainnah": 69
+    },
+    {
+      "Attribute_ID": 195,
+      "Ammarah": 2,
+      "Lawwamah": 3,
+      "Mulhamah": 25,
+      "Mutmainnah": 70
+    },
+    {
+      "Attribute_ID": 196,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 197,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 198,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 199,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    },
+    {
+      "Attribute_ID": 200,
+      "Ammarah": 0,
+      "Lawwamah": 2,
+      "Mulhamah": 18,
+      "Mutmainnah": 80
+    }
+  ]
+}
