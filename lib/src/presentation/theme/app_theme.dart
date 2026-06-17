@@ -6,7 +6,8 @@ import 'package:nafsmutmainna/src/presentation/theme/typography.dart';
 class AppTheme {
   AppTheme._();
 
-  /// Light theme
+  /// Light theme — the only theme used by HeartOS. All screens use explicit
+  /// `AppColors` constants so the look is consistent across the app.
   static ThemeData get lightTheme {
     return ThemeData(
       useMaterial3: true,
@@ -103,71 +104,6 @@ class AppTheme {
       floatingActionButtonTheme: const FloatingActionButtonThemeData(
         backgroundColor: AppColors.primary,
         foregroundColor: AppColors.textOnPrimary,
-      ),
-    );
-  }
-
-  /// Dark theme
-  static ThemeData get darkTheme {
-    return ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.dark,
-      colorScheme: const ColorScheme.dark(
-        primary: AppColors.primaryLight,
-        primaryContainer: AppColors.primary,
-        secondary: AppColors.secondaryLight,
-        secondaryContainer: AppColors.secondary,
-        surface: AppColors.darkSurface,
-        error: AppColors.error,
-        onPrimary: AppColors.darkBackground,
-        onSecondary: AppColors.darkBackground,
-        onSurface: AppColors.darkTextPrimary,
-        onError: AppColors.textOnPrimary,
-      ),
-      scaffoldBackgroundColor: AppColors.darkBackground,
-      appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.darkSurface,
-        foregroundColor: AppColors.darkTextPrimary,
-        elevation: 0,
-        centerTitle: true,
-        titleTextStyle: TextStyle(
-          fontFamily: AppTypography.fontFamily,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          color: AppColors.darkTextPrimary,
-        ),
-      ),
-      textTheme: const TextTheme(
-        displayLarge: AppTypography.h1,
-        displayMedium: AppTypography.h2,
-        displaySmall: AppTypography.h3,
-        headlineMedium: AppTypography.h4,
-        headlineSmall: AppTypography.h5,
-        titleLarge: AppTypography.h6,
-        bodyLarge: AppTypography.bodyLarge,
-        bodyMedium: AppTypography.bodyMedium,
-        bodySmall: AppTypography.bodySmall,
-        labelLarge: AppTypography.labelLarge,
-        labelMedium: AppTypography.labelMedium,
-        labelSmall: AppTypography.labelSmall,
-      ),
-      elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-          backgroundColor: AppColors.primaryLight,
-          foregroundColor: AppColors.darkBackground,
-          textStyle: AppTypography.button,
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-          ),
-        ),
-      ),
-      cardTheme: CardThemeData(
-        color: AppColors.darkSurface,
-        elevation: 2,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
       ),
     );
   }

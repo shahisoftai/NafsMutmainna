@@ -1,9 +1,34 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:url_launcher/url_launcher.dart';
 
+import '../../../infrastructure/di/providers.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
+import 'authentic_sources_data.dart';
+import 'delete_data_service.dart';
+
+// ============================================================================
+// App metadata constants
+// ============================================================================
+const String kAppVersion = '1.1.13';
+const String kAppWebsite = 'https://heartos.shahisoftware.com';
+const String kSupportEmail = 'support@shahisoftware.com';
+const String kPrivacyUrl = 'https://privacy.shahisoftware.com';
+const String kTermsUrl = 'https://terms.shahisoftware.com';
+
+// Store listing URLs (placeholders until the apps are published).
+const String kPlayStoreUrl =
+    'https://play.google.com/store/apps/details?id=com.shahisoftware.heartos';
+const String kAppStoreUrl =
+    'https://apps.apple.com/app/id000000000'; // TODO: replace with real Apple ID
+
+const String kDisclaimerText =
+    'All precautions have been taken to use only authentic sources, but user '
+    'discretion is strongly recommended.';
 
 class SettingsScreen extends ConsumerWidget {
   const SettingsScreen({super.key});
@@ -13,41 +38,45 @@ class SettingsScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
       body: ListView(
+        padding: const EdgeInsets.only(bottom: 24),
         children: [
-          const _SectionLabel('Appearance'),
-          ListTile(
-            leading: const Icon(Icons.palette_outlined),
-            title: const Text('Theme'),
-            subtitle: const Text('System default (light/dark)'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => _snack(context, 'Theme selector coming in v1.1'),
-          ),
-          const _SectionLabel('Content'),
-          ListTile(
-            leading: const Icon(Icons.translate),
-            title: const Text('Language'),
-            subtitle: const Text('English'),
-            trailing: const Icon(Icons.chevron_right),
-            onTap: () => _snack(context, 'Urdu language support coming in v1.1'),
-          ),
+          // ---- Data ----
           const _SectionLabel('Data'),
-          ListTile(
-            leading: const Icon(Icons.download_outlined),
-            title: const Text('Export data (JSON)'),
-            onTap: () => _snack(context, 'Coming in v1.1'),
+          const _DeleteDataTile(),
+          const _SectionDivider(),
+
+          // ---- Legal ----
+          const _SectionLabel('Legal'),
+          const _LinkTile(
+            icon: Icons.privacy_tip_outlined,
+            title: 'Privacy Policy',
+            url: kPrivacyUrl,
           ),
+          const _LinkTile(
+            icon: Icons.gavel_outlined,
+            title: 'Terms of Service',
+            url: kTermsUrl,
+          ),
+          const _DisclaimerTile(),
+          const _SectionDivider(),
+
+          // ---- About ----
           const _SectionLabel('About'),
-          const ListTile(
-            leading: Icon(Icons.info_outline),
-            title: Text('HeartOS v1.0'),
-            subtitle: Text('Offline-first spiritual self-improvement'),
+          const _AboutHeader(),
+          const _LinkTile(
+            icon: Icons.language_outlined,
+            title: 'Website',
+            subtitle: kAppWebsite,
+            url: kAppWebsite,
           ),
-          const ListTile(
-            leading: Icon(Icons.menu_book_outlined),
-            title: Text('Sources'),
-            subtitle: Text('Quran, Hadith, Names of Allah from canonical references'),
-          ),
-          const SizedBox(height: 24),
+          const _ContactUsTile(),
+          const _SourcesTile(),
+          const _RateAppTile(),
+          const _SectionDivider(),
+
+          // ---- Disclaimer banner ----
+          const _DisclaimerBanner(),
+          const SizedBox(height: 16),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: OutlinedButton(
@@ -59,11 +88,11 @@ class SettingsScreen extends ConsumerWidget {
       ),
     );
   }
-
-  void _snack(BuildContext context, String msg) {
-    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(msg)));
-  }
 }
+
+// ============================================================================
+// Section helpers
+// ============================================================================
 
 class _SectionLabel extends StatelessWidget {
   final String label;
@@ -74,8 +103,357 @@ class _SectionLabel extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(16, 16, 16, 4),
       child: Text(
         label,
-        style: const TextStyle(fontSize: 12, color: AppColors.textSecondary, fontWeight: FontWeight.w600),
+        style: const TextStyle(
+          fontSize: 12,
+          color: AppColors.textSecondary,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
+  }
+}
+
+class _SectionDivider extends StatelessWidget {
+  const _SectionDivider();
+  @override
+  Widget build(BuildContext context) {
+    return const Divider(height: 24, thickness: 1, indent: 16, endIndent: 16);
+  }
+}
+
+// ============================================================================
+// Data
+// ============================================================================
+
+class _DeleteDataTile extends ConsumerWidget {
+  const _DeleteDataTile();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return ListTile(
+      leading: const Icon(Icons.delete_outline, color: AppColors.error),
+      title: const Text('Delete my data'),
+      subtitle: const Text(
+        'Removes all check-ins, history, habits and preferences',
+      ),
+      onTap: () => _confirm(context, ref),
+    );
+  }
+
+  Future<void> _confirm(BuildContext context, WidgetRef ref) async {
+    final ok = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Delete all data?'),
+        content: const Text(
+          'This will permanently delete all your check-ins, heart history, '
+          'interventions, habits, and preferences. This action cannot be '
+          'undone.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: AppColors.error),
+            onPressed: () => Navigator.of(ctx).pop(true),
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+    if (ok != true || !context.mounted) return;
+
+    final service = DeleteDataService(ref.read(appDatabaseProvider));
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      await service.deleteAllUserData();
+      messenger.showSnackBar(
+        const SnackBar(content: Text('All data deleted.')),
+      );
+    } catch (e) {
+      messenger.showSnackBar(
+        SnackBar(content: Text('Failed to delete data: $e')),
+      );
+    }
+  }
+}
+
+// ============================================================================
+// Legal
+// ============================================================================
+
+class _LinkTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final String? subtitle;
+  final String url;
+  const _LinkTile({
+    required this.icon,
+    required this.title,
+    this.subtitle,
+    required this.url,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Icon(icon),
+      title: Text(title),
+      subtitle: subtitle == null ? null : Text(subtitle!),
+      trailing: const Icon(Icons.open_in_new, size: 18),
+      onTap: () => _open(context, url),
+    );
+  }
+}
+
+class _DisclaimerTile extends StatelessWidget {
+  const _DisclaimerTile();
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionTile(
+      leading: const Icon(Icons.info_outline),
+      title: const Text('Content disclaimer'),
+      childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      children: [
+        Text(
+          kDisclaimerText,
+          style: const TextStyle(
+            fontSize: 13,
+            color: AppColors.textSecondary,
+            height: 1.4,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+// ============================================================================
+// About
+// ============================================================================
+
+class _AboutHeader extends StatelessWidget {
+  const _AboutHeader();
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      child: Row(
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image.asset(
+              'assets/images/heartos_logo.png',
+              width: 56,
+              height: 56,
+              fit: BoxFit.cover,
+            ),
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                Text(
+                  'HeartOS',
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                ),
+                SizedBox(height: 2),
+                Text(
+                  'v$kAppVersion  ·  Offline-first spiritual self-improvement',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: AppColors.textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ContactUsTile extends StatelessWidget {
+  const _ContactUsTile();
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const Icon(Icons.mail_outline),
+      title: const Text('Contact us'),
+      subtitle: Text(kSupportEmail),
+      trailing: const Icon(Icons.open_in_new, size: 18),
+      onTap: () => _open(context, 'mailto:$kSupportEmail'),
+    );
+  }
+}
+
+class _SourcesTile extends StatelessWidget {
+  const _SourcesTile();
+  @override
+  Widget build(BuildContext context) {
+    return ExpansionTile(
+      leading: const Icon(Icons.menu_book_outlined),
+      title: const Text('Authentic sources'),
+      subtitle: const Text(
+        'Quran, Hadith, Names of Allah from canonical references',
+      ),
+      childrenPadding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+      children: [
+        for (final cat in kAuthenticSources) ...[
+          if (cat.description.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(top: 4, bottom: 4),
+              child: Text(
+                cat.title,
+                style: const TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textPrimary,
+                ),
+              ),
+            )
+          else
+            Padding(
+              padding: const EdgeInsets.only(top: 8, bottom: 4),
+              child: Text(
+                cat.title,
+                style: const TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w600,
+                  color: AppColors.textPrimary,
+                ),
+              ),
+            ),
+          for (final w in cat.works)
+            Padding(
+              padding: const EdgeInsets.only(left: 4, bottom: 2),
+              child: Text(
+                '• $w',
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: AppColors.textSecondary,
+                  height: 1.35,
+                ),
+              ),
+            ),
+        ],
+        const SizedBox(height: 12),
+        Text(
+          'Sources intentionally avoided:',
+          style: const TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            color: AppColors.textPrimary,
+          ),
+        ),
+        const SizedBox(height: 4),
+        for (final a in kSourcesAvoided)
+          Padding(
+            padding: const EdgeInsets.only(bottom: 2),
+            child: Text(
+              '• $a',
+              style: const TextStyle(
+                fontSize: 12,
+                color: AppColors.textSecondary,
+                height: 1.35,
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
+class _RateAppTile extends StatelessWidget {
+  const _RateAppTile();
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: const Icon(Icons.star_rate_outlined),
+      title: const Text('Rate this app'),
+      trailing: const Icon(Icons.open_in_new, size: 18),
+      onTap: () {
+        final url = _storeUrl();
+        _open(context, url);
+      },
+    );
+  }
+
+  String _storeUrl() {
+    try {
+      if (Platform.isIOS) return kAppStoreUrl;
+    } catch (_) {
+      // Platform not available (web/tests) — fall through.
+    }
+    return kPlayStoreUrl;
+  }
+}
+
+// ============================================================================
+// Footer
+// ============================================================================
+
+class _DisclaimerBanner extends StatelessWidget {
+  const _DisclaimerBanner();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: AppColors.surfaceVariant,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: AppColors.textHint),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Icon(
+            Icons.warning_amber_rounded,
+            size: 18,
+            color: AppColors.warning,
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              kDisclaimerText,
+              style: const TextStyle(
+                fontSize: 12,
+                color: AppColors.textSecondary,
+                height: 1.4,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+// ============================================================================
+// URL launcher
+// ============================================================================
+
+Future<void> _open(BuildContext context, String url) async {
+  final uri = Uri.tryParse(url);
+  if (uri == null) return;
+  final messenger = ScaffoldMessenger.of(context);
+  try {
+    final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!ok && context.mounted) {
+      messenger.showSnackBar(
+        const SnackBar(content: Text('Could not open the link.')),
+      );
+    }
+  } catch (e) {
+    if (context.mounted) {
+      messenger.showSnackBar(
+        SnackBar(content: Text('Could not open the link: $e')),
+      );
+    }
   }
 }

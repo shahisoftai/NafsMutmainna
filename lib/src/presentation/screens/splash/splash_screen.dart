@@ -8,6 +8,8 @@ import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../viewmodels/checkin_view_model.dart';
 
+const String _kAppVersion = '1.1.13';
+
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
   @override
@@ -59,30 +61,95 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.primary,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(Icons.spa, size: 80, color: AppColors.textOnPrimary),
-            SizedBox(height: 16),
-            Text(
-              'HeartOS',
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                color: AppColors.textOnPrimary,
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const _Logo(),
+              const SizedBox(height: 24),
+              const Text(
+                'HeartOS',
+                style: TextStyle(
+                  fontSize: 32,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.textOnPrimary,
+                  letterSpacing: 0.5,
+                ),
               ),
-            ),
-            SizedBox(height: 8),
-            Text(
-              'Spiritual Self-Improvement',
-              style: TextStyle(fontSize: 14, color: AppColors.textOnPrimary),
-            ),
-            SizedBox(height: 32),
-            CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(AppColors.textOnPrimary),
-            ),
-          ],
+              const SizedBox(height: 4),
+              const Text(
+                'Spiritual Self-Improvement',
+                style: TextStyle(
+                  fontSize: 13,
+                  color: AppColors.textOnPrimary,
+                ),
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'v$_kAppVersion',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: AppColors.textOnPrimary.withValues(alpha: 0.7),
+                  letterSpacing: 1.2,
+                ),
+              ),
+              const SizedBox(height: 40),
+              const CircularProgressIndicator(
+                valueColor: AlwaysStoppedAnimation<Color>(
+                  AppColors.textOnPrimary,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/// Renders the HeartOS logo from the bundled asset. A square white
+/// "card" backdrop is used so transparent / irregular logos remain
+/// visible against the brand-green background.
+///
+/// Size is derived from the screen width (clamped) so the logo never
+/// gets clipped on narrow devices and never overwhelms the screen on
+/// tablets. Internal padding is generous to keep the logo visually
+/// inset from the rounded card edge.
+class _Logo extends StatelessWidget {
+  const _Logo();
+
+  @override
+  Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.sizeOf(context).width;
+    // 32% of width, clamped between 96 and 140 px. Generous horizontal
+    // padding (24% of size) prevents edge clipping on any device.
+    final size = screenWidth * 0.32;
+    final clamped = size.clamp(96.0, 140.0);
+    final radius = clamped * 0.22;
+    final innerRadius = clamped * 0.16;
+    final padding = clamped * 0.20;
+
+    return Container(
+      width: clamped,
+      height: clamped,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(radius),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.15),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      padding: EdgeInsets.all(padding),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(innerRadius),
+        child: Image.asset(
+          'assets/images/heartos_logo.png',
+          fit: BoxFit.contain,
         ),
       ),
     );
