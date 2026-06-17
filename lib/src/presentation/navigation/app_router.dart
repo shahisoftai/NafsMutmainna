@@ -10,6 +10,7 @@ import '../screens/insight/insight_screen.dart';
 import '../screens/intervention/intervention_detail_screen.dart';
 import '../screens/intervention/intervention_screen.dart';
 import '../screens/journey/journey_screen.dart';
+import '../screens/nafs_detail/nafs_detail_screen.dart';
 import '../screens/reflect/reflect_screen.dart';
 import '../screens/splash/splash_screen.dart';
 import '../screens/habits/habits_screen.dart';
@@ -34,6 +35,7 @@ class AppRouter {
   static const String profile = '/profile';
   static const String settings = '/settings';
   static const String journey = '/journey';
+  static const String nafsDetail = '/nafs-detail';
 
   static final GoRouter router = GoRouter(
     initialLocation: splash,
@@ -84,6 +86,11 @@ class AppRouter {
       GoRoute(path: profile, name: 'profile', builder: (_, __) => const ProfileScreen()),
       GoRoute(path: settings, name: 'settings', builder: (_, __) => const SettingsScreen()),
       GoRoute(path: journey, name: 'journey', builder: (_, __) => const JourneyScreen()),
+      GoRoute(
+        path: nafsDetail,
+        name: 'nafsDetail',
+        builder: (_, _) => const NafsDetailScreen(),
+      ),
     ],
   );
 }

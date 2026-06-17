@@ -212,7 +212,7 @@ class Meter15Day {
   Future<Vector4> call(DateTime date) async {
     final start = date.subtract(const Duration(days: NafsConstants.meterWindowDays - 1));
     final rows = await _history.findBetween(start, date);
-    if (rows.isEmpty) return Vector4.lawwamahBaseline;
+    if (rows.isEmpty) return Vector4.ammarahStartup;
 
     final n = rows.length;
     final weights = <double>[];
@@ -222,7 +222,7 @@ class Meter15Day {
       weights.add(1.0 - (ageInDays * 0.8 / (NafsConstants.meterWindowDays - 1)));
     }
     final sumW = weights.fold<double>(0, (a, b) => a + b);
-    if (sumW == 0) return Vector4.lawwamahBaseline;
+    if (sumW == 0) return Vector4.ammarahStartup;
 
     final v = rows
         .map((r) => r.vector * weights[rows.indexOf(r)])

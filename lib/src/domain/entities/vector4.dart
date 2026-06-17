@@ -13,9 +13,15 @@ class Vector4 extends Equatable {
   /// Equal-weighted neutral baseline (used by tests / when no data).
   static const Vector4 neutral = Vector4(0.25, 0.25, 0.25, 0.25);
 
-  /// Lawwamah baseline - the default starting state for a new user.
-  /// 10/60/20/10.
-  static const Vector4 lawwamahBaseline = Vector4(0.10, 0.60, 0.20, 0.10);
+  /// Honest spiritual baseline for a new user — Ammarah-dominant.
+  ///
+  /// Meaning: before any spiritual practice is recorded, the model assumes the
+  /// user is in the Ammarah station (commanding soul), with a small step
+  /// toward Lawwamah (reproaching soul) and negligible Mulhamah/Mutmainnah.
+  /// This is aspirationally honest — it sets the starting point low so genuine
+  /// progress is measurable.  Corresponds to Ammarah=65%, Lawwamah=25%,
+  /// Mulhamah=7%, Mutmainnah=3%.
+  static const Vector4 ammarahStartup = Vector4(0.65, 0.25, 0.07, 0.03);
 
   static const List<NafsType> _order = NafsType.values;
 

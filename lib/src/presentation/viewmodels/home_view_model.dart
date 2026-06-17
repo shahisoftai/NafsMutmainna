@@ -97,9 +97,9 @@ class HomeViewModel extends StateNotifier<HomeState> {
         _streak = streak,
         _trendHelper = trendHelper,
         _actionResolver = actionResolver,
-        super(const HomeState(
-          meter: Vector4(0.10, 0.60, 0.20, 0.10),
-          dominant: NafsType.lawwamah,
+        super(HomeState(
+          meter: Vector4.ammarahStartup,
+          dominant: NafsType.ammarah,
           heartHealthScore: 0,
         ));
 
@@ -124,14 +124,14 @@ class HomeViewModel extends StateNotifier<HomeState> {
 
       // Persist today's row if missing (preserves existing behavior).
       final existingToday = await _historyRepo.findForDate(today);
-      if (existingToday == null) {
+        if (existingToday == null) {
         await _historyRepo.upsert(NafsHistory(
           id: 0,
           date: today,
-          ammarah: 0.10,
-          lawwamah: 0.60,
-          mulhamah: 0.20,
-          mutmainnah: 0.10,
+          ammarah: Vector4.ammarahStartup.ammarah,
+          lawwamah: Vector4.ammarahStartup.lawwamah,
+          mulhamah: Vector4.ammarahStartup.mulhamah,
+          mutmainnah: Vector4.ammarahStartup.mutmainnah,
         ));
       }
 

@@ -8,7 +8,7 @@ import '../../theme/colors.dart';
 import '../../viewmodels/home_view_model.dart';
 import '../../widgets/common/loading_indicator.dart';
 import '../../widgets/specific/heart_health_score_widget.dart';
-import '../../widgets/specific/nafs_meter.dart';
+import '../../widgets/specific/nafs_arc_meter.dart';
 import 'widgets/daily_dhikr_section.dart';
 import 'widgets/home_greeting_widget.dart';
 import 'widgets/today_habits_strip.dart';
@@ -72,11 +72,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                   _primaryCta(context),
                   const SizedBox(height: 14),
                   // Nafs Meter at the top — it's the app's core visual.
-                  NafsMeterWidget(
+                  NafsArcMeter(
                     vector: state.meter,
                     dominant: state.dominant,
-                    trend: state.trend,
-                    sparkline: state.sparkline,
+                    onTap: () => context.push(AppRouter.nafsDetail),
                   ),
                   const SizedBox(height: 14),
                   HeartHealthScoreWidget(
