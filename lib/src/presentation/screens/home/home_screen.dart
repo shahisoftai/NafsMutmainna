@@ -38,7 +38,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(
-        title: const Text('HeartOS'),
+        title: const Text('NafsMutmainna'),
         actions: [
           IconButton(
             icon: const Icon(Icons.account_tree_outlined),

@@ -1,5 +1,10 @@
 # HeartOS Database Changelog
 
+## [2026-06-18] v1.1.14
+
+### Changes
+- Updated app version to 1.1.14 across all project files
+
 ## [2026-06-16] Onboarding Flash Cards
 
 ### New feature

@@ -40,6 +40,7 @@ const List<OnboardingCardData> kOnboardingCards = [
         'Your privacy-first spiritual fitness companion.\n'
         'All your data stays on your device. No account. '
         'No tracking. No ads.\n'
+        'Set a passcode in Settings to lock the app.\n'
         'Just you and your heart, working quietly together.',
     icon: Icons.favorite_outline,
     accentIcon: Icons.lock_outline,

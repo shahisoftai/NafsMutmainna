@@ -1,7 +1,7 @@
 # Onboarding Flash Cards — Implementation Reference
 
 **Date:** 2026-06-16  
-**Version:** v1.1.13  
+**Version:** v1.1.14  
 **Status:** Implemented, ready for device testing
 
 ---
@@ -80,6 +80,6 @@ The flag is stored in a dedicated `prefs` Hive box (separate from the `auth` box
 ## See Also
 - `HeartOS/00_root/onboarding_flash_cards.md` — full design + persistence spec
 - `HeartOS/00_root/user_flow.md` §4 — user-facing first-run description
-- `HeartOS/CHANGELOG.md` — v1.1.13 entry
+- `HeartOS/CHANGELOG.md` — v1.1.14 entry
 - `HeartOS/INDEX.md` — table of contents (now 53 markdown files)
 - `memory-bank/ONBOARDING-FLASH-CARDS-PLAN.md` — original plan

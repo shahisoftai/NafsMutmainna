@@ -9,7 +9,7 @@ import '../../theme/colors.dart';
 import '../../viewmodels/checkin_view_model.dart';
 import '../../viewmodels/privacy_lock_view_model.dart';
 
-const String _kAppVersion = '1.1.13';
+const String _kAppVersion = '1.1.14';
 
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});

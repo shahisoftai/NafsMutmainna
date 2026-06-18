@@ -1,7 +1,7 @@
 # Onboarding Flash Cards
 
 > First-run UX that introduces the user to HeartOS in 7 swipable cards.
-> Implemented in v1.1.13 on 2026-06-16.
+> Implemented in v1.1.14 on 2026-06-18.
 
 This document is the **implementation reference** for the onboarding flow. For the user's perspective on the same feature see [`00_root/user_flow.md` §4 First-run experience](user_flow.md#4--first-run-experience).
 
@@ -186,4 +186,4 @@ The onboarding flag persists across `flutter clean` (Hive is on-device storage, 
 
 ---
 
-*Implemented 2026-06-16 · v1.1.13 · 7 cards · 4 new files · 0 existing files structurally changed.*
+*Implemented 2026-06-18 · v1.1.14 · 7 cards · 4 new files · 0 existing files structurally changed.*
