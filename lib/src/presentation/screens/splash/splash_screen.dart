@@ -7,6 +7,7 @@ import '../../../infrastructure/di/providers.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../viewmodels/checkin_view_model.dart';
+import '../../viewmodels/privacy_lock_view_model.dart';
 
 const String _kAppVersion = '1.1.13';
 
@@ -54,7 +55,27 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
       Logger.error('hasSeenOnboarding read failed: $e');
     }
     if (!mounted) return;
-    context.go(hasSeenOnboarding ? AppRouter.home : AppRouter.onboarding);
+
+    bool privacyLockEnabled = false;
+    try {
+      final lockNotifier = ref.read(privacyLockProvider.notifier);
+      await lockNotifier.checkInitialState();
+      final lockState = ref.read(privacyLockProvider);
+      privacyLockEnabled = lockState.isEnabled;
+    } catch (e) {
+      Logger.error('Privacy lock check failed: $e');
+    }
+
+    if (!mounted) return;
+
+    if (!hasSeenOnboarding) {
+      context.go(AppRouter.onboarding);
+    } else if (privacyLockEnabled) {
+      ref.read(privacyLockProvider.notifier).setAuthenticated(false);
+      context.go(AppRouter.lock);
+    } else {
+      context.go(AppRouter.home);
+    }
   }
 
   @override

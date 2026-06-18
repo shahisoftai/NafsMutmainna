@@ -10,6 +10,7 @@ import '../screens/insight/insight_screen.dart';
 import '../screens/intervention/intervention_detail_screen.dart';
 import '../screens/intervention/intervention_screen.dart';
 import '../screens/journey/journey_screen.dart';
+import '../screens/lock/privacy_lock_screen.dart';
 import '../screens/nafs_detail/nafs_detail_screen.dart';
 import '../screens/reflect/reflect_screen.dart';
 import '../screens/splash/splash_screen.dart';
@@ -36,6 +37,8 @@ class AppRouter {
   static const String settings = '/settings';
   static const String journey = '/journey';
   static const String nafsDetail = '/nafs-detail';
+  static const String lock = '/lock';
+  static const String lockSetup = '/lock/setup';
 
   static final GoRouter router = GoRouter(
     initialLocation: splash,
@@ -90,6 +93,12 @@ class AppRouter {
         path: nafsDetail,
         name: 'nafsDetail',
         builder: (_, _) => const NafsDetailScreen(),
+      ),
+      GoRoute(path: lock, name: 'lock', builder: (_, __) => const PrivacyLockScreen()),
+      GoRoute(
+        path: lockSetup,
+        name: 'lockSetup',
+        builder: (_, __) => const PrivacyLockScreen(isSetupMode: true),
       ),
     ],
   );

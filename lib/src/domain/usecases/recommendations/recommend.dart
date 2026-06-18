@@ -1,178 +1,292 @@
 import '../../entities/emotion.dart';
+import '../../entities/hadees.dart';
 import '../../entities/heart_attribute.dart';
 import '../../entities/intervention_card.dart';
-import '../../entities/hadees.dart';
 import '../../entities/quran_ayat.dart';
 import '../../repositories/attribute_repository.dart';
-import '../../repositories/emotion_attribute_link_repository.dart';
 import '../../repositories/emotion_repository.dart';
 import '../../repositories/hadees_repository.dart';
 import '../../repositories/intervention_history_repository.dart';
 import '../../repositories/quran_ayat_repository.dart';
+import 'attribute_resolver.dart';
 
-/// Builds up to 6 intervention cards (Quran / Hadith / Dua / Names / Dhikr / Action)
-/// for the given emotion and intensity.
+/// Recommend v2 — produces up to 6 intervention cards for a check-in.
 ///
-/// Candidate attributes come from the top-3 Treatment+Core links (ordered by Weight
-/// DESC), matching recommendation_algorithm.md §4.2:
-///   WHERE Role IN ('Treatment', 'Core') ORDER BY Weight DESC LIMIT 3
+/// Design principles (see `HeartOS/08_algorithms/recommendation_algorithm.md`):
 ///
-/// Cards are ranked by the composite formula from recommendation_algorithm.md §4.6:
-///   rank = 0.6 × baseScore  +  0.3 × (intensity / 10)  +  0.1 × (Mutmainnah / 100)
+/// 1. **Hand-curated first, derived second.** The Emotion row carries
+///    per-emotion `Recommended_Dua*`, `Recommended_Allah_Names`,
+///    `Recommended_Dhikr`, `Daily_Action`. These are the first source
+///    for the Dua, Names, Dhikr, Action cards. Only when the Emotion
+///    row has nothing in a field do we fall back to the resolved
+///    attribute's embedded content.
 ///
-/// The Mutmainnah bias rewards cards whose source attribute sits higher on the
-/// spiritual scale (more Mutmainnah weight = more virtue).  This ensures a card
-/// from a high-virtue Treatment attribute (e.g. Tawakkul) outranks one from a
-/// low-virtue Treatment attribute of equal Weight.
+/// 2. **Growth_Path drives depth.** Each Emotion has a `Growth_Path`
+///    (e.g. "Ghadab→Sabr→Hilm→Rifq"). The path always ends at a
+///    high-Mutmainnah attribute. Intensity picks WHICH step on the
+///    path to feature:
+///       - intensity 1-3 (mild) → later step (aspirational)
+///       - intensity 4-6 (moderate) → middle step
+///       - intensity 7-10 (acute) → early step (immediate, practical)
+///    The terminal step is always included as the "aspiration" anchor.
+///
+/// 3. **Deterministic Quran/Hadith.** The `emotion_quran_links` and
+///    `emotion_hadees_links` tables are hand-curated against the
+///    emotion's theme. We pick the top by `Weight DESC` (NOT random).
+///    A soft 3-day skip prefers variety but never blocks.
+///
+/// 4. **No magic scoring.** No 0.6/0.3/0.1 weighted sums. The card
+///    order is deterministic and explainable.
+///
+/// 5. **Failproof.** Missing fields produce empty card text, never
+///    exceptions. Unresolvable Growth_Path steps are logged and
+///    skipped. An Emotion with zero usable content still produces a
+///    single Dhikr-style reflection card so the screen is never empty.
 class Recommend {
-  final EmotionAttributeLinkRepositoryInterface _links;
-  final AttributeRepositoryInterface _attrs;
   final EmotionRepositoryInterface _emotions;
   final InterventionHistoryRepositoryInterface _history;
   final HadeesRepository _hadees;
   final QuranAyatRepository _quranAyat;
+  final AttributeResolver _resolver;
 
+  /// The number of days to soft-skip when picking top Quran/Hadith.
+  /// Short enough that the user is not starved, long enough to give
+  /// the same emotion a different feel across consecutive days.
+  static const int softSkipDays = 3;
+
+  /// Maximum number of cards to return.
+  static const int maxCards = 6;
+
+  /// Default constructor. Builds the [AttributeResolver] internally.
   Recommend(
-    this._links,
-    this._attrs,
+    AttributeRepositoryInterface attrs,
     this._emotions,
     this._history,
     this._hadees,
     this._quranAyat,
+  ) : _resolver = AttributeResolver(attrs);
+
+  /// Convenience constructor that accepts pre-built [resolver] (for tests
+  /// that want to stub out attribute resolution).
+  Recommend.withResolver(
+    this._emotions,
+    this._history,
+    this._hadees,
+    this._quranAyat,
+    this._resolver,
   );
 
   Future<List<InterventionCard>> call(int emotionId, int intensity) async {
-    // --- Step 1: Resolve the emotion ---
     final emotion = await _emotions.getById(emotionId);
     if (emotion == null) return [];
 
-    // --- Step 2: Top 3 Treatment + Core attributes combined ---
-    // Query both roles in one pass (Role IN ('Treatment','Core')).
-    // This ensures the Core attribute — the single most important one — is
-    // always included, even when Treatment links are present.
-    final links = await _links.findForEmotionTop(
-      emotionId,
-      roles: const ['Treatment', 'Core'],
-      limit: 3,
-    );
+    final clampedIntensity = intensity.clamp(1, 10);
 
-    // --- Step 3: Build candidate cards ---
-    final candidates = <InterventionCard>[];
-    final attrs = <HeartAttribute>[];
+    // --- Step 1: Resolve the growth path to attribute IDs. ---
+    final resolvedAttrs = await _resolveGrowthPath(emotion);
 
-    for (final link in links) {
-      final attr = await _attrs.getById(link.attributeId);
-      if (attr == null) continue;
-      attrs.add(attr);
-      final baseScore = link.weight * (intensity / 10.0);
-      candidates.addAll(_buildAttributeCards(attr, emotion, baseScore));
-    }
+    // --- Step 2: Pick the focus attribute by intensity. ---
+    final focusAttr = _pickFocus(resolvedAttrs, clampedIntensity);
 
-    // --- Step 4: Emotion-level cards (Dhikr + Action) ---
-    candidates.add(_buildDhikrCard(emotion, attrs));
-    candidates.add(_buildActionCard(emotion, attrs));
-
-    // --- Step 5: Randomised Hadith + Quran from normalised pools ---
-    final recent = await _history.findRecent(7);
+    // --- Step 3: Collect recent IDs for soft-skip. ---
+    final recent = await _history.findRecent(softSkipDays);
+    final recentQuranIds = recent
+        .where((r) => r.interventionType == InterventionType.quran)
+        .map((r) => r.attributeId)
+        .where((id) => id > 0)
+        .toSet();
     final recentHadeesIds = recent
-        .where((r) => r.interventionType.name == 'hadith')
+        .where((r) => r.interventionType == InterventionType.hadith)
         .map((r) => r.attributeId)
-        .toSet();
-    final recentAyatIds = recent
-        .where((r) => r.interventionType.name == 'quran')
-        .map((r) => r.attributeId)
+        .where((id) => id > 0)
         .toSet();
 
-    final hadees = await _fetchRandomHadees(emotionId, recentHadeesIds);
+    // --- Step 4: Build the 6 cards. ---
+    final cards = <InterventionCard>[];
+
+    // (a) Quran — top from emotion_quran_links by Weight DESC.
+    final quran = await _pickTopQuran(emotionId, recentQuranIds);
+    if (quran != null) {
+      cards.add(_buildAyatCard(quran, emotion));
+    } else if (focusAttr != null) {
+      // Fallback: attribute's embedded Quran_Reference.
+      final fb = _buildAttributeQuranCard(focusAttr, emotion);
+      if (fb != null) cards.add(fb);
+    }
+
+    // (b) Hadith — top from emotion_hadees_links by Weight DESC.
+    final hadees = await _pickTopHadees(emotionId, recentHadeesIds);
     if (hadees != null) {
-      candidates.add(_buildHadeesCard(hadees, emotion, 0.85));
+      cards.add(_buildHadeesCard(hadees, emotion));
+    } else if (focusAttr != null) {
+      final fb = _buildAttributeHadithCard(focusAttr, emotion);
+      if (fb != null) cards.add(fb);
     }
 
-    final ayat = await _fetchRandomAyat(emotionId, recentAyatIds);
-    if (ayat != null) {
-      candidates.add(_buildAyatCard(ayat, emotion, 0.85));
+    // (c) Dua — from Emotion row, if any content is present.
+    final dua = _buildDuaCard(emotion);
+    if (dua != null) cards.add(dua);
+
+    // (d) Names — from Emotion row.
+    final names = _buildNamesCard(emotion);
+    if (names != null) cards.add(names);
+
+    // (e) Dhikr — from Emotion row.
+    final dhikr = _buildDhikrCard(emotion);
+    if (dhikr != null) cards.add(dhikr);
+
+    // (f) Action — from Emotion row.
+    final action = _buildActionCard(emotion);
+    if (action != null) cards.add(action);
+
+    // --- Step 5: Trim and guarantee at least 1 card. ---
+    final trimmed = cards.take(maxCards).toList();
+    if (trimmed.isEmpty) {
+      trimmed.add(_buildReflectionFallback(emotion));
     }
-
-    // --- Step 6: Apply 7-day no-repeat filter ---
-    final seen = recent
-        .map((r) => (r.interventionType, r.attributeId, r.emotionId))
-        .toSet();
-    final filtered = candidates
-        .where((c) => !seen.contains((c.type, c.attributeId, c.emotionId)))
-        .toList();
-
-    // --- Step 7: Rank by composite formula ---
-    // rank = 0.6 × baseScore  +  0.3 × (intensity / 10)  +  0.1 × (Mutmainnah / 100)
-    // Nafs weights are on the 0–100 scale, so divide by 100 to get 0–1.
-    final intensityMult = (intensity / 10.0).clamp(0.0, 1.0);
-    // Build a local rank map to avoid mutable state on the use-case instance.
-    final rankScores = <InterventionCard, double>{};
-    for (final c in filtered) {
-      if (c.attributeId > 0) {
-        final nafsW = await _attrs.getNafsWeights(c.attributeId);
-        rankScores[c] = 0.6 * c.score + 0.3 * intensityMult + 0.1 * (nafsW.mutmainnah / 100.0);
-      } else {
-        // Dhikr / Action cards have attributeId = 0; rank purely on score + intensity.
-        rankScores[c] = 0.6 * c.score + 0.3 * intensityMult;
-      }
-    }
-
-    filtered.sort((a, b) => (rankScores[b] ?? 0).compareTo(rankScores[a] ?? 0));
-
-    // --- Step 8: Deduplicate by card type, take top 6 ---
-    final deduped = <InterventionType, InterventionCard>{};
-    for (final card in filtered) {
-      deduped.putIfAbsent(card.type, () => card);
-    }
-    return deduped.values.take(6).toList();
+    return trimmed;
   }
 
-  // ---------------------------------------------------------------------------
-  // Card builders
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // Path resolution
+  // ===========================================================================
 
-  Future<Hadees?> _fetchRandomHadees(int emotionId, Set<int> excludeIds) async {
-    final pool = await _hadees.findForEmotion(emotionId);
-    if (pool.isEmpty) return null;
-    for (int attempt = 0; attempt < 5; attempt++) {
-      final hadees = await _hadees.findRandomForEmotionExcluding(
-        emotionId: emotionId,
-        excludeIds: excludeIds,
-      );
-      if (hadees != null) return hadees;
-    }
-    return null;
+  /// Resolves the Emotion's `Growth_Path` to a list of [HeartAttribute]s.
+  ///
+  /// For negative emotions, the first step is often the disease attribute
+  /// (e.g. "Ghadab") or the emotion name itself (e.g. "Anxiety"). We still
+  /// keep it in the list — the focus picker will skip to the next step for
+  /// acute intensity — but the resolver gracefully returns null for names
+  /// that don't match an attribute, in which case the step is dropped.
+  ///
+  /// If the Growth_Path is empty or yields nothing resolvable, falls back
+  /// to `Primary_Positive_Attributes` (e.g. "Sabr;Hilm;Rifq" for Anger).
+  Future<List<HeartAttribute>> _resolveGrowthPath(Emotion emotion) async {
+    final fromPath = await _resolver.resolveAll(emotion.growthPathSteps);
+    if (fromPath.isNotEmpty) return fromPath;
+    return _resolver.resolveAll(emotion.primaryPositiveAttributeNames);
   }
 
-  Future<QuranAyat?> _fetchRandomAyat(int emotionId, Set<int> excludeIds) async {
-    final pool = await _quranAyat.findForEmotion(emotionId);
-    if (pool.isEmpty) return null;
-    for (int attempt = 0; attempt < 5; attempt++) {
-      final ayat = await _quranAyat.findRandomForEmotionExcluding(
-        emotionId: emotionId,
-        excludeIds: excludeIds,
-      );
-      if (ayat != null) return ayat;
-    }
-    return null;
+  /// Picks the index in [attrs] that matches the intensity profile.
+  ///
+  /// - `intensity 1-3` → last index (mild → aspirational)
+  /// - `intensity 4-6` → middle index
+  /// - `intensity 7-10` → first index (acute → immediate)
+  HeartAttribute? _pickFocus(List<HeartAttribute> attrs, int intensity) {
+    if (attrs.isEmpty) return null;
+    final n = attrs.length;
+    if (n == 1) return attrs.first;
+    final last = n - 1;
+    if (intensity <= 3) return attrs[last];
+    if (intensity >= 7) return attrs[0];
+    return attrs[(n / 2).floor().clamp(0, last)];
   }
 
-  InterventionCard _buildHadeesCard(Hadees hadees, Emotion emotion, double score) {
+  // ===========================================================================
+  // Top-N pickers (deterministic by Weight DESC, soft-skip)
+  // ===========================================================================
+
+  Future<QuranAyat?> _pickTopQuran(int emotionId, Set<int> exclude) async {
+    final top = await _quranAyat.findTopForEmotionExcluding(
+      emotionId,
+      limit: 1,
+      excludeIds: exclude,
+    );
+    return top.isNotEmpty ? top.first : null;
+  }
+
+  Future<Hadees?> _pickTopHadees(int emotionId, Set<int> exclude) async {
+    final top = await _hadees.findTopForEmotionExcluding(
+      emotionId,
+      limit: 1,
+      excludeIds: exclude,
+    );
+    return top.isNotEmpty ? top.first : null;
+  }
+
+  // ===========================================================================
+  // Card builders — Emotion-row-sourced (preferred)
+  // ===========================================================================
+
+  InterventionCard? _buildDuaCard(Emotion emotion) {
+    final arabic = emotion.recommendedDuaArabicOrFallback;
+    final english = emotion.recommendedDuaEnglishOrFallback;
+    final urdu = emotion.recommendedDuaUrduOrFallback;
+    final ref = emotion.recommendedDuaReferenceOrFallback;
+    // Drop the card if the emotion row carries no content for it.
+    if (arabic.isEmpty && english.isEmpty && urdu.isEmpty && ref.isEmpty) {
+      return null;
+    }
     return InterventionCard(
-      type: InterventionType.hadith,
-      title: 'Hadith',
-      subtitle: '${hadees.sourceBook} ${hadees.hadithNumber}',
-      arabic: hadees.arabicText,
-      translation: hadees.englishTranslation,
-      urdu: hadees.urduTranslation,
-      why: 'Authentic guidance for ${emotion.name}',
-      attributeId: hadees.id,
+      type: InterventionType.dua,
+      title: 'Dua',
+      subtitle: ref,
+      arabic: arabic,
+      translation: english,
+      urdu: urdu,
+      why: 'Recommended supplication for ${emotion.name}',
+      attributeId: 0,
       emotionId: emotion.id,
-      score: score,
+      score: 0.0,
     );
   }
 
-  InterventionCard _buildAyatCard(QuranAyat ayat, Emotion emotion, double score) {
+  InterventionCard? _buildNamesCard(Emotion emotion) {
+    final raw = emotion.recommendedAllahNames.trim();
+    if (raw.isEmpty) return null;
+    return InterventionCard(
+      type: InterventionType.allahNames,
+      title: 'Allah Names',
+      subtitle: '',
+      arabic: raw,
+      translation: '',
+      urdu: '',
+      why: 'Names of Allah to reflect on for ${emotion.name}',
+      attributeId: 0,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
+  }
+
+  InterventionCard? _buildDhikrCard(Emotion emotion) {
+    final raw = emotion.recommendedDhikr.trim();
+    if (raw.isEmpty) return null;
+    return InterventionCard(
+      type: InterventionType.dhikr,
+      title: 'Dhikr',
+      subtitle: '',
+      arabic: raw,
+      translation: '',
+      urdu: '',
+      why: 'Recommended remembrance for ${emotion.name}',
+      attributeId: 0,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
+  }
+
+  InterventionCard? _buildActionCard(Emotion emotion) {
+    final raw = emotion.dailyAction.trim();
+    if (raw.isEmpty) return null;
+    return InterventionCard(
+      type: InterventionType.action,
+      title: 'Daily Action',
+      subtitle: '',
+      arabic: '',
+      translation: raw,
+      urdu: '',
+      why: 'A practical step for ${emotion.name}',
+      attributeId: 0,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
+  }
+
+  // ===========================================================================
+  // Card builders — emotion_quran_links / emotion_hadees_links sourced
+  // ===========================================================================
+
+  InterventionCard _buildAyatCard(QuranAyat ayat, Emotion emotion) {
     return InterventionCard(
       type: InterventionType.quran,
       title: 'Quran',
@@ -180,184 +294,87 @@ class Recommend {
       arabic: ayat.arabicText,
       translation: ayat.englishTranslation,
       urdu: ayat.urduTranslation,
-      why: 'Divine guidance for ${emotion.name}',
+      why: 'Hand-picked for ${emotion.name}',
       attributeId: ayat.id,
       emotionId: emotion.id,
-      score: score,
+      score: 0.0,
     );
   }
 
-  List<InterventionCard> _buildAttributeCards(
-      HeartAttribute attr, Emotion emotion, double score) {
-    final cards = <InterventionCard>[];
-    if ((attr.quranReference ?? '').isNotEmpty) {
-      cards.add(InterventionCard(
-        type: InterventionType.quran,
-        title: 'Quran',
-        subtitle: attr.quranReference!,
-        arabic: attr.quranArabic ?? '',
-        translation: attr.quranEnglish ?? '',
-        urdu: attr.quranUrdu ?? '',
-        why: 'Reflective guidance for ${attr.name}',
-        attributeId: attr.id,
-        emotionId: emotion.id,
-        score: score,
-      ));
-    }
-    if ((attr.hadithReference ?? '').isNotEmpty) {
-      cards.add(InterventionCard(
-        type: InterventionType.hadith,
-        title: 'Hadith',
-        subtitle: attr.hadithReference!,
-        arabic: attr.hadithArabic ?? '',
-        translation: attr.hadithUrdu ?? '',
-        urdu: '',
-        why: 'Practical guidance for ${attr.name}',
-        attributeId: attr.id,
-        emotionId: emotion.id,
-        score: score,
-      ));
-    }
-    // Prefer Quranic dua over Prophetic dua (both are valid; Quranic dua gets +0.05 bump
-    // to reflect its direct Quranic source — matches recommendation_algorithm.md §4.3).
-    if ((attr.quranicDuaReference ?? '').isNotEmpty) {
-      cards.add(InterventionCard(
-        type: InterventionType.dua,
-        title: 'Dua',
-        subtitle: attr.quranicDuaReference!,
-        arabic: attr.quranicDuaArabic ?? '',
-        translation: attr.quranicDuaUrdu ?? '',
-        urdu: '',
-        why: 'A Quranic supplication for ${attr.name}',
-        attributeId: attr.id,
-        emotionId: emotion.id,
-        score: score + 0.05,
-      ));
-    } else if ((attr.propheticDuaReference ?? '').isNotEmpty) {
-      cards.add(InterventionCard(
-        type: InterventionType.dua,
-        title: 'Dua',
-        subtitle: attr.propheticDuaReference!,
-        arabic: attr.propheticDuaArabic ?? '',
-        translation: attr.propheticDuaUrdu ?? '',
-        urdu: '',
-        why: 'A supplication for ${attr.name}',
-        attributeId: attr.id,
-        emotionId: emotion.id,
-        score: score,
-      ));
-    }
-    if ((attr.relevantAllahNames ?? '').isNotEmpty) {
-      cards.add(InterventionCard(
-        type: InterventionType.allahNames,
-        title: 'Allah Names',
-        subtitle: '',
-        arabic: attr.relevantAllahNames!,
-        translation: '',
-        urdu: '',
-        why: 'Reflect on these names to cultivate ${attr.name}',
-        attributeId: attr.id,
-        emotionId: emotion.id,
-        score: score,
-      ));
-    }
-    return cards;
+  InterventionCard _buildHadeesCard(Hadees hadees, Emotion emotion) {
+    return InterventionCard(
+      type: InterventionType.hadith,
+      title: 'Hadith',
+      subtitle: '${hadees.sourceBook} ${hadees.hadithNumber}',
+      arabic: hadees.arabicText,
+      translation: hadees.englishTranslation,
+      urdu: hadees.urduTranslation,
+      why: 'Hand-picked for ${emotion.name}',
+      attributeId: hadees.id,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
   }
 
-  InterventionCard _buildDhikrCard(Emotion emotion, List<HeartAttribute> attrs) {
-    if (emotion.recommendedDhikr.isNotEmpty) {
-      return InterventionCard(
-        type: InterventionType.dhikr,
-        title: 'Dhikr',
-        subtitle: '',
-        arabic: emotion.recommendedDhikr,
-        translation: '',
-        urdu: '',
-        why: 'Recommended dhikr for ${emotion.name}',
-        attributeId: 0,
-        emotionId: emotion.id,
-        score: 0.5,
-      );
-    }
-    final fallback = _fallbackAttribute(attrs, (a) => a.quranReference);
-    if (fallback != null) {
-      return InterventionCard(
-        type: InterventionType.dhikr,
-        title: 'Dhikr',
-        subtitle: fallback.quranReference ?? '',
-        arabic: fallback.quranArabic ?? '',
-        translation: fallback.quranEnglish ?? '',
-        urdu: fallback.quranUrdu ?? '',
-        why: 'Reflective guidance for ${fallback.name}',
-        attributeId: fallback.id,
-        emotionId: emotion.id,
-        score: 0.4,
-      );
-    }
+  // ===========================================================================
+  // Card builders — attribute-embedded fallback
+  // ===========================================================================
+
+  InterventionCard? _buildAttributeQuranCard(HeartAttribute a, Emotion emotion) {
+    final ref = a.quranReference?.trim() ?? '';
+    final arabic = a.quranArabic?.trim() ?? '';
+    if (ref.isEmpty && arabic.isEmpty) return null;
+    return InterventionCard(
+      type: InterventionType.quran,
+      title: 'Quran',
+      subtitle: ref,
+      arabic: arabic,
+      translation: a.quranEnglish ?? '',
+      urdu: a.quranUrdu ?? '',
+      why: 'From the attribute ${a.name}, on the path of ${emotion.name}',
+      attributeId: a.id,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
+  }
+
+  InterventionCard? _buildAttributeHadithCard(HeartAttribute a, Emotion emotion) {
+    final ref = a.hadithReference?.trim() ?? '';
+    final arabic = a.hadithArabic?.trim() ?? '';
+    if (ref.isEmpty && arabic.isEmpty) return null;
+    return InterventionCard(
+      type: InterventionType.hadith,
+      title: 'Hadith',
+      subtitle: ref,
+      arabic: arabic,
+      translation: '',
+      urdu: a.hadithUrdu ?? '',
+      why: 'From the attribute ${a.name}, on the path of ${emotion.name}',
+      attributeId: a.id,
+      emotionId: emotion.id,
+      score: 0.0,
+    );
+  }
+
+  // ===========================================================================
+  // Last-resort card
+  // ===========================================================================
+
+  InterventionCard _buildReflectionFallback(Emotion emotion) {
     return InterventionCard(
       type: InterventionType.dhikr,
-      title: 'Dhikr',
+      title: 'Reflection',
       subtitle: '',
-      arabic: '',
-      translation: '',
+      arabic: 'بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ',
+      translation:
+          'Take a moment to pause, recall that you are in the presence of '
+          'Allah, and gently bring your attention back to Him. Your state of '
+          '${emotion.name} is a doorway to knowing Him better.',
       urdu: '',
-      why: 'Remembrance for ${emotion.name}',
+      why: 'A reflection for ${emotion.name}',
       attributeId: 0,
       emotionId: emotion.id,
-      score: 0.3,
+      score: 0.0,
     );
-  }
-
-  InterventionCard _buildActionCard(Emotion emotion, List<HeartAttribute> attrs) {
-    if (emotion.dailyAction.isNotEmpty) {
-      return InterventionCard(
-        type: InterventionType.action,
-        title: 'Daily Action',
-        subtitle: '',
-        arabic: '',
-        translation: emotion.dailyAction,
-        urdu: '',
-        why: 'A practical step for ${emotion.name}',
-        attributeId: 0,
-        emotionId: emotion.id,
-        score: 0.5,
-      );
-    }
-    final fallback = _fallbackAttribute(attrs, (a) => a.hadithReference);
-    if (fallback != null) {
-      return InterventionCard(
-        type: InterventionType.action,
-        title: 'Daily Action',
-        subtitle: fallback.hadithReference ?? '',
-        arabic: fallback.hadithArabic ?? '',
-        translation: fallback.hadithUrdu ?? '',
-        urdu: '',
-        why: 'Practical guidance from ${fallback.name}',
-        attributeId: fallback.id,
-        emotionId: emotion.id,
-        score: 0.4,
-      );
-    }
-    return InterventionCard(
-      type: InterventionType.action,
-      title: 'Daily Action',
-      subtitle: '',
-      arabic: '',
-      translation: '',
-      urdu: '',
-      why: 'A step toward growth for ${emotion.name}',
-      attributeId: 0,
-      emotionId: emotion.id,
-      score: 0.3,
-    );
-  }
-
-  HeartAttribute? _fallbackAttribute(
-      List<HeartAttribute> attrs, String? Function(HeartAttribute) getter) {
-    for (final attr in attrs) {
-      final ref = getter(attr);
-      if ((ref ?? '').isNotEmpty) return attr;
-    }
-    return null;
   }
 }

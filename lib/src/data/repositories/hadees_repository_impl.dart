@@ -59,6 +59,45 @@ class HadeesRepositoryImpl implements HadeesRepository {
     return _fromRow(rows.first);
   }
 
+  @override
+  Future<List<Hadees>> findTopForEmotion(
+    int emotionId, {
+    int? limit,
+  }) async {
+    final lim = limit != null ? 'LIMIT $limit' : '';
+    final rows = await _db.db.rawQuery('''
+      SELECT h.* FROM hadees h
+      INNER JOIN emotion_hadees_links ehl ON h.Hadees_ID = ehl.Hadees_ID
+      WHERE ehl.Emotion_ID = ?
+      ORDER BY ehl.Weight DESC
+      $lim
+    ''', [emotionId]);
+    return rows.map(_fromRow).toList();
+  }
+
+  @override
+  Future<List<Hadees>> findTopForEmotionExcluding(
+    int emotionId, {
+    int? limit,
+    Set<int> excludeIds = const <int>{},
+  }) async {
+    final lim = limit != null ? 'LIMIT $limit' : '';
+    if (excludeIds.isEmpty) return findTopForEmotion(emotionId, limit: limit);
+
+    final placeholders = List.filled(excludeIds.length, '?').join(',');
+    final filtered = await _db.db.rawQuery('''
+      SELECT h.* FROM hadees h
+      INNER JOIN emotion_hadees_links ehl ON h.Hadees_ID = ehl.Hadees_ID
+      WHERE ehl.Emotion_ID = ? AND h.Hadees_ID NOT IN ($placeholders)
+      ORDER BY ehl.Weight DESC
+      $lim
+    ''', [emotionId, ...excludeIds]);
+    if (filtered.isNotEmpty) return filtered.map(_fromRow).toList();
+
+    // Soft-skip: fall back to unfiltered top.
+    return findTopForEmotion(emotionId, limit: limit);
+  }
+
   Hadees _fromRow(Map<String, Object?> r) {
     return Hadees(
       id: r['Hadees_ID'] as int,

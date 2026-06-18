@@ -120,7 +120,6 @@ final detectAttributesProvider = Provider<DetectAttributes>(
 );
 final recommendProvider = Provider<Recommend>(
   (ref) => Recommend(
-    ref.watch(emotionAttributeLinkRepositoryProvider),
     ref.watch(attributeRepositoryProvider),
     ref.watch(emotionRepositoryProvider),
     ref.watch(interventionHistoryRepositoryProvider),
@@ -128,6 +127,7 @@ final recommendProvider = Provider<Recommend>(
     ref.watch(quranAyatRepositoryProvider),
   ),
 );
+
 final recordFeedbackProvider = Provider<RecordFeedback>(
   (ref) => RecordFeedback(ref.watch(interventionHistoryRepositoryProvider)),
 );

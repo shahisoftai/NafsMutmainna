@@ -43,6 +43,7 @@ dependencies:
   # Storage & Security
   flutter_secure_storage: ^9.2.0
   path_provider: ^2.1.0
+  local_auth: ^2.3.0
 
   # Local DB
   sqflite: ^2.3.3
@@ -52,6 +53,7 @@ dependencies:
   # Utilities
   intl: ^0.20.2
   equatable: ^2.0.5
+  crypto: ^3.0.3
   uuid: ^4.4.0
   retry: ^3.1.0
   dartz: ^0.10.1

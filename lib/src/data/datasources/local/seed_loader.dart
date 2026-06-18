@@ -27,6 +27,7 @@ class SeedLoader {
     await _seedQuranAyat(db);
     await _seedEmotionHadeesLinks(db);
     await _seedEmotionQuranLinks(db);
+    await _verifyIntegrity(db);
   }
 
   static Future<List<Map<String, Object?>>> _load(String name) async {
@@ -149,5 +150,124 @@ class SeedLoader {
     final rows = await _load('emotion_quran_links_seed');
     await _insertBatch(db, 'emotion_quran_links', rows);
     Logger.info('Seeded emotion_quran_links: ${rows.length}');
+  }
+
+  /// Best-effort integrity check on the freshly-seeded knowledge tables.
+  ///
+  /// Does NOT abort the seed: warns (does not throw) when an
+  /// `emotions.Growth_Path` step cannot be resolved to an `Attribute_ID`
+  /// or when the terminal step's Mutmainnah score is below 50. The
+  /// recommend v2 algorithm handles unresolvable steps gracefully
+  /// (logs and skips), so a warning here is informational, not fatal.
+  ///
+  /// Add forward-compatibility for the recommendation engine by
+  /// surfacing any data quality issues that would otherwise produce
+  /// a poor user experience.
+  static Future<void> _verifyIntegrity(Database db) async {
+    try {
+      final emotionRows = await db.query(
+        'emotions',
+        columns: ['Emotion_ID', 'Core_Emotion', 'Growth_Path', 'Primary_Positive_Attributes'],
+      );
+      final attributeNames = <String>{
+        for (final r in await db.query('attributes', columns: ['Attribute']))
+          (r['Attribute'] as String).toLowerCase(),
+      };
+
+      var totalSteps = 0;
+      var unresolvedSteps = 0;
+      var weakEndpoints = 0;
+      for (final er in emotionRows) {
+        final path = (er['Growth_Path'] as String?) ?? '';
+        final steps = path
+            .split('→')
+            .map((s) => s.trim())
+            .where((s) => s.isNotEmpty)
+            .toList();
+        if (steps.length < 2) {
+          Logger.warning(
+            'Integrity: emotion ${er['Emotion_ID']} (${er['Core_Emotion']}) has Growth_Path with <2 steps: "$path"',
+          );
+          continue;
+        }
+        for (final s in steps) {
+          totalSteps++;
+          if (!_nameLooselyMatches(s, attributeNames)) {
+            unresolvedSteps++;
+            Logger.warning(
+              'Integrity: emotion ${er['Emotion_ID']} (${er['Core_Emotion']}) has unresolvable Growth_Path step "$s"',
+            );
+          }
+        }
+        // Check terminal step has high Mutmainnah (>=50).
+        final endpointId = await _tryResolveStepToId(db, steps.last);
+        if (endpointId != null) {
+          final w = await db.query(
+            'attribute_nafs_weights',
+            columns: ['Mutmainnah'],
+            where: 'Attribute_ID = ?',
+            whereArgs: [endpointId],
+            limit: 1,
+          );
+          if (w.isNotEmpty) {
+            final mut = (w.first['Mutmainnah'] as num).toDouble();
+            if (mut < 50) {
+              weakEndpoints++;
+              Logger.warning(
+                'Integrity: emotion ${er['Emotion_ID']} (${er['Core_Emotion']}) endpoint "${steps.last}" (id=$endpointId) has Mutmainnah=$mut (<50)',
+              );
+            }
+          }
+        }
+      }
+      Logger.info(
+        'Integrity check: $totalSteps Growth_Path steps, $unresolvedSteps unresolvable, $weakEndpoints weak endpoints',
+      );
+    } catch (e) {
+      Logger.warning('Integrity check failed (non-fatal): $e');
+    }
+  }
+
+  /// Tolerant name match used by the integrity check. Mirrors the
+  /// resolver's "exact (case-insensitive)" and "normalized" passes;
+  /// a true substring search is intentionally avoided to keep the
+  /// log output meaningful (the resolver handles finer cases at
+  /// runtime).
+  static bool _nameLooselyMatches(String step, Set<String> attributeNames) {
+    final lower = step.toLowerCase().trim();
+    if (attributeNames.contains(lower)) return true;
+    final normalized = lower
+        .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
+        .replaceAll(RegExp(r'\s+'), '');
+    final stripped = normalized.startsWith('al') && normalized.length > 2
+        ? normalized.substring(2)
+        : normalized;
+    for (final a in attributeNames) {
+      final an = a
+          .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
+          .replaceAll(RegExp(r'\s+'), '');
+      final astripped = an.startsWith('al') && an.length > 2 ? an.substring(2) : an;
+      if (an == normalized || an == stripped || astripped == stripped) return true;
+    }
+    return false;
+  }
+
+  /// Looks up the first attribute row whose name matches [step] using the
+  /// same loose rules as [_nameLooselyMatches]. Returns null if none.
+  static Future<int?> _tryResolveStepToId(Database db, String step) async {
+    final lower = step.toLowerCase().trim();
+    final normalized = lower
+        .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
+        .replaceAll(RegExp(r'\s+'), '');
+    final rows = await db.query('attributes', columns: ['Attribute_ID', 'Attribute']);
+    for (final r in rows) {
+      final an = (r['Attribute'] as String).toLowerCase();
+      if (an == lower) return r['Attribute_ID'] as int;
+      final anNorm = an
+          .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
+          .replaceAll(RegExp(r'\s+'), '');
+      if (anNorm == normalized) return r['Attribute_ID'] as int;
+    }
+    return null;
   }
 }

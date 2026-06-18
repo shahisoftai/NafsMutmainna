@@ -1,8 +1,8 @@
-# Recommendation Algorithm
+# Recommendation Algorithm v2
 
-> The offline, graph-based algorithm that takes a check-in and produces the 6 (or fewer) intervention cards shown on the Intervention screen.
+> The offline, deterministic algorithm that takes a check-in and produces the 6 (or fewer) intervention cards shown on the Intervention screen.
 
-> ⚠️ **PROPOSAL — subject to tuning.** The constants below are the v1 proposal. They are hard-coded in `lib/src/domain/usecases/recommendations/recommend.dart` and can be adjusted without a database migration.
+> **v2 supersedes the v1 algorithm documented in earlier revisions.** v1 used the `emotion_attribute_links.Treatment` table to pick attributes and `ORDER BY RANDOM()` for Quran/Hadith — both were misaligned with the curated seed data. v2 walks the Emotion's `Growth_Path` deterministically and uses the Emotion row's hand-curated `Recommended_*` fields.
 
 ---
 
@@ -10,33 +10,39 @@
 
 The algorithm must:
 
-1. **Be explainable** — every card must have a "why" (which emotion, which attribute, which link).
+1. **Be on-point** — every card must be directly relevant to the selected core emotion.
 2. **Be deterministic** — the same check-in must produce the same cards.
-3. **Be diverse** — no card should repeat within 7 days.
-4. **Be ranked** — the most relevant card first.
-5. **Be fast** — under 50 ms end-to-end.
+3. **Be explainable** — every card has a "why" string that traces back to the emotion, attribute, or verse.
+4. **Be oriented toward Mutmainnah** — the recommended path is the `Growth_Path`, which always ends at a high-Mutmainnah attribute.
+5. **Be failproof** — missing or unresolvable data produces a fallback card, never an exception.
+6. **Be fast** — under 50 ms end-to-end.
 
 ## 2 · Input
 
 - `checkin` — the current `checkins` row.
-- `recent_interventions` — the last 7 days of `interventions_history`.
 - The **immutable** Knowledge, Graph, and Nafs tables.
+- `interventions_history` — the last 3 days (for soft-skip).
 
 ## 3 · Output
 
-A list of up to **6 cards**, each with:
+A list of up to **6 cards**, each typed as one of:
 
-```python
-@dataclass
-class Card:
-    type: str          # "Quran" | "Hadith" | "Dua" | "Allah_Names" | "Dhikr" | "Action"
-    content: str       # the Arabic text
-    reference: str     # e.g. "Surah Al-Ma'un 107:4-6" or "Sahih Muslim 91"
-    translations: dict # {"en": ..., "ur": ...}
-    why: str           # human-readable explanation
-    source_attr_id: int
-    source_emotion_id: int
 ```
+Quran | Hadith | Dua | Allah_Names | Dhikr | Action
+```
+
+The order is **deterministic**:
+
+1. Quran  (top from `emotion_quran_links` by `Weight DESC`)
+2. Hadith (top from `emotion_hadees_links` by `Weight DESC`)
+3. Dua    (from `emotions.Recommended_Dua_*`)
+4. Names  (from `emotions.Recommended_Allah_Names`)
+5. Dhikr  (from `emotions.Recommended_Dhikr`)
+6. Action (from `emotions.Daily_Action`)
+
+If a slot has no content (e.g. no linked verse for the emotion), the algorithm falls back to the focus attribute's embedded content; if still empty, the slot is dropped.
+
+If every slot is empty, a single "reflection" card is returned as a last resort.
 
 ## 4 · Algorithm
 
@@ -46,199 +52,123 @@ class Card:
 emotion = sql.get("emotions", id=checkin.Emotion_ID)
 ```
 
-### 4.2 Step 2 — Find the top 3 detected attributes
+### 4.2 Step 2 — Resolve the growth path
 
 ```python
-links = sql.query("""
-    SELECT Attribute_ID, Weight, Role
-    FROM emotion_attribute_links
-    WHERE Emotion_ID = ? AND Role IN ('Treatment', 'Core')
-    ORDER BY Weight DESC
-    LIMIT 3
-""", checkin.Emotion_ID)
+path = emotion.Growth_Path.split("→")          # e.g. "Ghadab→Sabr→Hilm→Rifq"
+attrs = [resolve(step_name) for step_name in path if step_name]
+attrs = [a for a in attrs if a is not None]     # drop unresolvable
+if not attrs:
+    attrs = [resolve(n) for n in emotion.Primary_Positive_Attributes.split(";")]
+    attrs = [a for a in attrs if a is not None]
 ```
 
-The query restricts to `Treatment` and `Core` roles — we want to *recommend remedies*, not surface diseases (those are shown on the Insight screen, not the Intervention screen).
+**`resolve(name)`** uses a 4-step matcher:
+1. Exact (case-insensitive) match against `Attribute.Attribute`.
+2. Aliased match against a hand-curated `aliases` table (e.g. `Yaqeen → Yaqin`, `Qanaah → Qana'ah`).
+3. Normalized match — strip punctuation, diacritics, hyphens, the "al-" prefix.
+4. Substring match (either direction), preferring the shorter attribute name.
 
-### 4.3 Step 3 — For each attribute, build candidate cards
+Unresolvable names are logged and skipped. The first two steps of a negative emotion's path are often the emotion name itself ("Anxiety", "Fear") or a non-attribute concept ("Dhikr", "Huzn") — they are silently skipped, and the algorithm walks the path from the first resolvable step.
+
+### 4.3 Step 3 — Pick the focus attribute by intensity
 
 ```python
-candidates = []
-for link in links:
-    attr = sql.get("attributes", id=link.Attribute_ID)
-    intensity_mult = checkin.Intensity / 10.0
-    score = link.Weight * intensity_mult
-    candidates.extend(build_cards(attr, emotion, score))
+n = len(attrs)
+if intensity <= 3:    idx = n - 1       # mild → aspirational (last step)
+elif intensity >= 7:  idx = 0           # acute → immediate (first step)
+else:                 idx = n // 2      # moderate → middle step
+focus = attrs[idx]
 ```
 
-The `build_cards` function produces 4 cards per attribute (Quran, Hadith, Dua, Names):
+The terminal step is **always** the last step on the path — and since every `Growth_Path` ends at a high-Mutmainnah attribute (Sakinah×9, Ridha×8, Mahabbah×7, etc., verified at `_verifyIntegrity` time in `seed_loader.dart`), the focus is always oriented toward Mutmainnah.
+
+### 4.4 Step 4 — Pick the Quran and Hadith
 
 ```python
-def build_cards(attr, emotion, score):
-    cards = []
-    if attr.Quran_Reference:
-        cards.append(Card(
-            type="Quran",
-            content=attr.Quran_Arabic,
-            reference=attr.Quran_Reference,
-            translations={"en": attr.Quran_English, "ur": attr.Quran_Urdu},
-            why=f"Surfaces {attr.Attribute} (recommended for {emotion.Core_Emotion})",
-            source_attr_id=attr.ID,
-            source_emotion_id=emotion.ID,
-        ))
-    if attr.Hadith_Reference:
-        cards.append(Card(
-            type="Hadith",
-            content=attr.Hadith_Arabic,
-            reference=attr.Hadith_Reference,
-            translations={"en": "", "ur": attr.Hadith_Urdu},
-            why=f"Practical guidance for {attr.Attribute}",
-            source_attr_id=attr.ID,
-            source_emotion_id=emotion.ID,
-        ))
-    if attr.Prophetic_Dua_Reference:
-        cards.append(Card(
-            type="Dua",
-            content=attr.Prophetic_Dua_Arabic,
-            reference=attr.Prophetic_Dua_Reference,
-            translations={"en": "", "ur": attr.Prophetic_Dua_Urdu},
-            why=f"A dua for {attr.Attribute}",
-            source_attr_id=attr.ID,
-            source_emotion_id=emotion.ID,
-        ))
-    if attr.Relevant_Allah_Names:
-        cards.append(Card(
-            type="Allah_Names",
-            content=attr.Relevant_Allah_Names,
-            reference="",
-            translations={},
-            why=f"Reflect on these names to cultivate {attr.Attribute}",
-            source_attr_id=attr.ID,
-            source_emotion_id=emotion.ID,
-        ))
-    return cards
+# Soft-skip: try top 1 excluding IDs shown in last 3 days;
+# if all excluded, fall back to the unfiltered top.
+recent_quran_ids = {r.Ayat_ID for r in interventions_history
+                    if r.Intervention_Type == "Quran" and r.Date >= today - 3 days}
+quran = findTopForEmotionExcluding(emotion_id, limit=1, exclude=recent_quran_ids)[0]
+# (Same for hadith.)
 ```
 
-### 4.4 Step 4 — Add the emotion-level cards (Dhikr, Action)
+`findTopForEmotionExcluding` does `ORDER BY Weight DESC LIMIT 1` with a `WHERE Ayat_ID NOT IN (...)` clause when possible. If the exclusion filter wipes out every candidate, the function falls back to the unfiltered top — the user is never blocked.
+
+### 4.5 Step 5 — Emit the 6 cards
 
 ```python
-candidates.append(Card(
-    type="Dhikr",
-    content=emotion.Recommended_Dhikr,
-    reference="",
-    translations={},
-    why=f"Recommended dhikr for {emotion.Core_Emotion}",
-    source_attr_id=0,
-    source_emotion_id=emotion.ID,
-))
-candidates.append(Card(
-    type="Action",
-    content=emotion.Daily_Action,
-    reference="",
-    translations={},
-    why=f"A Prophetic action for {emotion.Core_Emotion}",
-    source_attr_id=0,
-    source_emotion_id=emotion.ID,
-))
-```
-
-### 4.5 Step 5 — Apply the 7-day no-repeat filter
-
-```python
-shown_recently = sql.query("""
-    SELECT Intervention_Type, Attribute_ID, Emotion_ID
-    FROM interventions_history
-    WHERE Date >= date('now', '-7 day')
-""")
-shown_set = {(r.Intervention_Type, r.Attribute_ID, r.Emotion_ID) for r in shown_recently}
-
-candidates = [
-    c for c in candidates
-    if (c.type, c.source_attr_id, c.source_emotion_id) not in shown_set
+cards = [
+  build_quran_card(quran, emotion),
+  build_hadees_card(hadees, emotion),
+  build_dua_card(emotion),     # from Recommended_Dua_*
+  build_names_card(emotion),   # from Recommended_Allah_Names
+  build_dhikr_card(emotion),   # from Recommended_Dhikr
+  build_action_card(emotion),  # from Daily_Action
 ]
 ```
 
-### 4.6 Step 6 — Rank
+Each card carries a `why` string tying it back to the emotion (and the focus attribute, when relevant).
 
-```python
-def rank(card):
-    anw = sql.get("attribute_nafs_weights", id=card.source_attr_id) or DEFAULT
-    return (
-        0.6 * (card.score or 0.5)              # attribute score
-        + 0.3 * (checkin.Intensity / 10.0)      # intensity
-        + 0.1 * (anw.Mutmainnah / 100.0)        # virtue bias
-    )
+If a slot is empty (e.g. no linked verse, or empty `Recommended_Dua_Arabic`), the algorithm:
+1. Tries the focus attribute's embedded content (e.g. `attribute.Quran_Reference`).
+2. Drops the slot if still empty.
 
-candidates.sort(key=rank, reverse=True)
-```
-
-### 4.7 Step 7 — Take top 6
-
-```python
-return candidates[:6]
-```
+If **all** slots are empty (the only way this happens is an emotion with no Growth_Path, no Primary_Positive_Attributes, and empty `Recommended_*` fields), a single reflection card is returned.
 
 ## 5 · Edge cases
 
 | Situation | Handled how |
 |---|---|
-| No check-in (impossible — recommendation is triggered by a check-in) | Return empty list. |
-| Emotion has no `Treatment` or `Core` links | Return empty list (seed quality bar prevents this). |
-| All candidates are filtered by 7-day rule | Show a "Come back tomorrow for new suggestions" card. |
-| Some attributes have no Quran/Hadith/Dua fields | Skip those card types silently. |
-| The user has logged the same emotion 5 days in a row | Different cards each time (the seed has multiple options per attribute). |
-| attributeId = 0 (Dhikr / Action emotion-level cards) | Ranked by `0.6 × score + 0.3 × intensity`; no Nafs bias lookup. |
+| Unknown `emotionId` | Returns `[]` (the screen shows the "no interventions" message). |
+| `Growth_Path` is empty | Falls back to `Primary_Positive_Attributes`. |
+| `Growth_Path` step is the emotion name (e.g. "Anxiety") | Logged and skipped. |
+| `Growth_Path` step is a transliteration variant (e.g. "Yaqeen") | Aliased to "Yaqin". |
+| `emotion_quran_links` has no rows for the emotion | Falls back to the focus attribute's `Quran_Reference`. |
+| Top Quran shown in last 3 days | Try the next; fall back to top 1 if all candidates shown. |
+| `Recommended_Dua_Arabic` is empty | Falls back to the short `Recommended_Dua` transliteration. |
+| Every emotion-row field is empty | A single reflection card is returned. |
 
-## 6 · Performance
+## 6 · What changed from v1
+
+| v1 | v2 | Why |
+|---|---|---|
+| `emotion_attribute_links.Treatment` query | `emotion.Growth_Path` walker | The Treatment role held "what grows when you work on the core" — often irrelevant to the emotion (e.g. "Zuhd" for Anger). The Growth_Path is the curated trajectory toward Mutmainnah. |
+| `findRandomForEmotionExcluding` (RANDOM()) | `findTopForEmotionExcluding` (Weight DESC) | The hand-curated verses/hadith are weighted 0.7-1.0; random selection ignored that signal. |
+| 0.6 / 0.3 / 0.1 weighted-sum ranking | Deterministic slot order | The scoring formula was opaque and produced non-deterministic results when combined with the random picker. |
+| `attribute_nafs_weights` biasing | n/a | The Growth_Path already encodes the trajectory; the bias was redundant. |
+| Hard 7-day exclusion | Soft 3-day exclusion | The hard 7-day filter could empty the entire card list, leaving the user with no recommendation. |
+| Dedup-by-type (one Quran max) | n/a | The user can now see multiple Quran/Hadith cards (one from the emotion link, plus attribute-embedded fallbacks). |
+| Emotion row's `Recommended_Dua*` and `Recommended_Allah_Names` ignored | Used directly | These are hand-curated for each emotion. |
+
+## 7 · Performance
 
 | Step | Time |
 |---|---|
 | Step 1: resolve emotion | < 1 ms (in-memory cache) |
-| Step 2: top 3 attributes | < 5 ms (indexed) |
-| Step 3: build candidates | < 5 ms |
-| Step 4: add emotion cards | < 1 ms |
-| Step 5: filter | < 5 ms (indexed) |
-| Step 6: rank | < 1 ms (in-memory) |
-| Step 7: take top 6 | < 1 ms |
+| Step 2: resolve growth path | < 5 ms (200-attribute cache, hit once) |
+| Step 3: pick focus | < 1 ms (in-memory) |
+| Step 4: top Quran / Hadith | < 5 ms (indexed join) |
+| Step 5: build 6 cards | < 1 ms (in-memory) |
 | **Total** | **< 20 ms** |
 
-## 7 · Unit tests
-
-The algorithm is **fully unit-testable** — no IO, no clock, no network. The test cases:
-
-1. **Anger at intensity 7** → 6 cards: Quran, Hadith, Dua, Names, Dhikr, Action.
-2. **Anxiety at intensity 5** → 6 cards for Tawakkul / Yaqeen / Sakinah.
-3. **Gratitude at intensity 8** → 1–3 cards (positive emotions have fewer links).
-4. **All candidates filtered** → "come back tomorrow" card.
-5. **Same emotion on consecutive days** → different cards each day.
-
-## 8 · Why this algorithm
-
-| Alternative | Why rejected |
-|---|---|
-| LLM-generated cards | Latency, cost, network, non-deterministic, not authoritative. |
-| Random selection | No explainability. |
-| Time-of-day based | Doesn't reflect the user's actual state. |
-| User-history only (no graph) | Doesn't introduce new content; user gets stuck in a loop. |
-
-The chosen algorithm is **graph-first, deterministic, explainable, fast, and offline**.
-
-## 9 · Tunable constants
+## 8 · Tunable constants
 
 | Constant | Value | Location |
 |---|---|---|
-| Max attributes per recommendation | 3 | `recommend.dart` |
-| Max cards per check-in | 6 | `recommend.dart` |
-| No-repeat window | 7 days | `recommend.dart` |
-| Score weight | 0.6 | `recommend.dart` |
-| Intensity weight | 0.3 | `recommend.dart` |
-| Nafs bias weight | 0.1 | `recommend.dart` |
+| Soft-skip window | 3 days | `Recommend.softSkipDays` |
+| Maximum cards | 6 | `Recommend.maxCards` |
+| Acute intensity threshold | ≥ 7 | `Recommend._pickFocus` |
+| Mild intensity threshold | ≤ 3 | `Recommend._pickFocus` |
+
+## 9 · Integrity check
+
+After every seed, `SeedLoader._verifyIntegrity` logs a warning for each `Growth_Path` step that does not resolve to an existing attribute, and for each terminal step whose `Mutmainnah` score is below 50. As of v2, both checks pass for all 50 emotions. New emotions or path edits should preserve this invariant.
 
 ## 10 · See also
 
 - `../03_nafs_engine/nafs_meter_algorithm.md` — the scoring side.
-- `../02_relationships/emotion_attribute_links.md` — the source of attributes.
-- `../01_core_tables/attributes.md` — the intervention content.
-- `../01_core_tables/emotions.md` — the Dhikr + Action.
-- `../06_diagrams/recommendation_engine_diagram.md` — the visual.
-- `../00_root/heart_graph.md` — the graph that powers the recommendations.
+- `../02_relationships/emotion_attribute_links.md` — the legacy link table (still used by `DetectAttributes` for the Insight screen, but NOT used by the recommendation engine).
+- `../01_core_tables/attributes.md` — the embedded content on each attribute row.
+- `../01_core_tables/emotions.md` — the Emotion row's `Recommended_*` fields and `Growth_Path`.

@@ -59,6 +59,47 @@ class QuranAyatRepositoryImpl implements QuranAyatRepository {
     return _fromRow(rows.first);
   }
 
+  @override
+  Future<List<QuranAyat>> findTopForEmotion(
+    int emotionId, {
+    int? limit,
+  }) async {
+    final lim = limit != null ? 'LIMIT $limit' : '';
+    final rows = await _db.db.rawQuery('''
+      SELECT q.* FROM quran_ayat q
+      INNER JOIN emotion_quran_links eql ON q.Ayat_ID = eql.Ayat_ID
+      WHERE eql.Emotion_ID = ?
+      ORDER BY eql.Weight DESC
+      $lim
+    ''', [emotionId]);
+    return rows.map(_fromRow).toList();
+  }
+
+  @override
+  Future<List<QuranAyat>> findTopForEmotionExcluding(
+    int emotionId, {
+    int? limit,
+    Set<int> excludeIds = const <int>{},
+  }) async {
+    final lim = limit != null ? 'LIMIT $limit' : '';
+    if (excludeIds.isEmpty) return findTopForEmotion(emotionId, limit: limit);
+
+    final placeholders = List.filled(excludeIds.length, '?').join(',');
+    // Try with exclusion filter first.
+    final filtered = await _db.db.rawQuery('''
+      SELECT q.* FROM quran_ayat q
+      INNER JOIN emotion_quran_links eql ON q.Ayat_ID = eql.Ayat_ID
+      WHERE eql.Emotion_ID = ? AND q.Ayat_ID NOT IN ($placeholders)
+      ORDER BY eql.Weight DESC
+      $lim
+    ''', [emotionId, ...excludeIds]);
+    if (filtered.isNotEmpty) return filtered.map(_fromRow).toList();
+
+    // Soft-skip: if the filter excluded everything, return the top without
+    // the filter so the caller always has content.
+    return findTopForEmotion(emotionId, limit: limit);
+  }
+
   QuranAyat _fromRow(Map<String, Object?> r) {
     return QuranAyat(
       id: r['Ayat_ID'] as int,

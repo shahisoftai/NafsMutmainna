@@ -11,7 +11,7 @@ import 'seed_loader.dart';
 /// The 16-table HeartOS database.
 class AppDatabase {
   static const _dbName = 'heartos.db';
-  static const _schemaVersion = 8;
+  static const _schemaVersion = 10;
 
   Database? _db;
 
@@ -202,6 +202,23 @@ class AppDatabase {
         Logger.error('v8 migration failed: $e');
       }
     }
+    // v8 -> v9: recommend v2 — no DDL changes; the new Recommendation engine
+    // reads the Recommended_Dua_Arabic / _English / _Reference / _Urdu columns
+    // that were added in v6, and the recommended-algorithm upgrade is purely
+    // in Dart. Bump the version so _needsReseed can detect databases that
+    // pre-date the new fields and trigger a re-seed if the columns are empty.
+    if (oldVersion < 9) {
+      Logger.info('v9: upgraded to recommend v2 (no DDL change; data integrity re-check)');
+    }
+    // v9 -> v10: quran_ayat seed v1.1.0 — replaces the three broken entries
+    // (ID 39 was a misquoted 2:102 fragment, ID 45 had wrong Arabic for 24:47,
+    // ID 49 was a misquoted 9:112 fragment) and extends all truncated verses
+    // to their full Uthmani text with the complete Sahih International and
+    // Jalandhari translations. No DDL change; _needsReseed detects the old
+    // data via a content check and triggers a re-seed.
+    if (oldVersion < 10) {
+      Logger.info('v10: upgraded to quran_ayat seed v1.1.0 (no DDL change; content re-seed)');
+    }
     // ===========================================================================
     // UNIVERSAL RE-SEED (runs after all version-specific migrations)
     // Checks ALL critical tables — if ANY is empty, re-seed.
@@ -244,6 +261,43 @@ class AppDatabase {
     } catch (e) {
       Logger.error('[DB] Could not check Recommended_Allah_Names: $e');
     }
+    // v9: also require Recommended_Dua_Arabic populated for the new Dua card
+    // path. Older databases that received v6 migrations but were seeded from
+    // a pre-multilingual-dua JSON will have NULL in these columns.
+    try {
+      final emptyDua = Sqflite.firstIntValue(
+        await db.rawQuery(
+          "SELECT COUNT(*) FROM emotions WHERE Recommended_Dua_Arabic IS NULL OR Recommended_Dua_Arabic = ''",
+        ),
+      );
+      if (emptyDua != null && emptyDua > 0) {
+        Logger.info('[DB] Found $emptyDua emotion(s) with empty Recommended_Dua_Arabic — triggering re-seed');
+        return true;
+      }
+    } catch (e) {
+      Logger.error('[DB] Could not check Recommended_Dua_Arabic: $e');
+    }
+    // v10: verify quran_ayat was re-seeded with the v1.1.0 content. Three
+    // specific rows (IDs 39, 45, 49) were replaced in v1.1.0 because the
+    // originals had wrong verse text or wrong references. If any of them
+    // still carries the old content, re-seed the whole knowledge layer so
+    // the user gets the corrected Quranic references.
+    try {
+      final stale = Sqflite.firstIntValue(await db.rawQuery('''
+        SELECT COUNT(*) FROM quran_ayat
+        WHERE (Ayat_ID = 39 AND Surah_Name != 'Al-Isra')
+           OR (Ayat_ID = 45 AND Surah_Name != 'Al-Baqarah')
+           OR (Ayat_ID = 49 AND Verse_Number != 112)
+           OR (Ayat_ID IN (4, 6, 9, 10, 12, 15, 17, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 36, 37, 40, 41, 42, 47)
+               AND length(Arabic_Text) < 50)
+      '''));
+      if (stale != null && stale > 0) {
+        Logger.info('[DB] Found $stale stale quran_ayat row(s) from the pre-v1.1.0 seed — triggering re-seed');
+        return true;
+      }
+    } catch (e) {
+      Logger.error('[DB] Could not check quran_ayat freshness: $e');
+    }
     return false;
   }
 
@@ -278,9 +332,13 @@ class AppDatabase {
   }
 
   /// Open an in-memory database for tests.
+  ///
+  /// Sets the internal [_db] field so the same instance can be used both
+  /// directly (returned [Database]) and through the [AppDatabase] facade
+  /// (which is what the repository implementations depend on).
   Future<Database> openInMemory({String? path}) async {
     final dbPath = path ?? inMemoryDatabasePath;
-    return openDatabase(
+    _db = await openDatabase(
       dbPath,
       version: _schemaVersion,
       onConfigure: (db) async {
@@ -288,6 +346,7 @@ class AppDatabase {
       },
       onCreate: _onCreate,
     );
+    return _db!;
   }
 
   /// DDL for the 16 HeartOS tables.

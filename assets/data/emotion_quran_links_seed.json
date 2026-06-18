@@ -1,6 +1,6 @@
 {
-  "_schema_version": "1.0.0",
-  "_generated_at": "2026-06-15",
+  "_schema_version": "1.1.0",
+  "_generated_at": "2026-06-17",
   "rows": [
     {
       "Link_ID": 1,
@@ -429,12 +429,6 @@
       "Weight": 0.98
     },
     {
-      "Link_ID": 76,
-      "Emotion_ID": 18,
-      "Ayat_ID": 37,
-      "Weight": 0.85
-    },
-    {
       "Link_ID": 77,
       "Emotion_ID": 18,
       "Ayat_ID": 33,
@@ -789,12 +783,6 @@
       "Weight": 0.85
     },
     {
-      "Link_ID": 147,
-      "Emotion_ID": 35,
-      "Ayat_ID": 45,
-      "Weight": 0.9
-    },
-    {
       "Link_ID": 148,
       "Emotion_ID": 35,
       "Ayat_ID": 46,
@@ -829,12 +817,6 @@
       "Emotion_ID": 36,
       "Ayat_ID": 34,
       "Weight": 0.8
-    },
-    {
-      "Link_ID": 154,
-      "Emotion_ID": 37,
-      "Ayat_ID": 12,
-      "Weight": 0.85
     },
     {
       "Link_ID": 155,
@@ -973,12 +955,6 @@
       "Emotion_ID": 44,
       "Ayat_ID": 46,
       "Weight": 0.9
-    },
-    {
-      "Link_ID": 186,
-      "Emotion_ID": 44,
-      "Ayat_ID": 12,
-      "Weight": 0.8
     },
     {
       "Link_ID": 187,
@@ -1129,7 +1105,170 @@
       "Emotion_ID": 50,
       "Ayat_ID": 41,
       "Weight": 0.85
+    },
+    {
+      "Link_ID": 213,
+      "Emotion_ID": 11,
+      "Ayat_ID": 39,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 214,
+      "Emotion_ID": 34,
+      "Ayat_ID": 51,
+      "Weight": 0.98
+    },
+    {
+      "Link_ID": 215,
+      "Emotion_ID": 34,
+      "Ayat_ID": 52,
+      "Weight": 0.95
+    },
+    {
+      "Link_ID": 216,
+      "Emotion_ID": 34,
+      "Ayat_ID": 53,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 217,
+      "Emotion_ID": 34,
+      "Ayat_ID": 54,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 218,
+      "Emotion_ID": 8,
+      "Ayat_ID": 60,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 219,
+      "Emotion_ID": 13,
+      "Ayat_ID": 56,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 220,
+      "Emotion_ID": 17,
+      "Ayat_ID": 64,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 221,
+      "Emotion_ID": 18,
+      "Ayat_ID": 63,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 222,
+      "Emotion_ID": 23,
+      "Ayat_ID": 55,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 223,
+      "Emotion_ID": 23,
+      "Ayat_ID": 63,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 224,
+      "Emotion_ID": 25,
+      "Ayat_ID": 56,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 225,
+      "Emotion_ID": 25,
+      "Ayat_ID": 62,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 226,
+      "Emotion_ID": 33,
+      "Ayat_ID": 59,
+      "Weight": 0.95
+    },
+    {
+      "Link_ID": 227,
+      "Emotion_ID": 33,
+      "Ayat_ID": 63,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 228,
+      "Emotion_ID": 35,
+      "Ayat_ID": 55,
+      "Weight": 0.85
+    },
+    {
+      "Link_ID": 229,
+      "Emotion_ID": 37,
+      "Ayat_ID": 61,
+      "Weight": 0.95
+    },
+    {
+      "Link_ID": 230,
+      "Emotion_ID": 37,
+      "Ayat_ID": 62,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 231,
+      "Emotion_ID": 38,
+      "Ayat_ID": 59,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 232,
+      "Emotion_ID": 38,
+      "Ayat_ID": 64,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 233,
+      "Emotion_ID": 39,
+      "Ayat_ID": 59,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 234,
+      "Emotion_ID": 40,
+      "Ayat_ID": 55,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 235,
+      "Emotion_ID": 40,
+      "Ayat_ID": 63,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 236,
+      "Emotion_ID": 42,
+      "Ayat_ID": 56,
+      "Weight": 0.9
+    },
+    {
+      "Link_ID": 237,
+      "Emotion_ID": 42,
+      "Ayat_ID": 60,
+      "Weight": 0.88
+    },
+    {
+      "Link_ID": 238,
+      "Emotion_ID": 44,
+      "Ayat_ID": 63,
+      "Weight": 0.92
+    },
+    {
+      "Link_ID": 239,
+      "Emotion_ID": 46,
+      "Ayat_ID": 59,
+      "Weight": 0.92
     }
   ],
-  "_bad_ayat_removed": 24
+  "_bad_ayat_removed": 24,
+  "_notes": "Tightened emotion→ayat curation in v2. Removed off-topic links: 8:2→Love for People, 8:2→Certainty, 16:116→Suspicion, 2:256→Joy. Added: 17:37 (replacement for broken 2:102) → Arrogance. See HeartOS/08_algorithms/recommendation_algorithm.md for rationale."
 }

@@ -9,4 +9,18 @@ abstract class HadeesRepository {
     required int emotionId,
     required Set<int> excludeIds,
   });
+
+  /// Returns the top [limit] hadees for [emotionId] ordered by Weight DESC.
+  Future<List<Hadees>> findTopForEmotion(
+    int emotionId, {
+    int? limit,
+  });
+
+  /// Returns the top [limit] hadees for [emotionId] ordered by Weight DESC,
+  /// skipping ids in [excludeIds] when possible (soft-skip semantics).
+  Future<List<Hadees>> findTopForEmotionExcluding(
+    int emotionId, {
+    int? limit,
+    Set<int> excludeIds = const <int>{},
+  });
 }

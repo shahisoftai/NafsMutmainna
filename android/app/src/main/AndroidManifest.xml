@@ -1,6 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Google Sign-In requires Internet permission -->
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Biometric authentication for privacy lock -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     
     <application
         android:label="HeartOS"

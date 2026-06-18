@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../infrastructure/di/providers.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
+import '../../viewmodels/privacy_lock_view_model.dart';
 import 'authentic_sources_data.dart';
 import 'delete_data_service.dart';
 
@@ -15,10 +16,10 @@ import 'delete_data_service.dart';
 // App metadata constants
 // ============================================================================
 const String kAppVersion = '1.1.13';
-const String kAppWebsite = 'https://heartos.shahisoftware.com';
+const String kAppWebsite = 'https://shahisoftware.com/products/heartos';
 const String kSupportEmail = 'support@shahisoftware.com';
-const String kPrivacyUrl = 'https://privacy.shahisoftware.com';
-const String kTermsUrl = 'https://terms.shahisoftware.com';
+const String kPrivacyUrl = 'https://shahisoftware.com/products/heartos/privacy';
+const String kTermsUrl = 'https://shahisoftware.com/products/heartos/terms';
 
 // Store listing URLs (placeholders until the apps are published).
 const String kPlayStoreUrl =
@@ -43,6 +44,11 @@ class SettingsScreen extends ConsumerWidget {
           // ---- Data ----
           const _SectionLabel('Data'),
           const _DeleteDataTile(),
+          const _SectionDivider(),
+
+          // ---- Privacy & Security ----
+          const _SectionLabel('Privacy & Security'),
+          const _PrivacyLockTile(),
           const _SectionDivider(),
 
           // ---- Legal ----
@@ -431,6 +437,111 @@ class _DisclaimerBanner extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+// ============================================================================
+// Privacy & Security
+// ============================================================================
+
+class _PrivacyLockTile extends ConsumerWidget {
+  const _PrivacyLockTile();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final lockState = ref.watch(privacyLockProvider);
+
+    return ListTile(
+      leading: const Icon(Icons.lock_outline),
+      title: const Text('Privacy Lock'),
+      subtitle: Text(
+        lockState.isEnabled
+            ? 'App is protected with PIN and biometrics'
+            : 'Protect app with PIN and biometrics',
+      ),
+      trailing: Switch.adaptive(
+        value: lockState.isEnabled,
+        onChanged: (value) => _togglePrivacyLock(context, ref, value),
+        activeTrackColor: AppColors.primary,
+      ),
+      onTap: () => _showPrivacyLockOptions(context, ref),
+    );
+  }
+
+  void _showPrivacyLockOptions(BuildContext context, WidgetRef ref) {
+    final lockState = ref.read(privacyLockProvider);
+
+    showModalBottomSheet(
+      context: context,
+      builder: (ctx) => SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ListTile(
+              leading: const Icon(Icons.lock_outline),
+              title: const Text('Set up Privacy Lock'),
+              subtitle: const Text('Require PIN or biometrics to open app'),
+              onTap: () {
+                Navigator.pop(ctx);
+                context.go(AppRouter.lockSetup);
+              },
+            ),
+            if (lockState.isEnabled)
+              ListTile(
+                leading: const Icon(Icons.lock_open, color: AppColors.error),
+                title: const Text('Disable Privacy Lock'),
+                subtitle: const Text('Remove PIN and biometric protection'),
+                onTap: () async {
+                  Navigator.pop(ctx);
+                  await _confirmDisable(context, ref);
+                },
+              ),
+            const SizedBox(height: 8),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Future<void> _togglePrivacyLock(BuildContext context, WidgetRef ref, bool enable) async {
+    if (enable) {
+      context.go(AppRouter.lockSetup);
+    } else {
+      await _confirmDisable(context, ref);
+    }
+  }
+
+  Future<void> _confirmDisable(BuildContext context, WidgetRef ref) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Disable Privacy Lock?'),
+        content: const Text(
+          'This will remove PIN and biometric protection. '
+          'Anyone will be able to access your app.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: AppColors.error),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Disable'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed == true) {
+      await ref.read(privacyLockProvider.notifier).disable();
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Privacy Lock disabled')),
+        );
+      }
+    }
   }
 }
 

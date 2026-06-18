@@ -72,6 +72,10 @@ class EmotionRepositoryImpl implements EmotionRepositoryInterface {
       relatedEmotions: (r['Related_Emotions'] as String?) ?? '',
       relatedAttributeIds: (r['Related_Attribute_IDs'] as String?) ?? '',
       keywords: (r['Keywords'] as String?) ?? '',
+      recommendedDuaArabic: r['Recommended_Dua_Arabic'] as String?,
+      recommendedDuaEnglish: r['Recommended_Dua_English'] as String?,
+      recommendedDuaUrdu: r['Recommended_Dua_Urdu'] as String?,
+      recommendedDuaReference: r['Recommended_Dua_Reference'] as String?,
     );
   }
 }
