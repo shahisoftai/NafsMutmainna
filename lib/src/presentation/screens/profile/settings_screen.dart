@@ -69,6 +69,7 @@ class SettingsScreen extends ConsumerWidget {
           // ---- About ----
           const _SectionLabel('About'),
           const _AboutHeader(),
+          const _ReplayOnboardingTile(),
           const _LinkTile(
             icon: Icons.language_outlined,
             title: 'Website',
@@ -396,6 +397,60 @@ class _RateAppTile extends StatelessWidget {
       // Platform not available (web/tests) — fall through.
     }
     return kPlayStoreUrl;
+  }
+}
+
+class _ReplayOnboardingTile extends ConsumerWidget {
+  const _ReplayOnboardingTile();
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return ListTile(
+      leading: const Icon(Icons.replay_outlined),
+      title: const Text('Replay App Introduction'),
+      subtitle: const Text('View the onboarding cards again'),
+      onTap: () => _replayOnboarding(context, ref),
+    );
+  }
+
+  Future<void> _replayOnboarding(BuildContext context, WidgetRef ref) async {
+    final confirmed = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: const Text('Replay App Introduction?'),
+        content: const Text(
+          'You will see the onboarding cards again to learn about '
+          'the app\'s purpose and features.',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Cancel'),
+          ),
+          FilledButton(
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Replay'),
+          ),
+        ],
+      ),
+    );
+
+    if (confirmed != true || !context.mounted) return;
+
+    try {
+      final box = ref.read(prefsBoxProvider).maybeWhen(
+            data: (b) => b,
+            orElse: () => null,
+          );
+      if (box != null) {
+        await box.delete(kOnboardingSeenKey);
+      }
+    } catch (_) {
+      // Best-effort — if the flag can't be cleared, onboarding may show again anyway.
+    }
+
+    if (!context.mounted) return;
+    context.go(AppRouter.onboarding);
   }
 }
 

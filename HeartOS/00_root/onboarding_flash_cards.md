@@ -1,6 +1,7 @@
 # Onboarding Flash Cards
 
-> First-run UX that introduces the user to HeartOS in 7 swipable cards.
+> First-run UX that introduces the user to HeartOS in 8 swipable cards.
+> v2.0 restructured with spiritual concept first (Cards 1-2) then app features (Cards 3-8).
 > Implemented in v1.1.14 on 2026-06-18.
 
 This document is the **implementation reference** for the onboarding flow. For the user's perspective on the same feature see [`00_root/user_flow.md` §4 First-run experience](user_flow.md#4--first-run-experience).
@@ -20,19 +21,20 @@ The flow is **non-blocking**: a Skip button on every card and a Get-Started butt
 
 ---
 
-## 2 · The 7 cards
+## 2 · The 8 cards
 
 | # | Headline | Core message |
 |---|----------|-------------|
-| 1 | Welcome to HeartOS | Privacy-first · offline · no account · no ads |
-| 2 | Check In With Your Heart | 3-step daily check-in (emotion → intensity → note) under 60 seconds |
-| 3 | See What Your Heart Reveals | 3–5 heart attributes detected per check-in · growth path through the Nafs |
-| 4 | A Prescription Just for You | 6 intervention types (Quran · Hadith · Dua · Allah Names · Dhikr · Action) |
-| 5 | Your Nafs Meter | 4 stations of the soul · daily check-in moves the needle |
-| 6 | Your 15-Day Journey | Trend chart · Allah Names patterns · day-by-day breakdown |
-| 7 | The 8 Master Pathways | Every struggle has a mapped path · example: Ghadab → Sabr → Hilm → Rifq → Rahmah |
+| 1 | The Battle Within | Spiritual concept: Nafs-e-Ammara, negative traits, Shaytan's gateway |
+| 2 | Nafs Mutmainna Awaits | Quran 89:27-30 · the destination: soul at peace, beloved to Allah |
+| 3 | Check In With Your Heart | 3-step daily check-in (emotion → intensity → note) under 60 seconds |
+| 4 | See What Your Heart Reveals | 3–5 heart attributes detected per check-in · growth path through the Nafs |
+| 5 | Track Your Soul's Progress | 4 stations of the soul · daily check-in moves the needle |
+| 6 | A Prescription Just for You | 6 intervention types (Quran · Hadith · Dua · Allah Names · Dhikr · Action) |
+| 7 | Watch Your Transformation Unfold | Trend chart · Allah Names patterns · day-by-day breakdown |
+| 8 | Every Struggle Has a Map | Every struggle has a mapped path · example: Ghadab → Sabr → Hilm → Rifq → Rahmah |
 
-**Why this order:** cards 2–4 are the **core value loop** (what the user will actually do daily) and lead the sequence. Card 1 builds trust, cards 5–7 show depth, card 7 is for power users.
+**Why this order:** Cards 1–2 set the **spiritual foundation** (Nafs journey). Cards 3–6 are the **core value loop** (check-in → analysis → tracking → prescription). Cards 7–8 show depth and long-term benefits.
 
 ---
 
@@ -42,16 +44,17 @@ Each card is a full-screen vertical gradient, unique per card to keep the flow v
 
 | Card | Gradient (3-stop) | Icon | Accent |
 |---|---|---|---|
-| 1 | `0D3D12` → `1B5E20` → `2E7D32` (deep greens) | `favorite_outline` | `lock_outline` |
-| 2 | `1B5E20` → `388E3C` → `66BB6A` (mid greens) | `edit_note_rounded` | `timer_outlined` |
-| 3 | `004D40` → `00695C` → `26A69A` (teals) | `insights_rounded` | `psychology_outlined` |
-| 4 | `FF8F00` → `FFB300` → `FFCA28` (gold) | `medical_services_outlined` | `auto_awesome_outlined` |
+| 1 | `1A1A2E` → `16213E` → `0F3460` (deep indigo/purple) | `shield_outlined` | `whatshot_outlined` |
+| 2 | `0D3D12` → `1B5E20` → `D4AF37` (deep green → gold) | `mosque_outlined` | `auto_awesome_outlined` |
+| 3 | `1B5E20` → `388E3C` → `66BB6A` (mid greens) | `edit_note_rounded` | `timer_outlined` |
+| 4 | `004D40` → `00695C` → `26A69A` (teals) | `insights_rounded` | `psychology_outlined` |
 | 5 | `E53935` → `FB8C00` → `43A047` (red → gold → green — the Nafs spectrum) | `speed_rounded` | `show_chart_rounded` |
-| 6 | `1565C0` → `1976D2` → `42A5F5` (blues) | `timeline_rounded` | `calendar_today_outlined` |
-| 7 | `4A148C` → `6A1B9A` → `8E24AA` (purples) | `account_tree_outlined` | `explore_outlined` |
+| 6 | `FF8F00` → `FFB300` → `FFCA28` (gold) | `medical_services_outlined` | `medication_outlined` |
+| 7 | `1565C0` → `1976D2` → `42A5F5` (blues) | `timeline_rounded` | `calendar_today_outlined` |
+| 8 | `4A148C` → `6A1B9A` → `8E24AA` (purples) | `account_tree_outlined` | `explore_outlined` |
 
 **Card anatomy (top → bottom):**
-1. Step counter (e.g. "Step 3 of 7") — top-left
+1. Step counter (e.g. "Step 3 of 8") — top-left
 2. Accent icon in a soft glass circle — top-right
 3. Primary icon in a 140×140 glass circle with drop shadow — centre
 4. Headline — 28pt, FontWeight.w800, white
@@ -129,7 +132,7 @@ final hasSeenOnboardingProvider = FutureProvider<bool>((ref) async {
 | Route | `lib/src/presentation/navigation/app_router.dart` | `AppRouter.onboarding = '/onboarding'` |
 | Screen | `lib/src/presentation/screens/onboarding/onboarding_screen.dart` | `PageView` host + Skip / Next / Get Started buttons |
 | Card UI | `lib/src/presentation/screens/onboarding/widgets/onboarding_card.dart` | Full-screen gradient card with icon, headline, body, Islamic star watermark |
-| Card data | `lib/src/presentation/screens/onboarding/widgets/onboarding_data.dart` | `OnboardingCardData` model + 7-card content list |
+| Card data | `lib/src/presentation/screens/onboarding/widgets/onboarding_data.dart` | `OnboardingCardData` model + 8-card content list |
 | Indicator | `lib/src/presentation/screens/onboarding/widgets/page_indicator.dart` | Animated dot indicator |
 | Splash gate | `lib/src/presentation/screens/splash/splash_screen.dart` | Reads `hasSeenOnboardingProvider` after DB init, routes accordingly |
 | Boot wiring | `lib/main.dart` | Eagerly opens `prefs` Hive box |
@@ -186,4 +189,4 @@ The onboarding flag persists across `flutter clean` (Hive is on-device storage, 
 
 ---
 
-*Implemented 2026-06-18 · v1.1.14 · 7 cards · 4 new files · 0 existing files structurally changed.*
+*Implemented 2026-06-18 · v1.1.14 · 8 cards · restructured 2026-06-19 · 0 existing files structurally changed.*

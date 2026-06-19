@@ -9,6 +9,8 @@ import '../../viewmodels/home_view_model.dart';
 import '../../widgets/common/loading_indicator.dart';
 import '../../widgets/specific/heart_health_score_widget.dart';
 import '../../widgets/specific/nafs_arc_meter.dart';
+import '../../widgets/specific/quran_of_the_day_card.dart';
+import '../../widgets/specific/tazkiya_safe_banner.dart';
 import 'widgets/daily_dhikr_section.dart';
 import 'widgets/home_greeting_widget.dart';
 import 'widgets/today_habits_strip.dart';
@@ -77,12 +79,19 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                     dominant: state.dominant,
                     onTap: () => context.push(AppRouter.nafsDetail),
                   ),
+                  // RI-5.1: Tazkiya-safe banner — reminds the user the meter
+                  // reflects patterns, never judgment of the soul.
+                  const TazkiyaSafeBanner(),
                   const SizedBox(height: 14),
                   HeartHealthScoreWidget(
                     score: state.heartHealthScore,
                     trend: state.trend,
                     tip: _heartHealthTip(state.heartHealthScore),
                   ),
+                  const SizedBox(height: 16),
+                  // RI-5.3: Quran of the Day — anchors the user in Quran
+                  // independent of any emotion.
+                  const QuranOfTheDayCard(),
                   const SizedBox(height: 16),
                   TodayHabitsStrip(
                     onManageTap: () => context.push(AppRouter.habits),

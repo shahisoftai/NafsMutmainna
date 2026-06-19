@@ -9,6 +9,7 @@ import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../viewmodels/home_view_model.dart';
 import '../../widgets/specific/feedback_button_widget.dart';
+import '../../widgets/specific/reflect_prompts_card.dart';
 
 class ReflectScreen extends ConsumerStatefulWidget {
   final SubmitCheckinResult result;
@@ -112,6 +113,18 @@ class _ReflectScreenState extends ConsumerState<ReflectScreen> {
               'Reflecting on the prescription and emotions you just recorded will help refine your next check-in.',
               style: TextStyle(color: AppColors.textSecondary, fontSize: 14),
             ),
+          ),
+          // RI-5.2 + RI-3.5: Muhasabah prompts + Cause-Whisper anchored to
+          // the dominant Cause_Type of the detected attributes.
+          ReflectPromptsCard(
+            detectedAttributes: widget.result.detected,
+            resolveAttribute: (id) async {
+              try {
+                return await ref.read(attributeRepositoryProvider).getById(id);
+              } catch (_) {
+                return null;
+              }
+            },
           ),
           for (final f in InterventionFeedback.values)
             FeedbackButtonWidget(

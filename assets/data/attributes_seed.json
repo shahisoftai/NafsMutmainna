@@ -25,7 +25,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں جانتے ہوئے شرک سے تیری پناہ مانگتا ہوں اور نادانستہ شرک پر تیری بخشش چاہتا ہوں۔",
       "Relevant_Allah_Names": "الأحد، الرقيب، الشهيد، الحق",
-      "Practical_Understanding": "Riya grows when people's approval becomes more important than Allah's pleasure. Concealing good deeds and remembering that Allah alone knows intentions gradually strengthen sincerity and purify worship."
+      "Practical_Understanding": "Riya grows when people's approval becomes more important than Allah's pleasure. Concealing good deeds and remembering that Allah alone knows intentions gradually strengthen sincerity and purify worship.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Renew intention before each act of worship (wudu, salah, dhikr); recite \"Allahumma inni a'udhu bika an ushrika bika shay'an wa ana a'lam, wa astaghfiruka lima la a'lam\".",
+      "Daily_Action_Source": "Musnad Ahmad 19606"
     },
     {
       "Attribute_ID": 2,
@@ -50,7 +56,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت، تقویٰ، پاکدامنی اور بے نیازی مانگتا ہوں۔",
       "Relevant_Allah_Names": "الكبير، الحكيم، العليم",
-      "Practical_Understanding": "Arrogance disappears when a person remembers his weakness, origin and dependence upon Allah. Accepting truth and respecting others cultivate humility and open the heart to guidance."
+      "Practical_Understanding": "Arrogance disappears when a person remembers his weakness, origin and dependence upon Allah. Accepting truth and respecting others cultivate humility and open the heart to guidance.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"La ilaha illa Allah\" 100x daily; perform two raka'at of humility after Fajr.",
+      "Daily_Action_Source": "Quran 31:18; Bukhari 6114"
     },
     {
       "Attribute_ID": 3,
@@ -75,7 +87,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ایک پلک جھپکنے کے برابر بھی میرے نفس کے حوالے نہ کرنا۔",
       "Relevant_Allah_Names": "العظيم، الحكيم، الهادي",
-      "Practical_Understanding": "Self-admiration blinds a person to his shortcomings. Remembering that every blessing and achievement comes from Allah preserves humility and protects the heart from pride."
+      "Practical_Understanding": "Self-admiration blinds a person to his shortcomings. Remembering that every blessing and achievement comes from Allah preserves humility and protects the heart from pride.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Before each good deed, recite \"Allahumma la tukhayyibani bi 'ajli\" — O Allah, do not let me be deceived by my deeds.",
+      "Daily_Action_Source": "Ibn al-Qayyim, Madarij 2:300"
     },
     {
       "Attribute_ID": 4,
@@ -100,7 +118,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الشِّقَاقِ وَالنِّفَاقِ وَسُوءِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں اختلاف، نفاق اور برے اخلاق سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، الحق",
-      "Practical_Understanding": "Hypocrisy decreases when words, intentions and actions become aligned. Truthfulness, fulfilling promises and guarding trusts nurture inner integrity and sincerity."
+      "Practical_Understanding": "Hypocrisy decreases when words, intentions and actions become aligned. Truthfulness, fulfilling promises and guarding trusts nurture inner integrity and sincerity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Renew shahada daily with sincerity; examine each deed for ikhlas.",
+      "Daily_Action_Source": "Quran 2:8-9"
     },
     {
       "Attribute_ID": 5,
@@ -125,7 +149,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اجْعَلْ عَمَلِي كُلَّهُ صَالِحًا وَاجْعَلْهُ لِوَجْهِكَ خَالِصًا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے تمام اعمال نیک بنا اور انہیں خالص اپنی رضا کے لیے کر دے۔",
       "Relevant_Allah_Names": "الأحد، الرقيب، الشهيد",
-      "Practical_Understanding": "Love of fame ties happiness to people's opinions. Hidden worship and remembering the temporary nature of worldly praise help cultivate content anonymity and sincerity."
+      "Practical_Understanding": "Love of fame ties happiness to people's opinions. Hidden worship and remembering the temporary nature of worldly praise help cultivate content anonymity and sincerity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Conceal good deeds; resist sharing worship on social media.",
+      "Daily_Action_Source": "Bukhari 6499"
     },
     {
       "Attribute_ID": 6,
@@ -150,7 +180,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر، شکر اور بہترین عبادت پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الشكور، الكريم، الوهاب",
-      "Practical_Understanding": "Gratitude transforms blessings into means of nearness to Allah. Regular remembrance and acknowledging Allah's favors protect the heart from ingratitude."
+      "Practical_Understanding": "Gratitude transforms blessings into means of nearness to Allah. Regular remembrance and acknowledging Allah's favors protect the heart from ingratitude.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Begin each day with \"Alhamdulillah illadhi ahyana ba'da ma amaatana wa ilayhi an-nushur\" (after waking).",
+      "Daily_Action_Source": "Bukhari 6324; Muslim 2711"
     },
     {
       "Attribute_ID": 7,
@@ -175,7 +211,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کو درست فرما جو میرے معاملے کا محافظ ہے۔",
       "Relevant_Allah_Names": "الحق، الرشيد، الهادي",
-      "Practical_Understanding": "Delusion disappears when one remembers the temporary nature of worldly life and keeps the Hereafter in focus."
+      "Practical_Understanding": "Delusion disappears when one remembers the temporary nature of worldly life and keeps the Hereafter in focus.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Replace false hopes with Quran 14:7; trust in Allah's promise.",
+      "Daily_Action_Source": "Quran 14:7"
     },
     {
       "Attribute_ID": 8,
@@ -200,7 +242,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
       "Prophetic_Dua_Urdu": "اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت رکھ۔",
       "Relevant_Allah_Names": "العليم، الهادي، النور",
-      "Practical_Understanding": "Certainty grows through knowledge, reflection and righteous deeds. Seeking authentic knowledge and remembering Allah protect against destructive doubts."
+      "Practical_Understanding": "Certainty grows through knowledge, reflection and righteous deeds. Seeking authentic knowledge and remembering Allah protect against destructive doubts.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Quran daily (even a few verses); strengthen yaqeen through reading Sirat al-Salaf.",
+      "Daily_Action_Source": "Quran 2:2"
     },
     {
       "Attribute_ID": 9,
@@ -225,7 +273,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما اور اسے پاک کر دے۔",
       "Relevant_Allah_Names": "اللطيف، الرحمن، التواب",
-      "Practical_Understanding": "Frequent remembrance of Allah, recitation of the Quran and sincere repentance soften the heart and revive spiritual awareness."
+      "Practical_Understanding": "Frequent remembrance of Allah, recitation of the Quran and sincere repentance soften the heart and revive spiritual awareness.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Soften the heart through tafakkur over death, dhikr, and visiting the graves.",
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
     },
     {
       "Attribute_ID": 10,
@@ -250,7 +304,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کو درست فرما جو میرے معاملے کا محافظ ہے۔",
       "Relevant_Allah_Names": "الحي، النور، الهادي",
-      "Practical_Understanding": "Heedlessness develops gradually through neglect of remembrance. Consistent dhikr, prayer and reflection awaken the heart and strengthen awareness of Allah."
+      "Practical_Understanding": "Heedlessness develops gradually through neglect of remembrance. Consistent dhikr, prayer and reflection awaken the heart and strengthen awareness of Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Establish 5 daily adhkar (morning/evening); recite Surah Al-Kahf on Friday.",
+      "Daily_Action_Source": "Quran 7:205; Bukhari 6407"
     },
     {
       "Attribute_ID": 11,
@@ -275,7 +335,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحفيظ، الرقيب، الحكيم",
-      "Practical_Understanding": "A believer lives between hope and fear. Excessive security breeds negligence, while balanced hope and fear nurture vigilance and repentance."
+      "Practical_Understanding": "A believer lives between hope and fear. Excessive security breeds negligence, while balanced hope and fear nurture vigilance and repentance.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Shaytani",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite last 2 verses of Al-Baqarah before sleep; istighfar 100x.",
+      "Daily_Action_Source": "Bukhari 6607"
     },
     {
       "Attribute_ID": 12,
@@ -300,7 +366,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا عَيْشَ إِلَّا عَيْشُ الْآخِرَةِ",
       "Prophetic_Dua_Urdu": "اے اللہ! اصل زندگی تو آخرت کی زندگی ہے۔",
       "Relevant_Allah_Names": "الوارث، الحكيم، الحق",
-      "Practical_Understanding": "Remembering death and the temporary nature of this world helps reduce unrealistic hopes and encourages preparation for the Hereafter."
+      "Practical_Understanding": "Remembering death and the temporary nature of this world helps reduce unrealistic hopes and encourages preparation for the Hereafter.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Attend a janazah weekly; visit the sick; recite Surah Al-Mulk before sleep.",
+      "Daily_Action_Source": "Tirmidhi 2307"
     },
     {
       "Attribute_ID": 13,
@@ -325,7 +397,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الهادي، الرشيد، الحكيم",
-      "Practical_Understanding": "Unchecked desires cloud judgment. Seeking guidance and practicing self-discipline gradually align desires with Allah's commands."
+      "Practical_Understanding": "Unchecked desires cloud judgment. Seeking guidance and practicing self-discipline gradually align desires with Allah's commands.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Hawi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Pause 3 seconds before each desire; ask: Is this for Allah or for my hawa?",
+      "Daily_Action_Source": "Quran 45:23"
     },
     {
       "Attribute_ID": 14,
@@ -350,7 +428,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میری خطائیں معاف فرما۔",
       "Relevant_Allah_Names": "الغفور، التواب، الرحيم",
-      "Practical_Understanding": "Hope in Allah's mercy revives the heart. Sincere repentance and remembrance of Allah's forgiveness protect against despair."
+      "Practical_Understanding": "Hope in Allah's mercy revives the heart. Sincere repentance and remembrance of Allah's forgiveness protect against despair.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Shaytani",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Duha and Surah Al-Inshirah; istighfar 100x daily.",
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
     },
     {
       "Attribute_ID": 15,
@@ -375,7 +459,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں جانتے ہوئے شرک سے تیری پناہ چاہتا ہوں۔",
       "Relevant_Allah_Names": "الأحد، الصمد، الحق",
-      "Practical_Understanding": "Purifying intentions and strengthening Tawhid protect the believer from subtle forms of shirk."
+      "Practical_Understanding": "Purifying intentions and strengthening Tawhid protect the believer from subtle forms of shirk.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma la ta'alimni ila 'ajali\" — fix the eyes on akhirah.",
+      "Daily_Action_Source": "Bukhari 6416"
     },
     {
       "Attribute_ID": 16,
@@ -400,7 +490,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحي، الوارث، الحكيم",
-      "Practical_Understanding": "Preparing for the Hereafter and reducing attachment to worldly pleasures make the reality of death easier to accept."
+      "Practical_Understanding": "Preparing for the Hereafter and reducing attachment to worldly pleasures make the reality of death easier to accept.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Imran 3:185 and \"Ya Hayyu Ya Qayyum\" frequently.",
+      "Daily_Action_Source": "Bukhari 6412"
     },
     {
       "Attribute_ID": 17,
@@ -425,7 +521,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں برے اخلاق سے تیری پناہ چاہتا ہوں۔",
       "Relevant_Allah_Names": "اللطيف، الرحمن، الكريم",
-      "Practical_Understanding": "Respecting others and recognizing human dignity help eliminate mockery and cultivate noble character."
+      "Practical_Understanding": "Respecting others and recognizing human dignity help eliminate mockery and cultivate noble character.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Smile; speak gently; recite Surah Al-Hujurat 49:11.",
+      "Daily_Action_Source": "Quran 49:11"
     },
     {
       "Attribute_ID": 18,
@@ -450,7 +552,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے میرے نفس کے حوالے نہ کرنا۔",
       "Relevant_Allah_Names": "العليم، الحكيم، الخبير",
-      "Practical_Understanding": "Self-accountability and humility prevent spiritual arrogance and keep the believer dependent on Allah."
+      "Practical_Understanding": "Self-accountability and humility prevent spiritual arrogance and keep the believer dependent on Allah.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Avoid self-praise; seek the company of those who would criticize you.",
+      "Daily_Action_Source": "Quran 53:32; Muslim 2865"
     },
     {
       "Attribute_ID": 19,
@@ -475,7 +583,13 @@
       "Prophetic_Dua_Arabic": "Sahih Muslim 2721",
       "Prophetic_Dua_Urdu": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى",
       "Relevant_Allah_Names": "اے اللہ! میں تجھ سے ہدایت مانگتا ہوں۔",
-      "Practical_Understanding": "العدل، الحكيم، الرشيد"
+      "Practical_Understanding": "العدل، الحكيم، الرشيد",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni a'udhu bika minal-hammi wal-hazan...\" before dawn.",
+      "Daily_Action_Source": "Bukhari 6369"
     },
     {
       "Attribute_ID": 20,
@@ -500,7 +614,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "القوي، المتين، الناصر",
-      "Practical_Understanding": "True strength comes from faith, patience and reliance upon Allah rather than attachment to worldly comforts."
+      "Practical_Understanding": "True strength comes from faith, patience and reliance upon Allah rather than attachment to worldly comforts.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Establish 5 daily prayers on time; wudu strengthens the heart.",
+      "Daily_Action_Source": "Quran 8:46"
     },
     {
       "Attribute_ID": 21,
@@ -525,7 +645,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي الَّذِي هُوَ عِصْمَةُ أَمْرِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوهاب، الكريم، الرزاق",
-      "Practical_Understanding": "Recognizing that Allah distributes blessings with wisdom removes envy and nurtures contentment and goodwill."
+      "Practical_Understanding": "Recognizing that Allah distributes blessings with wisdom removes envy and nurtures contentment and goodwill.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Falaq morning and evening; practice gratitude for what one has.",
+      "Daily_Action_Source": "Quran 113:5; Bukhari 6369"
     },
     {
       "Attribute_ID": 22,
@@ -550,7 +676,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "السلام، اللطيف، الرحيم",
-      "Practical_Understanding": "Forgiveness purifies the heart and frees a believer from the burden of resentment."
+      "Practical_Understanding": "Forgiveness purifies the heart and frees a believer from the burden of resentment.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Forgive those who wronged you; recite \"Rabbana atina...\" with presence.",
+      "Daily_Action_Source": "Quran 3:133-134"
     },
     {
       "Attribute_ID": 23,
@@ -575,7 +707,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَاذْهِبْ غَيْظَ قَلْبِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے گناہ معاف فرما اور میرے دل کا غصہ دور فرما۔",
       "Relevant_Allah_Names": "الحليم، الصبور، الرحمن",
-      "Practical_Understanding": "Pausing before reacting and remembering Allah's pleasure helps transform anger into patience."
+      "Practical_Understanding": "Pausing before reacting and remembering Allah's pleasure helps transform anger into patience.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Perform wudu when anger rises; change posture; remain silent.",
+      "Daily_Action_Source": "Bukhari 6116"
     },
     {
       "Attribute_ID": 24,
@@ -600,7 +738,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْبُخْلِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں بخل سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الكريم، الرزاق، الوهاب",
-      "Practical_Understanding": "Generosity increases barakah and weakens attachment to possessions."
+      "Practical_Understanding": "Generosity increases barakah and weakens attachment to possessions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Give sadaqah daily (even a dirham); feed the poor.",
+      "Daily_Action_Source": "Bukhari 6035; Quran 3:180"
     },
     {
       "Attribute_ID": 25,
@@ -625,7 +769,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الغني، الكريم، الوهاب",
-      "Practical_Understanding": "Selflessness liberates the soul from greed and strengthens brotherhood."
+      "Practical_Understanding": "Selflessness liberates the soul from greed and strengthens brotherhood.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Give a small gift daily; smile at neighbors; pay zakat on time.",
+      "Daily_Action_Source": "Quran 59:9; Bukhari 3798"
     },
     {
       "Attribute_ID": 26,
@@ -650,7 +800,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ قَنِّعْنِي بِمَا رَزَقْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے اپنے رزق پر قناعت عطا فرما۔",
       "Relevant_Allah_Names": "الغني، الرزاق، الكريم",
-      "Practical_Understanding": "Contentment brings peace and frees a person from endless craving."
+      "Practical_Understanding": "Contentment brings peace and frees a person from endless craving.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka al-qana'ata...\" after Fajr.",
+      "Daily_Action_Source": "Muslim 1051"
     },
     {
       "Attribute_ID": 27,
@@ -675,7 +831,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوارث، الحق، الحكيم",
-      "Practical_Understanding": "Keeping the Hereafter in focus prevents worldly life from dominating the heart."
+      "Practical_Understanding": "Keeping the Hereafter in focus prevents worldly life from dominating the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Hadid 57:20 daily; fast Monday and Thursday.",
+      "Daily_Action_Source": "Quran 57:20"
     },
     {
       "Attribute_ID": 28,
@@ -700,7 +862,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الغني، الوهاب، الحكيم",
-      "Practical_Understanding": "Moderation protects the heart from endless competition and comparison."
+      "Practical_Understanding": "Moderation protects the heart from endless competition and comparison.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Takathur at least once; reflect on death often.",
+      "Daily_Action_Source": "Quran 102:1; Bukhari 6436"
     },
     {
       "Attribute_ID": 29,
@@ -725,7 +893,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "الحق، الشهيد، الرقيب",
-      "Practical_Understanding": "Truthfulness builds trust and illuminates the heart."
+      "Practical_Understanding": "Truthfulness builds trust and illuminates the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Always speak truth; never lie, even in jokes.",
+      "Daily_Action_Source": "Bukhari 6094"
     },
     {
       "Attribute_ID": 30,
@@ -750,7 +924,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الأمين، الشهيد",
-      "Practical_Understanding": "Faithfulness in responsibilities strengthens character and builds trust between people."
+      "Practical_Understanding": "Faithfulness in responsibilities strengthens character and builds trust between people.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Be punctual and trustworthy in all contracts; return trusts immediately.",
+      "Daily_Action_Source": "Quran 8:27"
     },
     {
       "Attribute_ID": 31,
@@ -775,7 +955,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، الحسيب",
-      "Practical_Understanding": "Guarding the tongue prevents countless sins. Remembering accountability before Allah helps eliminate backbiting."
+      "Practical_Understanding": "Guarding the tongue prevents countless sins. Remembering accountability before Allah helps eliminate backbiting.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Before mentioning anyone, recite dhikr; guard the tongue.",
+      "Daily_Action_Source": "Quran 49:12; Muslim 2589"
     },
     {
       "Attribute_ID": 32,
@@ -800,7 +986,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں برے اخلاق سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "السلام، الرقيب، اللطيف",
-      "Practical_Understanding": "Reconciling people instead of spreading tales strengthens brotherhood and protects communities."
+      "Practical_Understanding": "Reconciling people instead of spreading tales strengthens brotherhood and protects communities.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Walk away from gossip; if approached, change the subject.",
+      "Daily_Action_Source": "Quran 68:11"
     },
     {
       "Attribute_ID": 33,
@@ -825,7 +1017,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "العدل، الحكيم، الخبير",
-      "Practical_Understanding": "Giving others the benefit of the doubt nurtures trust and unity."
+      "Practical_Understanding": "Giving others the benefit of the doubt nurtures trust and unity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Shaytani",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Hujurat 49:12; assume the best of others.",
+      "Daily_Action_Source": "Bukhari 6066"
     },
     {
       "Attribute_ID": 34,
@@ -850,7 +1048,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بخش دے۔",
       "Relevant_Allah_Names": "الستير، الرقيب، اللطيف",
-      "Practical_Understanding": "Respecting privacy and overlooking faults foster mercy and social harmony."
+      "Practical_Understanding": "Respecting privacy and overlooking faults foster mercy and social harmony.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Shaytani",
+      "Source_Emphasis": "",
+      "Daily_Action": "Refrain from following people's private matters; lower the gaze.",
+      "Daily_Action_Source": "Quran 49:12; Muslim 2564"
     },
     {
       "Attribute_ID": 35,
@@ -875,7 +1079,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "القدوس، الطيب، الرحمن",
-      "Practical_Understanding": "Modesty beautifies faith and protects hearts and societies from corruption."
+      "Practical_Understanding": "Modesty beautifies faith and protects hearts and societies from corruption.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak softly; say \"AfaduAllah\" to lower the gaze.",
+      "Daily_Action_Source": "Quran 7:33"
     },
     {
       "Attribute_ID": 36,
@@ -900,7 +1110,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ مَنْ وَلِيَ مِنْ أَمْرِ أُمَّتِي شَيْئًا فَرَفَقَ بِهِمْ",
       "Prophetic_Dua_Urdu": "اے اللہ! جو میری امت کے ساتھ نرمی کرے اس پر رحم فرما۔",
       "Relevant_Allah_Names": "اللطيف، الرحمن، الحليم",
-      "Practical_Understanding": "Gentleness and respectful speech strengthen relationships and reflect prophetic character."
+      "Practical_Understanding": "Gentleness and respectful speech strengthen relationships and reflect prophetic character.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni a'udhu bika minal-sabb wal-la'n\" daily.",
+      "Daily_Action_Source": "Quran 49:11; Bukhari 6044"
     },
     {
       "Attribute_ID": 37,
@@ -925,7 +1141,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "الرحمن، الحليم، الغفور",
-      "Practical_Understanding": "Replacing curses with prayers for guidance purifies the tongue and softens the heart."
+      "Practical_Understanding": "Replacing curses with prayers for guidance purifies the tongue and softens the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Make abundant du'a for the absent and the dead.",
+      "Daily_Action_Source": "Quran 33:58"
     },
     {
       "Attribute_ID": 38,
@@ -950,7 +1172,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحكيم، اللطيف، السلام",
-      "Practical_Understanding": "Seeking truth rather than victory transforms discussions into means of guidance."
+      "Practical_Understanding": "Seeking truth rather than victory transforms discussions into means of guidance.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Walk away from dispute; recite \"La khayra fi hadhihil-jadl\".",
+      "Daily_Action_Source": "Quran 16:125; Tirmidhi 1993"
     },
     {
       "Attribute_ID": 39,
@@ -975,7 +1203,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "الحكيم، الرشيد، العليم",
-      "Practical_Understanding": "Humility and sincerity prevent disputes from becoming battles of ego."
+      "Practical_Understanding": "Humility and sincerity prevent disputes from becoming battles of ego.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Listen first, then speak. Recite Surah Al-Kahf verse 54.",
+      "Daily_Action_Source": "Quran 18:54"
     },
     {
       "Attribute_ID": 40,
@@ -1000,7 +1234,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں برے اخلاق سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرحمن، اللطيف، الحليم",
-      "Practical_Understanding": "Respecting human dignity and remembering accountability before Allah remove the tendency to ridicule others."
+      "Practical_Understanding": "Respecting human dignity and remembering accountability before Allah remove the tendency to ridicule others.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Honor those who differ from you; reflect on Surah Al-Hujurat.",
+      "Daily_Action_Source": "Quran 49:11"
     },
     {
       "Attribute_ID": 41,
@@ -1025,7 +1265,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "الحق، الشهيد، الرقيب",
-      "Practical_Understanding": "Truthfulness protects justice and preserves trust among people."
+      "Practical_Understanding": "Truthfulness protects justice and preserves trust among people.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak only witnessed truth; never fabricate evidence.",
+      "Daily_Action_Source": "Quran 22:30; Bukhari 2654"
     },
     {
       "Attribute_ID": 42,
@@ -1050,7 +1296,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الوفي، الرقيب، الشهيد",
-      "Practical_Understanding": "Keeping promises builds integrity and reflects the character of believers."
+      "Practical_Understanding": "Keeping promises builds integrity and reflects the character of believers.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Renew every promise immediately; never delay or alter a covenant.",
+      "Daily_Action_Source": "Quran 17:34"
     },
     {
       "Attribute_ID": 43,
@@ -1075,7 +1327,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ مَنْ وَلِيَ مِنْ أَمْرِ أُمَّتِي شَيْئًا فَرَفَقَ بِهِمْ فَارْفُقْ بِهِ",
       "Prophetic_Dua_Urdu": "اے اللہ! جو میری امت کے ساتھ نرمی کرے، اس پر رحم فرما۔",
       "Relevant_Allah_Names": "الرحيم، اللطيف، الحليم",
-      "Practical_Understanding": "Gentleness softens hearts and strengthens relationships."
+      "Practical_Understanding": "Gentleness softens hearts and strengthens relationships.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak softly; smile at others; say \"AfaduAllah\".",
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
     },
     {
       "Attribute_ID": 44,
@@ -1100,7 +1358,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی ہدایت دے۔",
       "Relevant_Allah_Names": "البر، الحليم، الرحمن",
-      "Practical_Understanding": "Good character is among the heaviest deeds on the scale on the Day of Judgment."
+      "Practical_Understanding": "Good character is among the heaviest deeds on the scale on the Day of Judgment.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Begin each day with the intention to be of good character.",
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
     },
     {
       "Attribute_ID": 45,
@@ -1125,7 +1389,13 @@
       "Prophetic_Dua_Arabic": "تُفْتَحُ أَبْوَابُ الْجَنَّةِ ...",
       "Prophetic_Dua_Urdu": "جنت کے دروازے کھولے جاتے ہیں...",
       "Relevant_Allah_Names": "السلام، الودود، الرحيم",
-      "Practical_Understanding": "Maintaining ties strengthens faith and removes resentment."
+      "Practical_Understanding": "Maintaining ties strengthens faith and removes resentment.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Greet a Muslim you have avoided; reconcile within 3 days.",
+      "Daily_Action_Source": "Quran 49:10; Bukhari 6077"
     },
     {
       "Attribute_ID": 46,
@@ -1150,7 +1420,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے میرے نفس کے حوالے نہ کرنا۔",
       "Relevant_Allah_Names": "الأحد، الحق، الشهيد",
-      "Practical_Understanding": "Seeking Allah's pleasure instead of people's praise purifies intentions."
+      "Practical_Understanding": "Seeking Allah's pleasure instead of people's praise purifies intentions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Kahf verses 1-3 when praised.",
+      "Daily_Action_Source": "Quran 53:32; Muslim 3001"
     },
     {
       "Attribute_ID": 47,
@@ -1175,7 +1451,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الكبير، العظيم، الحكيم",
-      "Practical_Understanding": "True honor comes from taqwa, not worldly distinctions."
+      "Practical_Understanding": "True honor comes from taqwa, not worldly distinctions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Subhana Allahi wa bihamdihi\" 100x daily.",
+      "Daily_Action_Source": "Quran 102:1; Muslim 2865"
     },
     {
       "Attribute_ID": 48,
@@ -1200,7 +1482,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الكبير، العليم، الحكيم",
-      "Practical_Understanding": "Humility allows a person to appreciate others and recognize his dependence on Allah."
+      "Practical_Understanding": "Humility allows a person to appreciate others and recognize his dependence on Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Sit with the poor; greet the one you know and the one you don't.",
+      "Daily_Action_Source": "Quran 49:13"
     },
     {
       "Attribute_ID": 49,
@@ -1225,7 +1513,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوارث، الحق، الحكيم",
-      "Practical_Understanding": "Balanced engagement with worldly affairs protects the heart from attachment."
+      "Practical_Understanding": "Balanced engagement with worldly affairs protects the heart from attachment.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"La hawla wa la quwwata illa billah\" 100x daily.",
+      "Daily_Action_Source": "Quran 57:20; Bukhari 6416"
     },
     {
       "Attribute_ID": 50,
@@ -1250,7 +1544,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ایک لمحہ کے لیے بھی میرے نفس کے حوالے نہ کرنا۔",
       "Relevant_Allah_Names": "العظيم، الحكيم، الغفور",
-      "Practical_Understanding": "Remembering Allah's favor and one's shortcomings protects from self-admiration."
+      "Practical_Understanding": "Remembering Allah's favor and one's shortcomings protects from self-admiration.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Conceal your good deeds; fast 3 days a month (White Days).",
+      "Daily_Action_Source": "Quran 53:32; Muslim 2818"
     },
     {
       "Attribute_ID": 51,
@@ -1275,7 +1575,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں سستی سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "القوي، المتين، المعين",
-      "Practical_Understanding": "Consistency and purposeful effort transform laziness into productivity and worship."
+      "Practical_Understanding": "Consistency and purposeful effort transform laziness into productivity and worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Wake for Fajr; recite Ayat al-Kursi after each prayer.",
+      "Daily_Action_Source": "Quran 53:39; Bukhari 6369"
     },
     {
       "Attribute_ID": 52,
@@ -1300,7 +1606,13 @@
       "Prophetic_Dua_Arabic": "وَاسْتَعِنْ بِاللَّهِ",
       "Prophetic_Dua_Urdu": "اللہ سے مدد مانگو۔",
       "Relevant_Allah_Names": "القوي، الوكيل، المتين",
-      "Practical_Understanding": "Reliance upon Allah must accompany taking practical means."
+      "Practical_Understanding": "Reliance upon Allah must accompany taking practical means.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma la tufzini wa la tansuni\"; rely on Allah.",
+      "Daily_Action_Source": "Quran 8:60"
     },
     {
       "Attribute_ID": 53,
@@ -1325,7 +1637,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُبْنِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں بزدلی سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "القوي، الحفيظ، الناصر",
-      "Practical_Understanding": "True courage is steadfastness upon truth and trust in Allah."
+      "Practical_Understanding": "True courage is steadfastness upon truth and trust in Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Imran 3:139; face fear with tawakkul.",
+      "Daily_Action_Source": "Quran 3:175; Bukhari 6374"
     },
     {
       "Attribute_ID": 54,
@@ -1350,7 +1668,13 @@
       "Prophetic_Dua_Arabic": "Sahih Muslim 1053",
       "Prophetic_Dua_Urdu": "اللَّهُمَّ قَنِّعْنِي بِمَا رَزَقْتَنِي",
       "Relevant_Allah_Names": "اے اللہ! مجھے اپنے رزق پر قناعت عطا فرما۔",
-      "Practical_Understanding": "الغني، الرزاق، الكريم"
+      "Practical_Understanding": "الغني، الرزاق، الكريم",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka al-qana'ata\" — practice contentment.",
+      "Daily_Action_Source": "Quran 102:1; Muslim 1051"
     },
     {
       "Attribute_ID": 55,
@@ -1375,7 +1699,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحكيم، الرزاق، الكريم",
-      "Practical_Understanding": "Moderation preserves blessings and cultivates gratitude."
+      "Practical_Understanding": "Moderation preserves blessings and cultivates gratitude.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Eat in moderation; reflect on \"do not be wasteful.\"",
+      "Daily_Action_Source": "Quran 7:31; Bukhari 6091"
     },
     {
       "Attribute_ID": 56,
@@ -1400,7 +1730,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الرزاق، الحكيم، الكريم",
-      "Practical_Understanding": "Responsible management of resources is part of gratitude."
+      "Practical_Understanding": "Responsible management of resources is part of gratitude.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Give sadaqah secretly; track daily spending.",
+      "Daily_Action_Source": "Quran 17:26-27"
     },
     {
       "Attribute_ID": 57,
@@ -1425,7 +1761,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحي، الوارث، الحق",
-      "Practical_Understanding": "Remembering death helps prioritize what truly matters."
+      "Practical_Understanding": "Remembering death helps prioritize what truly matters.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "Visit a janazah weekly; recite Surah Al-Mulk.",
+      "Daily_Action_Source": "Quran 62:8; Tirmidhi 2307"
     },
     {
       "Attribute_ID": 58,
@@ -1450,7 +1792,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ ذَاتَ بَيْنِنَا",
       "Prophetic_Dua_Urdu": "اے اللہ! ہمارے درمیان اصلاح فرما۔",
       "Relevant_Allah_Names": "الودود، الرحيم، السلام",
-      "Practical_Understanding": "Maintaining family ties attracts Allah's mercy and barakah."
+      "Practical_Understanding": "Maintaining family ties attracts Allah's mercy and barakah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Call a relative daily; visit parents on Eid.",
+      "Daily_Action_Source": "Quran 47:22-23; Bukhari 5984"
     },
     {
       "Attribute_ID": 59,
@@ -1475,7 +1823,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بخش دے۔",
       "Relevant_Allah_Names": "العدل، الحكم، الحق",
-      "Practical_Understanding": "Justice is among the greatest manifestations of faith."
+      "Practical_Understanding": "Justice is among the greatest manifestations of faith.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "Be just even against yourself; help the wronged.",
+      "Daily_Action_Source": "Quran 42:42"
     },
     {
       "Attribute_ID": 60,
@@ -1500,7 +1854,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میری خطائیں معاف فرما۔",
       "Relevant_Allah_Names": "الغفور، التواب، الرحيم",
-      "Practical_Understanding": "Hope in Allah's mercy renews repentance and protects from despair."
+      "Practical_Understanding": "Hope in Allah's mercy renews repentance and protects from despair.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Shaytani",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Zumar 39:53 daily; istighfar 100x.",
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
     },
     {
       "Attribute_ID": 61,
@@ -1525,7 +1885,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الحق، العليم، الهادي",
-      "Practical_Understanding": "Knowledge and reflection strengthen certainty and remove harmful doubts."
+      "Practical_Understanding": "Knowledge and reflection strengthen certainty and remove harmful doubts.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "ostentation in worship",
+      "Daily_Action": "Renew intention before each act of worship (wudu, salah, dhikr); recite \"Allahumma inni a'udhu bika an ushrika bika shay'an wa ana a'lam, wa astaghfiruka lima la a'lam\".",
+      "Daily_Action_Source": "Musnad Ahmad 19606"
     },
     {
       "Attribute_ID": 62,
@@ -1550,7 +1916,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ تُبْ عَلَيَّ",
       "Prophetic_Dua_Urdu": "اے اللہ! میری توبہ قبول فرما۔",
       "Relevant_Allah_Names": "التواب، الرحيم، الغفور",
-      "Practical_Understanding": "Delaying repentance is dangerous because life and opportunities are uncertain."
+      "Practical_Understanding": "Delaying repentance is dangerous because life and opportunities are uncertain.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "of argumentation",
+      "Daily_Action": "Recite \"La ilaha illa Allah\" 100x daily; perform two raka'at of humility after Fajr.",
+      "Daily_Action_Source": "Quran 31:18; Bukhari 6114"
     },
     {
       "Attribute_ID": 63,
@@ -1575,7 +1947,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر اور شکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الشكور، الكريم، الرزاق",
-      "Practical_Understanding": "Recognizing blessings transforms ordinary life into worship."
+      "Practical_Understanding": "Recognizing blessings transforms ordinary life into worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "of worldly life",
+      "Daily_Action": "Replace false hopes with Quran 14:7; trust in Allah's promise.",
+      "Daily_Action_Source": "Quran 14:7"
     },
     {
       "Attribute_ID": 64,
@@ -1600,7 +1978,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الصبور، الحكيم، الرحيم",
-      "Practical_Understanding": "Patience grows through practice, trust in Allah and remembering the reward promised by Him."
+      "Practical_Understanding": "Patience grows through practice, trust in Allah and remembering the reward promised by Him.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "of heedlessness toward the Hour",
+      "Daily_Action": "Establish 5 daily adhkar (morning/evening); recite Surah Al-Kahf on Friday.",
+      "Daily_Action_Source": "Quran 7:205; Bukhari 6407"
     },
     {
       "Attribute_ID": 65,
@@ -1625,7 +2009,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ تُبْ عَلَيَّ",
       "Prophetic_Dua_Urdu": "اے اللہ! میری توبہ قبول فرما۔",
       "Relevant_Allah_Names": "التواب، الغفور، الرحيم",
-      "Practical_Understanding": "Sincere repentance renews the heart and restores one's relationship with Allah."
+      "Practical_Understanding": "Sincere repentance renews the heart and restores one's relationship with Allah.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "as a chronic state",
+      "Daily_Action": "Soften the heart through tafakkur over death, dhikr, and visiting the graves.",
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
     },
     {
       "Attribute_ID": 66,
@@ -1650,7 +2040,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں شرک سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الأحد، الحق، الشهيد",
-      "Practical_Understanding": "Sincerity transforms ordinary deeds into acts of worship."
+      "Practical_Understanding": "Sincerity transforms ordinary deeds into acts of worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 67,
@@ -1675,7 +2071,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "الحق، الشهيد، الرقيب",
-      "Practical_Understanding": "Truthfulness builds trust and illuminates the heart."
+      "Practical_Understanding": "Truthfulness builds trust and illuminates the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "of outward/inward split",
+      "Daily_Action": "Renew shahada daily with sincerity; examine each deed for ikhlas.",
+      "Daily_Action_Source": "Quran 2:8-9"
     },
     {
       "Attribute_ID": 68,
@@ -1700,7 +2102,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، العليم، الحكيم",
-      "Practical_Understanding": "Taqwa protects the heart and guides every decision."
+      "Practical_Understanding": "Taqwa protects the heart and guides every decision.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Nafsi",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 69,
@@ -1725,7 +2133,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الصبور، الحكيم، الرحيم",
-      "Practical_Understanding": "Patience strengthens faith and brings Allah's companionship."
+      "Practical_Understanding": "Patience strengthens faith and brings Allah's companionship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 70,
@@ -1750,7 +2164,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر اور شکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الشكور، الكريم، الرزاق",
-      "Practical_Understanding": "Gratitude turns blessings into means of drawing closer to Allah."
+      "Practical_Understanding": "Gratitude turns blessings into means of drawing closer to Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Mixed",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 71,
@@ -1775,7 +2195,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوكيل، الحفيظ، الرزاق",
-      "Practical_Understanding": "True reliance combines trust in Allah with responsible effort."
+      "Practical_Understanding": "True reliance combines trust in Allah with responsible effort.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Repent sincerely at dawn; renew tawbah before each prayer.",
+      "Daily_Action_Source": "Quran 66:8; Muslim 2749"
     },
     {
       "Attribute_ID": 72,
@@ -1800,7 +2226,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الجليل، العزيز، الرقيب",
-      "Practical_Understanding": "Balanced fear protects a believer from carelessness."
+      "Practical_Understanding": "Balanced fear protects a believer from carelessness.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Examine each intention three times daily.",
+      "Daily_Action_Source": "Quran 98:5; Bukhari 1"
     },
     {
       "Attribute_ID": 73,
@@ -1825,7 +2257,13 @@
       "Prophetic_Dua_Arabic": "Sahih Muslim 2713",
       "Prophetic_Dua_Urdu": "اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي",
       "Relevant_Allah_Names": "اے اللہ! میری خطائیں معاف فرما۔",
-      "Practical_Understanding": "الغفور، الرحيم، التواب"
+      "Practical_Understanding": "الغفور، الرحيم، التواب",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak truth even if bitter; never lie, even in jokes.",
+      "Daily_Action_Source": "Quran 9:119; Bukhari 6094"
     },
     {
       "Attribute_ID": 74,
@@ -1850,7 +2288,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الحق، الهادي، العليم",
-      "Practical_Understanding": "Certainty strengthens resilience and removes destructive doubts."
+      "Practical_Understanding": "Certainty strengthens resilience and removes destructive doubts.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Begin each task with Bismillah; fear Allah privately.",
+      "Daily_Action_Source": "Quran 2:197; Muslim 2564"
     },
     {
       "Attribute_ID": 75,
@@ -1875,7 +2319,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوارث، الحكيم، الحق",
-      "Practical_Understanding": "Zuhd does not mean abandoning the world but keeping the Hereafter as the priority."
+      "Practical_Understanding": "Zuhd does not mean abandoning the world but keeping the Hereafter as the priority.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"HasbunAllah wa ni'mal-wakeel\" in difficulty.",
+      "Daily_Action_Source": "Quran 2:153; Muslim 1053"
     },
     {
       "Attribute_ID": 76,
@@ -1900,7 +2350,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ قَنِّعْنِي بِمَا رَزَقْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے اپنے رزق پر قناعت عطا فرما۔",
       "Relevant_Allah_Names": "الغني، الرزاق، الكريم",
-      "Practical_Understanding": "Contentment liberates the heart from endless comparison and greed."
+      "Practical_Understanding": "Contentment liberates the heart from endless comparison and greed.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Alhamdulillah\" 100x daily; count blessings before sleep.",
+      "Daily_Action_Source": "Quran 14:7; Muslim 2819"
     },
     {
       "Attribute_ID": 77,
@@ -1925,7 +2381,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرقيب، العليم، الحكيم",
-      "Practical_Understanding": "Avoiding doubtful matters protects faith and safeguards one's honor."
+      "Practical_Understanding": "Avoiding doubtful matters protects faith and safeguards one's honor.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Talaq 65:3; rely on Allah in all affairs.",
+      "Daily_Action_Source": "Quran 3:159; Bukhari 6470"
     },
     {
       "Attribute_ID": 78,
@@ -1950,7 +2412,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "القدوس، الطيب، الرحمن",
-      "Practical_Understanding": "Modesty beautifies character and protects from many sins."
+      "Practical_Understanding": "Modesty beautifies character and protects from many sins.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite the morning and evening adhkar in full.",
+      "Daily_Action_Source": "Quran 3:175; Muslim 2758"
     },
     {
       "Attribute_ID": 79,
@@ -1975,7 +2443,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ مَنْ وَلِيَ مِنْ أَمْرِ أُمَّتِي شَيْئًا فَرَفَقَ بِهِمْ",
       "Prophetic_Dua_Urdu": "اے اللہ! جو میری امت کے ساتھ نرمی کرے اس پر رحم فرما۔",
       "Relevant_Allah_Names": "اللطيف، الرحيم، الحليم",
-      "Practical_Understanding": "Gentleness wins hearts and reflects the prophetic character."
+      "Practical_Understanding": "Gentleness wins hearts and reflects the prophetic character.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "End each day with hope: \"Ya Rabbu, inni ra'ftu al-jannah...\".",
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
     },
     {
       "Attribute_ID": 80,
@@ -2000,7 +2474,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَاذْهِبْ غَيْظَ قَلْبِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دل کا غصہ دور فرما۔",
       "Relevant_Allah_Names": "الحليم، الصبور، الرحمن",
-      "Practical_Understanding": "True strength lies in controlling oneself during anger."
+      "Practical_Understanding": "True strength lies in controlling oneself during anger.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite the morning dua of yaqeen: \"Allahumma inni as'aluka al-yaqeen...\".",
+      "Daily_Action_Source": "Quran 2:2; Muslim 8"
     },
     {
       "Attribute_ID": 81,
@@ -2025,7 +2505,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لَنَا وَارْحَمْنَا",
       "Prophetic_Dua_Urdu": "اے اللہ! ہمیں بخش دے اور ہم پر رحم فرما۔",
       "Relevant_Allah_Names": "الرحمن، الرحيم، البر",
-      "Practical_Understanding": "Mercy toward people invites Allah's mercy upon His servant."
+      "Practical_Understanding": "Mercy toward people invites Allah's mercy upon His servant.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"La hawla wa la quwwata illa billah\" after Fajr.",
+      "Daily_Action_Source": "Quran 57:20; Ibn Majah 4102"
     },
     {
       "Attribute_ID": 82,
@@ -2050,7 +2536,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "العفو، الغفور، الرحيم",
-      "Practical_Understanding": "Forgiveness heals hearts and frees a person from resentment."
+      "Practical_Understanding": "Forgiveness heals hearts and frees a person from resentment.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Taha 20:131 before each meal.",
+      "Daily_Action_Source": "Quran 20:131; Muslim 1051"
     },
     {
       "Attribute_ID": 83,
@@ -2075,7 +2567,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "العفو، الرحيم، السلام",
-      "Practical_Understanding": "Overlooking faults creates peace and strengthens relationships."
+      "Practical_Understanding": "Overlooking faults creates peace and strengthens relationships.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Avoid doubtful matters; eat only what is plainly halal.",
+      "Daily_Action_Source": "Quran 2:168; Bukhari 52"
     },
     {
       "Attribute_ID": 84,
@@ -2100,7 +2598,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "المحسن، الرقيب، الحكيم",
-      "Practical_Understanding": "Ihsan elevates worship, character and every interaction to the highest level of excellence."
+      "Practical_Understanding": "Ihsan elevates worship, character and every interaction to the highest level of excellence.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Lower the gaze; speak softly; cover the head in humility.",
+      "Daily_Action_Source": "Quran 7:26; Bukhari 6117"
     },
     {
       "Attribute_ID": 85,
@@ -2125,7 +2629,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری محبت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الودود، الرحمن، الرحيم",
-      "Practical_Understanding": "Love of Allah becomes the driving force behind worship and obedience."
+      "Practical_Understanding": "Love of Allah becomes the driving force behind worship and obedience.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak 20% slower than usual; use gentle words with family.",
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
     },
     {
       "Attribute_ID": 86,
@@ -2150,7 +2660,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "اللطيف، الرحيم، الحليم",
-      "Practical_Understanding": "Reflecting on Allah's greatness nurtures humility in worship."
+      "Practical_Understanding": "Reflecting on Allah's greatness nurtures humility in worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka al-hilm\" after Fajr.",
+      "Daily_Action_Source": "Quran 3:134; Bukhari 6114"
     },
     {
       "Attribute_ID": 87,
@@ -2175,7 +2691,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ تُبْ عَلَيَّ",
       "Prophetic_Dua_Urdu": "اے اللہ! میری توبہ قبول فرما۔",
       "Relevant_Allah_Names": "التواب، الغفور، الرحيم",
-      "Practical_Understanding": "Inabah means repeatedly returning to Allah after every lapse."
+      "Practical_Understanding": "Inabah means repeatedly returning to Allah after every lapse.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Send blessings upon the Prophet ﷺ 100x daily.",
+      "Daily_Action_Source": "Quran 21:107; Bukhari 6013"
     },
     {
       "Attribute_ID": 88,
@@ -2200,7 +2722,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الودود، السلام، النور",
-      "Practical_Understanding": "Remembrance of Allah removes loneliness and fills the heart with peace."
+      "Practical_Understanding": "Remembrance of Allah removes loneliness and fills the heart with peace.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Ash-Shura 42:40-43; forgive before sleep.",
+      "Daily_Action_Source": "Quran 42:40; Muslim 2588"
     },
     {
       "Attribute_ID": 89,
@@ -2225,7 +2753,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "الحسيب، الرقيب، العليم",
-      "Practical_Understanding": "Daily self-accountability strengthens spiritual growth."
+      "Practical_Understanding": "Daily self-accountability strengthens spiritual growth.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Forgive 3 people daily; let go of grudges.",
+      "Daily_Action_Source": "Quran 24:22; Muslim 2588"
     },
     {
       "Attribute_ID": 90,
@@ -2250,7 +2784,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، البصير",
-      "Practical_Understanding": "Awareness of Allah's observation purifies intentions and actions."
+      "Practical_Understanding": "Awareness of Allah's observation purifies intentions and actions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Worship Allah as though you see Him; excel in every act.",
+      "Daily_Action_Source": "Quran 16:90; Muslim 8"
     },
     {
       "Attribute_ID": 91,
@@ -2275,7 +2815,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الكبير، العظيم، الحليم",
-      "Practical_Understanding": "Humility opens the heart to divine guidance."
+      "Practical_Understanding": "Humility opens the heart to divine guidance.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka hubbaka...\" daily.",
+      "Daily_Action_Source": "Quran 2:165; Bukhari 6502"
     },
     {
       "Attribute_ID": 92,
@@ -2300,7 +2846,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "الكبير، المتعال، الحليم",
-      "Practical_Understanding": "Humility earns honor with Allah and respect among people."
+      "Practical_Understanding": "Humility earns honor with Allah and respect among people.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Pray with presence; recite Surah Al-Mu'minun 23:1-2 with focus.",
+      "Daily_Action_Source": "Quran 23:1-2; Muslim 489"
     },
     {
       "Attribute_ID": 93,
@@ -2325,7 +2877,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "السلام، المؤمن، الودود",
-      "Practical_Understanding": "True tranquility comes from faith and remembrance of Allah."
+      "Practical_Understanding": "True tranquility comes from faith and remembrance of Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Return to Allah after every slip; renew tawbah daily.",
+      "Daily_Action_Source": "Quran 39:54; Muslim 2702"
     },
     {
       "Attribute_ID": 94,
@@ -2350,7 +2908,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الرِّضَا بَعْدَ الْقَضَاءِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں فیصلے کے بعد رضا کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الحكيم، اللطيف، الرحيم",
-      "Practical_Understanding": "Contentment with Allah's decree brings peace and freedom from resentment."
+      "Practical_Understanding": "Contentment with Allah's decree brings peace and freedom from resentment.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite morning and evening adhkar with full presence.",
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
     },
     {
       "Attribute_ID": 95,
@@ -2375,7 +2939,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیرے چہرے کے دیدار کی لذت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الودود، الرحمن، الكريم",
-      "Practical_Understanding": "Longing for Allah motivates worship and detachment from worldly distractions."
+      "Practical_Understanding": "Longing for Allah motivates worship and detachment from worldly distractions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Account yourself each night; write 3 mistakes to correct.",
+      "Daily_Action_Source": "Quran 59:18; Muslim 2816"
     },
     {
       "Attribute_ID": 96,
@@ -2400,7 +2970,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری محبت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الودود، الرحيم، البر",
-      "Practical_Understanding": "Love for the Prophet ﷺ is shown by following his Sunnah."
+      "Practical_Understanding": "Love for the Prophet ﷺ is shown by following his Sunnah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recall that Allah watches; recite \"Ya Muqeeb al-hayr...\" before sleep.",
+      "Daily_Action_Source": "Quran 50:16; Muslim 8"
     },
     {
       "Attribute_ID": 97,
@@ -2425,7 +3001,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ زِدْنِي عِلْمًا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے علم میں اضافہ فرما۔",
       "Relevant_Allah_Names": "الحكيم، العليم، الخبير",
-      "Practical_Understanding": "Reflection transforms information into wisdom and strengthens faith."
+      "Practical_Understanding": "Reflection transforms information into wisdom and strengthens faith.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Subhana Rabbiyal-A'la\" in ruku' with presence.",
+      "Daily_Action_Source": "Quran 22:34; Muslim 2865"
     },
     {
       "Attribute_ID": 98,
@@ -2450,7 +3032,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الحي، القيوم، الرقيب",
-      "Practical_Understanding": "Frequent remembrance nourishes the heart and prevents heedlessness."
+      "Practical_Understanding": "Frequent remembrance nourishes the heart and prevents heedlessness.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Sit with the less fortunate; greet all people equally.",
+      "Daily_Action_Source": "Quran 25:63; Muslim 2588"
     },
     {
       "Attribute_ID": 99,
@@ -2475,7 +3063,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الوكيل، الحفيظ، اللطيف",
-      "Practical_Understanding": "Entrusting matters to Allah brings peace and removes anxiety."
+      "Practical_Understanding": "Entrusting matters to Allah brings peace and removes anxiety.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"La ilaha illa Allah\" 100x after Maghrib.",
+      "Daily_Action_Source": "Quran 48:4; Bukhari 3614"
     },
     {
       "Attribute_ID": 100,
@@ -2500,7 +3094,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے اپنی پوشیدہ اور ظاہر حالت میں تیرے خوف کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الجليل، العظيم، الكبير",
-      "Practical_Understanding": "Reverential awe protects from arrogance and sin."
+      "Practical_Understanding": "Reverential awe protects from arrogance and sin.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Radhitu billahi Rabban...\" after each prayer.",
+      "Daily_Action_Source": "Quran 98:8; Muslim 2815"
     },
     {
       "Attribute_ID": 101,
@@ -2525,7 +3125,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! جو علم تو نے مجھے دیا ہے اس سے نفع عطا فرما۔",
       "Relevant_Allah_Names": "العليم، الحكيم، النور",
-      "Practical_Understanding": "Insight allows one to distinguish truth from deception."
+      "Practical_Understanding": "Insight allows one to distinguish truth from deception.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Ankabut 29:5; yearn for jumu'ah.",
+      "Daily_Action_Source": "Quran 29:5; Bukhari 6507"
     },
     {
       "Attribute_ID": 102,
@@ -2550,7 +3156,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "النور، الحكيم، العليم",
-      "Practical_Understanding": "Spiritual discernment increases through taqwa and knowledge."
+      "Practical_Understanding": "Spiritual discernment increases through taqwa and knowledge.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Send durood upon the Prophet ﷺ in abundance; study his seerah.",
+      "Daily_Action_Source": "Quran 9:24; Bukhari 15"
     },
     {
       "Attribute_ID": 103,
@@ -2575,7 +3187,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، الحكيم",
-      "Practical_Understanding": "Guarding the tongue protects faith and relationships."
+      "Practical_Understanding": "Guarding the tongue protects faith and relationships.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Reflect on creation: sunrise, sunset, your own body.",
+      "Daily_Action_Source": "Quran 3:191; Muslim 2699"
     },
     {
       "Attribute_ID": 104,
@@ -2600,7 +3218,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میری خطائیں معاف فرما۔",
       "Relevant_Allah_Names": "الرحمن، الغفور، الكريم",
-      "Practical_Understanding": "Good expectations of Allah inspire hope, repentance and perseverance."
+      "Practical_Understanding": "Good expectations of Allah inspire hope, repentance and perseverance.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Ra'd 13:28; remember Allah often.",
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
     },
     {
       "Attribute_ID": 105,
@@ -2625,7 +3249,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے میرے علم سے نفع عطا فرما۔",
       "Relevant_Allah_Names": "الحكيم، العليم، الخبير",
-      "Practical_Understanding": "Wisdom combines knowledge, sincerity and correct application."
+      "Practical_Understanding": "Wisdom combines knowledge, sincerity and correct application.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Say \"Allahumma inni tawakkaltu 'alaika...\" when overwhelmed.",
+      "Daily_Action_Source": "Quran 40:44; Bukhari 6369"
     },
     {
       "Attribute_ID": 106,
@@ -2650,7 +3280,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "العدل، الحكم، الحق",
-      "Practical_Understanding": "Justice strengthens societies and earns Allah's pleasure."
+      "Practical_Understanding": "Justice strengthens societies and earns Allah's pleasure.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Subhana Rabbiyal-A'la\" with presence of Allah's majesty.",
+      "Daily_Action_Source": "Quran 59:21; Muslim 2356"
     },
     {
       "Attribute_ID": 107,
@@ -2675,7 +3311,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، الحق",
-      "Practical_Understanding": "Trustworthiness is among the greatest signs of faith."
+      "Practical_Understanding": "Trustworthiness is among the greatest signs of faith.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Reflect deeply on Quran; seek knowledge of the unseen.",
+      "Daily_Action_Source": "Quran 12:108; Muslim 2699"
     },
     {
       "Attribute_ID": 108,
@@ -2700,7 +3342,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الوفي، الرقيب، الشهيد",
-      "Practical_Understanding": "Keeping promises builds honor and trust."
+      "Practical_Understanding": "Keeping promises builds honor and trust.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Observe faces and actions of the righteous; learn from them.",
+      "Daily_Action_Source": "Quran 15:75; Tirmidhi 3127"
     },
     {
       "Attribute_ID": 109,
@@ -2725,7 +3373,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْجُبْنِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں بزدلی سے تیری پناہ مانگتا ہوں۔",
       "Relevant_Allah_Names": "القوي، المتين، الناصر",
-      "Practical_Understanding": "True courage means standing firm upon truth."
+      "Practical_Understanding": "True courage means standing firm upon truth.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"HasbunAllah wa ni'mal-wakeel\"; speak less.",
+      "Daily_Action_Source": "Quran 50:18; Bukhari 6475"
     },
     {
       "Attribute_ID": 110,
@@ -2750,7 +3404,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "القدوس، الطيب، الحفيظ",
-      "Practical_Understanding": "Self-restraint preserves dignity and spiritual purity."
+      "Practical_Understanding": "Self-restraint preserves dignity and spiritual purity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Ya Rabbu, la taqzi' al-jannah...\" (hope in Allah).",
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
     },
     {
       "Attribute_ID": 111,
@@ -2775,7 +3435,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعْطِ مُنْفِقًا خَلَفًا",
       "Prophetic_Dua_Urdu": "اے اللہ! خرچ کرنے والے کو بدل عطا فرما۔",
       "Relevant_Allah_Names": "الكريم، الوهاب، الرزاق",
-      "Practical_Understanding": "Generosity purifies wealth and softens the heart."
+      "Practical_Understanding": "Generosity purifies wealth and softens the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Reflect before each decision; ask scholars for guidance.",
+      "Daily_Action_Source": "Quran 2:269; Bukhari 73"
     },
     {
       "Attribute_ID": 112,
@@ -2800,7 +3466,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "الرحمن، الكريم، البر",
-      "Practical_Understanding": "Selflessness strengthens brotherhood and sincerity."
+      "Practical_Understanding": "Selflessness strengthens brotherhood and sincerity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Establish fairness in all dealings; never favor one over another unjustly.",
+      "Daily_Action_Source": "Quran 16:90; Muslim 1827"
     },
     {
       "Attribute_ID": 113,
@@ -2825,7 +3497,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "البر، الرحيم، الحليم",
-      "Practical_Understanding": "Good character is among the heaviest deeds on the scale."
+      "Practical_Understanding": "Good character is among the heaviest deeds on the scale.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Honour all trusts; return what is borrowed promptly.",
+      "Daily_Action_Source": "Quran 4:58"
     },
     {
       "Attribute_ID": 114,
@@ -2850,7 +3528,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "القدوس، الحليم، الرقيب",
-      "Practical_Understanding": "Awareness that Allah sees us nurtures modesty and purity."
+      "Practical_Understanding": "Awareness that Allah sees us nurtures modesty and purity.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Document all promises; fulfill them within 24 hours.",
+      "Daily_Action_Source": "Quran 17:34"
     },
     {
       "Attribute_ID": 115,
@@ -2875,7 +3559,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت اور استقامت عطا فرما۔",
       "Relevant_Allah_Names": "الهادي، الرشيد، الحكيم",
-      "Practical_Understanding": "Steadfastness is achieved through consistent obedience and avoiding extremes."
+      "Practical_Understanding": "Steadfastness is achieved through consistent obedience and avoiding extremes.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Stand for truth even alone; defend the oppressed.",
+      "Daily_Action_Source": "Quran 3:175; Bukhari 2820"
     },
     {
       "Attribute_ID": 116,
@@ -2900,7 +3590,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر، شکر اور عبادت پر میری مدد فرما۔",
       "Relevant_Allah_Names": "القوي، المتين، الناصر",
-      "Practical_Understanding": "Struggling against desires strengthens faith and character."
+      "Practical_Understanding": "Struggling against desires strengthens faith and character.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah An-Nur 24:33 before leaving home.",
+      "Daily_Action_Source": "Quran 24:33"
     },
     {
       "Attribute_ID": 117,
@@ -2925,7 +3621,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دل کو اپنے دین پر ثابت رکھ۔",
       "Relevant_Allah_Names": "الحفيظ، الرقيب، الشهيد",
-      "Practical_Understanding": "Constant vigilance protects faith from gradual decline."
+      "Practical_Understanding": "Constant vigilance protects faith from gradual decline.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Give sadaqah daily; open doors to opportunity for others.",
+      "Daily_Action_Source": "Quran 2:261; Bukhari 6035"
     },
     {
       "Attribute_ID": 118,
@@ -2950,7 +3652,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي شَأْنِي كُلَّهُ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے تمام معاملات درست فرما۔",
       "Relevant_Allah_Names": "الغني، الصمد، الرزاق",
-      "Practical_Understanding": "Realizing one's dependence upon Allah removes arrogance and increases sincerity."
+      "Practical_Understanding": "Realizing one's dependence upon Allah removes arrogance and increases sincerity.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Prefer others in food, drink, and time; serve guests first.",
+      "Daily_Action_Source": "Quran 59:9; Bukhari 3798"
     },
     {
       "Attribute_ID": 119,
@@ -2975,7 +3683,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى عِبَادَتِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنی عبادت پر میری مدد فرما۔",
       "Relevant_Allah_Names": "المعبود الحق، الرب، الصمد",
-      "Practical_Understanding": "True freedom is found in complete servitude to Allah."
+      "Practical_Understanding": "True freedom is found in complete servitude to Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Begin each day with the intention to be of good character.",
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
     },
     {
       "Attribute_ID": 120,
@@ -3000,7 +3714,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر اور شکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الحي، القيوم، الودود",
-      "Practical_Understanding": "Making worship a priority brings blessings and inner peace."
+      "Practical_Understanding": "Making worship a priority brings blessings and inner peace.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni astahyika...\" with presence.",
+      "Daily_Action_Source": "Quran 7:26"
     },
     {
       "Attribute_ID": 121,
@@ -3025,7 +3745,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری محبت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الودود، الرحمن، الكريم",
-      "Practical_Understanding": "Love is proven through obedience and sacrifice."
+      "Practical_Understanding": "Love is proven through obedience and sacrifice.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Fussilat 41:30 daily; hold firm to the Sunnah.",
+      "Daily_Action_Source": "Quran 41:30; Muslim 38"
     },
     {
       "Attribute_ID": 122,
@@ -3050,7 +3776,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری محبت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الودود، القريب، الرحمن",
-      "Practical_Understanding": "Regular acts of worship bring a servant closer to Allah."
+      "Practical_Understanding": "Regular acts of worship bring a servant closer to Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Strive against your lower desires; fast regularly.",
+      "Daily_Action_Source": "Quran 29:69; Muslim 2664"
     },
     {
       "Attribute_ID": 123,
@@ -3075,7 +3807,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
       "Prophetic_Dua_Urdu": "اے دلوں کو پھیرنے والے! میرے دل کو اپنے دین پر ثابت رکھ۔",
       "Relevant_Allah_Names": "الثابت، الهادي، الحفيظ",
-      "Practical_Understanding": "Firmness upon faith is among the greatest blessings."
+      "Practical_Understanding": "Firmness upon faith is among the greatest blessings.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Imran 3:200; stand guard over your faith.",
+      "Daily_Action_Source": "Quran 3:200; Muslim 251"
     },
     {
       "Attribute_ID": 124,
@@ -3100,7 +3838,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں اس بات سے تیری پناہ مانگتا ہوں کہ میں تیرے ساتھ کسی کو شریک کروں۔",
       "Relevant_Allah_Names": "الأحد، الحق، الصمد",
-      "Practical_Understanding": "Purity of intention transforms every action into worship."
+      "Practical_Understanding": "Purity of intention transforms every action into worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka al-faqr...\" daily.",
+      "Daily_Action_Source": "Quran 35:15; Muslim 2577"
     },
     {
       "Attribute_ID": 125,
@@ -3125,7 +3869,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری پناہ چاہتا ہوں کہ میں تیرے ساتھ کسی کو شریک کروں۔",
       "Relevant_Allah_Names": "الأحد، الحق، الصمد",
-      "Practical_Understanding": "Pure intentions elevate ordinary actions into acts of worship."
+      "Practical_Understanding": "Pure intentions elevate ordinary actions into acts of worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Submit fully to Allah in every matter; say \"sami'na wa ata'na.\"",
+      "Daily_Action_Source": "Quran 51:56; Muslim 8"
     },
     {
       "Attribute_ID": 126,
@@ -3150,7 +3900,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "الكريم، البر، الرحمن",
-      "Practical_Understanding": "True nobility combines generosity, courage and service."
+      "Practical_Understanding": "True nobility combines generosity, courage and service.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Reserve time daily for fresh worship; reduce distractions.",
+      "Daily_Action_Source": "Quran 62:10"
     },
     {
       "Attribute_ID": 127,
@@ -3175,7 +3931,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي شَأْنِي كُلَّهُ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے تمام معاملات درست فرما۔",
       "Relevant_Allah_Names": "الوكيل، الحفيظ، الرزاق",
-      "Practical_Understanding": "Perfect reliance removes anxiety and strengthens certainty."
+      "Practical_Understanding": "Perfect reliance removes anxiety and strengthens certainty.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Love the Prophet ﷺ sincerely; follow his sunnah with ikhlas.",
+      "Daily_Action_Source": "Quran 3:31; Bukhari 15"
     },
     {
       "Attribute_ID": 128,
@@ -3200,7 +3962,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "السلام، النور، الودود",
-      "Practical_Understanding": "A focused heart experiences tranquility and spiritual strength."
+      "Practical_Understanding": "A focused heart experiences tranquility and spiritual strength.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Perform extra worship in the last third of the night.",
+      "Daily_Action_Source": "Quran 5:35; Bukhari 6502"
     },
     {
       "Attribute_ID": 129,
@@ -3225,7 +3993,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "اللطيف، الحليم، الرحيم",
-      "Practical_Understanding": "Presence of heart transforms worship into a source of joy."
+      "Practical_Understanding": "Presence of heart transforms worship into a source of joy.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Ibrahim 14:27 daily; renew intention often.",
+      "Daily_Action_Source": "Quran 14:27"
     },
     {
       "Attribute_ID": 130,
@@ -3250,7 +4024,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "البر، الكريم، الرحمن",
-      "Practical_Understanding": "Working together in goodness multiplies blessings and benefits society."
+      "Practical_Understanding": "Working together in goodness multiplies blessings and benefits society.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Strip your deeds of all but Allah's pleasure.",
+      "Daily_Action_Source": "Quran 39:11; Bukhari 1"
     },
     {
       "Attribute_ID": 131,
@@ -3275,7 +4055,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "البر، الرحيم، الودود",
-      "Practical_Understanding": "Sincere advice strengthens faith and brotherhood."
+      "Practical_Understanding": "Sincere advice strengthens faith and brotherhood.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Renew intention before each act with \"Lillah.\"",
+      "Daily_Action_Source": "Quran 98:5; Bukhari 1"
     },
     {
       "Attribute_ID": 132,
@@ -3300,7 +4086,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ ذَاتَ بَيْنِنَا",
       "Prophetic_Dua_Urdu": "اے اللہ! ہمارے تعلقات میں اصلاح فرما۔",
       "Relevant_Allah_Names": "السلام، الحكيم، الرحيم",
-      "Practical_Understanding": "Reconciliation brings harmony and removes hatred."
+      "Practical_Understanding": "Reconciliation brings harmony and removes hatred.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Honor the young, respect the elders; excel in generosity.",
+      "Daily_Action_Source": "Quran 59:9"
     },
     {
       "Attribute_ID": 133,
@@ -3325,7 +4117,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے ہدایت اور تقویٰ مانگتا ہوں۔",
       "Relevant_Allah_Names": "العلي، المجيد، الحكيم",
-      "Practical_Understanding": "High aspirations prevent laziness and inspire excellence."
+      "Practical_Understanding": "High aspirations prevent laziness and inspire excellence.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni tawakkaltu 'alaika...\" after Fajr.",
+      "Daily_Action_Source": "Quran 65:3; Bukhari 6470"
     },
     {
       "Attribute_ID": 134,
@@ -3350,7 +4148,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیرے چہرے کے دیدار کی لذت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، النور",
-      "Practical_Understanding": "Deep awareness of Allah elevates worship to the level of Ihsan."
+      "Practical_Understanding": "Deep awareness of Allah elevates worship to the level of Ihsan.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Gather the heart before each prayer; banish distraction.",
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
     },
     {
       "Attribute_ID": 135,
@@ -3375,7 +4179,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا",
       "Prophetic_Dua_Urdu": "اے اللہ! آسانی وہی ہے جسے تو آسان کرے۔",
       "Relevant_Allah_Names": "اللطيف، الحكيم، الرحيم",
-      "Practical_Understanding": "Balance and moderation protect a believer from extremism and burnout."
+      "Practical_Understanding": "Balance and moderation protect a believer from extremism and burnout.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Pray with the heart present; slow each raka'.",
+      "Daily_Action_Source": "Quran 23:1-2; Muslim 489"
     },
     {
       "Attribute_ID": 136,
@@ -3400,7 +4210,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "الودود، الرحيم، البر",
-      "Practical_Understanding": "Cheerfulness spreads positivity and strengthens relationships."
+      "Practical_Understanding": "Cheerfulness spreads positivity and strengthens relationships.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Join a circle of remembrance weekly; volunteer.",
+      "Daily_Action_Source": "Quran 5:2; Muslim 2699"
     },
     {
       "Attribute_ID": 137,
@@ -3425,7 +4241,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میری خطائیں معاف فرما۔",
       "Relevant_Allah_Names": "الرحمن، الكريم، الغفور",
-      "Practical_Understanding": "Optimism nurtures hope and perseverance in adversity."
+      "Practical_Understanding": "Optimism nurtures hope and perseverance in adversity.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Advise sincerely and privately; never for show.",
+      "Daily_Action_Source": "Quran 103:3; Muslim 55"
     },
     {
       "Attribute_ID": 138,
@@ -3450,7 +4272,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "السلام، البر، الرحيم",
-      "Practical_Understanding": "Giving others the benefit of doubt preserves brotherhood."
+      "Practical_Understanding": "Giving others the benefit of doubt preserves brotherhood.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Reconcile estranged believers; mediate disputes.",
+      "Daily_Action_Source": "Quran 49:10; Bukhari 2692"
     },
     {
       "Attribute_ID": 139,
@@ -3475,7 +4303,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "الحليم، البر، الرحيم",
-      "Practical_Understanding": "Refined manners beautify knowledge and worship."
+      "Practical_Understanding": "Refined manners beautify knowledge and worship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Set a daily Quran goal; track your hifz.",
+      "Daily_Action_Source": "Quran 94:7-8; Muslim 2664"
     },
     {
       "Attribute_ID": 140,
@@ -3500,7 +4334,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، الحكيم",
-      "Practical_Understanding": "Guarding the tongue protects faith and relationships."
+      "Practical_Understanding": "Guarding the tongue protects faith and relationships.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Worship with the presence of Ihsan; recite the hadith of Jibreel.",
+      "Daily_Action_Source": "Quran 50:16; Muslim 8"
     },
     {
       "Attribute_ID": 141,
@@ -3525,7 +4365,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "الرحيم، الحليم، البر",
-      "Practical_Understanding": "Leniency brings love and eases social interactions."
+      "Practical_Understanding": "Leniency brings love and eases social interactions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma la sahla illa ma ja'altahu sahla\" in difficulty.",
+      "Daily_Action_Source": "Quran 2:185; Bukhari 39"
     },
     {
       "Attribute_ID": 142,
@@ -3550,7 +4396,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الحليم، العظيم، الكبير",
-      "Practical_Understanding": "Dignity and composure reflect maturity and wisdom."
+      "Practical_Understanding": "Dignity and composure reflect maturity and wisdom.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Smile at the mirror before leaving home.",
+      "Daily_Action_Source": "Quran 80:1-2; Muslim 2626"
     },
     {
       "Attribute_ID": 143,
@@ -3575,7 +4427,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعْطِ مُنْفِقًا خَلَفًا",
       "Prophetic_Dua_Urdu": "اے اللہ! خرچ کرنے والے کو بدل عطا فرما۔",
       "Relevant_Allah_Names": "الكريم، الوهاب، الرزاق",
-      "Practical_Understanding": "Generosity expands the heart and attracts Allah's blessings."
+      "Practical_Understanding": "Generosity expands the heart and attracts Allah's blessings.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Khayrul-amal al-aqwamu\" — begin with optimism.",
+      "Daily_Action_Source": "Quran 39:53; Bukhari 5776"
     },
     {
       "Attribute_ID": 144,
@@ -3600,7 +4458,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي وَدُنْيَايَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین اور دنیا دونوں کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحكيم، اللطيف، الرب",
-      "Practical_Understanding": "Balance allows sustainable growth in worship, family and worldly responsibilities."
+      "Practical_Understanding": "Balance allows sustainable growth in worship, family and worldly responsibilities.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Assume good of others until proven otherwise.",
+      "Daily_Action_Source": "Quran 49:12; Muslim 2563"
     },
     {
       "Attribute_ID": 145,
@@ -3625,7 +4489,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے درست رہنمائی عطا فرما۔",
       "Relevant_Allah_Names": "الحكيم، الحليم، الرشيد",
-      "Practical_Understanding": "Thoughtful decisions prevent many mistakes."
+      "Practical_Understanding": "Thoughtful decisions prevent many mistakes.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Speak with the elderly first; greet everyone.",
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
     },
     {
       "Attribute_ID": 146,
@@ -3650,7 +4520,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "الستير، الغفور، الرحيم",
-      "Practical_Understanding": "Concealing faults promotes mercy and social harmony."
+      "Practical_Understanding": "Concealing faults promotes mercy and social harmony.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Guard the tongue: recite \"A'udhu billahi min al-shaytan\" before speaking.",
+      "Daily_Action_Source": "Quran 50:18; Bukhari 6475"
     },
     {
       "Attribute_ID": 147,
@@ -3675,7 +4551,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ رَحْمَةً مِنْ عِنْدِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے اپنی طرف سے رحمت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرحمن، الرحيم، البر",
-      "Practical_Understanding": "Mercy attracts Allah's mercy and softens hearts."
+      "Practical_Understanding": "Mercy attracts Allah's mercy and softens hearts.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Be lenient in transactions; forgive debts.",
+      "Daily_Action_Source": "Quran 7:199; Bukhari 2076"
     },
     {
       "Attribute_ID": 148,
@@ -3700,7 +4582,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے علم سے مجھے نفع دے۔",
       "Relevant_Allah_Names": "العليم، الحكيم، الكبير",
-      "Practical_Understanding": "Knowledge without humility becomes a source of arrogance."
+      "Practical_Understanding": "Knowledge without humility becomes a source of arrogance.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Walk with dignity; lower your voice.",
+      "Daily_Action_Source": "Quran 25:63; Bukhari 6118"
     },
     {
       "Attribute_ID": 149,
@@ -3725,7 +4613,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا",
       "Prophetic_Dua_Urdu": "اے اللہ! دنیا کو ہماری سب سے بڑی فکر نہ بنا۔",
       "Relevant_Allah_Names": "الغني، الوارث، الصمد",
-      "Practical_Understanding": "Detachment frees the heart for Allah and the Hereafter."
+      "Practical_Understanding": "Detachment frees the heart for Allah and the Hereafter.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Give beyond your means; outdo others in generosity.",
+      "Daily_Action_Source": "Quran 2:261; Bukhari 6035"
     },
     {
       "Attribute_ID": 150,
@@ -3750,7 +4644,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ",
       "Prophetic_Dua_Urdu": "اے دلوں کے پھیرنے والے! میرے دل کو اپنے دین پر ثابت رکھ۔",
       "Relevant_Allah_Names": "النور، الهادي، الرقيب",
-      "Practical_Understanding": "Spiritual awakening marks the beginning of sincere transformation."
+      "Practical_Understanding": "Spiritual awakening marks the beginning of sincere transformation.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Balance dunya and akhirah; schedule worship equally with work.",
+      "Daily_Action_Source": "Quran 28:77; Bukhari 6139"
     },
     {
       "Attribute_ID": 151,
@@ -3775,7 +4675,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "النور، الحكيم، العليم",
-      "Practical_Understanding": "Taqwa sharpens insight and protects from deception."
+      "Practical_Understanding": "Taqwa sharpens insight and protects from deception.",
+      "Hadith_Grade": "Hasan",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "in speech and action",
+      "Daily_Action": "Speak 20% slower than usual; use gentle words with family.",
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
     },
     {
       "Attribute_ID": 152,
@@ -3800,7 +4706,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت اور درستی عطا فرما۔",
       "Relevant_Allah_Names": "الحفيظ، الهادي، الوكيل",
-      "Practical_Understanding": "Attachment to Allah and His Book protects from deviation."
+      "Practical_Understanding": "Attachment to Allah and His Book protects from deviation.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "in restraining self",
+      "Daily_Action": "Recite \"Allahumma inni as'aluka al-hilm\" after Fajr.",
+      "Daily_Action_Source": "Quran 3:134; Bukhari 6114"
     },
     {
       "Attribute_ID": 153,
@@ -3825,7 +4737,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ",
       "Prophetic_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔",
       "Relevant_Allah_Names": "التواب، الغفور، الرحيم",
-      "Practical_Understanding": "Returning to Allah repeatedly purifies the heart."
+      "Practical_Understanding": "Returning to Allah repeatedly purifies the heart.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma ahini ma kanat al-hayatu khayran li...\" daily.",
+      "Daily_Action_Source": "Quran 17:11; Muslim 17"
     },
     {
       "Attribute_ID": 154,
@@ -3850,7 +4768,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي",
       "Prophetic_Dua_Urdu": "اے اللہ! میری مدد فرما۔",
       "Relevant_Allah_Names": "الصبور، الحكيم، الرحيم",
-      "Practical_Understanding": "Beautiful patience maintains trust in Allah during hardship."
+      "Practical_Understanding": "Beautiful patience maintains trust in Allah during hardship.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "with lawful provision",
+      "Daily_Action": "Recite Surah Taha 20:131 before each meal.",
+      "Daily_Action_Source": "Quran 20:131; Muslim 1051"
     },
     {
       "Attribute_ID": 155,
@@ -3875,7 +4799,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "الهادي، الودود، الرحمن",
-      "Practical_Understanding": "True migration is leaving sins and moving toward obedience."
+      "Practical_Understanding": "True migration is leaving sins and moving toward obedience.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Conceal the faults of others; never expose a Muslim.",
+      "Daily_Action_Source": "Quran 24:19; Muslim 2590"
     },
     {
       "Attribute_ID": 156,
@@ -3900,7 +4830,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "العظيم، الكبير، الحليم",
-      "Practical_Understanding": "Humility before Allah elevates a servant in His sight."
+      "Practical_Understanding": "Humility before Allah elevates a servant in His sight.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Visit the sick; feed the hungry; comfort the grieving.",
+      "Daily_Action_Source": "Quran 21:107; Bukhari 6013"
     },
     {
       "Attribute_ID": 157,
@@ -3925,7 +4861,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے تیری خشیت مانگتا ہوں۔",
       "Relevant_Allah_Names": "العظيم، الجليل، الكبير",
-      "Practical_Understanding": "Knowledge of Allah produces reverence and obedience."
+      "Practical_Understanding": "Knowledge of Allah produces reverence and obedience.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Allahumma inni a'udhu bika min ilmin la yanfa'\" daily.",
+      "Daily_Action_Source": "Quran 18:66; Muslim 2865"
     },
     {
       "Attribute_ID": 158,
@@ -3950,7 +4892,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، العظيم",
-      "Practical_Understanding": "A sensitive heart balances hope with concern for acceptance."
+      "Practical_Understanding": "A sensitive heart balances hope with concern for acceptance.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "avoiding doubtful matters",
+      "Daily_Action": "Avoid doubtful matters; eat only what is plainly halal.",
+      "Daily_Action_Source": "Quran 2:168; Bukhari 52"
     },
     {
       "Attribute_ID": 159,
@@ -3975,7 +4923,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَأَعُوذُ بِكَ مِنَ النَّارِ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے جنت مانگتا ہوں اور جہنم سے تیری پناہ چاہتا ہوں۔",
       "Relevant_Allah_Names": "الرحمن، الغفور، الشديد العقاب",
-      "Practical_Understanding": "A believer progresses to Allah through balanced hope and fear."
+      "Practical_Understanding": "A believer progresses to Allah through balanced hope and fear.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite \"Ma'a al-'usri yusra\" — trust in Allah's relief.",
+      "Daily_Action_Source": "Quran 57:20"
     },
     {
       "Attribute_ID": 160,
@@ -4000,7 +4954,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ انْفَعْنِي بِمَا عَلَّمْتَنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے میرے علم سے نفع عطا فرما۔",
       "Relevant_Allah_Names": "النور، الهادي، الحكيم",
-      "Practical_Understanding": "Living with the Quran transforms loneliness into guidance and tranquility."
+      "Practical_Understanding": "Living with the Quran transforms loneliness into guidance and tranquility.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "in remembrance",
+      "Daily_Action": "Recite morning and evening adhkar with full presence.",
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
     },
     {
       "Attribute_ID": 161,
@@ -4025,7 +4985,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے تیری خشیت مانگتا ہوں۔",
       "Relevant_Allah_Names": "العظيم، الجليل، الكبير",
-      "Practical_Understanding": "The more one knows Allah, the greater His majesty becomes in the heart."
+      "Practical_Understanding": "The more one knows Allah, the greater His majesty becomes in the heart.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite morning and evening adhkar with full presence.",
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
     },
     {
       "Attribute_ID": 162,
@@ -4050,7 +5016,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى طَاعَتِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنی اطاعت پر میری مدد فرما۔",
       "Relevant_Allah_Names": "القدوس، العظيم، الجليل",
-      "Practical_Understanding": "Honoring Allah's symbols strengthens Taqwa and reverence."
+      "Practical_Understanding": "Honoring Allah's symbols strengthens Taqwa and reverence.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 163,
@@ -4075,7 +5047,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي",
       "Prophetic_Dua_Urdu": "اے دلوں کے پھیرنے والے! میرے دل کو ثابت رکھ۔",
       "Relevant_Allah_Names": "الرقيب، الشهيد، السميع",
-      "Practical_Understanding": "Awareness that Allah sees us purifies intentions and actions."
+      "Practical_Understanding": "Awareness that Allah sees us purifies intentions and actions.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Hold firmly to the Quran and Sunnah; seek refuge in Allah from doubt.",
+      "Daily_Action_Source": "Quran 3:103; Muslim 867"
     },
     {
       "Attribute_ID": 164,
@@ -4100,7 +5078,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي شَأْنِي كُلَّهُ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے تمام معاملات درست فرما۔",
       "Relevant_Allah_Names": "الوكيل، الحفيظ، الرزاق",
-      "Practical_Understanding": "True reliance combines effort with trust in Allah."
+      "Practical_Understanding": "True reliance combines effort with trust in Allah.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 165,
@@ -4125,7 +5109,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي دِينِي وَدُنْيَايَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے دین اور دنیا کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحكيم، اللطيف، الرحيم",
-      "Practical_Understanding": "Contentment with Allah's decree brings peace during trials."
+      "Practical_Understanding": "Contentment with Allah's decree brings peace during trials.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Face trials with \"HasbunAllah wa ni'mal-wakeel\".",
+      "Daily_Action_Source": "Quran 12:18"
     },
     {
       "Attribute_ID": 166,
@@ -4150,7 +5140,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَالْمُؤْمِنَاتِ",
       "Prophetic_Dua_Urdu": "اے اللہ! تمام مومن مردوں اور عورتوں کو بخش دے۔",
       "Relevant_Allah_Names": "الودود، الرحيم، البر",
-      "Practical_Understanding": "Love for Allah creates the strongest bonds between believers."
+      "Practical_Understanding": "Love for Allah creates the strongest bonds between believers.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Make hijrah from sin to obedience daily.",
+      "Daily_Action_Source": "Quran 51:50"
     },
     {
       "Attribute_ID": 167,
@@ -4175,7 +5171,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ ذَاتَ بَيْنِنَا",
       "Prophetic_Dua_Urdu": "اے اللہ! ہمارے تعلقات کی اصلاح فرما۔",
       "Relevant_Allah_Names": "الحق، العزيز، الحكيم",
-      "Practical_Understanding": "Principled loyalty preserves faith while maintaining justice and mercy."
+      "Practical_Understanding": "Principled loyalty preserves faith while maintaining justice and mercy.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Prostrate with humility; make abundant du'a.",
+      "Daily_Action_Source": "Quran 25:63; Muslim 2865"
     },
     {
       "Attribute_ID": 168,
@@ -4200,7 +5202,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ وَحُبَّ مَنْ يُحِبُّكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری محبت اور ان لوگوں کی محبت مانگتا ہوں جو تجھ سے محبت کرتے ہیں۔",
       "Relevant_Allah_Names": "الودود، الرحمن، الكريم",
-      "Practical_Understanding": "When love for Allah becomes supreme, all other loves are properly ordered."
+      "Practical_Understanding": "When love for Allah becomes supreme, all other loves are properly ordered.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Hashr 59:21 with presence of Allah's majesty.",
+      "Daily_Action_Source": "Quran 35:28; Bukhari 6482"
     },
     {
       "Attribute_ID": 169,
@@ -4225,7 +5233,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي",
       "Prophetic_Dua_Urdu": "اے دلوں کے پھیرنے والے! میرے دل کو ثابت رکھ۔",
       "Relevant_Allah_Names": "الثابت، الهادي، الحفيظ",
-      "Practical_Understanding": "Steadfastness is more beloved than short bursts of enthusiasm."
+      "Practical_Understanding": "Steadfastness is more beloved than short bursts of enthusiasm.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Anfal 8:2; reflect on Allah's signs.",
+      "Daily_Action_Source": "Quran 8:2"
     },
     {
       "Attribute_ID": 170,
@@ -4250,7 +5264,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر اور شکر پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الشكور، الكريم، البر",
-      "Practical_Understanding": "Appreciating people is part of appreciating Allah's favors."
+      "Practical_Understanding": "Appreciating people is part of appreciating Allah's favors.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Balance hope and fear: \"Ya man yaqbil al-tawwabin, taqabbal minni.\"",
+      "Daily_Action_Source": "Quran 21:90"
     },
     {
       "Attribute_ID": 171,
@@ -4275,7 +5295,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے جنت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الفتاح، الكريم، الرحمن",
-      "Practical_Understanding": "True success is measured by Allah's pleasure and Paradise."
+      "Practical_Understanding": "True success is measured by Allah's pleasure and Paradise.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite one page of Quran with reflection daily.",
+      "Daily_Action_Source": "Quran 43:36; Muslim 804"
     },
     {
       "Attribute_ID": 172,
@@ -4300,7 +5326,13 @@
       "Prophetic_Dua_Arabic": "يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي",
       "Prophetic_Dua_Urdu": "اے دلوں کے پھیرنے والے! میرے دل کو ثابت رکھ۔",
       "Relevant_Allah_Names": "الهادي، الحفيظ، الرحيم",
-      "Practical_Understanding": "Consistency and sincerity are the means to a blessed ending."
+      "Practical_Understanding": "Consistency and sincerity are the means to a blessed ending.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Hajj 22:74; magnify Allah in every prayer.",
+      "Daily_Action_Source": "Quran 22:74"
     },
     {
       "Attribute_ID": 173,
@@ -4325,7 +5357,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا",
       "Prophetic_Dua_Urdu": "اے اللہ! آسانی وہی ہے جسے تو آسان کرے۔",
       "Relevant_Allah_Names": "اللطيف، الرحيم، الحكيم",
-      "Practical_Understanding": "Recognizing Allah's gentleness increases trust and gratitude."
+      "Practical_Understanding": "Recognizing Allah's gentleness increases trust and gratitude.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Honor the symbols of Islam: masjid, Quran, prayer.",
+      "Daily_Action_Source": "Quran 22:32"
     },
     {
       "Attribute_ID": 174,
@@ -4350,7 +5388,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے جنت کا سوال کرتا ہوں۔",
       "Relevant_Allah_Names": "الفتاح، الكريم، الرحمن",
-      "Practical_Understanding": "True success is Allah's pleasure and eternal Paradise."
+      "Practical_Understanding": "True success is Allah's pleasure and eternal Paradise.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "constant watchfulness",
+      "Daily_Action": "Recall that Allah watches; recite \"Ya Muqeeb al-hayr...\" before sleep.",
+      "Daily_Action_Source": "Quran 50:16; Muslim 8"
     },
     {
       "Attribute_ID": 175,
@@ -4375,7 +5419,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیرے دیدار کی لذت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الودود، الرحمن، الكريم",
-      "Practical_Understanding": "Preparing for meeting Allah gives meaning to worldly life."
+      "Practical_Understanding": "Preparing for meeting Allah gives meaning to worldly life.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "in every act",
+      "Daily_Action": "Worship Allah as though you see Him; excel in every act.",
+      "Daily_Action_Source": "Quran 16:90; Muslim 8"
     },
     {
       "Attribute_ID": 176,
@@ -4400,7 +5450,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ رِضَاكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری رضا مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرضي، الرحمن، الكريم",
-      "Practical_Understanding": "Allah's pleasure is greater than every blessing of Paradise."
+      "Practical_Understanding": "Allah's pleasure is greater than every blessing of Paradise.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Recite Surah Al-Talaq 65:3 with full tawakkul.",
+      "Daily_Action_Source": "Quran 65:3; Bukhari 6470"
     },
     {
       "Attribute_ID": 177,
@@ -4425,7 +5481,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق عطا فرما۔",
       "Relevant_Allah_Names": "المحسن، الحكيم، النور",
-      "Practical_Understanding": "Excellence in worship brings a servant closer to Allah."
+      "Practical_Understanding": "Excellence in worship brings a servant closer to Allah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "",
+      "Daily_Action_Source": ""
     },
     {
       "Attribute_ID": 178,
@@ -4450,7 +5512,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! اپنے ذکر، شکر اور بہترین عبادت پر میری مدد فرما۔",
       "Relevant_Allah_Names": "الرب، الصمد، المعبود",
-      "Practical_Understanding": "Perfect servitude is the essence of human existence."
+      "Practical_Understanding": "Perfect servitude is the essence of human existence.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Love for Allah's sake; hate for Allah's sake.",
+      "Daily_Action_Source": "Quran 59:10"
     },
     {
       "Attribute_ID": 179,
@@ -4475,7 +5543,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تیری پناہ چاہتا ہوں کہ تیرے ساتھ کسی کو شریک کروں۔",
       "Relevant_Allah_Names": "الأحد، الصمد، الحق",
-      "Practical_Understanding": "Tawhid is the foundation and culmination of faith."
+      "Practical_Understanding": "Tawhid is the foundation and culmination of faith.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Disavow disbelief in the heart; love the righteous.",
+      "Daily_Action_Source": "Quran 60:4"
     },
     {
       "Attribute_ID": 180,
@@ -4500,7 +5574,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا",
       "Prophetic_Dua_Urdu": "اے اللہ! میرے نفس کو تقویٰ عطا فرما۔",
       "Relevant_Allah_Names": "الحق، الصادق، الحكيم",
-      "Practical_Understanding": "Constant truthfulness elevates a believer to the rank of Siddiqiyyah."
+      "Practical_Understanding": "Constant truthfulness elevates a believer to the rank of Siddiqiyyah.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Renew love for Allah through night worship.",
+      "Daily_Action_Source": "Quran 2:165"
     },
     {
       "Attribute_ID": 181,
@@ -4525,7 +5605,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ اهْدِنِي",
       "Prophetic_Dua_Urdu": "اے اللہ! مجھے ہدایت عطا فرما۔",
       "Relevant_Allah_Names": "الولي، الودود، الرحيم",
-      "Practical_Understanding": "Nearness to Allah is achieved through faith and obedience."
+      "Practical_Understanding": "Nearness to Allah is achieved through faith and obedience.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "",
+      "Daily_Action": "Be truthful in love for Allah and His Messenger ﷺ.",
+      "Daily_Action_Source": "Quran 3:31; Bukhari 15"
     },
     {
       "Attribute_ID": 182,
@@ -4550,7 +5636,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْفِرْدَوْسَ الْأَعْلَى",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے اعلیٰ فردوس مانگتا ہوں۔",
       "Relevant_Allah_Names": "الكريم، الوهاب، الرحمن",
-      "Practical_Understanding": "High aspirations should be directed toward the highest Paradise."
+      "Practical_Understanding": "High aspirations should be directed toward the highest Paradise.",
+      "Hadith_Grade": "Unverified",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "for the meeting with Allah",
+      "Daily_Action": "Recite Surah Al-Ankabut 29:5; yearn for jumu'ah.",
+      "Daily_Action_Source": "Quran 29:5; Bukhari 6507"
     },
     {
       "Attribute_ID": 183,
@@ -4575,7 +5667,13 @@
       "Prophetic_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ",
       "Prophetic_Dua_Urdu": "اے اللہ! میں تجھ سے جنت مانگتا ہوں۔",
       "Relevant_Allah_Names": "الرحمن، الكريم، الوهاب",
-      "Practical_Understanding": "Keeping the Hereafter as the ultimate goal brings balance and purpose to worldly life."
+      "Practical_Understanding": "Keeping the Hereafter as the ultimate goal brings balance and purpose to worldly life.",
+      "Hadith_Grade": "Sahih",
+      "Quran_Primary": true,
+      "Cause_Type": "Positive",
+      "Source_Emphasis": "in all affairs",
+      "Daily_Action": "Say \"Allahumma inni tawakkaltu 'alaika...\" when overwhelmed.",
+      "Daily_Action_Source": "Quran 40:44; Bukhari 6369"
     }
   ]
 }

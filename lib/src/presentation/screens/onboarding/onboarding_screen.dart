@@ -51,6 +51,14 @@ class _OnboardingScreenState extends ConsumerState<OnboardingScreen> {
       // Best-effort — if the flag can't be written the user just sees
       // onboarding again on the next launch. No data is lost.
     }
+    // RI-3.4 + RI-3.7: Seed the foundational habits (Taharah, Halal Rizq,
+    // Hifz al-Lisan) and Body-Heart habits (sleep, eating) on first launch.
+    // Idempotent — does nothing if they already exist.
+    try {
+      await ref.read(foundationalHabitsSeederProvider).seedIfMissing();
+    } catch (_) {
+      // Non-fatal — habits can be added manually from the Habits screen.
+    }
     if (!mounted) return;
     context.go(AppRouter.home);
   }

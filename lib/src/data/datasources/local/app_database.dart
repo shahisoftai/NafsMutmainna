@@ -11,7 +11,7 @@ import 'seed_loader.dart';
 /// The 16-table HeartOS database.
 class AppDatabase {
   static const _dbName = 'heartos.db';
-  static const _schemaVersion = 10;
+  static const _schemaVersion = 11;
 
   Database? _db;
 
@@ -220,6 +220,49 @@ class AppDatabase {
       Logger.info('v10: upgraded to quran_ayat seed v1.1.0 (no DDL change; content re-seed)');
     }
     // ===========================================================================
+    // v10 -> v11: Scholar Audit Remediation (Tazkiya Nafs)
+    // Adds six columns to the attributes table for the scholar-audit-remediation
+    // plan (docs/scholar-audit-remediation-plan.md):
+    //   - Hadith_Grade        (RI-2.6): Sahih / Hasan / Da'if / Mutawatir
+    //   - Quran_Primary       (RI-2.7): TRUE if this is the classical tafsir locus
+    //   - Cause_Type          (RI-3.1): Nafsi / Shaytani / Hawi / Mixed
+    //   - Source_Emphasis     (RI-3.2): Disambiguates the 18 known duplicates
+    //   - Daily_Action        (RI-5.4): A concrete daily practice for every attribute
+    //   - Daily_Action_Source (RI-4.2): Quran/Hadith/Classical ref for the action
+    //
+    // The re-seed at the bottom of this method populates these columns from the
+    // updated attributes_seed.json (SeedLoader uses INSERT OR REPLACE).
+    // ===========================================================================
+    if (oldVersion < 11) {
+      try {
+        await db.execute('''
+          ALTER TABLE attributes ADD COLUMN Hadith_Grade TEXT NOT NULL
+            DEFAULT 'Unverified'
+            CHECK (Hadith_Grade IN ('Sahih','Hasan','Hasan li-ghayrihi','Mutawatir','Daif','Unverified'))
+        ''');
+        await db.execute('''
+          ALTER TABLE attributes ADD COLUMN Quran_Primary INTEGER NOT NULL DEFAULT 1
+            CHECK (Quran_Primary IN (0,1))
+        ''');
+        await db.execute('''
+          ALTER TABLE attributes ADD COLUMN Cause_Type TEXT NOT NULL DEFAULT 'Mixed'
+            CHECK (Cause_Type IN ('Nafsi','Shaytani','Hawi','Mixed'))
+        ''');
+        await db.execute(
+          "ALTER TABLE attributes ADD COLUMN Source_Emphasis TEXT NOT NULL DEFAULT ''",
+        );
+        await db.execute(
+          "ALTER TABLE attributes ADD COLUMN Daily_Action TEXT NOT NULL DEFAULT ''",
+        );
+        await db.execute(
+          "ALTER TABLE attributes ADD COLUMN Daily_Action_Source TEXT NOT NULL DEFAULT ''",
+        );
+        Logger.info('v11: added scholar-audit columns to attributes');
+      } catch (e) {
+        Logger.error('v11 migration failed: $e');
+      }
+    }
+    // ===========================================================================
     // UNIVERSAL RE-SEED (runs after all version-specific migrations)
     // Checks ALL critical tables — if ANY is empty, re-seed.
     // Catches databases that reached a version before re-seed logic was added,
@@ -387,7 +430,17 @@ class AppDatabase {
       Prophetic_Dua_Arabic TEXT,
       Prophetic_Dua_Urdu TEXT,
       Relevant_Allah_Names TEXT,
-      Practical_Understanding TEXT
+      Practical_Understanding TEXT,
+      -- Scholar Audit Remediation (v11)
+      Hadith_Grade TEXT NOT NULL DEFAULT 'Unverified'
+        CHECK (Hadith_Grade IN ('Sahih','Hasan','Hasan li-ghayrihi','Mutawatir','Daif','Unverified')),
+      Quran_Primary INTEGER NOT NULL DEFAULT 1
+        CHECK (Quran_Primary IN (0,1)),
+      Cause_Type TEXT NOT NULL DEFAULT 'Mixed'
+        CHECK (Cause_Type IN ('Nafsi','Shaytani','Hawi','Mixed')),
+      Source_Emphasis TEXT NOT NULL DEFAULT '',
+      Daily_Action TEXT NOT NULL DEFAULT '',
+      Daily_Action_Source TEXT NOT NULL DEFAULT ''
     )''',
     '''CREATE TABLE emotions (
       Emotion_ID INTEGER PRIMARY KEY,

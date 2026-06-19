@@ -9,6 +9,7 @@ import '../../../infrastructure/di/providers.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../widgets/specific/intervention_card_widget.dart';
+import '../../widgets/specific/intervention_disclaimer_banner.dart';
 
 class InterventionScreen extends ConsumerStatefulWidget {
   final SubmitCheckinResult result;
@@ -88,6 +89,9 @@ class _InterventionScreenState extends ConsumerState<InterventionScreen> {
       body: ListView(
         padding: const EdgeInsets.symmetric(vertical: 8),
         children: [
+          // RI-4.7: Tazkiya-safe disclaimer — every remedy is general;
+          // consult a qualified scholar for treatment specific to your state.
+          const InterventionDisclaimerBanner(),
           for (final card in widget.result.cards)
             InterventionCardWidget(
               card: card,

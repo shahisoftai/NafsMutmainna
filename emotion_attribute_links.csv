@@ -1,0 +1,428 @@
+Emotion_ID,Emotion_Name,Arabic,Category,Attribute_ID,Attribute_Name,Role,Weight
+1,Anger,الغضب,Negative,23,Ghadab,Core,1.0
+1,Anger,الغضب,Negative,75,Sabr,Treatment,0.9
+1,Anger,الغضب,Negative,86,Hilm,Treatment,0.85
+1,Anger,الغضب,Negative,85,Rifq,Treatment,0.8
+1,Anger,الغضب,Negative,23,Ghadab,Disease,0.95
+1,Anger,الغضب,Negative,22,Hiqd,Disease,0.65
+1,Anger,الغضب,Negative,86,Hilm,Strengthens,0.55
+2,Jealousy,الحسد,Negative,21,Hasad,Core,1.0
+2,Jealousy,الحسد,Negative,76,Shukr,Treatment,0.9
+2,Jealousy,الحسد,Negative,82,Qana'ah,Treatment,0.85
+2,Jealousy,الحسد,Negative,100,Ridha,Treatment,0.8
+2,Jealousy,الحسد,Negative,21,Hasad,Disease,0.95
+2,Jealousy,الحسد,Negative,26,Tama,Disease,0.65
+2,Jealousy,الحسد,Negative,82,Qana'ah,Strengthens,0.55
+3,Anxiety,القلق,Negative,77,Tawakkul,Core,1.0
+3,Anxiety,القلق,Negative,77,Tawakkul,Treatment,0.9
+3,Anxiety,القلق,Negative,80,Yaqin,Treatment,0.85
+3,Anxiety,القلق,Negative,99,Raja,Treatment,0.8
+3,Anxiety,القلق,Negative,77,Tawakkul,Disease,0.95
+3,Anxiety,القلق,Negative,80,Yaqin,Disease,0.65
+3,Anxiety,القلق,Negative,80,Yaqin,Strengthens,0.55
+4,Fear,الخوف,Negative,78,Khawf,Core,1.0
+4,Fear,الخوف,Negative,77,Tawakkul,Treatment,0.9
+4,Fear,الخوف,Negative,79,Raja,Treatment,0.85
+4,Fear,الخوف,Negative,80,Yaqin,Treatment,0.8
+4,Fear,الخوف,Negative,78,Khawf,Disease,0.95
+4,Fear,الخوف,Negative,20,Wahn,Disease,0.65
+4,Fear,الخوف,Negative,79,Raja,Strengthens,0.55
+5,Sadness,الحزن,Negative,75,Sabr,Core,1.0
+5,Sadness,الحزن,Negative,75,Sabr,Treatment,0.9
+5,Sadness,الحزن,Negative,79,Raja,Treatment,0.85
+5,Sadness,الحزن,Negative,144,Husn az-Zann bin-Nas,Treatment,0.8
+5,Sadness,الحزن,Negative,79,Raja,Strengthens,0.55
+6,Hopelessness,اليأس,Negative,79,Raja,Core,1.0
+6,Hopelessness,اليأس,Negative,79,Raja,Treatment,0.9
+6,Hopelessness,اليأس,Negative,71,Tawbah,Treatment,0.85
+6,Hopelessness,اليأس,Negative,144,Husn az-Zann bin-Nas,Treatment,0.8
+6,Hopelessness,اليأس,Negative,71,Tawbah,Strengthens,0.55
+7,Guilt,الندم,Negative,71,Tawbah,Core,1.0
+7,Guilt,الندم,Negative,71,Tawbah,Treatment,0.9
+7,Guilt,الندم,Negative,93,Inabah,Treatment,0.85
+7,Guilt,الندم,Negative,72,Ikhlas,Treatment,0.8
+7,Guilt,الندم,Negative,9,Qasawat al-Qalb,Disease,0.65
+7,Guilt,الندم,Negative,93,Inabah,Strengthens,0.55
+8,Laziness,الكسل,Negative,139,Himmah Aliyah,Core,1.0
+8,Laziness,الكسل,Negative,139,Himmah Aliyah,Treatment,0.9
+8,Laziness,الكسل,Negative,122,Mujahadah,Treatment,0.85
+8,Laziness,الكسل,Negative,121,Istiqamah,Treatment,0.8
+8,Laziness,الكسل,Negative,51,Kasal,Disease,0.95
+8,Laziness,الكسل,Negative,122,Mujahadah,Strengthens,0.55
+9,Loneliness,الوحدة,Negative,104,Tadhakkur,Core,1.0
+9,Loneliness,الوحدة,Negative,94,Uns billah,Treatment,0.9
+9,Loneliness,الوحدة,Negative,104,Tadhakkur,Treatment,0.85
+9,Loneliness,الوحدة,Negative,91,Mahabbah,Treatment,0.8
+9,Loneliness,الوحدة,Negative,10,Ghaflah,Disease,0.95
+9,Loneliness,الوحدة,Negative,104,Tadhakkur,Disease,0.65
+9,Loneliness,الوحدة,Negative,104,Tadhakkur,Strengthens,0.55
+10,Emptiness,الفراغ الروحي,Negative,104,Tadhakkur,Treatment,0.85
+10,Emptiness,الفراغ الروحي,Negative,171,Uns bil-Quran,Treatment,0.8
+10,Emptiness,الفراغ الروحي,Negative,10,Ghaflah,Disease,0.95
+10,Emptiness,الفراغ الروحي,Negative,171,Uns bil-Quran,Disease,0.65
+10,Emptiness,الفراغ الروحي,Negative,104,Tadhakkur,Strengthens,0.55
+11,Arrogance,الكبر,Negative,72,Ikhlas,Treatment,0.85
+11,Arrogance,الكبر,Negative,2,Kibr,Disease,0.95
+11,Arrogance,الكبر,Negative,3,Ujb,Disease,0.65
+11,Arrogance,الكبر,Negative,72,Ikhlas,Strengthens,0.55
+12,Pride,العجب,Negative,76,Shukr,Treatment,0.85
+12,Pride,العجب,Negative,3,Ujb,Disease,0.95
+12,Pride,العجب,Negative,2,Kibr,Disease,0.65
+12,Pride,العجب,Negative,76,Shukr,Strengthens,0.55
+13,Showing Off,الرياء,Negative,72,Ikhlas,Core,1.0
+13,Showing Off,الرياء,Negative,72,Ikhlas,Treatment,0.9
+13,Showing Off,الرياء,Negative,90,Ihsan,Treatment,0.85
+13,Showing Off,الرياء,Negative,1,Riya,Disease,0.95
+13,Showing Off,الرياء,Negative,3,Ujb,Disease,0.65
+13,Showing Off,الرياء,Negative,90,Ihsan,Strengthens,0.55
+14,Greed,الطمع,Negative,82,Qana'ah,Core,1.0
+14,Greed,الطمع,Negative,82,Qana'ah,Treatment,0.9
+14,Greed,الطمع,Negative,76,Shukr,Treatment,0.85
+14,Greed,الطمع,Negative,26,Tama,Disease,0.95
+14,Greed,الطمع,Negative,54,Hirs,Disease,0.65
+14,Greed,الطمع,Negative,76,Shukr,Strengthens,0.55
+15,Love of Dunya,حب الدنيا,Negative,81,Zuhd,Core,1.0
+15,Love of Dunya,حب الدنيا,Negative,81,Zuhd,Treatment,0.9
+15,Love of Dunya,حب الدنيا,Negative,200,Jannat an-Naim Orientation,Treatment,0.85
+15,Love of Dunya,حب الدunya,Negative,27,Hubb ad-Dunya,Disease,0.95
+15,Love of Dunya,حب الدنيا,Negative,54,Hirs,Disease,0.65
+15,Love of Dunya,حب الدنيا,Negative,200,Jannat an-Naim Orientation,Strengthens,0.55
+16,Hatred,الحقد,Negative,88,Afw,Core,1.0
+16,Hatred,الحقد,Negative,88,Afw,Treatment,0.9
+16,Hatred,الحقد,Negative,87,Rahmah,Treatment,0.85
+16,Hatred,الحقد,Negative,86,Hilm,Treatment,0.8
+16,Hatred,الحقد,Negative,22,Hiqd,Disease,0.95
+16,Hatred,الحقد,Negative,23,Ghadab,Disease,0.65
+16,Hatred,الحقد,Negative,87,Rahmah,Strengthens,0.55
+17,Desire for Revenge,الانتقام,Negative,88,Afw,Core,1.0
+17,Desire for Revenge,الانتقام,Negative,88,Afw,Treatment,0.9
+17,Desire for Revenge,الانتقام,Negative,75,Sabr,Treatment,0.85
+17,Desire for Revenge,الانتقام,Negative,86,Hilm,Treatment,0.8
+17,Desire for Revenge,الانتقام,Negative,23,Ghadab,Disease,0.95
+17,Desire for Revenge,الانتقام,Negative,23,Ghadab,Disease,0.65
+17,Desire for Revenge,الانتقام,Negative,75,Sabr,Strengthens,0.55
+18,Suspicion,سوء الظن,Negative,144,Husn az-Zann bin-Nas,Core,1.0
+18,Suspicion,سوء الظن,Negative,144,Husn az-Zann bin-Nas,Treatment,0.9
+18,Suspicion,سوء الظن,Negative,33,Su' al-Dhann,Disease,0.95
+18,Suspicion,سوء الظن,Negative,21,Hasad,Disease,0.65
+19,Doubt,الشك,Negative,80,Yaqin,Core,1.0
+19,Doubt,الشك,Negative,80,Yaqin,Treatment,0.9
+19,Doubt,الشك,Negative,77,Tawakkul,Treatment,0.85
+19,Doubt,الشك,Negative,80,Yaqin,Disease,0.65
+19,Doubt,الشك,Negative,77,Tawakkul,Strengthens,0.55
+20,Confusion,الحيرة,Negative,107,Basirah,Core,1.0
+20,Confusion,الحيرة,Negative,107,Basirah,Treatment,0.9
+21,Distractedness,الغفلة,Negative,104,Tadhakkur,Core,1.0
+21,Distractedness,الغفلة,Negative,104,Tadhakkur,Treatment,0.9
+21,Distractedness,الغفلة,Negative,96,Muraqabah,Treatment,0.8
+21,Distractedness,الغفلة,Negative,10,Ghaflah,Disease,0.95
+21,Distractedness,الغفلة,Negative,171,Uns bil-Quran,Disease,0.65
+21,Distractedness,الغفلة,Negative,104,Tadhakkur,Strengthens,0.55
+22,Weak Faith,ضعف الإيمان,Negative,80,Yaqin,Core,1.0
+22,Weak Faith,ضعف الإيمان,Negative,80,Yaqin,Treatment,0.9
+22,Weak Faith,ضعف الإيمان,Negative,77,Tawakkul,Treatment,0.85
+22,Weak Faith,ضعف الإيمان,Negative,104,Tadhakkur,Treatment,0.8
+22,Weak Faith,ضعف الإيمان,Negative,80,Yaqin,Disease,0.95
+22,Weak Faith,ضعف الإيمان,Negative,10,Ghaflah,Disease,0.65
+22,Weak Faith,ضعف الإيمان,Negative,77,Tawakkul,Strengthens,0.55
+23,Impatience,قلة الصبر,Negative,75,Sabr,Core,1.0
+23,Impatience,قلة الصبر,Negative,75,Sabr,Treatment,0.9
+23,Impatience,قلة الصبر,Negative,100,Ridha,Treatment,0.85
+23,Impatience,قلة الصبر,Negative,100,Ridha,Strengthens,0.55
+24,Hard-heartedness,قسوة القلب,Negative,92,Khushu',Core,1.0
+24,Hard-heartedness,قسوة القلب,Negative,104,Tadhakkur,Treatment,0.85
+24,Hard-heartedness,قسوة القلب,Negative,92,Khushu',Treatment,0.8
+24,Hard-heartedness,قسوة القلب,Negative,9,Qasawat al-Qalb,Disease,0.95
+24,Hard-heartedness,قسوة القلب,Negative,10,Ghaflah,Disease,0.65
+24,Hard-heartedness,قسوة القلب,Negative,104,Tadhakkur,Strengthens,0.55
+25,Stinginess,البخل,Negative,117,Sakhawah,Core,1.0
+25,Stinginess,البخل,Negative,117,Sakhawah,Treatment,0.9
+25,Stinginess,البخل,Negative,76,Shukr,Treatment,0.85
+25,Stinginess,البخل,Negative,77,Tawakkul,Treatment,0.8
+25,Stinginess,البخل,Negative,24,Bukhl,Disease,0.95
+25,Stinginess,البخل,Negative,26,Tama,Disease,0.65
+25,Stinginess,البخل,Negative,76,Shukr,Strengthens,0.55
+26,Excessive Attachment,التعلق الزائد,Negative,77,Tawakkul,Core,1.0
+26,Excessive Attachment,التعلق الزائد,Negative,77,Tawakkul,Treatment,0.9
+26,Excessive Attachment,التعلق الزائد,Negative,81,Zuhd,Treatment,0.85
+26,Excessive Attachment,التعلق الزائد,Negative,100,Ridha,Treatment,0.8
+26,Excessive Attachment,التعلق الزائد,Negative,27,Hubb ad-Dunya,Disease,0.65
+26,Excessive Attachment,التعلق الزائد,Negative,81,Zuhd,Strengthens,0.55
+27,Envy of Status,حب الجاه,Negative,72,Ikhlas,Core,1.0
+27,Envy of Status,حب الجاه,Negative,72,Ikhlas,Treatment,0.9
+27,Envy of Status,حب الجاه,Negative,1,Riya,Disease,0.65
+28,Shame after Sin,الخجل بعد الذنب,Negative,71,Tawbah,Core,1.0
+28,Shame after Sin,الخجل بعد الذنب,Negative,71,Tawbah,Treatment,0.9
+28,Shame after Sin,الخجل بعد الذنب,Negative,79,Raja,Treatment,0.85
+28,Shame after Sin,الخجل بعد الذنب,Negative,79,Raja,Strengthens,0.55
+29,Overthinking,كثرة التفكير,Negative,77,Tawakkul,Core,1.0
+29,Overthinking,كثرة التفكير,Negative,77,Tawakkul,Treatment,0.9
+29,Overthinking,كثرة التفكير,Negative,107,Basirah,Treatment,0.85
+29,Overthinking,كثرة التفكير,Negative,107,Basirah,Strengthens,0.55
+30,Restlessness,الاضطراب,Negative,99,Raja,Core,1.0
+30,Restlessness,الاضطراب,Negative,99,Raja,Treatment,0.9
+30,Restlessness,الاضطراب,Negative,104,Tadhakkur,Treatment,0.85
+30,Restlessness,الاضطراب,Negative,80,Yaqin,Treatment,0.8
+30,Restlessness,الاضطراب,Negative,104,Tadhakkur,Strengthens,0.55
+31,Distractedness,الغفلة,Negative,79,Raja,Core,1.0
+31,Distractedness,الغفلة,Negative,79,Raja,Treatment,0.9
+31,Distractedness,الغفلة,Negative,77,Tawakkul,Treatment,0.85
+31,Distractedness,الغفلة,Negative,77,Tawakkul,Strengthens,0.55
+32,Weak Faith,ضعف الإيمان,Negative,76,Shukr,Core,1.0
+32,Weak Faith,ضعف الإيمان,Negative,76,Shukr,Treatment,0.9
+32,Weak Faith,ضعف الإيمان,Negative,82,Qana'ah,Treatment,0.85
+32,Weak Faith,ضعف الإيمان,Negative,100,Ridha,Treatment,0.8
+32,Weak Faith,ضعف الإيمان,Negative,6,Kufr al-Ni'mah,Disease,0.95
+32,Weak Faith,ضعف الإيمان,Negative,8,Irtiyab,Disease,0.65
+32,Weak Faith,ضعف الإيمان,Negative,82,Qana'ah,Strengthens,0.55
+33,Impatience,قلة الصبر,Negative,75,Sabr,Core,1.0
+33,Impatience,قلة الصبر,Negative,75,Sabr,Treatment,0.9
+33,Impatience,قلة الصبر,Negative,77,Tawakkul,Treatment,0.85
+33,Impatience,قلة الصبر,Negative,100,Ridha,Treatment,0.8
+33,Impatience,قلة الصبر,Negative,77,Tawakkul,Strengthens,0.55
+34,Hopelessness,اليأس,Negative,102,Mahabbat ar-Rasul,Core,1.0
+34,Hopelessness,اليأس,Negative,102,Mahabbat ar-Rasul,Treatment,0.9
+34,Hopelessness,اليأس,Negative,118,Ithar,Treatment,0.85
+34,Hopelessness,اليأس,Negative,16,Karahiyyat al-Mawt,Disease,0.95
+34,Hopelessness,اليأس,Negative,31,Tazkiyat an-Nafs al-Madhmumah,Disease,0.65
+34,Hopelessness,اليأس,Negative,118,Ithar,Strengthens,0.55
+35,Stinginess,البخل,Negative,103,Tafakkur,Core,1.0
+35,Stinginess,البخل,Negative,103,Tafakkur,Treatment,0.9
+35,Stinginess,البخل,Negative,103,Tafakkur,Treatment,0.85
+35,Stinginess,البخل,Negative,107,Basirah,Treatment,0.8
+35,Stinginess,البخل,Negative,8,Irtiyab,Disease,0.95
+35,Stinginess,البخل,Negative,10,Ghaflah,Disease,0.65
+35,Stinginess,البخل,Negative,103,Tafakkur,Strengthens,0.55
+36,Laziness,الكسل,Negative,117,Sakhawah,Core,1.0
+36,Laziness,الكسل,Negative,117,Sakhawah,Treatment,0.9
+36,Laziness,الكسل,Negative,149,Jud,Treatment,0.85
+36,Laziness,الكسل,Negative,118,Ithar,Treatment,0.8
+36,Laziness,الكسل,Negative,24,Bukhl,Disease,0.95
+36,Laziness,الكسل,Negative,25,Shuhh,Disease,0.65
+36,Laziness,الكسل,Negative,149,Jud,Strengthens,0.55
+37,Hard-heartedness,قسوة القلب,Negative,115,Shaja'ah,Core,1.0
+37,Hard-heartedness,قسوة القلب,Negative,115,Shaja'ah,Treatment,0.9
+37,Hard-heartedness,قسوة القلب,Negative,129,Thabat,Treatment,0.85
+37,Hard-heartedness,قسوة القلب,Negative,121,Istiqamah,Treatment,0.8
+37,Hard-heartedness,قسوة القلب,Negative,53,Jubn,Disease,0.95
+37,Hard-heartedness,قسوة القلب,Negative,20,Wahn,Disease,0.65
+37,Hard-heartedness,قسوة القلب,Negative,129,Thabat,Strengthens,0.55
+38,Excessive Attachment,التعلق الزائد,Negative,112,Adl,Core,1.0
+38,Excessive Attachment,التعلق الزائد,Negative,112,Adl,Treatment,0.9
+38,Excessive Attachment,التعلق الزائد,Negative,111,Hikmah,Treatment,0.85
+38,Excessive Attachment,التعلق الزائد,Negative,90,Ihsan,Treatment,0.8
+38,Excessive Attachment,التعلق الزائد,Negative,59,Zulm,Disease,0.95
+38,Excessive Attachment,التعلق الزائد,Negative,111,Hikmah,Strengthens,0.55
+39,Envy of Status,حب الجاه,Negative,82,Qana'ah,Core,1.0
+39,Envy of Status,حب الجاه,Negative,82,Qana'ah,Treatment,0.9
+39,Envy of Status,حب الجاه,Negative,100,Ridha,Treatment,0.85
+39,Envy of Status,حب الجاه,Negative,76,Shukr,Treatment,0.8
+39,Envy of Status,حب الجاه,Negative,26,Tama,Disease,0.95
+39,Envy of Status,حب الجاه,Negative,21,Hasad,Disease,0.65
+39,Envy of Status,حب الجاه,Negative,100,Ridha,Strengthens,0.55
+40,Emptiness,الفراغ الروحي,Negative,125,Ubudiyyah,Core,1.0
+40,Emptiness,الفراغ الروحي,Negative,125,Ubudiyyah,Treatment,0.9
+40,Emptiness,الفراغ الروحي,Negative,72,Ikhlas,Treatment,0.85
+40,Emptiness,الفراغ الروحي,Negative,90,Ihsan,Treatment,0.8
+40,Emptiness,الفراغ الروحي,Negative,15,Shirk al-Asghar,Disease,0.95
+40,Emptiness,الفراغ الروحي,Negative,1,Riya,Disease,0.65
+40,Emptiness,الفراغ الروحي,Negative,72,Ikhlas,Strengthens,0.55
+41,Humility,التواضع,Negative,72,Ikhlas,Treatment,0.85
+41,Humility,التواضع,Negative,76,Shukr,Treatment,0.8
+41,Humility,التواضع,Negative,2,Kibr,Disease,0.95
+41,Humility,التواضع,Negative,3,Ujb,Disease,0.65
+41,Humility,التواضع,Negative,72,Ikhlas,Strengthens,0.55
+42,Sincerity,الإخلاص,Positive,72,Ikhlas,Core,1.0
+42,Sincerity,الإخلاص,Positive,72,Ikhlas,Treatment,0.9
+42,Sincerity,الإخلاص,Positive,90,Ihsan,Treatment,0.85
+42,Sincerity,الإخلاص,Positive,1,Riya,Disease,0.95
+42,Sincerity,الإخلاص,Positive,3,Ujb,Disease,0.65
+42,Sincerity,الإخلاص,Positive,90,Ihsan,Strengthens,0.55
+43,Trust,الثقة بالله,Positive,77,Tawakkul,Core,1.0
+43,Trust,الثقة بالله,Positive,77,Tawakkul,Treatment,0.9
+43,Trust,الثقة بالله,Positive,100,Ridha,Treatment,0.85
+43,Trust,الثقة بالله,Positive,78,Khawf,Disease,0.95
+43,Trust,الثقة بالله,Positive,80,Yaqin,Disease,0.65
+43,Trust,الثقة بالله,Positive,100,Ridha,Strengthens,0.55
+44,Certainty,اليقين,Positive,80,Yaqin,Core,1.0
+44,Certainty,اليقين,Positive,80,Yaqin,Treatment,0.9
+44,Certainty,اليقين,Positive,77,Tawakkul,Treatment,0.85
+44,Certainty,اليقين,Positive,99,Raja,Treatment,0.8
+44,Certainty,اليقين,Positive,80,Yaqin,Disease,0.65
+44,Certainty,اليقين,Positive,77,Tawakkul,Strengthens,0.55
+45,Reverence,الخشية,Positive,168,Khashyah,Core,1.0
+45,Reverence,الخشية,Positive,168,Khashyah,Treatment,0.9
+45,Reverence,الخشية,Positive,92,Khushu',Treatment,0.85
+45,Reverence,الخشية,Positive,10,Ghaflah,Disease,0.95
+45,Reverence,الخشية,Positive,9,Qasawat al-Qalb,Disease,0.65
+45,Reverence,الخشية,Positive,92,Khushu',Strengthens,0.55
+46,Tranquility,السكينة,Positive,99,Raja,Core,1.0
+46,Tranquility,السكينة,Positive,99,Raja,Treatment,0.9
+46,Tranquility,السكينة,Positive,80,Yaqin,Treatment,0.85
+46,Tranquility,السكينة,Positive,100,Ridha,Treatment,0.8
+46,Tranquility,السكينة,Positive,80,Yaqin,Strengthens,0.55
+47,Repentance,التوبة,Positive,71,Tawbah,Core,1.0
+47,Repentance,التوبة,Positive,71,Tawbah,Treatment,0.9
+47,Repentance,التوبة,Positive,93,Inabah,Treatment,0.85
+47,Repentance,التوبة,Positive,79,Raja,Treatment,0.8
+47,Repentance,التوبة,Positive,93,Inabah,Strengthens,0.55
+48,Spiritual Longing,الشوق إلى الله,Positive,101,Shawq ila Allah,Core,1.0
+48,Spiritual Longing,الشوق إلى الله,Positive,101,Shawq ila Allah,Treatment,0.9
+48,Spiritual Longing,الشوق إلى الله,Positive,91,Mahabbah,Treatment,0.85
+48,Spiritual Longing,الشوق إلى الله,Positive,27,Hubb ad-Dunya,Disease,0.95
+48,Spiritual Longing,الشوق إلى الله,Positive,10,Ghaflah,Disease,0.65
+48,Spiritual Longing,الشوق إلى الله,Positive,91,Mahabbah,Strengthens,0.55
+49,Happiness in Worship,حلاوة العبادة,Positive,91,Mahabbah,Core,1.0
+49,Happiness in Worship,حلاوة العبادة,Positive,91,Mahabbah,Treatment,0.9
+49,Happiness in Worship,حلاوة العبادة,Positive,94,Uns billah,Treatment,0.85
+49,Happiness in Worship,حلاوة العبادة,Positive,10,Ghaflah,Disease,0.95
+49,Happiness in Worship,حلاوة العبادة,Positive,51,Kasal,Disease,0.65
+49,Happiness in Worship,حلاوة العبادة,Positive,94,Uns billah,Strengthens,0.55
+50,Nearness to Allah,القرب من الله,Positive,198,Wilayah,Core,1.0
+50,Nearness to Allah,القرب من الله,Positive,198,Wilayah,Treatment,0.9
+50,Nearness to Allah,القرب من الله,Positive,90,Ihsan,Treatment,0.85
+50,Nearness to Allah,القرب من الله,Positive,91,Mahabbah,Treatment,0.8
+50,Nearness to Allah,القرب من الله,Positive,10,Ghaflah,Disease,0.95
+50,Nearness to Allah,القرب من الله,Positive,27,Hubb ad-Dunya,Disease,0.65
+50,Nearness to Allah,القرب من الله,Positive,90,Ihsan,Strengthens,0.55
+
+---
+UNLINKED ATTRIBUTES (134 attributes with no emotion links)
+Attribute_ID,Attribute_Name,Arabic,Nature
+4,Nifaq,النفاق,Negative
+5,Sum'ah,السُّمعة,Negative
+7,Ghurur,الغرور,Negative
+11,Amn min Makrillah,الأمن من مكر الله,Negative
+12,Tul al-Amal,طول الأمل,Negative
+13,Ittiba al-Hawa,اتباع الهوى,Negative
+14,Yas,اليأس,Negative
+17,Sukhriyyah,السخرية,Negative
+18,Tazkiyat an-Nafs al-Madhmumah,تزكية النفس المذمومة,Negative
+19,Taassub,التعصب,Negative
+28,Takathur,التكاثر,Negative
+29,Kadhib,الكذب,Negative
+30,Khiyanah,الخيانة,Negative
+31,Gheebah,الغيبة,Negative
+32,Namimah,النميمة,Negative
+34,Tajassus,التجسس,Negative
+35,Fuhsh,الفحش,Negative
+36,Sabb,السب,Negative
+37,La'n,اللعن,Negative
+38,Jidal,الجدال,Negative
+39,Mira',المراء,Negative
+40,Istihza',الاستهزاء,Negative
+41,Shahadat az-Zur,شهادة الزور,Negative
+42,Ikhlaf al-Wa'd,إخلاف الوعد,Negative
+43,Qaswah fi al-Mu'amalah,القسوة,Negative
+44,Su' al-Khuluq,سوء الخلق,Negative
+45,Hijran al-Muslim,هجر المسلم,Negative
+46,Hubb al-Madh,حب المدح,Negative
+47,Tafakhur,التفاخر,Negative
+48,Ta'ali,التعالي,Negative
+49,Raghbah fi ad-Dunya,الرغبة في الدنيا,Negative
+50,Ujub bi al-'Amal,العجب بالعمل,Negative
+52,Ajz,العجز,Negative
+55,Israaf,الإسراف,Negative
+56,Tabdhir,التبذير,Negative
+57,Ghaflah an al-Mawt,الغفلة عن الموت,Negative
+58,Qat' ar-Rahim,قطع الرحم,Negative
+59,Zulm,الظلم,Negative
+60,Qanut min Rahmatillah,القنوط من رحمة الله,Negative
+61,Riya,الرياء,Negative
+62,Kibr,الكبر,Negative
+63,Ghurur,الغرور,Negative
+64,Ghaflah,الغفلة,Negative
+65,Qaswat al-Qalb,قسوة القلب,Negative
+66,Shakk,الشك,Negative
+67,Nifaq,النفاق,Negative
+68,Taswif,التسويف,Negative
+69,Qillat ash-Shukr,قلة الشكر,Negative
+70,Qillat as-Sabr,قلة الصبر,Negative
+73,Sidq,الصدق,Positive
+74,Taqwa,التقوى,Positive
+83,Wara',الورع,Positive
+84,Haya',الحياء,Positive
+89,Safh,الصفح,Positive
+95,Muhasabah,المحاسبة,Positive
+97,Ikhbat,الإخبات,Positive
+98,Tawadu',التواضع,Positive
+105,Tafwid,التفويض,Positive
+106,Haybah,الهيبة,Positive
+108,Firasah,الفراسة,Positive
+109,Samt,الصمت,Positive
+110,Husn az-Zann billah,حسن الظن بالله,Positive
+113,Amanah,الأمانة,Positive
+114,Wafa bil-Ahd,الوفاء بالعهد,Positive
+116,Iffah,العفة,Positive
+119,Husn al-Khuluq,حسن الخلق,Positive
+120,Haya' min Allah,الحياء من الله,Positive
+123,Murabitah,المرابطة,Positive
+124,Faqr ila Allah,الفقر إلى الله,Positive
+126,Tafarrugh lil-Ibadah,التفرغ للعبادة,Positive
+127,Sidq al-Mahabbah,صدق المحبة,Positive
+128,Taqarrub ila Allah,التقرب إلى الله,Positive
+130,Tajrid,التجريد,Positive
+131,Ikhlas al-Qasd,إخلاص القصد,Positive
+132,Futuwwah,الفتوة,Positive
+133,Tawakkul al-Kamil,التوكل الكامل,Positive
+134,Jam'iyyat al-Qalb,جمعية القلب,Positive
+135,Hudur al-Qalb,حضور القلب,Positive
+136,Musharakah fi al-Khayr,المشاركة في الخير,Positive
+137,Nasihah,النصيحة,Positive
+138,Islah,الإصلاح,Positive
+140,Mushahadah,المشاهدة,Positive
+141,Yusr,اليسر,Positive
+142,Bashashah,البشاشة,Positive
+143,Tafa'ul,التفاؤل,Positive
+145,Adab,الأدب,Positive
+146,Hifz al-Lisan,حفظ اللسان,Positive
+147,Samahah,السماحة,Positive
+148,Waqar,الوقار,Positive
+150,Tawazun,التوازن,Positive
+151,Rifq,الرفق,Positive
+152,Hilm,الحلم,Positive
+153,Anah,الأناة,Positive
+154,Qana'ah,القناعة,Positive
+155,Satr,الستر,Positive
+156,Rahmah lil-Khalq,الرحمة للخلق,Positive
+157,Tawadu fi al-Ilm,التواضع في العلم,Positive
+158,Wara,الورع,Positive
+159,Zuhd fi ad-Dunya,الزهد في الدنيا,Positive
+160,Uns billah,الأنس بالله,Positive
+161,Yaqzah,اليقظة,Positive
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive
+163,I'tisam billah,الاعتصام بالله,Positive
+164,Inabah Kamilah,الإنابة الكاملة,Positive
+165,Sabr Jamil,الصبر الجميل,Positive
+166,Hijrah ila Allah,الهجرة إلى الله,Positive
+167,Tadhallul,التذلل,Positive
+169,Wajal,الجل,Positive
+170,Raghabah wa Rahabah,الرغبة والرهبة,Positive
+172,Ta'zim Allah,تعظيم الله,Positive
+173,Ta'zim Sha'air Allah,تعظيم شعائر الله,Positive
+174,Muraqabah Kamilah,المراقبة الكاملة,Positive
+175,Ihsan,الإحسان,Positive
+176,Sidq at-Tawakkul,صدق التوكل,Positive
+177,Ridha bil-Qada,الرضا بالقضاء,Positive
+178,Mahabbah fillah,المحبة في الله,Positive
+179,Bughd fillah,البغض في الله,Positive
+180,Ikhlas al-Mahabbah,إخلاص المحبة,Positive
+181,Sidq al-Mahabbah,صدق المحبة,Positive
+182,Shawq ila Allah,الشوق إلى الله,Positive
+183,Tafwid,التفويض,Positive
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive
+185,Sakinah,السكينة,Positive
+186,Basirah,البصيرة,Positive
+187,Shukr al-Khalq,شكر الخلق,Positive
+188,Falah,الفلاح,Positive
+189,Husn al-Khatimah,حسن الخاتمة,Positive
+190,Rifq billah,الرفق بالله,Positive
+191,Fawz al-Azim,الفوز العظيم,Positive
+192,Liqa Allah,لقاء الله,Positive
+193,Ridhwan Allah,رضوان الله,Positive
+194,Darajat al-Ihsan,درجات الإحسان,Positive
+195,Ubudiyyah Kamilah,العبودية الكاملة,Positive
+196,Tawhid Kamil,التوحيد الكامل,Positive
+197,Siddiqiyyah,الصديقية,Positive
+199,Talab al-Firdaws al-Ala,طلب الفردوس الأعلى,Positive
+200,Jannat an-Naim Orientation,التطلع إلى جنة النعيم,Positive

@@ -5,6 +5,7 @@ import '../../../domain/entities/heart_attribute.dart';
 import '../../../infrastructure/di/providers.dart';
 import '../../widgets/specific/growth_path_strip.dart';
 import '../../widgets/specific/master_pathway_card_widget.dart';
+import '../../widgets/specific/sheikh_murabbi_panel.dart';
 
 class HeartGraphScreen extends ConsumerStatefulWidget {
   const HeartGraphScreen({super.key});
@@ -60,6 +61,9 @@ class _HeartGraphScreenState extends ConsumerState<HeartGraphScreen> {
           : ListView(
               padding: const EdgeInsets.symmetric(vertical: 12),
               children: [
+                // RI-5.6: Suluk framing — these pathways follow the
+                // great imams of tazkiya.
+                const SulukPathwaysHeader(),
                 if (_path.isNotEmpty) ...[
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16),
@@ -83,6 +87,9 @@ class _HeartGraphScreenState extends ConsumerState<HeartGraphScreen> {
                     path: p.$2,
                     onTap: () {},
                   ),
+                // RI-3.3: Sheikh/Murabbi panel — classical tazkiya requires
+                // a living teacher; the app is a companion, not a replacement.
+                const SheikhMurabbiPanel(),
                 const SizedBox(height: 24),
               ],
             ),

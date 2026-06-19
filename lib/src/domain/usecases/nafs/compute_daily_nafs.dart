@@ -115,7 +115,36 @@ class ComputeDailyNafs {
         (e * NafsConstants.wEmotion) +
         (h * NafsConstants.wHabit) +
         (t * NafsConstants.wTrend);
-    return combined.normalised;
+    // RI-3.6: Waswasa baseline — apply a small pull-back on Ammarah to
+    // prevent the Nafs engine from over-attributing negativity to the user's
+    // own nafs. Classical tazkiya (Ghazali, Ihya' 21) teaches that some
+    // negativity comes from waswasa, not the self. The effect is bounded
+    // (±5%) and invisible to the user.
+    final withWaswasaCorrection = _applyWaswasaBaseline(combined);
+    return withWaswasaCorrection.normalised;
+  }
+
+  /// Apply the waswasa pull-back to the combined Nafs vector.
+  ///
+  /// Per RI-3.6: when the combined vector is far from Mutmainnah, we reduce
+  /// the Ammarah coefficient by up to [NafsConstants.waswasaPullback] and
+  /// redistribute the removed mass evenly across the other three stations.
+  /// This prevents the model from claiming the user is in Ammarah when in
+  /// fact Shaytan's waswasa may be the dominant cause.
+  Vector4 _applyWaswasaBaseline(Vector4 combined) {
+    final distanceFromMutmainnah = 1.0 - combined.mutmainnah;
+    if (distanceFromMutmainnah <= 0.001) return combined;
+    // Pull-back scales with distance from Mutmainnah, capped at waswasaPullback.
+    final pullback =
+        (distanceFromMutmainnah * NafsConstants.waswasaPullback).clamp(0.0, NafsConstants.waswasaPullback);
+    final newAmmarah = (combined.ammarah - pullback).clamp(0.0, 1.0);
+    final redistributed = pullback / 3.0;
+    return Vector4(
+      newAmmarah,
+      combined.lawwamah + redistributed,
+      combined.mulhamah + redistributed,
+      combined.mutmainnah + redistributed,
+    );
   }
 
   /// AttributeScore: score-weighted average of attribute_nafs_weights.

@@ -1,0 +1,634 @@
+Attribute_ID,Attribute_Name,Arabic_Name,Nature,Emotion_ID,Emotion_Name,Emotion_Arabic,Role,Quran_Ref,Hadith_Ref,Category,Notes
+1,Riya,الرياء,Negative,13,Showing Off,الرياء,Disease,Quran 107:4-6,Sahih Muslim 2985,Primary,Showing off in worship - core sin
+1,Riya,الرياء,Negative,13,Showing Off,الرياء,Universal_Cure,Quran 98:5,Sahih al-Bukhari 1,Universal,Sincerity (Ikhlas) is its opposite
+1,Riya,الرياء,Negative,11,Arrogance,الكبر,Disease,Quran 31:18,,Secondary,Arrogance often manifests as Riya
+1,Riya,الرياء,Negative,12,Pride,العجب,Disease,Quran 53:32,,Secondary,Self-admiration underlies Riya
+2,Kibr,الكبر,Negative,11,Arrogance,الكبر,Disease,Quran 31:18,Sahih Muslim 91,Primary,Pride is the essence of Kibr
+2,Kibr,الكبر,Negative,12,Pride,العجب,Disease,Quran 53:32,Sahih Muslim 2749,Secondary,Self-admiration related to Kibr
+2,Kibr,الكبر,Negative,16,Hatred,الحقد,Disease,Quran 31:18,,Secondary,Pride causes looking down on others
+2,Kibr,الكبر,Negative,27,Envy of Status,حب الجاه,Disease,Quran 31:18,,Secondary,Status seeking from pride
+2,Kibr,الكبر,Negative,11,Arrogance,الكبر,Universal_Cure,Quran 25:63,Sahih Muslim 2588,Universal,Tawadu is the opposite
+3,Ujb,العجب,Negative,12,Pride,العجب,Disease,Quran 53:32,Sahih Muslim 2749,Primary,Self-amazement
+3,Ujb,العجب,Negative,11,Arrogance,الكبر,Disease,Quran 53:32,,Secondary,Related to arrogance
+3,Ujb,العجب,Negative,42,Sincerity,الإخلاص,Disease,Quran 53:32,,Secondary,Undermines sincerity
+3,Ujb,العجب,Negative,12,Pride,العجب,Universal_Cure,Quran 25:63,,Universal,Tawadu cures Ujb
+4,Nifaq,النفاق,Negative,13,Showing Off,الرياء,Disease,Quran 2:8-9,Sahih al-Bukhari 33,Primary,Hypocrisy - showing off is its manifestation
+4,Nifaq,النفاق,Negative,11,Arrogance,الكبر,Disease,Quran 2:8-9,,Secondary,Arrogance can lead to nifaq
+4,Nifaq,النفاق,Negative,29,Overthinking,كثرة التفكير,Disease,Quran 2:8-9,,Secondary,Excessive doubt leads to nifaq
+4,Nifaq,النفاق,Negative,18,Suspicion,سوء الظن,Disease,Quran 49:12,,Secondary,Bad assumption is sign of nifaq
+5,Sum'ah,السُّمعة,Negative,13,Showing Off,الرياء,Disease,Quran 28:83,Sahih al-Bukhari 6499,Primary,Love of fame - showing off manifestation
+5,Sum'ah,السُّمعة,Negative,11,Arrogance,الكبر,Disease,Quran 28:83,,Secondary,Pride in reputation
+6,Kufr al-Ni'mah,كفر النعمة,Negative,32,Weak Faith,ضعف الإيمان,Disease,Quran 14:7,Sahih Muslim 2734,Primary,Disbelief in blessings
+6,Kufr al-Ni'mah,كفر النعمة,Negative,14,Love of Dunya,حب الدنيا,Disease,Quran 14:7,,Secondary,Takes blessings for granted
+6,Kufr al-Ni'mah,كفر النعمة,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 16:18,,Secondary,Disregard of Allah's blessings
+6,Kufr al-Ni'mah,كفر النيما,Negative,32,Weak Faith,ضعف الإيمان,Universal_Cure,Quran 14:7,Sahih Muslim 2819,Universal,Shukr is the opposite
+7,Ghurur,الغرور,Negative,11,Arrogance,الكبر,Disease,Quran 31:33,Sahih Muslim 2959,Secondary,False sense of security
+7,Ghurur,الغرور,Negative,4,Fear,الخوف,Disease,Quran 31:33,,Secondary,False security instead of Khawf
+7,Ghurur,الغرور,Negative,7,Guilt,الندم,Disease,Quran 31:33,,Secondary,Self-deception
+7,Ghurur,الغرور,Negative,11,Arrogance,الكبر,Universal_Cure,Quran 12:108,Sahih Muslim 2699,Universal,Basirah is opposite
+8,Irtiyab,الارتياب,Negative,19,Doubt,الشك,Disease,Quran 49:15,Sahih Muslim 134,Primary,Hesitation - form of doubt
+8,Irtiyab,الارتياب,Negative,22,Weak Faith,ضعف الإيمان,Disease,Quran 49:15,,Secondary,Hesitation weakens faith
+8,Irtiyab,الارتياب,Negative,44,Certainty of Faith,اليقين,Disease,Quran 49:15,,Secondary,Opposite of yaqin
+8,Irtiyab,الارتياب,Negative,19,Doubt,الشك,Universal_Cure,Quran 2:2,Sahih Muslim 8,Universal,Yaqin is cure
+9,Qasawat al-Qalb,قسوة القلب,Negative,5,Sadness,الحزن,Disease,Quran 57:16,Sahih Muslim 2750,Primary,Hardness from unhealed grief
+9,Qasawat al-Qalb,قسوة القلب,Negative,24,Hard-heartedness,قسوة القلب,Disease,Quran 57:16,Sahih Muslim 2750,Primary,Hard-heartedness itself
+9,Qasawat al-Qalb,قسوة القلب,Negative,7,Guilt,الندم,Disease,Quran 57:16,,Secondary,Guilt can harden heart
+9,Qasawat al-Qalb,قسوة القلب,Negative,16,Hatred,الحقد,Disease,Quran 57:16,,Secondary,Harbored hatred hardens heart
+9,Qasawat al-Qalb,قسوة القلب,Negative,10,Emptiness,الفراغ الروحي,Disease,Quran 57:16,,Secondary,Spiritual emptiness from hardness
+9,Qasawat al-Qalb,قسوة القلب,Negative,5,Sadness,الحزن,Universal_Cure,Quran 13:28,Sahih Muslim 2675,Universal,Tadhakkur softens hearts
+10,Ghaflah,الغفلة,Negative,9,Loneliness,الوحدة,Disease,Quran 7:205,Sahih al-Bukhari 6407,Primary,Heedlessness causes loneliness
+10,Ghaflah,الغفلة,Negative,10,Emptiness,الفراغ الروحي,Disease,Quran 7:205,,Primary,Spiritual emptiness from heedlessness
+10,Ghaflah,الغفلة,Negative,21,Distractedness,الغفلة,Disease,Quran 7:205,,Primary,Distractedness is heedlessness
+10,Ghaflah,الغفلة,Negative,31,Distractedness,الغفلة,Disease,Quran 7:205,,Primary,Repeated entry
+10,Ghaflah,الغفلة,Negative,45,Fear of Allah,خشية الله,Disease,Quran 7:205,,Secondary,Opposite of khashyah
+10,Ghaflah,الغفلة,Negative,9,Loneliness,الوحدة,Universal_Cure,Quran 13:28,Sahih Muslim 2675,Universal,Tadhakkur is the cure
+11,Amn min Makrillah,الأمن من مكر الله,Negative,4,Fear,الخوف,Disease,Quran 7:99,Sahih al-Bukhari 6607,Primary,False security from Allah
+11,Amn min Makrillah,الأمن من مكر الله,Negative,3,Anxiety,القلق,Disease,Quran 7:99,,Secondary,Either excessive fear or false security
+11,Amn min Makrillah,الأمن من مكر الله,Negative,4,Fear,الخوف,Universal_Cure,Quran 35:28,Sahih al-Bukhari 6482,Universal,Khashyah is cure
+12,Tul al-Amal,طول الأمل,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 15:3,Sahih al-Bukhari 6417,Primary,Length of worldly hope
+12,Tul al-Amal,طول الأمل,Negative,14,Hopelessness,اليأس,Disease,Quran 15:3,,Secondary,Excessive hope can lead to despair when not met
+12,Tul al-Amal,طول الأمل,Negative,8,Laziness,الكسل,Disease,Quran 15:3,,Secondary,Procrastination from long hope
+13,Ittiba al-Hawa,اتباع الهوى,Negative,1,Anger,الغضب,Disease,Quran 45:23,Sahih Muslim 2657,Secondary,Following desires fuels anger
+13,Ittiba al-Hawa,اتباع الهوى,Negative,14,Greed,الطمع,Disease,Quran 45:23,,Primary,Following desires is greed
+13,Ittiba al-Hawa,اتباع الهوى,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 45:23,,Primary,Following desires is dunya love
+13,Ittiba al-Hawa,اتباع الهوى,Negative,26,Excessive Attachment,التعلق الزائد,Disease,Quran 45:23,,Primary,Following desires is excessive attachment
+13,Ittiba al-Hawa,اتباع الهوى,Negative,1,Anger,الغضب,Universal_Cure,Quran 2:197,Sahih Muslim 2564,Universal,Taqwa is the cure
+14,Yas,اليأس,Negative,6,Hopelessness,اليأس,Disease,Quran 39:53,Sahih Muslim 2755,Primary,Despair
+14,Yas,اليأس,Negative,34,Hopelessness,اليأس,Disease,Quran 39:53,,Primary,Repeated
+14,Yas,اليأس,Negative,6,Hopelessness,اليأس,Universal_Cure,Quran 39:53,Sahih Muslim 2877,Universal,Raja is cure
+15,Shirk al-Asghar,الشرك الأصغر,Negative,13,Showing Off,الرياء,Disease,Quran 31:13,Musnad Ahmad 23630,Primary,Minor shirk - showing off
+15,Shirk al-Asghar,الشرك الأصغر,Negative,40,Emptiness,الفراغ الروحي,Disease,Quran 31:13,,Secondary,Empty worship
+15,Shirk al-Asghar,الشرك الأصغر,Negative,13,Showing Off,الرياء,Universal_Cure,Quran 98:5,Sahih al-Bukhari 1,Universal,Ikhlas is cure
+16,Karahiyyat al-Mawt,كراهية الموت,Negative,34,Hopelessness,اليأس,Disease,Quran 62:8,Sahih al-Bukhari 6412,Secondary,Fear of death
+16,Karahiyyat al-Mawt,كراهية الموت,Negative,4,Fear,الخوف,Disease,Quran 62:8,,Secondary,Excessive fear of death
+16,Karahiyyat al-Mawt,كراهية الموت,Negative,34,Hopelessness,اليأس,Universal_Cure,Quran 29:5,Sahih al-Bukhari 6507,Universal,Shawq ila Allah is cure
+17,Sukhriyyah,السخرية,Negative,1,Anger,الغضب,Disease,Quran 49:11,Sahih Muslim 2564,Secondary,Anger can lead to mockery
+17,Sukhriyyah,السخرية,Negative,12,Pride,العجب,Disease,Quran 49:11,,Secondary,Pride causes mocking
+17,Sukhriyyah,السخرية,Negative,16,Hatred,الحقد,Disease,Quran 49:11,,Secondary,Grudge can manifest as mockery
+18,Tazkiyat an-Nafs al-Madhmumah,تزكية النفس المذمومة,Negative,12,Pride,العجب,Disease,Quran 53:32,Sahih Muslim 2865,Primary,Self-praise in negative form
+18,Tazkiyat an-Nafs al-Madhmumah,تزكية النفس المذمومة,Negative,11,Arrogance,الكبر,Disease,Quran 53:32,,Secondary,Related to pride
+18,Tazkiyat an-Nafs al-Madhmumah,تزكية النفس المذمومة,Negative,7,Guilt,الندم,Disease,Quran 53:32,,Secondary,False self-justification
+19,Taassub,التعصب,Negative,11,Arrogance,الكبر,Disease,Quran 5:8,Sahih Muslim 1848,Primary,Fanaticism from pride
+19,Taassub,التعصب,Negative,16,Hatred,الحقد,Disease,Quran 5:8,,Secondary,Grudge can lead to fanaticism
+19,Taassub,التعصب,Negative,18,Suspicion,سوء الظن,Disease,Quran 5:8,,Secondary,Suspicion can become fanaticism
+20,Wahn,الوهن,Negative,8,Laziness,الكسل,Disease,Quran 8:46,Sunan Abu Dawud 4297,Primary,Weakness
+20,Wahn,الوهن,Negative,4,Fear,الخوف,Disease,Quran 8:46,,Secondary,Excessive fear weakens
+20,Wahn,الوهن,Negative,32,Weak Faith,ضعف الإيمان,Disease,Quran 8:46,,Secondary,Weakens faith
+21,Hasad,الحسد,Negative,2,Jealousy,الحسد,Disease,Quran 113:5,Sahih Muslim 2564,Primary,Envy itself
+21,Hasad,الحسد,Negative,39,Envy of Status,حب الجاه,Disease,Quran 113:5,,Secondary,Envy of others' status
+21,Hasad,الحسد,Negative,2,Jealousy,الحسد,Universal_Cure,Quran 14:7,Sahih Muslim 2819,Universal,Shukr is cure
+22,Hiqd,الحقد,Negative,16,Hatred,الحقد,Disease,Quran 59:10,Sahih Muslim 2563,Primary,Grudge itself
+22,Hiqd,الحقد,Negative,17,Desire for Revenge,الانتقام,Disease,Quran 59:10,,Secondary,Revenge from grudge
+22,Hiqd,الحقد,Negative,16,Hatred,الحقد,Universal_Cure,Quran 24:22,Sahih Muslim 2588,Universal,Safh is cure
+23,Ghadab,الغضب,Negative,1,Anger,الغضب,Disease,Quran 3:134,Sahih al-Bukhari 6116,Primary,Anger itself
+23,Ghadab,الغضب,Negative,17,Desire for Revenge,الانتقام,Disease,Quran 3:134,,Secondary,Anger drives revenge
+23,Ghadab,الغضب,Negative,1,Anger,الغضب,Universal_Cure,Quran 3:134,Sahih al-Bukhari 6114,Universal,Hilm is cure
+24,Bukhl,البخل,Negative,25,Stinginess,البخل,Disease,Quran 3:180,Sahih Muslim 1021,Primary,Stinginess itself
+24,Bukhl,البخل,Negative,35,Stinginess,البخل,Disease,Quran 3:180,,Primary,Repeated
+24,Bukhl,البخل,Negative,36,Laziness,الكسل,Disease,Quran 3:180,,Secondary,Stinginess can cause laziness in giving
+24,Bukhl,البخل,Negative,25,Stinginess,البخل,Universal_Cure,Quran 2:261,Sahih al-Bukhari 6035,Universal,Jud/Sakhawah is cure
+25,Shuhh,الشح,Negative,25,Stinginess,البخل,Disease,Quran 59:9,Sahih Muslim 2578,Primary,Extreme stinginess
+25,Shuhh,الشح,Negative,36,Laziness,الكسل,Disease,Quran 59:9,,Secondary,Extreme stinginess in giving
+25,Shuhh,الشح,Negative,25,Stinginess,البخل,Universal_Cure,Quran 59:9,Sahih al-Bukhari 3798,Universal,Ithar is cure
+26,Tama,الطمع,Negative,14,Greed,الطمع,Disease,Quran 102:1,Sahih Muslim 1051,Primary,Greed itself
+26,Tama,الطمع,Negative,39,Envy of Status,حب الجاه,Disease,Quran 102:1,,Secondary,Greed for status
+26,Tama,الطمع,Negative,14,Greed,الطمع,Universal_Cure,Quran 20:131,Sahih Muslim 1051,Universal,Qana'ah is cure
+27,Hubb ad-Dunya,حب الدنيا,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 57:20,Sahih Muslim 2956,Primary,Worldly love
+27,Hubb ad-Dunya,حب الدنيا,Negative,26,Excessive Attachment,التعلق الزائد,Disease,Quran 57:20,,Primary,Excessive dunya attachment
+27,Hubb ad-Dunya,حب الدنيا,Negative,48,Spiritual Longing,الشوق إلى الله,Disease,Quran 57:20,,Secondary,Worldly love opposes spiritual longing
+27,Hubb ad-Dunya,حب الدنيا,Negative,15,Love of Dunya,حب الدنيا,Universal_Cure,Quran 57:20,Sahih Ibn Majah 4102,Universal,Zuhd is cure
+28,Takathur,التكاثر,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 102:1,Sahih al-Bukhari 6436,Secondary,Rivalry in worldly gain
+28,Takathur,التكاثر,Negative,27,Envy of Status,حب الجاه,Disease,Quran 102:1,,Primary,Competition for status
+29,Kadhib,الكذب,Negative,13,Showing Off,الرياء,Disease,Quran 9:119,Sahih al-Bukhari 6094,Primary,False display of piety
+29,Kadhib,الكذب,Negative,12,Pride,العجب,Disease,Quran 9:119,,Secondary,Pride can lead to lies
+29,Kadhib,الكذب,Negative,3,Anxiety,القلق,Disease,Quran 9:119,,Secondary,Anxiety may lead to lies
+29,Kadhib,الكذب,Negative,13,Showing Off,الرياء,Universal_Cure,Quran 9:119,Sahih al-Bukhari 6094,Universal,Sidq is cure
+30,Khiyanah,الخيانة,Negative,1,Anger,الغضب,Disease,Quran 8:27,Sahih al-Bukhari 33,Secondary,Anger can lead to betrayal
+30,Khiyanah,الخيانة,Negative,25,Stinginess,البخل,Disease,Quran 8:27,,Secondary,Stinginess can cause betrayal
+30,Khiyanah,الخيانة,Negative,17,Desire for Revenge,الانتقام,Disease,Quran 8:27,,Secondary,Revenge can lead to betrayal
+30,Khiyanah,الخيانة,Negative,1,Anger,الغضب,Universal_Cure,Quran 4:58,Sahih al-Bukhari 33,Universal,Amanah is cure
+31,Gheebah,الغيبة,Negative,16,Hatred,الحقد,Disease,Quran 49:12,Sahih Muslim 2589,Primary,Backbiting from hatred
+31,Gheebah,الغيبة,Negative,18,Suspicion,سوء الظن,Disease,Quran 49:12,,Primary,Backbiting from suspicion
+31,Gheebah,الغيبة,Negative,1,Anger,الغضب,Disease,Quran 49:12,,Secondary,Anger can lead to backbiting
+31,Gheebah,الغيبة,Negative,16,Hatred,الحقد,Universal_Cure,Quran 50:18,Sahih al-Bukhari 6475,Universal,Hifz al-Lisan is cure
+32,Namimah,النميمة,Negative,18,Suspicion,سوء الظن,Disease,Quran 68:11,Sahih Muslim 105,Primary,Tale-carrying from suspicion
+32,Namimah,النميمة,Negative,16,Hatred,الحقد,Disease,Quran 68:11,,Secondary,From grudges
+32,Namimah,النميمة,Negative,1,Anger,الغضب,Disease,Quran 68:11,,Secondary,Anger can cause tale-carrying
+32,Namimah,النميمة,Negative,18,Suspicion,سوء الظن,Universal_Cure,Quran 68:4,Sahih Muslim 2321,Universal,Adab/Islah is cure
+33,Su' al-Dhann,سوء الظن,Negative,18,Suspicion,سوء الظن,Disease,Quran 49:12,Sahih al-Bukhari 6066,Primary,Bad assumption itself
+33,Su' al-Dhann,سوء الظن,Negative,18,Suspicion,سوء الظن,Disease,Quran 49:12,,Secondary,Bad assumption manifests as suspicion; sign of nifaq
+33,Su' al-Dhann,سوء الظن,Negative,2,Jealousy,الحسد,Disease,Quran 49:12,,Secondary,Envy can lead to bad assumption
+33,Su' al-Dhann,سوء الظن,Negative,18,Suspicion,سوء الظن,Universal_Cure,Quran 49:12,Sahih Muslim 2563,Universal,Husn az-Zann bin-Nas is cure
+34,Tajassus,التجسس,Negative,18,Suspicion,سوء الظن,Disease,Quran 49:12,Sahih Muslim 2564,Primary,Spying from suspicion
+34,Tajassus,التجسس,Negative,3,Anxiety,القلق,Disease,Quran 49:12,,Secondary,Anxiety can drive spying
+34,Tajassus,التجسس,Negative,18,Suspicion,سوء الظن,Universal_Cure,Quran 24:19,Sahih Muslim 2590,Universal,Satr is cure
+35,Fuhsh,الفحش,Negative,1,Anger,الغضب,Disease,Quran 7:33,Sahih al-Bukhari 6117,Secondary,Anger can lead to obscenity
+35,Fuhsh,الفحش,Negative,2,Jealousy,الحسد,Disease,Quran 7:33,,Secondary,Envy can manifest in obscenity
+35,Fuhsh,الفحش,Negative,1,Anger,الغضب,Universal_Cure,Quran 7:26,Sahih al-Bukhari 6117,Universal,Haya is cure
+36,Sabb,السب,Negative,1,Anger,الغضب,Disease,Quran 49:11,Sahih al-Bukhari 6044,Primary,Insulting from anger
+36,Sabb,السب,Negative,16,Hatred,الحقد,Disease,Quran 49:11,,Secondary,Grudges cause insults
+36,Sabb,السب,Negative,1,Anger,الغضب,Universal_Cure,Quran 3:159,Sahih Muslim 2593,Universal,Rifq is cure
+37,La'n,اللعن,Negative,1,Anger,الغضب,Disease,Quran 33:58,Sahih Muslim 2597,Secondary,Anger can lead to cursing
+37,La'n,اللعن,Negative,16,Hatred,الحقد,Disease,Quran 33:58,,Secondary,Grudges cause cursing
+37,La'n,اللعن,Negative,1,Anger,الغضب,Universal_Cure,Quran 7:26,Sahih al-Bukhari 6117,Universal,Haya is cure
+38,Jidal,الجدال,Negative,1,Anger,الغضب,Disease,Quran 16:125,Jami at-Tirmidhi 1993,Secondary,Anger can lead to arguing
+38,Jidal,الجدال,Negative,11,Arrogance,الكبر,Disease,Quran 16:125,,Secondary,Pride causes disputes
+38,Jidal,الجدال,Negative,12,Pride,العجب,Disease,Quran 16:125,,Secondary,Self-amazement causes disputes
+38,Jidal,الجدال,Negative,1,Anger,الغضب,Universal_Cure,Quran 3:159,Sahih Muslim 2593,Universal,Rifq is cure
+39,Mira',المراء,Negative,11,Arrogance,الكبر,Disease,Quran 18:54,Jami at-Tirmidhi 1993,Secondary,Pride causes disputation
+39,Mira',المراء,Negative,12,Pride,العجب,Disease,Quran 18:54,,Secondary,Self-amazement causes arguing
+39,Mira',المراء,Negative,1,Anger,الغضب,Disease,Quran 18:54,,Secondary,Anger can lead to disputation
+40,Istihza',الاستهزاء,Negative,11,Arrogance,الكبر,Disease,Quran 49:11,Sahih Muslim 2564,Secondary,Pride causes mocking
+40,Istihza',الاستهزاء,Negative,16,Hatred,الحقد,Disease,Quran 49:11,,Secondary,Grudges cause mockery
+40,Istihza',الاستهزاء,Negative,1,Anger,الغضب,Disease,Quran 49:11,,Secondary,Anger can lead to mockery
+40,Istihza',الاستهزاء,Negative,1,Anger,الغضب,Universal_Cure,Quran 3:159,Sahih Muslim 2593,Universal,Rifq is cure
+41,Shahadat az-Zur,شهادة الزور,Negative,29,Kadhib,الكذب,Disease,Quran 22:30,Sahih al-Bukhari 2654,Primary,False witness
+41,Shahadat az-Zur,شهادة الزور,Negative,2,Jealousy,الحسد,Disease,Quran 22:30,,Secondary,Envy can lead to false witness
+41,Shahadat az-Zur,شهادة الزور,Negative,18,Suspicion,سوء الظن,Disease,Quran 22:30,,Secondary,Bad assumption causes false witness
+41,Shahadat az-Zur,شهادة الزور,Negative,29,Kadhib,الكذب,Universal_Cure,Quran 9:119,Sahih al-Bukhari 6094,Universal,Sidq is cure
+42,Ikhlaf al-Wa'd,إخلاف الوعد,Negative,29,Kadhib,الكذب,Disease,Quran 17:34,Sahih al-Bukhari 33,Primary,Breaking promises is lying
+42,Ikhlaf al-Wa'd,إخلاف الوعد,Negative,30,Khiyanah,الخيانة,Disease,Quran 17:34,,Primary,Betrayal
+42,Ikhlaf al-Wa'd,إخلاف الوعد,Negative,1,Anger,الغضب,Disease,Quran 17:34,,Secondary,Anger can cause breaking promises
+42,Ikhlaf al-Wa'd,إخلاف الوعد,Negative,29,Kadhib,الكذب,Universal_Cure,Quran 17:34,Sahih al-Bukhari 33,Universal,Wafa bil-Ahd is cure
+43,Qaswah fi al-Mu'amalah,القسوة في المعاملة,Negative,1,Anger,الغضب,Disease,Quran 3:159,Sahih Muslim 2593,Primary,Harshness in dealings
+43,Qaswah fi al-Mu'amalah,القسوة في المعاملة,Negative,9,Hard-heartedness,قسوة القلب,Disease,Quran 3:159,,Primary,Hard dealings from hard heart
+43,Qaswah fi al-Mu'amalah,القسوة في المعاملة,Negative,16,Hatred,الحقد,Disease,Quran 3:159,,Secondary,Grudges cause harshness
+43,Qaswah fi al-Mu'amalah,القسوة في المعاملة,Negative,1,Anger,الغضب,Universal_Cure,Quran 3:159,Sahih Muslim 2593,Universal,Rifq is cure
+44,Su' al-Khuluq,سوء الخلق,Negative,1,Anger,الغضب,Disease,Quran 68:4,Sahih Muslim 2321,Primary,Bad character from anger
+44,Su' al-Khuluq,سوء الخلق,Negative,11,Arrogance,الكبر,Disease,Quran 68:4,,Secondary,Pride causes bad character
+44,Su' al-Khuluq,سوء الخلق,Negative,16,Hatred,الحقد,Disease,Quran 68:4,,Secondary,Grudges cause bad character
+44,Su' al-Khuluq,سوء الخلق,Negative,1,Anger,الغضب,Universal_Cure,Quran 68:4,Sahih Muslim 2321,Universal,Husn al-Khuluq is cure
+45,Hijran al-Muslim,هجر المسلم,Negative,16,Hatred,الحقد,Disease,Quran 49:10,Sahih al-Bukhari 6077,Primary,Abandoning from hatred
+45,Hijran al-Muslim,هجر المسلم,Negative,1,Anger,الغضب,Disease,Quran 49:10,,Secondary,Anger can cause abandoning
+45,Hijran al-Muslim,هجر المسلم,Negative,9,Loneliness,الوحدة,Disease,Quran 49:10,,Secondary,Abandoning causes loneliness
+45,Hijran al-Muslim,هجر المسلم,Negative,16,Hatred,الحقد,Universal_Cure,Quran 49:10,Sahih al-Bukhari 2692,Universal,Islah is cure
+46,Hubb al-Madh,حب المدح,Negative,11,Arrogance,الكبر,Disease,Quran 53:32,Sahih Muslim 3001,Primary,Love of praise from pride
+46,Hubb al-Madh,حب المدح,Negative,27,Envy of Status,حب الجاه,Disease,Quran 53:32,,Primary,Status seeking
+46,Hubb al-Madh,حب المدح,Negative,13,Showing Off,الرياء,Disease,Quran 53:32,,Secondary,Showing off for praise
+46,Hubb al-Madh,حب المدح,Negative,11,Arrogance,الكبر,Universal_Cure,Quran 98:5,Sahih al-Bukhari 1,Universal,Ikhlas is cure
+47,Tafakhur,التفاخر,Negative,11,Arrogance,الكبر,Disease,Quran 102:1,Sahih Muslim 2865,Primary,Boasting from pride
+47,Tafakhur,التفاخر,Negative,27,Envy of Status,حب الجاه,Disease,Quran 102:1,,Primary,Status boasting
+47,Tafakhur,التفاخر,Negative,12,Pride,العجب,Disease,Quran 102:1,,Secondary,Self-amazement causes boasting
+47,Tafakhur,التفاخر,Negative,11,Arrogance,الكبر,Universal_Cure,Quran 25:63,Sahih Muslim 2588,Universal,Tawadu is cure
+48,Ta'ali,التعالي,Negative,11,Arrogance,الكبر,Disease,Quran 49:13,Sahih Muslim 2564,Primary,Haughtiness from pride
+48,Ta'ali,التعالي,Negative,12,Pride,العجب,Disease,Quran 49:13,,Secondary,Self-amazement causes haughtiness
+48,Ta'ali,التعالي,Negative,16,Hatred,الحقد,Disease,Quran 49:13,,Secondary,Grudges cause looking down
+48,Ta'ali,التعالي,Negative,11,Arrogance,الكبر,Universal_Cure,Quran 25:63,Sahih Muslim 2588,Universal,Tawadu is cure
+49,Raghbah fi ad-Dunya,الرغبة في الدنيا,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 57:20,Sahih al-Bukhari 6416,Primary,Desire for dunya
+49,Raghbah fi ad-Dunya,الرغبة في الدنيا,Negative,26,Excessive Attachment,التعلق الزائد,Disease,Quran 57:20,,Primary,Excessive attachment
+49,Raghbah fi ad-Dunya,الرغبة في الدنيا,Negative,1,Anger,الغضب,Disease,Quran 57:20,,Secondary,Anger over worldly matters
+49,Raghbah fi ad-Dunya,الرغبة في الدنيا,Negative,15,Love of Dunya,حب الدنيا,Universal_Cure,Quran 57:20,Sahih Ibn Majah 4102,Universal,Zuhd is cure
+50,Ujub bi al-'Amal,العجب بالعمل,Negative,12,Pride,العجب,Disease,Quran 53:32,Sahih Muslim 2818,Primary,Self-admiration of deeds
+50,Ujub bi al-'Amal,العجب بالعمل,Negative,13,Showing Off,الرياء,Disease,Quran 53:32,,Secondary,Showing off through deeds
+50,Ujub bi al-'Amal,العجب بالعمل,Negative,42,Sincerity,الإخلاص,Disease,Quran 53:32,,Secondary,Undermines sincerity
+50,Ujub bi al-'Amal,العجب بالعمل,Negative,12,Pride,العجب,Universal_Cure,Quran 98:5,Sahih al-Bukhari 1,Universal,Ikhlas is cure
+51,Kasal,الكسل,Negative,8,Laziness,الكسل,Disease,Quran 53:39,Sahih al-Bukhari 6369,Primary,Laziness itself
+51,Kasal,الكسل,Negative,36,Laziness,الكسل,Disease,Quran 53:39,,Primary,Repeated
+51,Kasal,الكسل,Negative,49,Sweetness of Worship,حلاوة العبادة,Disease,Quran 53:39,,Secondary,Blocks sweetness of worship
+51,Kasal,الكسل,Negative,8,Laziness,الكسل,Universal_Cure,Quran 29:69,Sahih Muslim 2664,Universal,Mujahadah is cure
+52,Ajz,العجز,Negative,8,Laziness,الكسل,Disease,Quran 8:60,Sahih Muslim 2664,Primary,Weakness
+52,Ajz,العجز,Negative,22,Weak Faith,ضعف الإيمان,Disease,Quran 8:60,,Secondary,Weakens faith
+52,Ajz,العجز,Negative,32,Weak Faith,ضعف الإيمان,Disease,Quran 8:60,,Secondary,Repeated
+52,Ajz,العجز,Negative,4,Fear,الخوف,Disease,Quran 8:60,,Secondary,Weakness from fear
+52,Ajz,العجز,Negative,8,Laziness,الكسل,Universal_Cure,Quran 3:159,Sahih al-Bukhari 6470,Universal,Tawakkul is cure
+53,Jubn,الجبن,Negative,4,Fear,الخوف,Disease,Quran 3:175,Sahih al-Bukhari 6374,Primary,Cowardice from fear
+53,Jubn,الجبن,Negative,7,Guilt,الندم,Disease,Quran 3:175,,Secondary,Guilt can cause cowardice
+53,Jubn,الجبن,Negative,9,Hard-heartedness,قسوة القلب,Disease,Quran 3:175,,Secondary,Hard heart can be cowardly
+53,Jubn,الجبن,Negative,4,Fear,الخوف,Universal_Cure,Quran 3:175,Sahih al-Bukhari 2820,Universal,Shaja'ah is cure
+54,Hirs,الحرص,Negative,14,Greed,الطمع,Disease,Quran 102:1,Sahih Muslim 1051,Primary,Greedy grasping
+54,Hirs,الحرص,Negative,39,Envy of Status,حب الجاه,Disease,Quran 102:1,,Secondary,Greed for status
+54,Hirs,الحرص,Negative,14,Greed,الطمع,Universal_Cure,Quran 20:131,Sahih Muslim 1051,Universal,Qana'ah is cure
+55,Israaf,الإسراف,Negative,14,Greed,الطمع,Disease,Quran 7:31,Sahih al-Bukhari 6091,Secondary,Wastefulness from greed
+55,Israaf,الإسراف,Negative,15,Love of Dunya,حب الدنيا,Disease,Quran 7:31,,Primary,Dunya love causes waste
+55,Israaf,الإسراف,Negative,1,Anger,الغضب,Disease,Quran 7:31,,Secondary,Anger can cause spending
+55,Israaf,الإسراف,Negative,14,Greed,الطمع,Universal_Cure,Quran 2:261,Sahih al-Bukhari 6035,Universal,Jud/balance is cure
+56,Tabdhir,التبذير,Negative,14,Greed,الطمع,Disease,Quran 17:26-27,Sahih Muslim 593,Secondary,Squandering
+56,Tabdhir,التبذير,Negative,2,Jealousy,الحسد,Disease,Quran 17:26-27,,Secondary,Envy causes squandering
+56,Tabdhir,التبذير,Negative,1,Anger,الغضب,Disease,Quran 17:26-27,,Secondary,Anger can cause waste
+56,Tabdhir,التبذير,Negative,14,Greed,الطمع,Universal_Cure,Quran 2:168,Sahih al-Bukhari 52,Universal,Wara' is cure
+57,Ghaflah an al-Mawt,الغفلة عن الموت,Negative,10,Emptiness,الفراغ الروحي,Disease,Quran 62:8,Jami at-Tirmidhi 2307,Primary,Forgetting death
+57,Ghaflah an al-Mawt,الغفلة عن الموت,Negative,21,Distractedness,الغفلة,Disease,Quran 62:8,,Secondary,Heedlessness of death
+57,Ghaflah an al-Mawt,الغفلة عن الموت,Negative,8,Laziness,الكسل,Disease,Quran 62:8,,Secondary,Causes laziness
+57,Ghaflah an al-Mawt,الغفلة عن الموت,Negative,10,Emptiness,الفراغ الروحي,Universal_Cure,Quran 62:8,Jami at-Tirmidhi 2307,Universal,Tadhakkur is cure
+58,Qat' ar-Rahim,قطع الرحم,Negative,16,Hatred,الحقد,Disease,Quran 47:22-23,Sahih al-Bukhari 5984,Primary,Cutting ties from hatred
+58,Qat' ar-Rahim,قطع الرحم,Negative,1,Anger,الغضب,Disease,Quran 47:22-23,,Secondary,Anger can cause cutting ties
+58,Qat' ar-Rahim,قطع الرحم,Negative,9,Loneliness,الوحدة,Disease,Quran 47:22-23,,Secondary,Causes loneliness
+58,Qat' ar-Rahim,قطع الرحم,Negative,16,Hatred,الحقد,Universal_Cure,Quran 49:10,Sahih al-Bukhari 2692,Universal,Islah is cure
+59,Zulm,الظلم,Negative,1,Anger,الغضب,Disease,Quran 42:42,Sahih Muslim 2577,Secondary,Anger can lead to injustice
+59,Zulm,الظلم,Negative,16,Hatred,الحقد,Disease,Quran 42:42,,Secondary,Grudges cause injustice
+59,Zulm,الظلم,Negative,11,Arrogance,الكبر,Disease,Quran 42:42,,Secondary,Pride causes injustice
+59,Zulm,الظلم,Negative,16,Hatred,الحقد,Universal_Cure,Quran 16:90,Sahih Muslim 1827,Universal,Adl is cure
+60,Qanut min Rahmatillah,القنوط من رحمة الله,Negative,6,Hopelessness,اليأس,Disease,Quran 39:53,Sahih Muslim 2755,Primary,Despair of mercy
+60,Qanut min Rahmatillah,القنوط من رحمة الله,Negative,34,Hopelessness,اليأس,Disease,Quran 39:53,,Primary,Repeated
+60,Qanut min Rahmatillah,القنوط من رحمة الله,Negative,6,Hopelessness,اليأس,Universal_Cure,Quran 39:53,Sahih Muslim 2877,Universal,Raja is cure
+66,Shakk,الشك,Negative,19,Doubt,الشك,Disease,Quran 2:2,Sahih Muslim 134,Primary,Doubt itself
+66,Shakk,الشك,Negative,44,Certainty of Faith,اليقين,Disease,Quran 2:2,,Secondary,Opposite of yaqin
+66,Shakk,الشك,Negative,22,Weak Faith,ضعف الإيمان,Disease,Quran 2:2,,Secondary,Weakens faith
+66,Shakk,الشك,Negative,19,Doubt,الشك,Universal_Cure,Quran 2:2,Sahih Muslim 8,Universal,Yaqin is cure
+68,Taswif,التسويف,Negative,8,Laziness,الكسل,Disease,Quran 63:10,Sahih al-Bukhari 6416,Primary,Procrastination
+68,Taswif,التسويف,Negative,6,Hopelessness,اليأس,Disease,Quran 63:10,,Secondary,Can lead to despair
+68,Taswif,التسويف,Negative,12,Tul al-Amal,طول الأمل,Disease,Quran 63:10,,Secondary,Related to long hope
+68,Taswif,التسويف,Negative,8,Laziness,الكسل,Universal_Cure,Quran 66:8,Sahih Muslim 2749,Universal,Tawbah is cure
+69,Qillat ash-Shukr,قلة الشكر,Negative,32,Weak Faith,ضعف الإيمان,Disease,Quran 14:7,Sahih Muslim 2819,Primary,Ingratitude
+69,Qillat ash-Shukr,قلة الشكر,Negative,6,Kufr al-Ni'mah,كفر النعمة,Disease,Quran 14:7,,Secondary,Related
+69,Qillat ash-Shukr,قلة الشكر,Negative,12,Pride,العجب,Disease,Quran 14:7,,Secondary,Self-amazement causes ingratitude
+69,Qillat ash-Shukr,قلة الشكر,Negative,32,Weak Faith,ضعف الإيمان,Universal_Cure,Quran 14:7,Sahih Muslim 2819,Universal,Shukr is cure
+70,Qillat as-Sabr,قلة الصبر,Negative,23,Impatience,قلة الصبر,Disease,Quran 2:153,Sahih Muslim 1053,Primary,Lack of patience
+70,Qillat as-Sabr,قلة الصبر,Negative,33,Impatience,قلة الصبر,Disease,Quran 2:153,,Primary,Repeated
+70,Qillat as-Sabr,قلة الصبر,Negative,1,Anger,الغضب,Disease,Quran 2:153,,Secondary,Anger can cause impatience
+70,Qillat as-Sabr,قلة الصبر,Negative,23,Impatience,قلة الصبر,Universal_Cure,Quran 2:153,Sahih Muslim 1053,Universal,Sabr is cure
+71,Tawbah,التوبة,Positive,47,Repentance,التوبة,Universal,Quran 66:8,Sahih Muslim 2749,Universal,Repentance is universal cure
+71,Tawbah,التوبة,Positive,7,Guilt,الندم,Treatment,Quran 66:8,,Primary,Repentance heals guilt
+71,Tawbah,التوبة,Positive,28,Shame after Sin,الخجل بعد الذنب,Treatment,Quran 66:8,,Primary,Repentance heals shame
+71,Tawbah,التوبة,Positive,6,Hopelessness,اليأس,Treatment,Quran 66:8,,Primary,Repentance opens door to hope
+72,Ikhlas,الإخلاص,Positive,42,Sincerity,الإخلاص,Universal,Quran 98:5,Sahih al-Bukhari 1,Universal,Sincerity is core
+72,Ikhlas,الإخلاص,Positive,13,Showing Off,الرياء,Treatment,Quran 98:5,,Primary,Sincerity cures Riya
+72,Ikhlas,الإخلاص,Positive,11,Arrogance,الكبر,Treatment,Quran 98:5,,Secondary,Sincerity is opposite of Kibr
+73,Sidq,الصدق,Positive,13,Showing Off,الرياء,Universal,Quran 9:119,Sahih al-Bukhari 6094,Universal,Truthfulness cures many
+73,Sidq,الصدق,Positive,29,Kadhib,الكذب,Treatment,Quran 9:119,,Primary,Truthfulness cures lies
+73,Sidq,الصدق,Positive,18,Suspicion,سوء الظن,Treatment,Quran 9:119,,Secondary,Speak truth to cure suspicion
+73,Sidq,الصدق,Positive,42,Sincerity,الإخلاص,Treatment,Quran 9:119,,Primary,Sincerity and truthfulness
+74,Taqwa,التقوى,Positive,1,Anger,الغضب,Universal,Quran 2:197,Sahih Muslim 2564,Universal,Taqwa is universal protection
+74,Taqwa,التقوى,Positive,11,Arrogance,الكبر,Treatment,Quran 2:197,,Primary,True honor is with taqwa
+74,Taqwa,التقوى,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 2:197,,Secondary,Piety prioritizes akhira
+75,Sabr,الصبر,Positive,1,Anger,الغضب,Universal,Quran 2:153,Sahih Muslim 1053,Universal,Patience is universal cure
+75,Sabr,الصبر,Positive,5,Sadness,الحزن,Treatment,Quran 2:153,,Primary,Patience in grief
+75,Sabr,الصبر,Positive,17,Desire for Revenge,الانتقام,Treatment,Quran 2:153,,Primary,Patience in revenge
+75,Sabr,الصبر,Positive,23,Impatience,قلة الصبر,Treatment,Quran 2:153,,Primary,Patience cures impatience
+76,Shukr,الشكر,Positive,2,Jealousy,الحسد,Universal,Quran 14:7,Sahih Muslim 2819,Universal,Gratitude cures envy
+76,Shukr,الشكر,Positive,12,Pride,العجب,Treatment,Quran 14:7,,Primary,Gratitude counters pride
+76,Shukr,الشكر,Positive,6,Kufr al-Ni'mah,كفر النعمة,Treatment,Quran 14:7,,Primary,Gratitude counters ingratitude
+76,Shukr,الشكر,Positive,25,Stinginess,البخل,Treatment,Quran 14:7,,Secondary,Gratitude encourages giving
+77,Tawakkul,التوكل,Positive,3,Anxiety,القلق,Universal,Quran 3:159,Sahih al-Bukhari 6470,Universal,Trust is universal cure
+77,Tawakkul,التوكل,Positive,4,Fear,الخوف,Treatment,Quran 3:159,,Primary,Trust cures fear
+77,Tawakkul,التوكل,Positive,19,Doubt,الشك,Treatment,Quran 3:159,,Secondary,Trust cures doubt
+77,Tawakkul,التوكل,Positive,29,Overthinking,كثرة التفكير,Treatment,Quran 3:159,,Primary,Trust cures overthinking
+77,Tawakkul,التوكل,Positive,26,Excessive Attachment,التعلق الزائد,Treatment,Quran 3:159,,Primary,Trust detaches from creation
+78,Khawf,الخوف,Positive,4,Fear,الخوف,Universal,Quran 3:175,Sahih Muslim 2758,Universal,Proper fear balances
+78,Khawf,الخوف,Positive,45,Fear of Allah,خشية الله,Treatment,Quran 3:175,,Primary,Proper fear of Allah
+78,Khawf,الخوف,Positive,43,Trust in Allah,التوكل على الله,Treatment,Quran 3:175,,Secondary,Balance with trust
+79,Raja,الرجاء,Positive,6,Hopelessness,اليأس,Universal,Quran 39:53,Sahih Muslim 2877,Universal,Hope cures despair
+79,Raja,الرجاء,Positive,3,Anxiety,القلق,Treatment,Quran 39:53,,Primary,Hope calms anxiety
+79,Raja,الرجاء,Positive,4,Fear,الخوف,Treatment,Quran 39:53,,Primary,Hope balances fear
+79,Raja,الرجاء,Positive,14,Yas,اليأس,Treatment,Quran 39:53,,Primary,Hope cures yas
+80,Yaqin,اليقين,Positive,19,Doubt,الشك,Universal,Quran 2:2,Sahih Muslim 8,Universal,Certainty is universal cure
+80,Yaqin,اليقين,Positive,22,Weak Faith,ضعف الإيمان,Treatment,Quran 2:2,,Primary,Certainty strengthens weak faith
+80,Yaqin,اليقين,Positive,19,Doubt,الشك,Treatment,Quran 2:2,,Primary,Certainty cures shakk
+81,Zuhd,الزهد,Positive,15,Love of Dunya,حب الدنيا,Universal,Quran 57:20,Sahih Ibn Majah 4102,Universal,Asceticism is universal
+81,Zuhd,الزهد,Positive,14,Greed,الطمع,Treatment,Quran 57:20,,Primary,Zuhd cures greed
+81,Zuhd,الزهد,Positive,26,Excessive Attachment,التعلق الزائد,Treatment,Quran 57:20,,Primary,Zuhd moderates attachment
+82,Qana'ah,القناعة,Positive,14,Greed,الطمع,Universal,Quran 20:131,Sahih Muslim 1051,Universal,Contentment is universal
+82,Qana'ah,القناعة,Positive,2,Jealousy,الحسد,Treatment,Quran 20:131,,Primary,Contentment cures envy
+82,Qana'ah,القناعة,Positive,39,Envy of Status,حب الجاه,Treatment,Quran 20:131,,Primary,Contentment cures status envy
+83,Wara',الورع,Positive,23,Impatience,قلة الصبر,Universal,Quran 2:168,Sahih al-Bukhari 52,Universal,Restraint is universal
+83,Wara',الورع,Positive,14,Greed,الطمع,Treatment,Quran 2:168,,Primary,Wara' restrains greed
+83,Wara',الورع,Positive,1,Anger,الغضب,Treatment,Quran 2:168,,Secondary,Restraint curbs anger
+84,Haya',الحياء,Positive,1,Anger,الغضب,Universal,Quran 7:26,Sahih al-Bukhari 6117,Universal,Modesty is universal
+84,Haya',الحياء,Positive,1,Anger,الغضب,Treatment,Quran 7:26,,Primary,Modesty controls anger
+84,Haya',الحياء,Positive,13,Showing Off,الرياء,Treatment,Quran 7:26,,Secondary,Modesty restrains showing off
+85,Rifq,الرفق,Positive,1,Anger,الغضب,Universal,Quran 3:159,Sahih Muslim 2593,Universal,Gentleness is universal
+85,Rifq,الرفق,Positive,1,Anger,الغضب,Treatment,Quran 3:159,,Primary,Gentleness cures anger
+85,Rifq,الرفق,Positive,16,Hatred,الحقد,Treatment,Quran 3:159,,Secondary,Gentleness cures hatred
+86,Hilm,الحلم,Positive,1,Anger,الغضب,Universal,Quran 3:134,Sahih al-Bukhari 6114,Universal,Forbearance is universal
+86,Hilm,الحلم,Positive,1,Anger,الغضب,Treatment,Quran 3:134,,Primary,Forbearance cures anger
+86,Hilm,الحلم,Positive,16,Hatred,الحقد,Treatment,Quran 3:134,,Secondary,Forbearance cures hatred
+87,Rahmah,الرحمة,Positive,16,Hatred,الحقد,Universal,Quran 21:107,Sahih al-Bukhari 6013,Universal,Mercy is universal
+87,Rahmah,الرحمة,Positive,9,Hard-heartedness,قسوة القلب,Treatment,Quran 21:107,,Primary,Mercy softens hard heart
+87,Rahmah,الرحمة,Positive,24,Hard-heartedness,قسوة القلب,Treatment,Quran 21:107,,Primary,Repeated
+88,Afw,العفو,Positive,1,Anger,الغضب,Universal,Quran 42:40,Sahih Muslim 2588,Universal,Forgiveness is universal
+88,Afw,العفو,Positive,16,Hatred,الحقد,Treatment,Quran 42:40,,Primary,Forgiveness cures hatred
+88,Afw,العفو,Positive,17,Desire for Revenge,الانتقام,Treatment,Quran 42:40,,Primary,Forgiveness leaves vengeance to Allah
+89,Safh,الصفح,Positive,16,Hatred,الحقد,Universal,Quran 24:22,Sahih Muslim 2588,Universal,Pardoning is universal
+89,Safh,الصفح,Positive,16,Hatred,الحقد,Treatment,Quran 24:22,,Primary,Safh cures Hiqd
+89,Safh,الصفح,Positive,17,Desire for Revenge,الانتقام,Treatment,Quran 24:22,,Primary,Safh abandons revenge
+90,Ihsan,الإحسان,Positive,13,Showing Off,الرياء,Universal,Quran 16:90,Sahih Muslim 8,Universal,Ihsan is universal
+90,Ihsan,الإحسان,Positive,13,Showing Off,الرياء,Treatment,Quran 16:90,,Primary,Ihsan cures Riya
+90,Ihsan,الإحسان,Positive,38,Excessive Attachment,التعلق الزائد,Treatment,Quran 16:90,,Secondary,Ihsan balances attachment
+91,Mahabbah,المحبة,Positive,9,Loneliness,الوحدة,Universal,Quran 2:165,Sahih al-Bukhari 6502,Universal,Love is universal
+91,Mahabbah,المحبة,Positive,9,Loneliness,الوحدة,Treatment,Quran 2:165,,Primary,Love cures loneliness
+91,Mahabbah,المحبة,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 2:165,,Primary,Love brings nearness to Allah
+92,Khushu',الخشوع,Positive,11,Arrogance,الكبر,Universal,Quran 23:1-2,Sahih Muslim 489,Universal,Khushu' is universal
+92,Khushu',الخشوع,Positive,5,Sadness,الحزن,Treatment,Quran 23:1-2,,Secondary,Khushu' brings comfort
+92,Khushu',الخشوع,Positive,9,Hard-heartedness,قسوة القلب,Treatment,Quran 23:1-2,,Primary,Khushu' softens hard heart
+93,Inabah,الإنابة,Positive,47,Repentance,التوبة,Universal,Quran 39:54,Sahih Muslim 2702,Universal,Inabah is universal
+93,Inabah,الإنابة,Positive,7,Guilt,الندم,Treatment,Quran 39:54,,Primary,Inabah heals guilt
+93,Inabah,الإنابة,Positive,28,Shame after Sin,الخجل بعد الذنب,Treatment,Quran 39:54,,Primary,Inabah heals shame
+94,Uns billah,الأنس بالله,Positive,9,Loneliness,الوحدة,Universal,Quran 13:28,Sahih Muslim 2675,Universal,Comfort in Allah is universal
+94,Uns billah,الأنس بالله,Positive,9,Loneliness,الوحدة,Treatment,Quran 13:28,,Primary,Comfort in Allah cures loneliness
+94,Uns billah,الأنس بالله,Positive,8,Laziness,الكسل,Treatment,Quran 13:28,,Secondary,Energizes worship
+95,Muhasabah,المحاسبة,Positive,7,Guilt,الندم,Universal,Quran 59:18,Sahih Muslim 2816,Universal,Self-accounting is universal
+95,Muhasabah,المحاسبة,Positive,7,Guilt,الندم,Treatment,Quran 59:18,,Primary,Self-accounting processes guilt
+95,Muhasabah,المحاسبة,Positive,47,Repentance,التوبة,Treatment,Quran 59:18,,Secondary,Part of repentance
+96,Muraqabah,المراقبة,Positive,21,Distractedness,الغفلة,Universal,Quran 50:16,Sahih Muslim 8,Universal,Watchfulness is universal
+96,Muraqabah,المراقبة,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 50:16,,Primary,Muraqabah guards against emptiness
+96,Muraqabah,المراقبة,Positive,21,Distractedness,الغفلة,Treatment,Quran 50:16,,Primary,Repeated
+97,Ikhbat,الإخبات,Positive,11,Arrogance,الكبر,Universal,Quran 22:34,Sahih Muslim 2865,Universal,Humility is universal
+97,Ikhbat,الإخبات,Positive,11,Arrogance,الكبر,Treatment,Quran 22:34,,Primary,Ikhbat is opposite of Kibr
+98,Tawadu',التواضع,Positive,11,Arrogance,الكبر,Universal,Quran 25:63,Sahih Muslim 2588,Universal,Tawadu' is universal
+98,Tawadu',التواضع,Positive,11,Arrogance,الكبر,Treatment,Quran 25:63,,Primary,Tawadu' cures Kibr
+98,Tawadu',التواضع,Positive,12,Pride,العجب,Treatment,Quran 25:63,,Primary,Tawadu' cures Ujb
+99,Sakinah,السكينة,Positive,3,Anxiety,القلق,Universal,Quran 48:4,Sahih al-Bukhari 3614,Universal,Tranquility is universal
+99,Sakinah,السكينة,Positive,3,Anxiety,القلق,Treatment,Quran 48:4,,Primary,Tranquility cures anxiety
+99,Sakinah,السكينة,Positive,29,Overthinking,كثرة التفكير,Treatment,Quran 48:4,,Primary,Tranquility cures overthinking
+100,Ridha,الرضا,Positive,2,Jealousy,الحسد,Universal,Quran 98:8,Sahih Muslim 2815,Universal,Resignation is universal
+100,Ridha,الرضا,Positive,2,Jealousy,الحسد,Treatment,Quran 98:8,,Primary,Contentment cures envy
+100,Ridha,الرضا,Positive,23,Impatience,قلة الصبر,Treatment,Quran 98:8,,Primary,Resignation cures impatience
+101,Shawq ila Allah,الشوق إلى الله,Positive,48,Spiritual Longing,الشوق إلى الله,Universal,Quran 29:5,Sahih al-Bukhari 6507,Universal,Longing is universal
+101,Shawq ila Allah,الشوق إلى الله,Positive,48,Spiritual Longing,الشوق إلى الله,Treatment,Quran 29:5,,Primary,Shawq itself
+101,Shawq ila Allah,الشوق إلى الله,Positive,16,Karahiyyat al-Mawt,كراهية الموت,Treatment,Quran 29:5,,Primary,Longing for Allah cures fear of death
+102,Mahabbat ar-Rasul,محبة الرسول,Positive,34,Hopelessness,اليأس,Universal,Quran 9:24,Sahih al-Bukhari 15,Universal,Love of Prophet is universal
+102,Mahabbat ar-Rasul,محبة الرسول,Positive,34,Hopelessness,اليأس,Treatment,Quran 9:24,,Primary,Following Prophet's example cures despair
+102,Mahabbat ar-Rasul,محبة الرسول,Positive,42,Sincerity,الإخلاص,Treatment,Quran 9:24,,Primary,Love of Prophet exemplifies sincerity
+103,Tafakkur,التفكر,Positive,19,Doubt,الشك,Universal,Quran 3:191,Sahih Muslim 2699,Universal,Reflection is universal
+103,Tafakkur,التفكر,Positive,35,Stinginess,البخل,Treatment,Quran 3:191,,Primary,Reflection cures stinginess
+103,Tafakkur,التفكر,Positive,20,Confusion,الحيرة,Treatment,Quran 3:191,,Secondary,Reflection aids clarity
+104,Tadhakkur,التذكر,Positive,10,Emptiness,الفراغ الروحي,Universal,Quran 13:28,Sahih Muslim 2675,Universal,Remembrance is universal
+104,Tadhakkur,التذكر,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 13:28,,Primary,Remembrance fills emptiness
+104,Tadhakkur,التذكر,Positive,21,Distractedness,الغفلة,Treatment,Quran 13:28,,Primary,Remembrance counters heedlessness
+105,Tafwid,التفويض,Positive,3,Anxiety,القلق,Universal,Quran 40:44,Sahih al-Bukhari 6369,Universal,Delegation is universal
+105,Tafwid,التفويض,Positive,3,Anxiety,القلق,Treatment,Quran 40:44,,Primary,Delegation to Allah cures anxiety
+105,Tafwid,التفويض,Positive,29,Overthinking,كثرة التفكير,Treatment,Quran 40:44,,Primary,Delegation cures overthinking
+106,Haybah,الهيبة,Positive,1,Anger,الغضب,Universal,Quran 59:21,Sahih Muslim 2356,Universal,Awe of Allah is universal
+106,Haybah,الهيبة,Positive,1,Anger,الغضب,Treatment,Quran 59:21,,Secondary,Awe of Allah calms anger
+106,Haybah,الهيبة,Positive,2,Jealousy,الحسد,Treatment,Quran 59:21,,Primary,Awe of Allah cures envy
+107,Basirah,البصيرة,Positive,19,Doubt,الشك,Universal,Quran 12:108,Sahih Muslim 2699,Universal,Insight is universal
+107,Basirah,البصيرة,Positive,20,Confusion,الحيرة,Treatment,Quran 12:108,,Primary,Basirah cures confusion
+107,Basirah,البصيرة,Positive,19,Doubt,الشك,Treatment,Quran 12:108,,Primary,Basirah cures doubt
+108,Firasah,الفراسة,Positive,20,Confusion,الحيرة,Universal,Quran 15:75,Jami at-Tirmidhi 3127,Universal,Intuition is universal
+108,Firasah,الفراسة,Positive,20,Confusion,الحيرة,Treatment,Quran 15:75,,Primary,Firasah cures confusion
+108,Firasah,الفراسة,Positive,19,Doubt,الشك,Treatment,Quran 15:75,,Secondary,Intuition aids certainty
+109,Samt,الصمت,Positive,1,Anger,الغضب,Universal,Quran 50:18,Sahih al-Bukhari 6475,Universal,Silence is universal
+109,Samt,الصمت,Positive,1,Anger,الغضب,Treatment,Quran 50:18,,Primary,Silence cures anger
+109,Samt,الصمت,Positive,13,Showing Off,الرياء,Treatment,Quran 50:18,,Secondary,Silence reduces showing off
+110,Husn az-Zann billah,حسن الظن بالله,Positive,3,Anxiety,القلق,Universal,Quran 39:53,Sahih Muslim 2877,Universal,Good expectation of Allah is universal
+110,Husn az-Zann billah,حسن الظن بالله,Positive,3,Anxiety,القلق,Treatment,Quran 39:53,,Primary,Good expectation cures anxiety
+110,Husn az-Zann billah,حسن الظن بالله,Positive,4,Fear,الخوف,Treatment,Quran 39:53,,Primary,Good expectation of Allah cures fear
+111,Hikmah,الحكمة,Positive,20,Confusion,الحيرة,Universal,Quran 2:269,Sahih al-Bukhari 73,Universal,Wisdom is universal
+111,Hikmah,الحكمة,Positive,20,Confusion,الحيرة,Treatment,Quran 2:269,,Primary,Hikmah cures confusion
+111,Hikmah,الحكمة,Positive,38,Excessive Attachment,التعلق الزائد,Treatment,Quran 2:269,,Primary,Wisdom balances attachment
+112,Adl,العدل,Positive,17,Desire for Revenge,الانتقام,Universal,Quran 16:90,Sahih Muslim 1827,Universal,Justice is universal
+112,Adl,العدل,Positive,17,Desire for Revenge,الانتقام,Treatment,Quran 16:90,,Primary,Justice replaces revenge
+112,Adl,العدل,Positive,38,Excessive Attachment,التعلق الزائد,Treatment,Quran 16:90,,Primary,Justice balances attachment
+113,Amanah,الأمانة,Positive,30,Khiyanah,الخيانة,Universal,Quran 4:58,Sahih al-Bukhari 33,Universal,Trustworthiness is universal
+113,Amanah,الأمانة,Positive,30,Khiyanah,الخيانة,Treatment,Quran 4:58,,Primary,Amanah cures betrayal
+113,Amanah,الأمانة,Positive,1,Anger,الغضب,Treatment,Quran 4:58,,Secondary,Trustworthiness guards against anger
+114,Wafa bil-Ahd,الوفاء بالعهد,Positive,42,Ikhlaf al-Wa'd,إخلاف الوعد,Universal,Quran 17:34,Sahih al-Bukhari 33,Universal,Fulfilling promises is universal
+114,Wafa bil-Aهد,الوفاء بالعهد,Positive,42,Ikhlaf al-Wa'd,إخلاف الوعد,Treatment,Quran 17:34,,Primary,Wafa cures breaking promises
+114,Wafa bil-Ahd,الوفاء بالعهد,Positive,1,Anger,الغضب,Treatment,Quran 17:34,,Secondary,Keeping promises even when angry
+115,Shaja'ah,الشجاعة,Positive,4,Fear,الخوف,Universal,Quran 3:175,Sahih al-Bukhari 2820,Universal,Courage is universal
+115,Shaja'ah,الشجاعة,Positive,4,Fear,الخوف,Treatment,Quran 3:175,,Primary,Shaja'ah cures fear
+115,Shaja'ah,الشجاعة,Positive,9,Hard-heartedness,قسوة القلب,Treatment,Quran 3:175,,Secondary,Courage faces challenges
+116,Iffah,العفة,Positive,14,Greed,الطمع,Universal,Quran 24:33,Sahih al-Bukhari 1469,Universal,Chastity is universal
+116,Iffah,العفة,Positive,14,Greed,الطمع,Treatment,Quran 24:33,,Primary,Iffah restrains greed
+116,Iffah,العفة,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 24:33,,Secondary,Iffah moderates dunya attachment
+117,Sakhawah,السخاوة,Positive,25,Stinginess,البخل,Universal,Quran 2:261,Sahih al-Bukhari 6035,Universal,Generosity is universal
+117,Sakhawah,السخاوة,Positive,25,Stinginess,البخل,Treatment,Quran 2:261,,Primary,Generosity cures stinginess
+117,Sakhawah,السخاوة,Positive,35,Stinginess,البخل,Treatment,Quran 2:261,,Primary,Repeated
+118,Ithar,الإيثار,Positive,25,Stinginess,البخل,Universal,Quran 59:9,Sahih al-Bukhari 3798,Universal,Selflessness is universal
+118,Ithar,الإيثار,Positive,25,Stinginess,البخل,Treatment,Quran 59:9,,Primary,Ithar cures stinginess
+118,Ithar,الإيثار,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 59:9,,Secondary,Ithar counters dunya love
+119,Husn al-Khuluq,حسن الخلق,Positive,1,Anger,الغضب,Universal,Quran 68:4,Sahih Muslim 2321,Universal,Good character is universal
+119,Husn al-Khuluq,حسن الخلق,Positive,1,Anger,الغضب,Treatment,Quran 68:4,,Primary,Good character cures anger
+119,Husn al-Khuluq,حسن الخلق,Positive,18,Suspicion,سوء الظن,Treatment,Quran 68:4,,Secondary,Good character reduces suspicion
+120,Haya' min Allah,الحياء من الله,Positive,1,Anger,الغضب,Universal,Quran 7:26,Jami at-Tirmidhi 2458,Universal,Modesty before Allah is universal
+120,Haya' min Allah,الحياء من الله,Positive,1,Anger,الغضب,Treatment,Quran 7:26,,Primary,Modesty before Allah cures anger
+120,Haya' min Allah,الحياء من الله,Positive,13,Showing Off,الرياء,Treatment,Quran 7:26,,Secondary,Modesty before Allah reduces showing off
+121,Istiqamah,الاستقامة,Positive,21,Distractedness,الغفلة,Universal,Quran 41:30,Sahih Muslim 38,Universal,Steadfastness is universal
+121,Istiqamah,الاستقامة,Positive,8,Laziness,الكسل,Treatment,Quran 41:30,,Primary,Istiqamah counters laziness
+121,Istiqamah,الاستقامة,Positive,21,Distractedness,الغفلة,Treatment,Quran 41:30,,Primary,Steadfastness counters distraction
+122,Mujahadah,المجاهدة,Positive,8,Laziness,الكسل,Universal,Quran 29:69,Sahih Muslim 2664,Universal,Striving is universal
+122,Mujahadah,المجاهدة,Positive,8,Laziness,الكسل,Treatment,Quran 29:69,,Primary,Striving counters laziness
+122,Mujahadah,المجاهدة,Positive,13,Ittiba al-Hawa,اتباع الهوى,Treatment,Quran 29:69,,Primary,Striving against desires
+123,Murabitah,المرابطة,Positive,21,Distractedness,الغفلة,Universal,Quran 3:200,Sahih Muslim 251,Universal,Steadfast guard is universal
+123,Murabitah,المرابطة,Positive,21,Distractedness,الغفلة,Treatment,Quran 3:200,,Primary,Murabitah counters distraction
+123,Murabitah,المرابطة,Positive,8,Laziness,الكسل,Treatment,Quran 3:200,,Secondary,Steadfast guard enables action
+124,Faqr ila Allah,الفقر إلى الله,Positive,15,Love of Dunya,حب الدنيا,Universal,Quran 35:15,Sahih Muslim 2577,Universal,Neediness of Allah is universal
+124,Faqr ila Allah,الفقر إلى الله,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 35:15,,Primary,Neediness of Allah cures dunya love
+124,Faqr ila Allah,الفقر إلى الله,Positive,26,Excessive Attachment,التعلق الزائد,Treatment,Quran 35:15,,Primary,Neediness of Allah detaches from creation
+125,Ubudiyyah,العبودية,Positive,40,Emptiness,الفراغ الروحي,Universal,Quran 51:56,Sahih Muslim 8,Universal,Servanthood is universal
+125,Ubudiyyah,العبودية,Positive,40,Emptiness,الفراغ الروحي,Treatment,Quran 51:56,,Primary,Ubudiyyah fills emptiness
+125,Ubudiyyah,العبودية,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 51:56,,Primary,Servanthood brings nearness
+126,Tafarrugh lil-Ibadah,التفرغ للعبادة,Positive,8,Laziness,الكسل,Universal,Quran 62:10,Jami at-Tirmidhi 2466,Universal,Dedication to worship is universal
+126,Tafarrugh lil-Ibadah,التفرغ للعبادة,Positive,8,Laziness,الكسل,Treatment,Quran 62:10,,Primary,Dedication counters laziness
+126,Tafarrugh lil-Ibadah,التفرغ للعبادة,Positive,21,Distractedness,الغفلة,Treatment,Quran 62:10,,Primary,Dedication counters distraction
+127,Sidq al-Mahabbah,صدق المحبة,Positive,42,Sincerity,الإخلاص,Universal,Quran 3:31,Sahih al-Bukhari 15,Universal,True love is universal
+127,Sidq al-Mahabbah,صدق المحبة,Positive,42,Sincerity,الإخلاص,Treatment,Quran 3:31,,Primary,True love is part of sincerity
+127,Sidq al-Mahabbah,صدق المحبة,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 3:31,,Secondary,True love brings nearness
+128,Taqarrub ila Allah,التقرب إلى الله,Positive,10,Emptiness,الفراغ الروحي,Universal,Quran 5:35,Sahih al-Bukhari 6502,Universal,Drawing near to Allah is universal
+128,Taqarrub ila Allah,التقرب إلى الله,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 5:35,,Primary,Taqarrub fills emptiness
+128,Taqarrub ila Allah,التقرب إلى الله,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 5:35,,Primary,Drawing near brings nearness
+129,Thabat,الثبات,Positive,8,Laziness,الكسل,Universal,Quran 14:27,Jami at-Tirmidhi 2140,Universal,Firmness is universal
+129,Thabat,الثبات,Positive,8,Laziness,الكسل,Treatment,Quran 14:27,,Primary,Firmness counters laziness
+129,Thabat,الثبات,Positive,9,Hard-heartedness,قسوة القلب,Treatment,Quran 14:27,,Secondary,Firmness in good
+130,Tajrid,التجريد,Positive,42,Sincerity,الإخلاص,Universal,Quran 39:11,Sahih al-Bukhari 1,Universal,Disassociation is universal
+130,Tajrid,التجريد,Positive,13,Showing Off,الرياء,Treatment,Quran 39:11,,Primary,Tajrid cures showing off
+130,Tajrid,التجريد,Positive,42,Sincerity,الإخلاص,Treatment,Quran 39:11,,Primary,Tajrid exemplifies sincerity
+131,Ikhlas al-Qasd,إخلاص القصد,Positive,13,Showing Off,الرياء,Universal,Quran 98:5,Sahih al-Bukhari 1,Universal,Pure intention is universal
+131,Ikhlas al-Qasd,إخلاص القصد,Positive,13,Showing Off,الرياء,Treatment,Quran 98:5,,Primary,Pure intention cures showing off
+131,Ikhlas al-Qasd,إخلاص القصد,Positive,42,Sincerity,الإخلاص,Treatment,Quran 98:5,,Primary,Intensifier of ikhlas
+132,Futuwwah,الفتوة,Positive,11,Arrogance,الكبر,Universal,Quran 59:9,Sahih Muslim 2588,Universal,Chivalrous character is universal
+132,Futuwwah,الفتوة,Positive,11,Arrogance,الكبر,Treatment,Quran 59:9,,Primary,Futuwwah counters arrogance
+132,Futuwwah,الفتوة,Positive,42,Sincerity,الإخلاص,Treatment,Quran 59:9,,Secondary,Chivalrous character supports sincerity
+133,Tawakkul al-Kamil,التوكل الكامل,Positive,43,Trust in Allah,التوكل على الله,Universal,Quran 65:3,Sahih al-Bukhari 6470,Universal,Complete trust is universal
+133,Tawakkul al-Kamil,التوكل الكامل,Positive,3,Anxiety,القلق,Treatment,Quran 65:3,,Primary,Complete trust cures anxiety
+133,Tawakkul al-Kamil,التوكل الكامل,Positive,22,Weak Faith,ضعف الإيمان,Treatment,Quran 65:3,,Primary,Complete trust strengthens faith
+134,Jam'iyyat al-Qalb,جمعية القلب,Positive,29,Overthinking,كثرة التفكير,Universal,Quran 13:28,Sahih Muslim 2675,Universal,Unity of heart is universal
+134,Jam'iyyat al-Qalb,جمعية القلب,Positive,29,Overthinking,كثرة التفكير,Treatment,Quran 13:28,,Primary,Unity of heart cures overthinking
+134,Jam'iyyat al-Qalb,جمعية القلب,Positive,21,Distractedness,الغفلة,Treatment,Quran 13:28,,Primary,Unity counters distraction
+135,Hudur al-Qalb,حضور القلب,Positive,21,Distractedness,الغفلة,Universal,Quran 23:1-2,Sahih Muslim 489,Universal,Presence of heart is universal
+135,Hudur al-Qalb,حضور القلب,Positive,21,Distractedness,الغفلة,Treatment,Quran 23:1-2,,Primary,Hudur al-Qalb counters distraction
+135,Hudur al-Qalb,حضور القلب,Positive,49,Sweetness of Worship,حلاوة العبادة,Treatment,Quran 23:1-2,,Primary,Heart presence brings sweetness
+136,Musharakah fi al-Khayr,المشاركة في الخير,Positive,18,Suspicion,سوء الظن,Universal,Quran 5:2,Sahih Muslim 2699,Universal,Joining in goodness is universal
+136,Musharakah fi al-Khayr,المشاركة في الخير,Positive,18,Suspicion,سوء الظن,Treatment,Quran 5:2,,Primary,Joining in goodness builds trust
+136,Musharakah fi al-Khayr,المشاركة في الخير,Positive,9,Loneliness,الوحدة,Treatment,Quran 5:2,,Secondary,Community involvement cures loneliness
+137,Nasihah,النصيحة,Positive,18,Suspicion,سوء الظن,Universal,Quran 103:3,Sahih Muslim 55,Universal,Sincere advice is universal
+137,Nasihah,النصيحة,Positive,18,Suspicion,سوء الظن,Treatment,Quran 103:3,,Primary,Sincere advice cures suspicion
+137,Nasihah,النصيحة,Positive,42,Sincerity,الإخلاص,Treatment,Quran 103:3,,Secondary,Part of iman and sincerity
+138,Islah,الإصلاح,Positive,16,Hatred,الحقد,Universal,Quran 49:10,Sahih al-Bukhari 2692,Universal,Reconciliation is universal
+138,Islah,الإصلاح,Positive,16,Hatred,الحقد,Treatment,Quran 49:10,,Primary,Islah cures hatred
+138,Islah,الإصلاح,Positive,17,Desire for Revenge,الانتقام,Treatment,Quran 49:10,,Primary,Reconciliation replaces revenge
+139,Himmah Aliyah,الهمة العالية,Positive,8,Laziness,الكسل,Universal,Quran 94:7-8,Sahih Muslim 2664,Universal,High ambition is universal
+139,Himmah Aliyah,الهمة العالية,Positive,8,Laziness,الكسل,Treatment,Quran 94:7-8,,Primary,High ambition counters laziness
+139,Himmah Aliyah,الهمة العالية,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 94:7-8,,Secondary,High ambition for akhira
+140,Mushahadah,المشاهدة,Positive,21,Distractedness,الغفلة,Universal,Quran 50:16,Sahih Muslim 8,Universal,Direct witnessing is universal
+140,Mushahadah,المشاهدة,Positive,21,Distractedness,الغفلة,Treatment,Quran 50:16,,Primary,Mushahadah counters distraction
+140,Mushahadah,المشاهدة,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 50:16,,Primary,Direct witnessing fills void
+141,Yusr,اليسر,Positive,19,Doubt,الشك,Universal,Quran 2:185,Sahih al-Bukhari 39,Universal,Ease is universal
+141,Yusr,اليسر,Positive,19,Doubt,الشك,Treatment,Quran 2:185,,Primary,Yusr aids clarity
+141,Yusr,اليسر,Positive,20,Confusion,الحيرة,Treatment,Quran 2:185,,Primary,Allah's law is ease
+142,Bashashah,البشاشة,Positive,9,Loneliness,الوحدة,Universal,Quran 80:1-2,Sahih Muslim 2626,Universal,Cheerful face is universal
+142,Bashashah,البشاشة,Positive,9,Loneliness,الوحدة,Treatment,Quran 80:1-2,,Primary,Cheerful face counters loneliness
+142,Bashashah,البشاشة,Positive,1,Anger,الغضب,Treatment,Quran 80:1-2,,Secondary,Cheerfulness counters anger
+143,Tafa'ul,التفاؤل,Positive,6,Hopelessness,اليأس,Universal,Quran 39:53,Sahih al-Bukhari 5776,Universal,Optimism is universal
+143,Tafa'ul,التفاؤل,Positive,6,Hopelessness,اليأس,Treatment,Quran 39:53,,Primary,Optimism cures despair
+143,Tafa'ul,التفاؤل,Positive,3,Anxiety,القلق,Treatment,Quran 39:53,,Primary,Optimism calms anxiety
+144,Husn az-Zann bin-Nas,حسن الظن بالناس,Positive,18,Suspicion,سوء الظن,Universal,Quran 49:12,Sahih Muslim 2563,Universal,Good assumption is universal
+144,Husn az-Zann bin-Nas,حسن الظن بالناس,Positive,18,Suspicion,سوء الظن,Treatment,Quran 49:12,,Primary,Good assumption cures suspicion
+144,Husn az-Zann bin-Nas,حسن الظن بالناس,Positive,2,Jealousy,الحسد,Treatment,Quran 49:12,,Primary,Good assumption cures envy
+145,Adab,الأدب,Positive,1,Anger,الغضب,Universal,Quran 68:4,Sahih Muslim 2321,Universal,Proper conduct is universal
+145,Adab,الأدب,Positive,1,Anger,الغضب,Treatment,Quran 68:4,,Primary,Adab regulates anger
+145,Adab,الأدب,Positive,13,Showing Off,الرياء,Treatment,Quran 68:4,,Secondary,Adab prevents showing off
+146,Hifz al-Lisan,حفظ اللسان,Positive,18,Suspicion,سوء الظن,Universal,Quran 50:18,Sahih al-Bukhari 6475,Universal,Guarding tongue is universal
+146,Hifz al-Lisan,حفظ اللسان,Positive,18,Suspicion,سوء الظن,Treatment,Quran 50:18,,Primary,Guarding tongue prevents backbiting
+146,Hifz al-Lisan,حفظ اللسان,Positive,1,Anger,الغضب,Treatment,Quran 50:18,,Secondary,Guarding tongue prevents angry speech
+147,Samahah,السماحة,Positive,25,Stinginess,البخل,Universal,Quran 7:199,Sahih al-Bukhari 2076,Universal,Ease is universal
+147,Samahah,السماحة,Positive,25,Stinginess,البخل,Treatment,Quran 7:199,,Primary,Samahah cures stinginess
+147,Samahah,السماحة,Positive,16,Hatred,الحقد,Treatment,Quran 7:199,,Secondary,Ease in dealings cures hatred
+148,Waqar,الوقار,Positive,11,Arrogance,الكبر,Universal,Quran 25:63,Sahih al-Bukhari 6118,Universal,Dignity is universal
+148,Waqar,الوقار,Positive,11,Arrogance,الكبر,Treatment,Quran 25:63,,Primary,Waqar is opposite of Kibr
+148,Waqar,الوقار,Positive,1,Anger,الغضب,Treatment,Quran 25:63,,Secondary,Dignity composes anger
+149,Jud,الجود,Positive,25,Stinginess,البخل,Universal,Quran 2:261,Sahih al-Bukhari 6035,Universal,Generosity is universal
+149,Jud,الجود,Positive,25,Stinginess,البخل,Treatment,Quran 2:261,,Primary,Jud cures Bukhl
+149,Jud,الجود,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 2:261,,Secondary,Generosity counters dunya love
+150,Tawazun,التوازن,Positive,14,Greed,الطمع,Universal,Quran 28:77,Sahih al-Bukhari 6139,Universal,Balance is universal
+150,Tawazun,التوازن,Positive,14,Greed,الطمع,Treatment,Quran 28:77,,Primary,Balance counters greed
+150,Tawazun,التوازن,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 28:77,,Primary,Balance in dunya
+153,Anah,الأناة,Positive,23,Impatience,قلة الصبر,Universal,Quran 17:11,Sahih Muslim 17,Universal,Deliberateness is universal
+153,Anah,الأناة,Positive,23,Impatience,قلة الصبر,Treatment,Quran 17:11,,Primary,Anah cures impatience (Jaza')
+153,Anah,الأناة,Positive,1,Anger,الغضب,Treatment,Quran 17:11,,Secondary,Deliberateness in anger
+155,Satr,الستر,Positive,18,Suspicion,سوء الظن,Universal,Quran 24:19,Sahih Muslim 2590,Universal,Concealment is universal
+155,Satr,الستر,Positive,18,Suspicion,سوء الظن,Treatment,Quran 24:19,,Primary,Satr covers faults
+155,Satr,الستر,Positive,16,Hatred,الحقد,Treatment,Quran 24:19,,Secondary,Covering reduces hatred
+156,Rahmah lil-Khalq,الرحمة للخلق,Positive,9,Hard-heartedness,قسوة القلب,Universal,Quran 21:107,Sahih al-Bukhari 6013,Universal,Mercy to creation is universal
+156,Rahmah lil-Khalq,الرحمة للخلق,Positive,9,Hard-heartedness,قسوة القلب,Treatment,Quran 21:107,,Primary,Mercy softens hard heart
+156,Rahmah lil-Khalq,الرحمة للخلق,Positive,9,Loneliness,الوحدة,Treatment,Quran 21:107,,Secondary,Mercy builds connections
+157,Tawadu fi al-Ilm,التواضع في العلم,Positive,12,Pride,العجب,Universal,Quran 18:66,Sahih Muslim 2865,Universal,Humility in knowledge is universal
+157,Tawadu fi al-Ilm,التواضع في العلم,Positive,12,Pride,العجب,Treatment,Quran 18:66,,Primary,Humility in knowledge counters pride
+157,Tawadu fi al-Ilm,التواضع في العلم,Positive,19,Doubt,الشك,Treatment,Quran 18:66,,Secondary,Humility in seeking knowledge
+159,Zuhd fi ad-Dunya,الزهد في الدنيا,Positive,15,Love of Dunya,حب الدنيا,Universal,Quran 57:20,Sunan Ibn Majah 4102,Universal,Asceticism is universal
+159,Zuhd fi ad-Dunya,الزهد في الدنيا,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 57:20,,Primary,Zuhd cures dunya love
+159,Zuhd fi ad-Dunya,الزهد في الدنيا,Positive,14,Greed,الطمع,Treatment,Quran 57:20,,Primary,Asceticism cures greed
+161,Yaqzah,اليقظة,Positive,10,Emptiness,الفراغ الروحي,Universal,Quran 57:16,Sahih Muslim 2750,Universal,Awakening is universal
+161,Yaqzah,اليقظة,Positive,21,Distractedness,الغفلة,Treatment,Quran 57:16,,Primary,Yaqzah cures Ghaflah
+161,Yaqzah,اليقظة,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 57:16,,Primary,Awakening fills void
+163,I'tisam billah,الاعتصام بالله,Positive,19,Doubt,الشك,Universal,Quran 3:103,Sahih Muslim 867,Universal,Clinging to Allah is universal
+163,I'tisam billah,الاعتصام بالله,Positive,19,Doubt,الشك,Treatment,Quran 3:103,,Primary,Clinging to Allah cures doubt
+163,I'tisam billah,الاعتصام بالله,Positive,21,Distractedness,الغفلة,Treatment,Quran 3:103,,Secondary,Clinging to Allah cures distraction
+165,Sabr Jamil,الصبر الجميل,Positive,5,Sadness,الحزن,Universal,Quran 12:18,Sahih al-Bukhari 1469,Universal,Beautiful patience is universal
+165,Sabr Jamil,الصبر الجميل,Positive,5,Sadness,الحزن,Treatment,Quran 12:18,,Primary,Beautiful patience in grief
+165,Sabr Jamil,الصبر الجميل,Positive,23,Impatience,قلة الصبر,Treatment,Quran 12:18,,Primary,Beautiful patience cures impatience
+166,Hijrah ila Allah,الهجرة إلى الله,Positive,10,Emptiness,الفراغ الروحي,Universal,Quran 51:50,Sahih al-Bukhari 1,Universal,Migration to Allah is universal
+166,Hijrah ila Allah,الهجرة إلى الله,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 51:50,,Primary,Hijrah fills emptiness
+166,Hijrah ila Allah,الهجرة إلى الله,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 51:50,,Primary,Hijrah from dunya
+167,Tadhallul,التذلل,Positive,11,Arrogance,الكبر,Universal,Quran 25:63,Sahih Muslim 2865,Universal,Humbling oneself is universal
+167,Tadhallul,التذلل,Positive,11,Arrogance,الكبر,Treatment,Quran 25:63,,Primary,Tadhallul counters Kibr
+167,Tadhallul,التذلل,Positive,7,Guilt,الندم,Treatment,Quran 25:63,,Secondary,Humbling in repentance
+168,Khashyah,الخشية,Positive,4,Fear,الخوف,Universal,Quran 35:28,Sahih al-Bukhari 6482,Universal,God-fearing is universal
+168,Khashyah,الخشية,Positive,45,Fear of Allah,خشية الله,Treatment,Quran 35:28,,Primary,Khashyah is fear of Allah
+168,Khashyah,الخشية,Positive,4,Fear,الخوف,Treatment,Quran 35:28,,Primary,Khashyah balances fear
+169,Wajal,الوجل,Positive,45,Fear of Allah,خشية الله,Universal,Quran 8:2,Sahih al-Bukhari 50,Universal,God-fearing is universal
+169,Wajal,الوجل,Positive,45,Fear of Allah,خشية الله,Treatment,Quran 8:2,,Primary,Wajal is fear of Allah
+169,Wajal,الوجل,Positive,4,Fear,الخوف,Treatment,Quran 8:2,,Secondary,Healthy fear
+170,Raghabah wa Rahabah,الرغبة والرهبة,Positive,4,Fear,الخوف,Universal,Quran 21:90,Sahih Muslim 2679,Universal,Hope and fear balanced
+170,Raghabah wa Rahabah,الرغبة والرهبة,Positive,4,Fear,الخوف,Treatment,Quran 21:90,,Primary,Balance of hope and fear
+170,Raghabah wa Rahabah,الرغبة والرهبة,Positive,6,Hopelessness,اليأس,Treatment,Quran 21:90,,Primary,Balance in hope and fear
+171,Uns bil-Quran,الأنس بالقرآن,Positive,10,Emptiness,الفراغ الروحي,Universal,Quran 43:36,Sahih Muslim 804,Universal,Quranic companionship is universal
+171,Uns bil-Quran,الأنس بالقرآن,Positive,9,Loneliness,الوحدة,Treatment,Quran 43:36,,Primary,Quran as companion
+171,Uns bil-Quran,الأنس بالقرآن,Positive,10,Emptiness,الفراغ الروحي,Treatment,Quran 43:36,,Primary,Quran fills void
+172,Ta'zim Allah,تعظيم الله,Positive,45,Fear of Allah,خشية الله,Universal,Quran 22:74,Sahih al-Bukhari 7384,Universal,Reverence for Allah is universal
+172,Ta'zim Allah,تعظيم الله,Positive,45,Fear of Allah,خشية الله,Treatment,Quran 22:74,,Primary,Ta'zim is fear of Allah
+172,Ta'zim Allah,تعظيم الله,Positive,49,Sweetness of Worship,حلاوة العبادة,Treatment,Quran 22:74,,Secondary,Reverence brings sweetness
+173,Ta'zim Sha'air Allah,تعظيم شعائر الله,Positive,45,Fear of Allah,خشية الله,Universal,Quran 22:32,Sahih al-Bukhari 1610,Universal,Reverence for Allah's symbols is universal
+173,Ta'zim Sha'air Allah,تعظيم شعائر الله,Positive,45,Fear of Allah,خشية الله,Treatment,Quran 22:32,,Primary,Reverence for symbols of Allah
+173,Ta'zim Sha'air Allah,تعظيم شعائر الله,Positive,42,Sincerity,الإخلاص,Treatment,Quran 22:32,,Secondary,Reverence supports sincerity
+176,Sidq at-Tawakkul,صدق التوكل,Positive,43,Trust in Allah,التوكل على الله,Universal,Quran 65:3,Sahih al-Bukhari 6470,Universal,True trust is universal
+176,Sidq at-Tawakkul,صدق التوكل,Positive,3,Anxiety,القلق,Treatment,Quran 65:3,,Primary,True trust cures anxiety
+176,Sidq at-Tawakkul,صدق التوكل,Positive,22,Weak Faith,ضعف الإيمان,Treatment,Quran 65:3,,Primary,True trust strengthens faith
+178,Mahabbah fillah,المحبة في الله,Positive,50,Nearness to Allah,القرب من الله,Universal,Quran 59:10,Sahih Muslim 2566,Universal,Love for Allah's sake is universal
+178,Mahabbah fillah,المحبة في الله,Positive,42,Sincerity,الإخلاص,Treatment,Quran 59:10,,Primary,Love for Allah is core sincerity
+178,Mahabbah fillah,المحبة في الله,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 59:10,,Primary,Love brings nearness
+179,Bughd fillah,البغض في الله,Positive,42,Sincerity,الإخلاص,Universal,Quran 60:4,Sunan Abi Dawud 4681,Universal,Disapproval for Allah's sake is universal
+179,Bughd fillah,البغض في الله,Positive,4,Nifaq,النفاق,Treatment,Quran 60:4,,Primary,Disapproval for disbelief
+179,Bughd fillah,البغض في الله,Positive,16,Hatred,الحقد,Treatment,Quran 60:4,,Secondary,Proper hatred
+180,Ikhlas al-Mahabbah,إخلاص المحبة,Positive,42,Sincerity,الإخلاص,Universal,Quran 2:165,Sahih Muslim 2721,Universal,Sincerity of love is universal
+180,Ikhlas al-Mahabbah,إخلاص المحبة,Positive,42,Sincerity,الإخلاص,Treatment,Quran 2:165,,Primary,Sincerity of love supports ikhlas
+180,Ikhlas al-Mahabbah,إخلاص المحبة,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 2:165,,Secondary,Sincerity of love brings nearness
+181,Sidq al-Mahabbah,صدق المحبة,Positive,42,Sincerity,الإخلاص,Universal,Quran 3:31,Sahih al-Bukhari 15,Universal,Truthfulness of love is universal
+181,Sidq al-Mahabbah,صدق المحبة,Positive,42,Sincerity,الإخلاص,Treatment,Quran 3:31,,Primary,Truthfulness of love
+181,Sidq al-Mahabbah,صدق المحبة,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 3:31,,Secondary,True love brings nearness
+187,Shukr al-Khalq,شكر الخلق,Positive,9,Loneliness,الوحدة,Universal,Quran 31:14,Jami at-Tirmidhi 1954,Universal,Gratitude to people is universal
+187,Shukr al-Khalq,شكر الخلق,Positive,9,Loneliness,الوحدة,Treatment,Quran 31:14,,Primary,Gratitude to people builds bonds
+187,Shukr al-Khalq,شكر الخلق,Positive,16,Hatred,الحقد,Treatment,Quran 31:14,,Secondary,Gratitude counters hatred
+188,Falah,الفلاح,Positive,22,Weak Faith,ضعف الإيمان,Universal,Quran 23:1,Sahih Muslim 85,Universal,Success is universal
+188,Falah,الفلاح,Positive,22,Weak Faith,ضعف الإيمان,Treatment,Quran 23:1,,Primary,Success from strong faith
+188,Falah,الفلاح,Positive,42,Sincerity,الإخلاص,Treatment,Quran 23:1,,Primary,True success from sincerity
+189,Husn al-Khatimah,حسن الخاتمة,Positive,5,Sadness,الحزن,Universal,Quran 3:102,Sahih al-Bukhari 6607,Universal,Good ending is universal
+189,Husn al-Khatimah,حسن الخاتمة,Positive,6,Hopelessness,اليأس,Treatment,Quran 3:102,,Primary,Good ending gives hope
+189,Husn al-Khatimah,حسن الخاتمة,Positive,7,Guilt,الندم,Treatment,Quran 3:102,,Primary,Good ending after tawbah
+191,Fawz al-Azim,الفوز العظيم,Positive,5,Sadness,الحزن,Universal,Quran 9:72,Sahih Muslim 2829,Universal,Great success is universal
+191,Fawz al-Azim,الفوز العظيم,Positive,6,Hopelessness,اليأس,Treatment,Quran 9:72,,Primary,Great success from hope
+191,Fawz al-Azim,الفوز العظيم,Positive,42,Sincerity,الإخلاص,Treatment,Quran 9:72,,Primary,Great success from faith
+192,Liqa Allah,لقاء الله,Positive,48,Spiritual Longing,الشوق إلى الله,Universal,Quran 29:5,Sahih al-Bukhari 6507,Universal,Meeting Allah is universal
+192,Liqa Allah,لقاء الله,Positive,48,Spiritual Longing,الشوق إلى الله,Treatment,Quran 29:5,,Primary,Liqa Allah is the goal
+192,Liqa Allah,لقاء الله,Positive,16,Karahiyyat al-Mawt,كراهية الموت,Treatment,Quran 29:5,,Primary,Meeting Allah cures fear of death
+193,Ridhwan Allah,رضوان الله,Positive,50,Nearness to Allah,القرب من الله,Universal,Quran 9:72,Sahih Muslim 2829,Universal,Allah's pleasure is universal
+193,Ridhwan Allah,رضوان الله,Positive,6,Hopelessness,اليأس,Treatment,Quran 9:72,,Primary,Allah's pleasure gives hope
+193,Ridhwan Allah,رضوان الله,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 9:72,,Primary,Allah's pleasure is nearness
+194,Darajat al-Ihsan,درجات الإحسان,Positive,42,Sincerity,الإخلاص,Universal,Quran 83:28,Sahih Muslim 8,Universal,Levels of excellence is universal
+194,Darajat al-Ihsan,درجات الإحسان,Positive,42,Sincerity,الإخلاص,Treatment,Quran 83:28,,Primary,Excellence levels from ikhlas
+194,Darajat al-Ihsan,درجات الإحسان,Positive,49,Sweetness of Worship,حلاوة العبادة,Treatment,Quran 83:28,,Secondary,Excellence brings sweetness
+196,Tawhid Kamil,التوحيد الكامل,Positive,4,Nifaq,النفاق,Universal,Quran 112:1,Sahih al-Bukhari 7375,Universal,Complete monotheism is universal
+196,Tawhid Kamil,التوحيد الكامل,Positive,42,Sincerity,الإخلاص,Treatment,Quran 112:1,,Primary,Complete monotheism is core sincerity
+196,Tawhid Kamil,التوحيد الكامل,Positive,15,Shirk al-Asghar,الشرك الأصغر,Treatment,Quran 112:1,,Primary,Complete monotheism removes shirk
+197,Siddiqiyyah,الصديقية,Positive,42,Sincerity,الإخلاص,Universal,Quran 4:69,Sahih al-Bukhari 6094,Universal,Truthfulness is universal
+197,Siddiqiyyah,الصديقية,Positive,42,Sincerity,الإخلاص,Treatment,Quran 4:69,,Primary,Siddiqiyyah is highest sincerity
+197,Siddiqiyyah,الصديقية,Positive,19,Doubt,الشك,Treatment,Quran 4:69,,Primary,Truthfulness cures doubt
+198,Wilayah,الولاية,Positive,50,Nearness to Allah,القرب من الله,Universal,Quran 10:62,Sahih al-Bukhari 6502,Universal,Nearness to Allah is universal
+198,Wilayah,الولاية,Positive,50,Nearness to Allah,القرب من الله,Treatment,Quran 10:62,,Primary,Wilayah is nearness
+198,Wilayah,الولاية,Positive,42,Sincerity,الإخلاص,Treatment,Quran 10:62,,Primary,Wilayah through obedience
+199,Talab al-Firdaws al-Ala,طلب الفردوس الأعلى,Positive,48,Spiritual Longing,الشوق إلى الله,Universal,Quran 83:26,Sahih al-Bukhari 2790,Universal,Seeking highest paradise is universal
+199,Talab al-Firdaws al-Ala,طلب الفردوس الأعلى,Positive,6,Hopelessness,اليأس,Treatment,Quran 83:26,,Primary,Seeking highest paradise gives hope
+199,Talab al-Firdaws al-Ala,طلب الفردوس الأعلى,Positive,42,Sincerity,الإخلاص,Treatment,Quran 83:26,,Primary,Seeking through sincere deeds
+200,Jannat an-Naim Orientation,التطلع إلى جنة النعيم,Positive,48,Spiritual Longing,الشوق إلى الله,Universal,Quran 42:20,Sahih Muslim 2864,Universal,Yearning for paradise is universal
+200,Jannat an-Naim Orientation,التطلع إلى جنة النعيم,Positive,6,Hopelessness,اليأس,Treatment,Quran 42:20,,Primary,Yearning for paradise cures despair
+200,Jannat an-Naim Orientation,التطلع إلى جنة النعيم,Positive,42,Sincerity,الإخلاص,Treatment,Quran 42:20,,Primary,Yearning supports sincerity
+98,Tawadu',التواضع,Positive,41,Humility,التواضع,Treatment,Quran 25:63,Sahih Muslim 2588,Primary,Tawadu is core of humility
+2,Kibr,الكبر,Negative,41,Humility,التواضع,Disease,Quran 31:18,Sahih Muslim 91,Secondary,Arrogance opposes humility
+3,Ujb,العجب,Negative,41,Humility,التواضع,Disease,Quran 53:32,Sahih Muslim 2749,Secondary,Self-amazement opposes humility
+74,Taqwa,التقوى,Positive,41,Humility,التواضع,Treatment,Quran 2:197,Sahih Muslim 2564,Secondary,True honor is with taqwa and humility
+72,Ikhlas,الإخلاص,Positive,41,Humility,التواضع,Treatment,Quran 98:5,Sahih al-Bukhari 1,Secondary,Sincerity supports humility
+99,Sakinah,السكينة,Positive,46,Tranquility,السكينة,Treatment,Quran 48:4,Sahih al-Bukhari 3614,Primary,Tranquility is core
+20,Wahn,الوهن,Negative,46,Tranquility,السكينة,Disease,Quran 8:46,,Secondary,Weakness opposes tranquility
+77,Tawakkul,التوكل,Positive,46,Tranquility,السكينة,Treatment,Quran 3:159,Sahih al-Bukhari 6470,Secondary,Trust brings tranquility
+80,Yaqin,اليقين,Positive,46,Tranquility,السكينة,Treatment,Quran 2:2,Sahih Muslim 8,Secondary,Certainty brings tranquility
+9,Qasawat al-Qalb,قسوة القلب,Negative,37,Hard-heartedness,قسوة القلب,Disease,Quran 57:16,Sahih Muslim 2750,Primary,Hardness of heart is Hard-heartedness emotion
+5,Sadness,الحزن,Negative,37,Hard-heartedness,قسوة القلب,Disease,Quran 57:16,,Secondary,Unhealed grief hardens heart
+104,Tadhakkur,التذكر,Positive,37,Hard-heartedness,قسوة القلب,Treatment,Quran 13:28,Sahih Muslim 2675,Primary,Remembrance softens hard heart
+92,Khushu',الخشوع,Positive,37,Hard-heartedness,قسوة القلب,Treatment,Quran 23:1-2,Sahih Muslim 489,Primary,Khushu dissolves hardness
+87,Rahmah,الرحمة,Positive,37,Hard-heartedness,قسوة القلب,Treatment,Quran 21:107,Sahih al-Bukhari 6013,Secondary,Mercy softens hard heart
+171,Uns bil-Quran,الأنس بالقرآن,Positive,37,Hard-heartedness,قسوة القلب,Treatment,Quran 43:36,Sahih Muslim 804,Secondary,Quran revives hard heart
+108,Firasah,الفراسة,Positive,20,Confusion,الحيرة,Treatment,Quran 15:75,Jami at-Tirmidhi 3127,Primary,Intuition cures confusion
+108,Firasah,الفراسة,Positive,19,Doubt,الشك,Treatment,Quran 15:75,,Secondary,Intuition aids certainty
+93,Inabah,الإنابة,Positive,7,Guilt,الندم,Treatment,Quran 39:54,Sahih Muslim 2702,Primary,Inabah heals guilt
+93,Inabah,الإنابة,Positive,28,Shame after Sin,الخجل بعد الذنب,Treatment,Quran 39:54,,Secondary,Inabah heals shame
+100,Ridha,الرضا,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 98:8,Sahih Muslim 2815,Primary,Contentment cures dunya love
+100,Ridha,الرضا,Positive,2,Jealousy,الحسد,Treatment,Quran 98:8,,Secondary,Contentment cures envy
+121,Istiqamah,الاستقامة,Positive,8,Laziness,الكسل,Treatment,Quran 41:30,Sahih Muslim 38,Primary,Istiqamah counters laziness
+121,Istiqamah,الاستقامة,Positive,21,Distractedness,الغفلة,Treatment,Quran 41:30,,Primary,Istiqamah counters distraction
+85,Rifq,الرفق,Positive,3,Anxiety,القلق,Treatment,Quran 3:159,Sahih Muslim 2593,Primary,Gentleness cures anxiety
+85,Rifq,الرفق,Positive,4,Fear,الخوف,Treatment,Quran 3:159,,Secondary,Gentleness calms fear
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive,20,Confusion,الحيرة,Universal,Quran 15:75,Jami at-Tirmidhi 3127,Intensifier,Firasah Imaniyyah (intensified Firasah) for Confusion
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive,20,Confusion,الحيرة,Treatment,Quran 15:75,,Intensifier,Firasah Imaniyyah (intensified Firasah) for Confusion
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive,19,Doubt,الشك,Treatment,Quran 15:75,,Intensifier,Firasah Imaniyyah (intensified Firasah) for Doubt
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive,20,Confusion,الحيرة,Treatment,Quran 15:75,Jami at-Tirmidhi 3127,Intensifier,Firasah Imaniyyah (intensified Firasah) for Confusion
+162,Firasah Imaniyyah,الفراسة الإيمانية,Positive,19,Doubt,الشك,Treatment,Quran 15:75,,Intensifier,Firasah Imaniyyah (intensified Firasah) for Doubt
+164,Inabah Kamilah,الإنابة الكاملة,Positive,47,Repentance,التوبة,Universal,Quran 39:54,Sahih Muslim 2702,Intensifier,Inabah Kamilah (intensified Inabah) for Repentance
+164,Inabah Kamilah,الإنابة الكاملة,Positive,7,Guilt,الندم,Treatment,Quran 39:54,,Intensifier,Inabah Kamilah (intensified Inabah) for Guilt
+164,Inabah Kamilah,الإنابة الكاملة,Positive,28,Shame after Sin,الخجل بعد الذنب,Treatment,Quran 39:54,,Intensifier,Inabah Kamilah (intensified Inabah) for Shame after Sin
+164,Inabah Kamilah,الإنابة الكاملة,Positive,7,Guilt,الندم,Treatment,Quran 39:54,Sahih Muslim 2702,Intensifier,Inabah Kamilah (intensified Inabah) for Guilt
+164,Inabah Kamilah,الإنابة الكاملة,Positive,28,Shame after Sin,الخجل بعد الذنب,Treatment,Quran 39:54,,Intensifier,Inabah Kamilah (intensified Inabah) for Shame after Sin
+177,Ridha bil-Qada,الرضا بالقضاء,Positive,2,Jealousy,الحسد,Universal,Quran 98:8,Sahih Muslim 2815,Intensifier,Ridha bil-Qada (intensified Ridha) for Jealousy
+177,Ridha bil-Qada,الرضا بالقضاء,Positive,2,Jealousy,الحسد,Treatment,Quran 98:8,,Intensifier,Ridha bil-Qada (intensified Ridha) for Jealousy
+177,Ridha bil-Qada,الرضا بالقضاء,Positive,23,Impatience,قلة الصبر,Treatment,Quran 98:8,,Intensifier,Ridha bil-Qada (intensified Ridha) for Impatience
+177,Ridha bil-Qada,الرضا بالقضاء,Positive,15,Love of Dunya,حب الدنيا,Treatment,Quran 98:8,Sahih Muslim 2815,Intensifier,Ridha bil-Qada (intensified Ridha) for Love of Dunya
+177,Ridha bil-Qada,الرضا بالقضاء,Positive,2,Jealousy,الحسد,Treatment,Quran 98:8,,Intensifier,Ridha bil-Qada (intensified Ridha) for Jealousy
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive,21,Distractedness,الغفلة,Universal,Quran 41:30,Sahih Muslim 38,Intensifier,Istiqamah Kamilah (intensified Istiqamah) for Distractedness
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive,8,Laziness,الكسل,Treatment,Quran 41:30,,Intensifier,Istiqamah Kamilah (intensified Istiqamah) for Laziness
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive,21,Distractedness,الغفلة,Treatment,Quran 41:30,,Intensifier,Istiqamah Kamilah (intensified Istiqamah) for Distractedness
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive,8,Laziness,الكسل,Treatment,Quran 41:30,Sahih Muslim 38,Intensifier,Istiqamah Kamilah (intensified Istiqamah) for Laziness
+184,Istiqamah Kamilah,الاستقامة الكاملة,Positive,21,Distractedness,الغفلة,Treatment,Quran 41:30,,Intensifier,Istiqamah Kamilah (intensified Istiqamah) for Distractedness
+190,Rifq billah,الرفق بالله,Positive,1,Anger,الغضب,Universal,Quran 3:159,Sahih Muslim 2593,Intensifier,Rifq billah (intensified Rifq) for Anger
+190,Rifq billah,الرفق بالله,Positive,1,Anger,الغضب,Treatment,Quran 3:159,,Intensifier,Rifq billah (intensified Rifq) for Anger
+190,Rifq billah,الرفق بالله,Positive,16,Hatred,الحقد,Treatment,Quran 3:159,,Intensifier,Rifq billah (intensified Rifq) for Hatred
+190,Rifq billah,الرفق بالله,Positive,3,Anxiety,القلق,Treatment,Quran 3:159,Sahih Muslim 2593,Intensifier,Rifq billah (intensified Rifq) for Anxiety
+190,Rifq billah,الرفق بالله,Positive,4,Fear,الخوف,Treatment,Quran 3:159,,Intensifier,Rifq billah (intensified Rifq) for Fear

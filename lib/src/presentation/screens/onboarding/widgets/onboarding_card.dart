@@ -65,9 +65,9 @@ class OnboardingCard extends StatelessWidget {
                 ),
               ),
             ),
-            // Main content
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 16),
+            // Main content — scrollable
+            SingleChildScrollView(
+              padding: const EdgeInsets.fromLTRB(28, 16, 28, 160),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
@@ -100,7 +100,7 @@ class OnboardingCard extends StatelessWidget {
                         ),
                     ],
                   ),
-                  const Spacer(flex: 2),
+                  const SizedBox(height: 24),
                   // Primary icon
                   Center(
                     child: Container(
@@ -150,7 +150,7 @@ class OnboardingCard extends StatelessWidget {
                       fontWeight: FontWeight.w400,
                     ),
                   ),
-                  const Spacer(flex: 3),
+                  const SizedBox(height: 24),
                 ],
               ),
             ),

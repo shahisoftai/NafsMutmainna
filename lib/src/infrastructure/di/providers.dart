@@ -32,6 +32,7 @@ import '../../domain/repositories/intervention_history_repository.dart';
 import '../../domain/repositories/quran_ayat_repository.dart';
 import '../../domain/repositories/nafs_history_repository.dart';
 import '../../domain/repositories/nafs_state_repository.dart';
+import '../../domain/services/foundational_habits_seeder.dart';
 import '../../domain/usecases/graph/detect_attributes.dart';
 import '../../domain/usecases/graph/growth_path.dart';
 import '../../domain/usecases/nafs/compute_daily_nafs.dart';
@@ -82,6 +83,12 @@ final interventionHistoryRepositoryProvider = Provider<InterventionHistoryReposi
 );
 final habitRepositoryProvider = Provider<HabitRepositoryInterface>(
   (ref) => HabitRepositoryImpl(ref.watch(appDatabaseProvider)),
+);
+
+/// RI-3.4 / RI-3.7: Seeds the three foundational habits (Taharah, Halal
+/// Rizq, Hifz al-Lisan) plus the Body-Heart habits on first onboarding.
+final foundationalHabitsSeederProvider = Provider<FoundationalHabitsSeeder>(
+  (ref) => FoundationalHabitsSeeder(ref.watch(habitRepositoryProvider)),
 );
 final hadeesRepositoryProvider = Provider<HadeesRepository>(
   (ref) => HadeesRepositoryImpl(ref.watch(appDatabaseProvider)),

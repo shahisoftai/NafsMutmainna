@@ -1,6 +1,4 @@
 {
-  "_schema_version": "1.0.0",
-  "_generated_at": "2026-06-13",
   "rows": [
     {
       "Link_ID": 1,
@@ -133,14 +131,14 @@
       "Emotion_ID": 3,
       "Attribute_ID": 77,
       "Weight": 0.95,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 20,
       "Emotion_ID": 3,
       "Attribute_ID": 80,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 21,
@@ -182,7 +180,7 @@
       "Emotion_ID": 4,
       "Attribute_ID": 78,
       "Weight": 0.95,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 27,
@@ -392,7 +390,7 @@
       "Emotion_ID": 9,
       "Attribute_ID": 104,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 57,
@@ -427,7 +425,7 @@
       "Emotion_ID": 10,
       "Attribute_ID": 171,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 62,
@@ -591,6 +589,13 @@
       "Role": "Treatment"
     },
     {
+      "Link_ID": 85,
+      "Emotion_ID": 15,
+      "Attribute_ID": 183,
+      "Weight": 0.85,
+      "Role": "Treatment"
+    },
+    {
       "Link_ID": 86,
       "Emotion_ID": 15,
       "Attribute_ID": 27,
@@ -603,6 +608,13 @@
       "Attribute_ID": 54,
       "Weight": 0.65,
       "Role": "Disease"
+    },
+    {
+      "Link_ID": 88,
+      "Emotion_ID": 15,
+      "Attribute_ID": 183,
+      "Weight": 0.55,
+      "Role": "Strengthens"
     },
     {
       "Link_ID": 89,
@@ -756,7 +768,7 @@
       "Emotion_ID": 19,
       "Attribute_ID": 80,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 111,
@@ -812,1162 +824,1246 @@
       "Emotion_ID": 21,
       "Attribute_ID": 171,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 119,
+      "Emotion_ID": 21,
+      "Attribute_ID": 104,
+      "Weight": 0.55,
+      "Role": "Strengthens"
+    },
+    {
+      "Link_ID": 120,
       "Emotion_ID": 22,
       "Attribute_ID": 80,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 120,
+      "Link_ID": 121,
       "Emotion_ID": 22,
       "Attribute_ID": 80,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 121,
+      "Link_ID": 122,
       "Emotion_ID": 22,
       "Attribute_ID": 77,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 122,
+      "Link_ID": 123,
       "Emotion_ID": 22,
       "Attribute_ID": 104,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 123,
+      "Link_ID": 124,
       "Emotion_ID": 22,
       "Attribute_ID": 80,
       "Weight": 0.95,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
-      "Link_ID": 124,
+      "Link_ID": 125,
       "Emotion_ID": 22,
       "Attribute_ID": 10,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 125,
+      "Link_ID": 126,
       "Emotion_ID": 22,
       "Attribute_ID": 77,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 126,
+      "Link_ID": 127,
       "Emotion_ID": 23,
       "Attribute_ID": 75,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 127,
+      "Link_ID": 128,
       "Emotion_ID": 23,
       "Attribute_ID": 75,
       "Weight": 0.9,
-      "Role": "Treatment"
-    },
-    {
-      "Link_ID": 128,
-      "Emotion_ID": 23,
-      "Attribute_ID": 100,
-      "Weight": 0.85,
       "Role": "Treatment"
     },
     {
       "Link_ID": 129,
       "Emotion_ID": 23,
       "Attribute_ID": 100,
+      "Weight": 0.85,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 130,
+      "Emotion_ID": 23,
+      "Attribute_ID": 100,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 130,
+      "Link_ID": 131,
       "Emotion_ID": 24,
       "Attribute_ID": 92,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 131,
+      "Link_ID": 132,
       "Emotion_ID": 24,
       "Attribute_ID": 104,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 132,
+      "Link_ID": 133,
       "Emotion_ID": 24,
       "Attribute_ID": 92,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 133,
+      "Link_ID": 134,
       "Emotion_ID": 24,
       "Attribute_ID": 9,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 134,
+      "Link_ID": 135,
       "Emotion_ID": 24,
       "Attribute_ID": 10,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 135,
+      "Link_ID": 136,
       "Emotion_ID": 24,
       "Attribute_ID": 104,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 136,
+      "Link_ID": 137,
       "Emotion_ID": 25,
       "Attribute_ID": 117,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 137,
+      "Link_ID": 138,
       "Emotion_ID": 25,
       "Attribute_ID": 117,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 138,
+      "Link_ID": 139,
       "Emotion_ID": 25,
       "Attribute_ID": 76,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 139,
+      "Link_ID": 140,
       "Emotion_ID": 25,
       "Attribute_ID": 77,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 140,
+      "Link_ID": 141,
       "Emotion_ID": 25,
       "Attribute_ID": 24,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 141,
+      "Link_ID": 142,
       "Emotion_ID": 25,
       "Attribute_ID": 26,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 142,
+      "Link_ID": 143,
       "Emotion_ID": 25,
       "Attribute_ID": 76,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 143,
+      "Link_ID": 144,
       "Emotion_ID": 26,
       "Attribute_ID": 77,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 144,
+      "Link_ID": 145,
       "Emotion_ID": 26,
       "Attribute_ID": 77,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 145,
+      "Link_ID": 146,
       "Emotion_ID": 26,
       "Attribute_ID": 81,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 146,
+      "Link_ID": 147,
       "Emotion_ID": 26,
       "Attribute_ID": 100,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 147,
+      "Link_ID": 148,
       "Emotion_ID": 26,
       "Attribute_ID": 27,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 148,
+      "Link_ID": 149,
       "Emotion_ID": 26,
       "Attribute_ID": 81,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 149,
+      "Link_ID": 150,
       "Emotion_ID": 27,
       "Attribute_ID": 72,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 150,
+      "Link_ID": 151,
       "Emotion_ID": 27,
       "Attribute_ID": 72,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 151,
+      "Link_ID": 152,
       "Emotion_ID": 27,
       "Attribute_ID": 1,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 152,
+      "Link_ID": 153,
       "Emotion_ID": 28,
       "Attribute_ID": 71,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 153,
+      "Link_ID": 154,
       "Emotion_ID": 28,
       "Attribute_ID": 71,
       "Weight": 0.9,
-      "Role": "Treatment"
-    },
-    {
-      "Link_ID": 154,
-      "Emotion_ID": 28,
-      "Attribute_ID": 79,
-      "Weight": 0.85,
       "Role": "Treatment"
     },
     {
       "Link_ID": 155,
       "Emotion_ID": 28,
       "Attribute_ID": 79,
+      "Weight": 0.85,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 156,
+      "Emotion_ID": 28,
+      "Attribute_ID": 79,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 156,
+      "Link_ID": 157,
       "Emotion_ID": 29,
       "Attribute_ID": 77,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 157,
+      "Link_ID": 158,
       "Emotion_ID": 29,
       "Attribute_ID": 77,
       "Weight": 0.9,
-      "Role": "Treatment"
-    },
-    {
-      "Link_ID": 158,
-      "Emotion_ID": 29,
-      "Attribute_ID": 107,
-      "Weight": 0.85,
       "Role": "Treatment"
     },
     {
       "Link_ID": 159,
       "Emotion_ID": 29,
       "Attribute_ID": 107,
+      "Weight": 0.85,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 160,
+      "Emotion_ID": 29,
+      "Attribute_ID": 107,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 160,
+      "Link_ID": 161,
       "Emotion_ID": 30,
       "Attribute_ID": 99,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 161,
+      "Link_ID": 162,
       "Emotion_ID": 30,
       "Attribute_ID": 99,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 162,
+      "Link_ID": 163,
       "Emotion_ID": 30,
       "Attribute_ID": 104,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 163,
+      "Link_ID": 164,
       "Emotion_ID": 30,
       "Attribute_ID": 80,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 164,
+      "Link_ID": 165,
       "Emotion_ID": 30,
       "Attribute_ID": 104,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 165,
+      "Link_ID": 166,
       "Emotion_ID": 31,
       "Attribute_ID": 79,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 166,
+      "Link_ID": 167,
       "Emotion_ID": 31,
       "Attribute_ID": 79,
       "Weight": 0.9,
-      "Role": "Treatment"
-    },
-    {
-      "Link_ID": 167,
-      "Emotion_ID": 31,
-      "Attribute_ID": 77,
-      "Weight": 0.85,
       "Role": "Treatment"
     },
     {
       "Link_ID": 168,
       "Emotion_ID": 31,
       "Attribute_ID": 77,
+      "Weight": 0.85,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 169,
+      "Emotion_ID": 31,
+      "Attribute_ID": 77,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 169,
+      "Link_ID": 170,
       "Emotion_ID": 32,
       "Attribute_ID": 76,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 170,
+      "Link_ID": 171,
       "Emotion_ID": 32,
       "Attribute_ID": 76,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 171,
+      "Link_ID": 172,
       "Emotion_ID": 32,
       "Attribute_ID": 82,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 172,
+      "Link_ID": 173,
       "Emotion_ID": 32,
       "Attribute_ID": 100,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 173,
+      "Link_ID": 174,
       "Emotion_ID": 32,
       "Attribute_ID": 6,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 174,
+      "Link_ID": 175,
       "Emotion_ID": 32,
       "Attribute_ID": 8,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 175,
+      "Link_ID": 176,
       "Emotion_ID": 32,
       "Attribute_ID": 82,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 176,
+      "Link_ID": 177,
       "Emotion_ID": 33,
       "Attribute_ID": 75,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 177,
+      "Link_ID": 178,
       "Emotion_ID": 33,
       "Attribute_ID": 75,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 178,
+      "Link_ID": 179,
       "Emotion_ID": 33,
       "Attribute_ID": 77,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 179,
+      "Link_ID": 180,
       "Emotion_ID": 33,
       "Attribute_ID": 100,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 180,
+      "Link_ID": 181,
       "Emotion_ID": 33,
       "Attribute_ID": 77,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 181,
+      "Link_ID": 182,
       "Emotion_ID": 34,
       "Attribute_ID": 102,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 182,
+      "Link_ID": 183,
       "Emotion_ID": 34,
       "Attribute_ID": 102,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 183,
+      "Link_ID": 184,
       "Emotion_ID": 34,
       "Attribute_ID": 118,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 184,
+      "Link_ID": 185,
       "Emotion_ID": 34,
       "Attribute_ID": 16,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 185,
+      "Link_ID": 186,
       "Emotion_ID": 34,
       "Attribute_ID": 31,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 186,
+      "Link_ID": 187,
       "Emotion_ID": 34,
       "Attribute_ID": 118,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 187,
+      "Link_ID": 188,
       "Emotion_ID": 35,
       "Attribute_ID": 103,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 188,
+      "Link_ID": 189,
       "Emotion_ID": 35,
       "Attribute_ID": 103,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 189,
+      "Link_ID": 190,
       "Emotion_ID": 35,
       "Attribute_ID": 103,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 190,
+      "Link_ID": 191,
       "Emotion_ID": 35,
       "Attribute_ID": 107,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 191,
+      "Link_ID": 192,
       "Emotion_ID": 35,
       "Attribute_ID": 8,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 192,
+      "Link_ID": 193,
       "Emotion_ID": 35,
       "Attribute_ID": 10,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 193,
+      "Link_ID": 194,
       "Emotion_ID": 35,
       "Attribute_ID": 103,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 194,
+      "Link_ID": 195,
       "Emotion_ID": 36,
       "Attribute_ID": 117,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 195,
+      "Link_ID": 196,
       "Emotion_ID": 36,
       "Attribute_ID": 117,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 196,
+      "Link_ID": 197,
       "Emotion_ID": 36,
       "Attribute_ID": 149,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 197,
+      "Link_ID": 198,
       "Emotion_ID": 36,
       "Attribute_ID": 118,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 198,
+      "Link_ID": 199,
       "Emotion_ID": 36,
       "Attribute_ID": 24,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 199,
+      "Link_ID": 200,
       "Emotion_ID": 36,
       "Attribute_ID": 25,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 200,
+      "Link_ID": 201,
       "Emotion_ID": 36,
       "Attribute_ID": 149,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 201,
+      "Link_ID": 202,
       "Emotion_ID": 37,
       "Attribute_ID": 115,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 202,
+      "Link_ID": 203,
       "Emotion_ID": 37,
       "Attribute_ID": 115,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 203,
+      "Link_ID": 204,
       "Emotion_ID": 37,
       "Attribute_ID": 129,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 204,
+      "Link_ID": 205,
       "Emotion_ID": 37,
       "Attribute_ID": 121,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 205,
+      "Link_ID": 206,
       "Emotion_ID": 37,
       "Attribute_ID": 53,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 206,
+      "Link_ID": 207,
       "Emotion_ID": 37,
       "Attribute_ID": 20,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 207,
+      "Link_ID": 208,
       "Emotion_ID": 37,
       "Attribute_ID": 129,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 208,
+      "Link_ID": 209,
       "Emotion_ID": 38,
       "Attribute_ID": 112,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 209,
+      "Link_ID": 210,
       "Emotion_ID": 38,
       "Attribute_ID": 112,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 210,
+      "Link_ID": 211,
       "Emotion_ID": 38,
       "Attribute_ID": 111,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 211,
+      "Link_ID": 212,
       "Emotion_ID": 38,
       "Attribute_ID": 90,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 212,
+      "Link_ID": 213,
       "Emotion_ID": 38,
       "Attribute_ID": 59,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 213,
+      "Link_ID": 214,
       "Emotion_ID": 38,
       "Attribute_ID": 111,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 214,
+      "Link_ID": 215,
       "Emotion_ID": 39,
       "Attribute_ID": 82,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 215,
+      "Link_ID": 216,
       "Emotion_ID": 39,
       "Attribute_ID": 82,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 216,
+      "Link_ID": 217,
       "Emotion_ID": 39,
       "Attribute_ID": 100,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 217,
+      "Link_ID": 218,
       "Emotion_ID": 39,
       "Attribute_ID": 76,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 218,
+      "Link_ID": 219,
       "Emotion_ID": 39,
       "Attribute_ID": 26,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 219,
+      "Link_ID": 220,
       "Emotion_ID": 39,
       "Attribute_ID": 21,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 220,
+      "Link_ID": 221,
       "Emotion_ID": 39,
       "Attribute_ID": 100,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 221,
+      "Link_ID": 222,
       "Emotion_ID": 40,
       "Attribute_ID": 125,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 222,
+      "Link_ID": 223,
       "Emotion_ID": 40,
       "Attribute_ID": 125,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 223,
+      "Link_ID": 224,
       "Emotion_ID": 40,
       "Attribute_ID": 72,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 224,
+      "Link_ID": 225,
       "Emotion_ID": 40,
       "Attribute_ID": 90,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 225,
+      "Link_ID": 226,
       "Emotion_ID": 40,
       "Attribute_ID": 15,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 226,
+      "Link_ID": 227,
       "Emotion_ID": 40,
       "Attribute_ID": 1,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 227,
+      "Link_ID": 228,
       "Emotion_ID": 40,
       "Attribute_ID": 72,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 228,
+      "Link_ID": 229,
       "Emotion_ID": 41,
       "Attribute_ID": 72,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 229,
+      "Link_ID": 230,
       "Emotion_ID": 41,
       "Attribute_ID": 76,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 230,
+      "Link_ID": 231,
       "Emotion_ID": 41,
       "Attribute_ID": 2,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 231,
+      "Link_ID": 232,
       "Emotion_ID": 41,
       "Attribute_ID": 3,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 232,
+      "Link_ID": 233,
       "Emotion_ID": 41,
       "Attribute_ID": 72,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 233,
+      "Link_ID": 234,
       "Emotion_ID": 42,
       "Attribute_ID": 72,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 234,
+      "Link_ID": 235,
       "Emotion_ID": 42,
       "Attribute_ID": 72,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 235,
+      "Link_ID": 236,
       "Emotion_ID": 42,
       "Attribute_ID": 90,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 236,
+      "Link_ID": 237,
       "Emotion_ID": 42,
       "Attribute_ID": 1,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 237,
+      "Link_ID": 238,
       "Emotion_ID": 42,
       "Attribute_ID": 3,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 238,
+      "Link_ID": 239,
       "Emotion_ID": 42,
       "Attribute_ID": 90,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 239,
+      "Link_ID": 240,
       "Emotion_ID": 43,
       "Attribute_ID": 77,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 240,
+      "Link_ID": 241,
       "Emotion_ID": 43,
       "Attribute_ID": 77,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 241,
+      "Link_ID": 242,
       "Emotion_ID": 43,
       "Attribute_ID": 100,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 242,
+      "Link_ID": 243,
       "Emotion_ID": 43,
       "Attribute_ID": 78,
       "Weight": 0.95,
-      "Role": "Disease"
-    },
-    {
-      "Link_ID": 243,
-      "Emotion_ID": 43,
-      "Attribute_ID": 80,
-      "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
       "Link_ID": 244,
+      "Emotion_ID": 43,
+      "Attribute_ID": 80,
+      "Weight": 0.65,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 245,
       "Emotion_ID": 43,
       "Attribute_ID": 100,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 245,
+      "Link_ID": 246,
       "Emotion_ID": 44,
       "Attribute_ID": 80,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 246,
+      "Link_ID": 247,
       "Emotion_ID": 44,
       "Attribute_ID": 80,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 247,
+      "Link_ID": 248,
       "Emotion_ID": 44,
       "Attribute_ID": 77,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 248,
+      "Link_ID": 249,
       "Emotion_ID": 44,
       "Attribute_ID": 99,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 249,
+      "Link_ID": 250,
       "Emotion_ID": 44,
       "Attribute_ID": 80,
       "Weight": 0.65,
-      "Role": "Disease"
+      "Role": "Treatment"
     },
     {
-      "Link_ID": 250,
+      "Link_ID": 251,
       "Emotion_ID": 44,
       "Attribute_ID": 77,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 251,
+      "Link_ID": 252,
       "Emotion_ID": 45,
       "Attribute_ID": 168,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 252,
+      "Link_ID": 253,
       "Emotion_ID": 45,
       "Attribute_ID": 168,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 253,
+      "Link_ID": 254,
       "Emotion_ID": 45,
       "Attribute_ID": 92,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 254,
+      "Link_ID": 255,
       "Emotion_ID": 45,
       "Attribute_ID": 10,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 255,
+      "Link_ID": 256,
       "Emotion_ID": 45,
       "Attribute_ID": 9,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 256,
+      "Link_ID": 257,
       "Emotion_ID": 45,
       "Attribute_ID": 92,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 257,
+      "Link_ID": 258,
       "Emotion_ID": 46,
       "Attribute_ID": 99,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 258,
+      "Link_ID": 259,
       "Emotion_ID": 46,
       "Attribute_ID": 99,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 259,
+      "Link_ID": 260,
       "Emotion_ID": 46,
       "Attribute_ID": 80,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 260,
+      "Link_ID": 261,
       "Emotion_ID": 46,
       "Attribute_ID": 100,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 261,
+      "Link_ID": 262,
       "Emotion_ID": 46,
       "Attribute_ID": 80,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 262,
+      "Link_ID": 263,
       "Emotion_ID": 47,
       "Attribute_ID": 71,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 263,
+      "Link_ID": 264,
       "Emotion_ID": 47,
       "Attribute_ID": 71,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 264,
+      "Link_ID": 265,
       "Emotion_ID": 47,
       "Attribute_ID": 93,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 265,
+      "Link_ID": 266,
       "Emotion_ID": 47,
       "Attribute_ID": 79,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 266,
+      "Link_ID": 267,
       "Emotion_ID": 47,
       "Attribute_ID": 93,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 267,
+      "Link_ID": 268,
       "Emotion_ID": 48,
       "Attribute_ID": 101,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 268,
+      "Link_ID": 269,
       "Emotion_ID": 48,
       "Attribute_ID": 101,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 269,
+      "Link_ID": 270,
       "Emotion_ID": 48,
       "Attribute_ID": 91,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 270,
+      "Link_ID": 271,
       "Emotion_ID": 48,
       "Attribute_ID": 27,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 271,
+      "Link_ID": 272,
       "Emotion_ID": 48,
       "Attribute_ID": 10,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 272,
+      "Link_ID": 273,
       "Emotion_ID": 48,
       "Attribute_ID": 91,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
-      "Link_ID": 273,
+      "Link_ID": 274,
       "Emotion_ID": 49,
       "Attribute_ID": 91,
       "Weight": 1.0,
       "Role": "Core"
     },
     {
-      "Link_ID": 274,
+      "Link_ID": 275,
       "Emotion_ID": 49,
       "Attribute_ID": 91,
       "Weight": 0.9,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 275,
+      "Link_ID": 276,
       "Emotion_ID": 49,
       "Attribute_ID": 94,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 276,
+      "Link_ID": 277,
       "Emotion_ID": 49,
       "Attribute_ID": 10,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 277,
+      "Link_ID": 278,
       "Emotion_ID": 49,
       "Attribute_ID": 51,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 278,
+      "Link_ID": 279,
       "Emotion_ID": 49,
       "Attribute_ID": 94,
       "Weight": 0.55,
       "Role": "Strengthens"
     },
     {
+      "Link_ID": 280,
+      "Emotion_ID": 50,
+      "Attribute_ID": 181,
+      "Weight": 1.0,
+      "Role": "Core"
+    },
+    {
       "Link_ID": 281,
+      "Emotion_ID": 50,
+      "Attribute_ID": 181,
+      "Weight": 0.9,
+      "Role": "Treatment"
+    },
+    {
+      "Link_ID": 282,
       "Emotion_ID": 50,
       "Attribute_ID": 90,
       "Weight": 0.85,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 282,
+      "Link_ID": 283,
       "Emotion_ID": 50,
       "Attribute_ID": 91,
       "Weight": 0.8,
       "Role": "Treatment"
     },
     {
-      "Link_ID": 283,
+      "Link_ID": 284,
       "Emotion_ID": 50,
       "Attribute_ID": 10,
       "Weight": 0.95,
       "Role": "Disease"
     },
     {
-      "Link_ID": 284,
+      "Link_ID": 285,
       "Emotion_ID": 50,
       "Attribute_ID": 27,
       "Weight": 0.65,
       "Role": "Disease"
     },
     {
-      "Link_ID": 285,
+      "Link_ID": 286,
       "Emotion_ID": 50,
       "Attribute_ID": 90,
       "Weight": 0.55,
       "Role": "Strengthens"
+    },
+    {
+      "Link_ID": 287,
+      "Emotion_ID": 5,
+      "Attribute_ID": 9,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 288,
+      "Emotion_ID": 6,
+      "Attribute_ID": 14,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 289,
+      "Emotion_ID": 20,
+      "Attribute_ID": 19,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 290,
+      "Emotion_ID": 23,
+      "Attribute_ID": 64,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 291,
+      "Emotion_ID": 28,
+      "Attribute_ID": 18,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 292,
+      "Emotion_ID": 29,
+      "Attribute_ID": 4,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 293,
+      "Emotion_ID": 30,
+      "Attribute_ID": 42,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 294,
+      "Emotion_ID": 3,
+      "Attribute_ID": 20,
+      "Weight": 0.65,
+      "Role": "Disease"
+    },
+    {
+      "Link_ID": 295,
+      "Emotion_ID": 19,
+      "Attribute_ID": 61,
+      "Weight": 0.85,
+      "Role": "Disease"
     }
   ]
 }
