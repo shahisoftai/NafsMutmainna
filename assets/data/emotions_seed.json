@@ -1,5 +1,5 @@
 {
-  "_schema_version": "1.0.0",
+  "_schema_version": "1.1.0",
   "_generated_at": "2026-06-13",
   "rows": [
     {
@@ -27,7 +27,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لَا يَصْرِفُ عَنِّي سَيِّئَهَا إِلَّا أَنْتَ",
       "Recommended_Dua_Reference": "Sahih Muslim 771",
       "Recommended_Dua_English": "O Allah, guide me to the best of character, for none can guide to the best of it except You. And turn me away from the worst of character, for none can turn me away from the worst of it except You.",
-      "Recommended_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی طرف رہنمائی فرما، ان کی طرف تیرے سوا کوئی رہنمائی نہیں کر سکتا۔ اور مجھ سے برے اخلاق کو دور کر دے، انہیں تیرے سوا کوئی دور نہیں کر سکتا۔"
+      "Recommended_Dua_Urdu": "اے اللہ! مجھے بہترین اخلاق کی طرف رہنمائی فرما، ان کی طرف تیرے سوا کوئی رہنمائی نہیں کر سکتا۔ اور مجھ سے برے اخلاق کو دور کر دے، انہیں تیرے سوا کوئی دور نہیں کر سکتا۔",
+      "Urdu_Name": "غصہ"
     },
     {
       "Emotion_ID": 2,
@@ -54,7 +55,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:201",
       "Recommended_Dua_English": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔",
+      "Urdu_Name": "حسد"
     },
     {
       "Emotion_ID": 3,
@@ -81,7 +83,8 @@
       "Recommended_Dua_Arabic": "حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
       "Recommended_Dua_Reference": "At-Tawbah 9:129",
       "Recommended_Dua_English": "Sufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.",
-      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔"
+      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔",
+      "Urdu_Name": "پریشانی"
     },
     {
       "Emotion_ID": 4,
@@ -108,7 +111,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَالشَّهَادَةِ، وَأَسْأَلُكَ كَلِمَةَ الْحَقِّ فِي الرِّضَا وَالْغَضَبِ",
       "Recommended_Dua_Reference": "Sunan an-Nasa'i 1305",
       "Recommended_Dua_English": "O Allah, I ask You for Your fear in the unseen and in the seen, and I ask You for the word of truth in contentment and in anger.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے غیب اور حاضر میں تیرا خوف مانگتا ہوں اور رضا اور غضب میں حق بات کہنے کی توفیق مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے غیب اور حاضر میں تیرا خوف مانگتا ہوں اور رضا اور غضب میں حق بات کہنے کی توفیق مانگتا ہوں۔",
+      "Urdu_Name": "خوف"
     },
     {
       "Emotion_ID": 5,
@@ -135,7 +139,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:250",
       "Recommended_Dua_English": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔",
+      "Urdu_Name": "غم"
     },
     {
       "Emotion_ID": 6,
@@ -162,7 +167,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",
       "Recommended_Dua_Reference": "Al-A'raf 7:23",
       "Recommended_Dua_English": "Our Lord, we have wronged ourselves. If You do not forgive us and have mercy upon us, we will surely be among the losers.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم نے اپنے نفسوں پر ظلم کیا۔ اگر آپ نے ہمیں نہ بخشا اور ہم پر رحم نہ کیا تو ہم یقیناً خسارہ پانے والوں میں سے ہو جائیں گے۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم نے اپنے نفسوں پر ظلم کیا۔ اگر آپ نے ہمیں نہ بخشا اور ہم پر رحم نہ کیا تو ہم یقیناً خسارہ پانے والوں میں سے ہو جائیں گے۔",
+      "Urdu_Name": "مایوسی"
     },
     {
       "Emotion_ID": 7,
@@ -189,7 +195,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
       "Recommended_Dua_Reference": "Sahih al-Bukhari 6306",
       "Recommended_Dua_English": "O Allah, You are my Lord. There is no deity except You. You created me and I am Your servant, and I uphold Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I confess my sin to You, so forgive me, for there is no one who forgives sins except You.",
-      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔"
+      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔",
+      "Urdu_Name": "ندامت"
     },
     {
       "Emotion_ID": 8,
@@ -216,7 +223,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 1522",
       "Recommended_Dua_English": "O Allah, help me to remember You, to be grateful to You, and to worship You well.",
-      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔"
+      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔",
+      "Urdu_Name": "سستی"
     },
     {
       "Emotion_ID": 9,
@@ -243,7 +251,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ وَحُبَّ مَنْ يُحِبُّكَ وَحُبَّ الْعَمَلِ الَّذِي يُبَلِّغُنِي حُبَّكَ",
       "Recommended_Dua_Reference": "Jami' at-Tirmidhi 3490",
       "Recommended_Dua_English": "O Allah, I ask You for Your love, the love of those who love You, and the love of deeds that will bring me to Your love.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری محبت، تجھ سے محبت کرنے والوں کی محبت اور اس عمل کی محبت مانگتا ہوں جو مجھے تیری محبت تک پہنچائے۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری محبت، تجھ سے محبت کرنے والوں کی محبت اور اس عمل کی محبت مانگتا ہوں جو مجھے تیری محبت تک پہنچائے۔",
+      "Urdu_Name": "تنہائی"
     },
     {
       "Emotion_ID": 10,
@@ -270,7 +279,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ زِدْنِي عِلْمًا",
       "Recommended_Dua_Reference": "Ta-Ha 20:114",
       "Recommended_Dua_English": "My Lord, increase me in knowledge.",
-      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+      "Urdu_Name": "روحانی خالی پن"
     },
     {
       "Emotion_ID": 11,
@@ -297,7 +307,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ",
       "Recommended_Dua_Reference": "Jami' at-Tirmidhi 3491",
       "Recommended_Dua_English": "O Allah, I seek refuge in You from the evil of my soul and from the evil of Shaytan and his traps.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے جال سے تیری پناہ مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے جال سے تیری پناہ مانگتا ہوں۔",
+      "Urdu_Name": "تکبر"
     },
     {
       "Emotion_ID": 12,
@@ -324,7 +335,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا مَا خَلَقْتَ هَٰذَا بَاطِلًا سُبْحَانَكَ فَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Imran 3:191",
       "Recommended_Dua_English": "Our Lord, You did not create this in vain; exalted are You; then protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! تو نے یہ سب بے فائدہ نہیں بنایا، تو پاک ہے۔ ہمیں آگ کے عذاب سے بچا لے۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! تو نے یہ سب بے فائدہ نہیں بنایا، تو پاک ہے۔ ہمیں آگ کے عذاب سے بچا لے۔",
+      "Urdu_Name": "عُجب"
     },
     {
       "Emotion_ID": 13,
@@ -351,7 +363,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",
       "Recommended_Dua_Reference": "Musnad Ahmad 19606",
       "Recommended_Dua_English": "O Allah, I seek refuge in You from knowingly associating partners with You, and I ask Your forgiveness for what I do not know.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔",
+      "Urdu_Name": "ریاکاری"
     },
     {
       "Emotion_ID": 14,
@@ -378,7 +391,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:201",
       "Recommended_Dua_English": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔",
+      "Urdu_Name": "لالچ"
     },
     {
       "Emotion_ID": 15,
@@ -405,7 +419,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ لَا تَجْعَلِ الدُّنْيَا أَكْبَرَ هَمِّنَا وَلَا مَبْلَغَ عِلْمِنَا",
       "Recommended_Dua_Reference": "Jami' at-Tirmidhi 3502",
       "Recommended_Dua_English": "O Allah, do not make the world our greatest concern nor the extent of our knowledge.",
-      "Recommended_Dua_Urdu": "اے اللہ! دنیا کو ہماری سب سے بڑی فکر اور ہمارے علم کی انتہا نہ بنا۔"
+      "Recommended_Dua_Urdu": "اے اللہ! دنیا کو ہماری سب سے بڑی فکر اور ہمارے علم کی انتہا نہ بنا۔",
+      "Urdu_Name": "دنیا کی محبت"
     },
     {
       "Emotion_ID": 16,
@@ -432,7 +447,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ",
       "Recommended_Dua_Reference": "Al-Hashr 59:10",
       "Recommended_Dua_English": "Our Lord, forgive us and our brothers who preceded us in faith.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں اور ہمارے ان بھائیوں کو بخش دے جو ہم سے پہلے ایمان لائے۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں اور ہمارے ان بھائیوں کو بخش دے جو ہم سے پہلے ایمان لائے۔",
+      "Urdu_Name": "کینہ"
     },
     {
       "Emotion_ID": 17,
@@ -459,7 +475,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:250",
       "Recommended_Dua_English": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔",
+      "Urdu_Name": "بدلے کی خواہش"
     },
     {
       "Emotion_ID": 18,
@@ -486,7 +503,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً",
       "Recommended_Dua_Reference": "Al-Imran 3:8",
       "Recommended_Dua_English": "Our Lord, do not let our hearts deviate after You have guided us, and grant us from Yourself mercy.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں ہدایت دینے کے بعد ہمارے دلوں کو کج نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں ہدایت دینے کے بعد ہمارے دلوں کو کج نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔",
+      "Urdu_Name": "بدگمانی"
     },
     {
       "Emotion_ID": 19,
@@ -513,7 +531,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ زِدْنِي عِلْمًا",
       "Recommended_Dua_Reference": "Ta-Ha 20:114",
       "Recommended_Dua_English": "My Lord, increase me in knowledge.",
-      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+      "Urdu_Name": "شک"
     },
     {
       "Emotion_ID": 20,
@@ -540,7 +559,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ زِدْنِي عِلْمًا",
       "Recommended_Dua_Reference": "Ta-Ha 20:114",
       "Recommended_Dua_English": "My Lord, increase me in knowledge.",
-      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+      "Urdu_Name": "حیرت"
     },
     {
       "Emotion_ID": 21,
@@ -567,7 +587,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 1522",
       "Recommended_Dua_English": "O Allah, help me to remember You, to be grateful to You, and to worship You well.",
-      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔"
+      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔",
+      "Urdu_Name": "غفلت"
     },
     {
       "Emotion_ID": 22,
@@ -594,7 +615,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ زِدْنِي عِلْمًا",
       "Recommended_Dua_Reference": "Ta-Ha 20:114",
       "Recommended_Dua_English": "My Lord, increase me in knowledge.",
-      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+      "Urdu_Name": "کمزور ایمان"
     },
     {
       "Emotion_ID": 23,
@@ -621,7 +643,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:250",
       "Recommended_Dua_English": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔",
+      "Urdu_Name": "بے صبری"
     },
     {
       "Emotion_ID": 24,
@@ -648,7 +671,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً",
       "Recommended_Dua_Reference": "Al-Imran 3:8",
       "Recommended_Dua_English": "Our Lord, do not let our hearts deviate after You have guided us, and grant us from Yourself mercy.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں ہدایت دینے کے بعد ہمارے دلوں کو کج نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں ہدایت دینے کے بعد ہمارے دلوں کو کج نہ کر، اور ہمیں اپنی طرف سے رحمت عطا فرما۔",
+      "Urdu_Name": "سنگدلی"
     },
     {
       "Emotion_ID": 25,
@@ -675,7 +699,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:201",
       "Recommended_Dua_English": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔",
+      "Urdu_Name": "بخل"
     },
     {
       "Emotion_ID": 26,
@@ -702,7 +727,8 @@
       "Recommended_Dua_Arabic": "حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
       "Recommended_Dua_Reference": "At-Tawbah 9:129",
       "Recommended_Dua_English": "Sufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.",
-      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔"
+      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔",
+      "Urdu_Name": "حد سے زیادہ لگاؤ"
     },
     {
       "Emotion_ID": 27,
@@ -729,7 +755,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",
       "Recommended_Dua_Reference": "Musnad Ahmad 19606",
       "Recommended_Dua_English": "O Allah, I seek refuge in You from knowingly associating partners with You, and I ask Your forgiveness for what I do not know.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔",
+      "Urdu_Name": "جاہ کی محبت"
     },
     {
       "Emotion_ID": 28,
@@ -756,7 +783,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
       "Recommended_Dua_Reference": "Sahih al-Bukhari 6306",
       "Recommended_Dua_English": "O Allah, You are my Lord. There is no deity except You. You created me and I am Your servant, and I uphold Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I confess my sin to You, so forgive me, for there is no one who forgives sins except You.",
-      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔"
+      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔",
+      "Urdu_Name": "گناہ کے بعد شرم"
     },
     {
       "Emotion_ID": 29,
@@ -783,7 +811,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَصْلِحْ لِي شَأْنِي كُلَّهُ وَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 5090",
       "Recommended_Dua_English": "O Allah, rectify all my affairs and do not entrust me to myself for even the blink of an eye.",
-      "Recommended_Dua_Urdu": "اے اللہ! میرے تمام معاملات درست فرما اور مجھے ایک لمحے کے لیے بھی میرے نفس کے سپرد نہ کر۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میرے تمام معاملات درست فرما اور مجھے ایک لمحے کے لیے بھی میرے نفس کے سپرد نہ کر۔",
+      "Urdu_Name": "زیادہ سوچنا"
     },
     {
       "Emotion_ID": 30,
@@ -810,7 +839,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا",
       "Recommended_Dua_Reference": "Sahih Muslim 2722",
       "Recommended_Dua_English": "O Allah, grant my soul its piety and purify it, for You are the best of those who purify it.",
-      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔",
+      "Urdu_Name": "بے چینی"
     },
     {
       "Emotion_ID": 31,
@@ -837,7 +867,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 1522",
       "Recommended_Dua_English": "O Allah, help me to remember You, to be grateful to You, and to worship You well.",
-      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔"
+      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔",
+      "Urdu_Name": "شکر گزاری"
     },
     {
       "Emotion_ID": 32,
@@ -864,7 +895,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:201",
       "Recommended_Dua_English": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔",
+      "Urdu_Name": "قناعت"
     },
     {
       "Emotion_ID": 33,
@@ -891,7 +923,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ",
       "Recommended_Dua_Reference": "Al-A'raf 7:23",
       "Recommended_Dua_English": "Our Lord, we have wronged ourselves. If You do not forgive us and have mercy upon us, we will surely be among the losers.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم نے اپنے نفسوں پر ظلم کیا۔ اگر آپ نے ہمیں نہ بخشا اور ہم پر رحم نہ کیا تو ہم یقیناً خسارہ پانے والوں میں سے ہو جائیں گے۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم نے اپنے نفسوں پر ظلم کیا۔ اگر آپ نے ہمیں نہ بخشا اور ہم پر رحم نہ کیا تو ہم یقیناً خسارہ پانے والوں میں سے ہو جائیں گے۔",
+      "Urdu_Name": "امید"
     },
     {
       "Emotion_ID": 34,
@@ -918,7 +951,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا",
       "Recommended_Dua_Reference": "Sahih Muslim 2722",
       "Recommended_Dua_English": "O Allah, grant my soul its piety and purify it, for You are the best of those who purify it.",
-      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔",
+      "Urdu_Name": "اندرونی سکون"
     },
     {
       "Emotion_ID": 35,
@@ -945,7 +979,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:201",
       "Recommended_Dua_English": "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں دنیا میں بھی بھلائی دے اور آخرت میں بھی بھلائی دے، اور ہمیں آگ کے عذاب سے بچا۔",
+      "Urdu_Name": "خوشی"
     },
     {
       "Emotion_ID": 36,
@@ -972,7 +1007,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ وَحُبَّ مَنْ يُحِبُّكَ وَحُبَّ الْعَمَلِ الَّذِي يُبَلِّغُنِي حُبَّكَ",
       "Recommended_Dua_Reference": "Jami' at-Tirmidhi 3490",
       "Recommended_Dua_English": "O Allah, I ask You for Your love, the love of those who love You, and the love of deeds that will bring me to Your love.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری محبت، تجھ سے محبت کرنے والوں کی محبت اور اس عمل کی محبت مانگتا ہوں جو مجھے تیری محبت تک پہنچائے۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری محبت، تجھ سے محبت کرنے والوں کی محبت اور اس عمل کی محبت مانگتا ہوں جو مجھے تیری محبت تک پہنچائے۔",
+      "Urdu_Name": "اللہ سے محبت"
     },
     {
       "Emotion_ID": 37,
@@ -999,7 +1035,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا اغْفِرْ لَنَا وَلِإِخْوَانِنَا الَّذِينَ سَبَقُونَا بِالْإِيمَانِ",
       "Recommended_Dua_Reference": "Al-Hashr 59:10",
       "Recommended_Dua_English": "Our Lord, forgive us and our brothers who preceded us in faith.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں اور ہمارے ان بھائیوں کو بخش دے جو ہم سے پہلے ایمان لائے۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہمیں اور ہمارے ان بھائیوں کو بخش دے جو ہم سے پہلے ایمان لائے۔",
+      "Urdu_Name": "اللہ کی خاطر لوگوں سے محبت"
     },
     {
       "Emotion_ID": 38,
@@ -1026,7 +1063,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ",
       "Recommended_Dua_Reference": "Al-Mu'minun 23:118",
       "Recommended_Dua_English": "My Lord, forgive and have mercy, for You are the best of those who show mercy.",
-      "Recommended_Dua_Urdu": "اے میرے رب! بخش دے اور رحم فرما، اور تو سب سے بہتر رحم کرنے والا ہے۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! بخش دے اور رحم فرما، اور تو سب سے بہتر رحم کرنے والا ہے۔",
+      "Urdu_Name": "رحم"
     },
     {
       "Emotion_ID": 39,
@@ -1053,7 +1091,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ اغْفِرْ وَارْحَمْ وَأَنتَ خَيْرُ الرَّاحِمِينَ",
       "Recommended_Dua_Reference": "Al-Mu'minun 23:118",
       "Recommended_Dua_English": "My Lord, forgive and have mercy, for You are the best of those who show mercy.",
-      "Recommended_Dua_Urdu": "اے میرے رب! بخش دے اور رحم فرما، اور تو سب سے بہتر رحم کرنے والا ہے۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! بخش دے اور رحم فرما، اور تو سب سے بہتر رحم کرنے والا ہے۔",
+      "Urdu_Name": "ہمدردی"
     },
     {
       "Emotion_ID": 40,
@@ -1080,7 +1119,8 @@
       "Recommended_Dua_Arabic": "رَبَّنَا أَفْرِغْ عَلَيْنَا صَبْرًا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ",
       "Recommended_Dua_Reference": "Al-Baqarah 2:250",
       "Recommended_Dua_English": "Our Lord, pour upon us patience and plant firmly our feet and give us victory over the disbelieving people.",
-      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔"
+      "Recommended_Dua_Urdu": "اے ہمارے رب! ہم پر صبر انڈیل دے، ہمارے قدم جمائے رکھ اور ہمیں کافر قوم پر فتح عطا فرما۔",
+      "Urdu_Name": "صبر"
     },
     {
       "Emotion_ID": 41,
@@ -1107,7 +1147,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ نَفْسِي وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ",
       "Recommended_Dua_Reference": "Jami' at-Tirmidhi 3491",
       "Recommended_Dua_English": "O Allah, I seek refuge in You from the evil of my soul and from the evil of Shaytan and his traps.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے جال سے تیری پناہ مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں اپنے نفس کے شر سے اور شیطان کے شر اور اس کے جال سے تیری پناہ مانگتا ہوں۔",
+      "Urdu_Name": "تواضع"
     },
     {
       "Emotion_ID": 42,
@@ -1134,7 +1175,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ أَنْ أُشْرِكَ بِكَ وَأَنَا أَعْلَمُ، وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ",
       "Recommended_Dua_Reference": "Musnad Ahmad 19606",
       "Recommended_Dua_English": "O Allah, I seek refuge in You from knowingly associating partners with You, and I ask Your forgiveness for what I do not know.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں جانتے ہوئے تیرے ساتھ شرک کرنے سے تیری پناہ مانگتا ہوں اور جو نہیں جانتا اس کی بخشش مانگتا ہوں۔",
+      "Urdu_Name": "اخلاص"
     },
     {
       "Emotion_ID": 43,
@@ -1161,7 +1203,8 @@
       "Recommended_Dua_Arabic": "حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ ۖ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ",
       "Recommended_Dua_Reference": "At-Tawbah 9:129",
       "Recommended_Dua_English": "Sufficient for me is Allah; there is no deity except Him. On Him I have relied, and He is the Lord of the Great Throne.",
-      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔"
+      "Recommended_Dua_Urdu": "مجھے اللہ کافی ہے، اس کے سوا کوئی معبود نہیں۔ میں نے اسی پر بھروسہ کیا اور وہی عرش عظیم کا رب ہے۔",
+      "Urdu_Name": "توکل"
     },
     {
       "Emotion_ID": 44,
@@ -1188,7 +1231,8 @@
       "Recommended_Dua_Arabic": "رَّبِّ زِدْنِي عِلْمًا",
       "Recommended_Dua_Reference": "Ta-Ha 20:114",
       "Recommended_Dua_English": "My Lord, increase me in knowledge.",
-      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔"
+      "Recommended_Dua_Urdu": "اے میرے رب! مجھے علم میں اضافہ فرما۔",
+      "Urdu_Name": "یقین"
     },
     {
       "Emotion_ID": 45,
@@ -1215,7 +1259,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَالشَّهَادَةِ، وَأَسْأَلُكَ كَلِمَةَ الْحَقِّ فِي الرِّضَا وَالْغَضَبِ",
       "Recommended_Dua_Reference": "Sunan an-Nasa'i 1305",
       "Recommended_Dua_English": "O Allah, I ask You for Your fear in the unseen and in the seen, and I ask You for the word of truth in contentment and in anger.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے غیب اور حاضر میں تیرا خوف مانگتا ہوں اور رضا اور غضب میں حق بات کہنے کی توفیق مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے غیب اور حاضر میں تیرا خوف مانگتا ہوں اور رضا اور غضب میں حق بات کہنے کی توفیق مانگتا ہوں۔",
+      "Urdu_Name": "خشیت"
     },
     {
       "Emotion_ID": 46,
@@ -1242,7 +1287,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا",
       "Recommended_Dua_Reference": "Sahih Muslim 2722",
       "Recommended_Dua_English": "O Allah, grant my soul its piety and purify it, for You are the best of those who purify it.",
-      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میرے نفس کو اس کا تقوی عطا فرما اور اسے پاک کر، تو ہی اسے پاک کرنے والوں میں بہترین ہے۔",
+      "Urdu_Name": "اطمینان"
     },
     {
       "Emotion_ID": 47,
@@ -1269,7 +1315,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
       "Recommended_Dua_Reference": "Sahih al-Bukhari 6306",
       "Recommended_Dua_English": "O Allah, You are my Lord. There is no deity except You. You created me and I am Your servant, and I uphold Your covenant and promise as best I can. I seek refuge in You from the evil of what I have done. I acknowledge Your favor upon me and I confess my sin to You, so forgive me, for there is no one who forgives sins except You.",
-      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔"
+      "Recommended_Dua_Urdu": "اے اللہ! تو میرا رب ہے، تیرے سوا کوئی معبود نہیں۔ تو نے مجھے پیدا کیا اور میں تیرا بندہ ہوں، جتنی طاقت ہے اپنے وعدے پر قائم ہوں۔ اپنے اعمال کے شر سے تیری پناہ مانگتا ہوں، تیری نعمتیں تسلیم کرتا ہوں اور اپنے گناہ کا اعتراف کرتا ہوں، پس مجھے معاف کر دے، کیونکہ تیرے سوا کوئی گناہ نہیں بخشتا۔",
+      "Urdu_Name": "توبہ"
     },
     {
       "Emotion_ID": 48,
@@ -1296,7 +1343,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ لَذَّةَ النَّظَرِ إِلَى وَجْهِكَ وَالشَّوْقَ إِلَى لِقَائِكَ",
       "Recommended_Dua_Reference": "Sunan an-Nasa'i 1305",
       "Recommended_Dua_English": "O Allah, I ask You for the delight of gazing upon Your Face and the longing to meet You.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیرے چہرے کو دیکھنے کی لذت اور تجھ سے ملاقات کے شوق کا سوال کرتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیرے چہرے کو دیکھنے کی لذت اور تجھ سے ملاقات کے شوق کا سوال کرتا ہوں۔",
+      "Urdu_Name": "اللہ کا شوق"
     },
     {
       "Emotion_ID": 49,
@@ -1323,7 +1371,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 1522",
       "Recommended_Dua_English": "O Allah, help me to remember You, to be grateful to You, and to worship You well.",
-      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔"
+      "Recommended_Dua_Urdu": "اے اللہ! مجھے اپنا ذکر کرنے، اپنا شکر ادا کرنے اور اپنی اچھی عبادت کرنے میں مدد فرما۔",
+      "Urdu_Name": "عبادت کی مٹھاس"
     },
     {
       "Emotion_ID": 50,
@@ -1350,7 +1399,8 @@
       "Recommended_Dua_Arabic": "اللَّهُمَّ إِنِّي أَسْأَلُكَ رِضَاكَ وَالْجَنَّةَ وَأَعُوذُ بِكَ مِنْ سَخَطِكَ وَالنَّارِ",
       "Recommended_Dua_Reference": "Sunan Abi Dawud 1519",
       "Recommended_Dua_English": "O Allah, I ask You for Your pleasure and for Paradise, and I seek refuge in You from Your anger and from the Fire.",
-      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری رضا اور جنت کا سوال کرتا ہوں اور تیرے غضب اور دوزخ سے تیری پناہ مانگتا ہوں۔"
+      "Recommended_Dua_Urdu": "اے اللہ! میں تجھ سے تیری رضا اور جنت کا سوال کرتا ہوں اور تیرے غضب اور دوزخ سے تیری پناہ مانگتا ہوں۔",
+      "Urdu_Name": "اللہ کا قرب"
     }
   ]
 }

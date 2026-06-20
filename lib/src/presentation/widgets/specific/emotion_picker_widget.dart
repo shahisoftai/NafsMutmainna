@@ -31,14 +31,16 @@ class _EmotionPickerWidgetState extends State<EmotionPickerWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final q = _query.toLowerCase();
     final filtered = _query.isEmpty
         ? widget.emotions
-        : widget.emotions
-            .where((e) =>
-                e.name.toLowerCase().contains(_query.toLowerCase()) ||
+        : widget.emotions.where((e) {
+            final urdu = (e.urduName ?? '').toLowerCase();
+            return e.name.toLowerCase().contains(q) ||
                 e.arabicName.contains(_query) ||
-                e.keywords.toLowerCase().contains(_query.toLowerCase()))
-            .toList();
+                urdu.contains(q) ||
+                e.keywords.toLowerCase().contains(q);
+          }).toList();
     final negative = filtered.where((e) => e.category == 'Negative').toList();
     final positive = filtered.where((e) => e.category == 'Positive').toList();
 
@@ -93,20 +95,74 @@ class _EmotionPickerWidgetState extends State<EmotionPickerWidget> {
     );
   }
 
+  /// Compact 2-line bilingual pill: English name on top, Arabic + Urdu
+  /// beneath in a smaller secondary colour. The bilingual line uses a Row
+  /// (not Directionality) so the ambient text direction (en/ur/ar) flips
+  /// the order naturally when the user switches app locale.
   Widget _chip(Emotion e) {
     final isSelected = widget.selected?.id == e.id;
     final color = e.category == 'Negative' ? AppColors.nafsAmmarah : AppColors.primary;
     return ChoiceChip(
-      label: Text(e.name),
       selected: isSelected,
       onSelected: (_) => widget.onSelected(e),
       selectedColor: color.withValues(alpha: 0.15),
-      labelStyle: TextStyle(
-        color: isSelected ? color : AppColors.textPrimary,
-        fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
-        fontSize: 12,
-      ),
+      backgroundColor: Colors.transparent,
       side: BorderSide(color: isSelected ? color : AppColors.surfaceVariant),
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      labelPadding: const EdgeInsets.symmetric(horizontal: 2, vertical: 2),
+      label: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            e.name,
+            style: TextStyle(
+              color: isSelected ? color : AppColors.textPrimary,
+              fontWeight: isSelected ? FontWeight.w600 : FontWeight.w600,
+              fontSize: 12,
+              height: 1.15,
+            ),
+          ),
+          const SizedBox(height: 2),
+          _bilingualLine(e, isSelected: isSelected, color: color),
+        ],
+      ),
+    );
+  }
+
+  Widget _bilingualLine(Emotion e, {required bool isSelected, required Color color}) {
+    final hasArabic = e.arabicName.trim().isNotEmpty;
+    final hasUrdu = (e.urduName ?? '').trim().isNotEmpty;
+    if (!hasArabic && !hasUrdu) return const SizedBox.shrink();
+    final secondary = isSelected
+        ? color.withValues(alpha: 0.85)
+        : AppColors.textSecondary;
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (hasArabic)
+          Text(
+            e.arabicName,
+            style: TextStyle(color: secondary, fontSize: 11, height: 1.15),
+          ),
+        if (hasArabic && hasUrdu)
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 6),
+            child: Text(
+              '·',
+              style: TextStyle(
+                color: AppColors.textSecondary.withValues(alpha: 0.5),
+                fontSize: 11,
+                height: 1.15,
+              ),
+            ),
+          ),
+        if (hasUrdu)
+          Text(
+            e.urduName!,
+            style: TextStyle(color: secondary, fontSize: 11, height: 1.15),
+          ),
+      ],
     );
   }
 }

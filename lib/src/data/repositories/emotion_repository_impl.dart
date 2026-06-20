@@ -42,8 +42,8 @@ class EmotionRepositoryImpl implements EmotionRepositoryInterface {
     final q = '%${query.toLowerCase()}%';
     final rows = await _db.db.query(
       'emotions',
-      where: 'LOWER(Core_Emotion) LIKE ? OR LOWER(Keywords) LIKE ? OR LOWER(Arabic_Name) LIKE ?',
-      whereArgs: [q, q, q],
+      where: 'LOWER(Core_Emotion) LIKE ? OR LOWER(Keywords) LIKE ? OR LOWER(Arabic_Name) LIKE ? OR LOWER(Urdu_Name) LIKE ?',
+      whereArgs: [q, q, q, q],
       orderBy: 'Emotion_ID ASC',
     );
     return rows.map(_fromRow).toList();
@@ -76,6 +76,7 @@ class EmotionRepositoryImpl implements EmotionRepositoryInterface {
       recommendedDuaEnglish: r['Recommended_Dua_English'] as String?,
       recommendedDuaUrdu: r['Recommended_Dua_Urdu'] as String?,
       recommendedDuaReference: r['Recommended_Dua_Reference'] as String?,
+      urduName: r['Urdu_Name'] as String?,
     );
   }
 }

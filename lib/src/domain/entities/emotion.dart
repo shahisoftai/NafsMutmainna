@@ -27,6 +27,7 @@ class Emotion extends Equatable {
   final String? recommendedDuaEnglish;
   final String? recommendedDuaUrdu;
   final String? recommendedDuaReference;
+  final String? urduName;
 
   const Emotion({
     required this.id,
@@ -54,10 +55,12 @@ class Emotion extends Equatable {
     this.recommendedDuaEnglish,
     this.recommendedDuaUrdu,
     this.recommendedDuaReference,
+    this.urduName,
   });
 
   @override
-  List<Object?> get props => [id, name, arabicName, category, severityWeight];
+  List<Object?> get props =>
+      [id, name, arabicName, urduName, category, severityWeight];
 
   /// Parses [growthPath] (e.g. "Ghadab→Sabr→Hilm→Rifq") into a list of
   /// non-empty, trimmed step names.

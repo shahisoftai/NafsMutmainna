@@ -11,7 +11,7 @@ import 'seed_loader.dart';
 /// The 16-table HeartOS database.
 class AppDatabase {
   static const _dbName = 'heartos.db';
-  static const _schemaVersion = 11;
+  static const _schemaVersion = 13;
 
   Database? _db;
 
@@ -263,6 +263,45 @@ class AppDatabase {
       }
     }
     // ===========================================================================
+    // v11 -> v12: Add Urdu_Name column to emotions.
+    // Mirrors the v6 multilingual pattern (Arabic_Name, Recommended_Dua_*, etc.)
+    // so the check-in emotion picker can render a compact bilingual pill
+    // (English on top, Arabic + Urdu underneath) regardless of the active
+    // locale. The re-seed at the bottom of this method populates the new
+    // column from the updated emotions_seed.json (SeedLoader uses
+    // INSERT OR REPLACE, so existing rows are updated in place).
+    // ===========================================================================
+    if (oldVersion < 12) {
+      try {
+        await db.execute(
+          "ALTER TABLE emotions ADD COLUMN Urdu_Name TEXT DEFAULT NULL",
+        );
+        Logger.info('v12: added Urdu_Name column to emotions');
+      } catch (e) {
+        Logger.error('v12 migration failed: $e');
+      }
+    }
+    // ===========================================================================
+    // v12 -> v13: Add Urdu_Name column to attributes (mirrors the v11 -> v12
+    // change for emotions). Lets the Heart Analysis attribute card render a
+    // 2-line bilingual name (English on top, Arabic + Urdu beneath) and
+    // matches the convention used everywhere else in the knowledge layer
+    // (Quran/Hadith translations already carry Urdu). The re-seed at the
+    // bottom of this method populates the new column from the updated
+    // attributes_seed.json (SeedLoader uses INSERT OR REPLACE, so existing
+    // rows are updated in place).
+    // ===========================================================================
+    if (oldVersion < 13) {
+      try {
+        await db.execute(
+          "ALTER TABLE attributes ADD COLUMN Urdu_Name TEXT DEFAULT NULL",
+        );
+        Logger.info('v13: added Urdu_Name column to attributes');
+      } catch (e) {
+        Logger.error('v13 migration failed: $e');
+      }
+    }
+    // ===========================================================================
     // UNIVERSAL RE-SEED (runs after all version-specific migrations)
     // Checks ALL critical tables — if ANY is empty, re-seed.
     // Catches databases that reached a version before re-seed logic was added,
@@ -340,6 +379,40 @@ class AppDatabase {
       }
     } catch (e) {
       Logger.error('[DB] Could not check quran_ayat freshness: $e');
+    }
+    // v12: ensure emotions have been re-seeded with the Urdu_Name column
+    // populated. Databases that ran the v11 -> v12 ALTER TABLE migration but
+    // were seeded from a pre-v1.1.0 emotions_seed.json will have NULL here,
+    // so the bilingual check-in pill would render English-only.
+    try {
+      final emptyUrdu = Sqflite.firstIntValue(
+        await db.rawQuery(
+          "SELECT COUNT(*) FROM emotions WHERE Urdu_Name IS NULL OR Urdu_Name = ''",
+        ),
+      );
+      if (emptyUrdu != null && emptyUrdu > 0) {
+        Logger.info('[DB] Found $emptyUrdu emotion(s) with empty Urdu_Name — triggering re-seed');
+        return true;
+      }
+    } catch (e) {
+      Logger.error('[DB] Could not check Urdu_Name: $e');
+    }
+    // v13: same re-seed trigger for the attributes.Urdu_Name column added in
+    // v13. Without this the bilingual Heart Analysis card would render the
+    // Arabic + English lines but the Urdu segment would be missing for any
+    // pre-v13 database.
+    try {
+      final emptyAttrUrdu = Sqflite.firstIntValue(
+        await db.rawQuery(
+          "SELECT COUNT(*) FROM attributes WHERE Urdu_Name IS NULL OR Urdu_Name = ''",
+        ),
+      );
+      if (emptyAttrUrdu != null && emptyAttrUrdu > 0) {
+        Logger.info('[DB] Found $emptyAttrUrdu attribute(s) with empty Urdu_Name — triggering re-seed');
+        return true;
+      }
+    } catch (e) {
+      Logger.error('[DB] Could not check attributes.Urdu_Name: $e');
     }
     return false;
   }
@@ -440,7 +513,8 @@ class AppDatabase {
         CHECK (Cause_Type IN ('Nafsi','Shaytani','Hawi','Mixed')),
       Source_Emphasis TEXT NOT NULL DEFAULT '',
       Daily_Action TEXT NOT NULL DEFAULT '',
-      Daily_Action_Source TEXT NOT NULL DEFAULT ''
+      Daily_Action_Source TEXT NOT NULL DEFAULT '',
+      Urdu_Name TEXT
     )''',
     '''CREATE TABLE emotions (
       Emotion_ID INTEGER PRIMARY KEY,
@@ -467,7 +541,8 @@ class AppDatabase {
       Recommended_Dua_Arabic TEXT,
       Recommended_Dua_Reference TEXT,
       Recommended_Dua_English TEXT,
-      Recommended_Dua_Urdu TEXT
+      Recommended_Dua_Urdu TEXT,
+      Urdu_Name TEXT
     )''',
     // Graph
     '''CREATE TABLE emotion_attribute_links (

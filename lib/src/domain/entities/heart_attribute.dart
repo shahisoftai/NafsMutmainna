@@ -129,6 +129,7 @@ class HeartAttribute extends Equatable {
   final String sourceEmphasis;
   final String dailyAction;
   final String dailyActionSource;
+  final String? urduName;
 
   const HeartAttribute({
     required this.id,
@@ -160,6 +161,7 @@ class HeartAttribute extends Equatable {
     this.sourceEmphasis = '',
     this.dailyAction = '',
     this.dailyActionSource = '',
+    this.urduName,
   });
 
   /// Convenience getter for Urdu Quranic dua.
@@ -176,6 +178,7 @@ class HeartAttribute extends Equatable {
         id,
         name,
         arabicName,
+        urduName,
         nature,
         hadithGrade,
         causeType,

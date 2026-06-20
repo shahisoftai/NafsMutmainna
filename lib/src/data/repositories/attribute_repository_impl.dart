@@ -92,6 +92,7 @@ class AttributeRepositoryImpl implements AttributeRepositoryInterface {
       sourceEmphasis: r['Source_Emphasis'] as String? ?? '',
       dailyAction: r['Daily_Action'] as String? ?? '',
       dailyActionSource: r['Daily_Action_Source'] as String? ?? '',
+      urduName: r['Urdu_Name'] as String?,
     );
   }
 }

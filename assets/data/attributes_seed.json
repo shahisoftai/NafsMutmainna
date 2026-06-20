@@ -1,5 +1,5 @@
 {
-  "_schema_version": "1.0.0",
+  "_schema_version": "1.1.0",
   "_generated_at": "2026-06-13",
   "rows": [
     {
@@ -31,7 +31,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Renew intention before each act of worship (wudu, salah, dhikr); recite \"Allahumma inni a'udhu bika an ushrika bika shay'an wa ana a'lam, wa astaghfiruka lima la a'lam\".",
-      "Daily_Action_Source": "Musnad Ahmad 19606"
+      "Daily_Action_Source": "Musnad Ahmad 19606",
+      "Urdu_Name": "ریا"
     },
     {
       "Attribute_ID": 2,
@@ -62,7 +63,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"La ilaha illa Allah\" 100x daily; perform two raka'at of humility after Fajr.",
-      "Daily_Action_Source": "Quran 31:18; Bukhari 6114"
+      "Daily_Action_Source": "Quran 31:18; Bukhari 6114",
+      "Urdu_Name": "تکبر"
     },
     {
       "Attribute_ID": 3,
@@ -93,7 +95,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Before each good deed, recite \"Allahumma la tukhayyibani bi 'ajli\" — O Allah, do not let me be deceived by my deeds.",
-      "Daily_Action_Source": "Ibn al-Qayyim, Madarij 2:300"
+      "Daily_Action_Source": "Ibn al-Qayyim, Madarij 2:300",
+      "Urdu_Name": "عُجب"
     },
     {
       "Attribute_ID": 4,
@@ -124,7 +127,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Renew shahada daily with sincerity; examine each deed for ikhlas.",
-      "Daily_Action_Source": "Quran 2:8-9"
+      "Daily_Action_Source": "Quran 2:8-9",
+      "Urdu_Name": "نفاق"
     },
     {
       "Attribute_ID": 5,
@@ -155,7 +159,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Conceal good deeds; resist sharing worship on social media.",
-      "Daily_Action_Source": "Bukhari 6499"
+      "Daily_Action_Source": "Bukhari 6499",
+      "Urdu_Name": "سُمعہ"
     },
     {
       "Attribute_ID": 6,
@@ -186,7 +191,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Begin each day with \"Alhamdulillah illadhi ahyana ba'da ma amaatana wa ilayhi an-nushur\" (after waking).",
-      "Daily_Action_Source": "Bukhari 6324; Muslim 2711"
+      "Daily_Action_Source": "Bukhari 6324; Muslim 2711",
+      "Urdu_Name": "کفرانِ نعمت"
     },
     {
       "Attribute_ID": 7,
@@ -217,7 +223,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Replace false hopes with Quran 14:7; trust in Allah's promise.",
-      "Daily_Action_Source": "Quran 14:7"
+      "Daily_Action_Source": "Quran 14:7",
+      "Urdu_Name": "غرور"
     },
     {
       "Attribute_ID": 8,
@@ -248,7 +255,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Quran daily (even a few verses); strengthen yaqeen through reading Sirat al-Salaf.",
-      "Daily_Action_Source": "Quran 2:2"
+      "Daily_Action_Source": "Quran 2:2",
+      "Urdu_Name": "ارتیاب"
     },
     {
       "Attribute_ID": 9,
@@ -279,7 +287,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Soften the heart through tafakkur over death, dhikr, and visiting the graves.",
-      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750",
+      "Urdu_Name": "قسوتِ قلب"
     },
     {
       "Attribute_ID": 10,
@@ -310,7 +319,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Establish 5 daily adhkar (morning/evening); recite Surah Al-Kahf on Friday.",
-      "Daily_Action_Source": "Quran 7:205; Bukhari 6407"
+      "Daily_Action_Source": "Quran 7:205; Bukhari 6407",
+      "Urdu_Name": "غفلت"
     },
     {
       "Attribute_ID": 11,
@@ -341,7 +351,8 @@
       "Cause_Type": "Shaytani",
       "Source_Emphasis": "",
       "Daily_Action": "Recite last 2 verses of Al-Baqarah before sleep; istighfar 100x.",
-      "Daily_Action_Source": "Bukhari 6607"
+      "Daily_Action_Source": "Bukhari 6607",
+      "Urdu_Name": "اَمنِ مکرِ الٰہی"
     },
     {
       "Attribute_ID": 12,
@@ -372,7 +383,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Attend a janazah weekly; visit the sick; recite Surah Al-Mulk before sleep.",
-      "Daily_Action_Source": "Tirmidhi 2307"
+      "Daily_Action_Source": "Tirmidhi 2307",
+      "Urdu_Name": "طُولِ اَمل"
     },
     {
       "Attribute_ID": 13,
@@ -403,7 +415,8 @@
       "Cause_Type": "Hawi",
       "Source_Emphasis": "",
       "Daily_Action": "Pause 3 seconds before each desire; ask: Is this for Allah or for my hawa?",
-      "Daily_Action_Source": "Quran 45:23"
+      "Daily_Action_Source": "Quran 45:23",
+      "Urdu_Name": "اِتّباعِ ہویٰ"
     },
     {
       "Attribute_ID": 14,
@@ -434,7 +447,8 @@
       "Cause_Type": "Shaytani",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Duha and Surah Al-Inshirah; istighfar 100x daily.",
-      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877",
+      "Urdu_Name": "مایوسی"
     },
     {
       "Attribute_ID": 15,
@@ -465,7 +479,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma la ta'alimni ila 'ajali\" — fix the eyes on akhirah.",
-      "Daily_Action_Source": "Bukhari 6416"
+      "Daily_Action_Source": "Bukhari 6416",
+      "Urdu_Name": "شرکِ اصغر"
     },
     {
       "Attribute_ID": 16,
@@ -496,7 +511,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Imran 3:185 and \"Ya Hayyu Ya Qayyum\" frequently.",
-      "Daily_Action_Source": "Bukhari 6412"
+      "Daily_Action_Source": "Bukhari 6412",
+      "Urdu_Name": "کراہیتِ موت"
     },
     {
       "Attribute_ID": 17,
@@ -527,7 +543,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Smile; speak gently; recite Surah Al-Hujurat 49:11.",
-      "Daily_Action_Source": "Quran 49:11"
+      "Daily_Action_Source": "Quran 49:11",
+      "Urdu_Name": "سُخریہ"
     },
     {
       "Attribute_ID": 18,
@@ -558,7 +575,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Avoid self-praise; seek the company of those who would criticize you.",
-      "Daily_Action_Source": "Quran 53:32; Muslim 2865"
+      "Daily_Action_Source": "Quran 53:32; Muslim 2865",
+      "Urdu_Name": "تکیۂ نفسِ مذمومہ"
     },
     {
       "Attribute_ID": 19,
@@ -589,7 +607,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni a'udhu bika minal-hammi wal-hazan...\" before dawn.",
-      "Daily_Action_Source": "Bukhari 6369"
+      "Daily_Action_Source": "Bukhari 6369",
+      "Urdu_Name": "تعصب"
     },
     {
       "Attribute_ID": 20,
@@ -620,7 +639,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Establish 5 daily prayers on time; wudu strengthens the heart.",
-      "Daily_Action_Source": "Quran 8:46"
+      "Daily_Action_Source": "Quran 8:46",
+      "Urdu_Name": "وَهن"
     },
     {
       "Attribute_ID": 21,
@@ -651,7 +671,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Falaq morning and evening; practice gratitude for what one has.",
-      "Daily_Action_Source": "Quran 113:5; Bukhari 6369"
+      "Daily_Action_Source": "Quran 113:5; Bukhari 6369",
+      "Urdu_Name": "حسد"
     },
     {
       "Attribute_ID": 22,
@@ -682,7 +703,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Forgive those who wronged you; recite \"Rabbana atina...\" with presence.",
-      "Daily_Action_Source": "Quran 3:133-134"
+      "Daily_Action_Source": "Quran 3:133-134",
+      "Urdu_Name": "کینہ"
     },
     {
       "Attribute_ID": 23,
@@ -713,7 +735,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Perform wudu when anger rises; change posture; remain silent.",
-      "Daily_Action_Source": "Bukhari 6116"
+      "Daily_Action_Source": "Bukhari 6116",
+      "Urdu_Name": "غصہ"
     },
     {
       "Attribute_ID": 24,
@@ -744,7 +767,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Give sadaqah daily (even a dirham); feed the poor.",
-      "Daily_Action_Source": "Bukhari 6035; Quran 3:180"
+      "Daily_Action_Source": "Bukhari 6035; Quran 3:180",
+      "Urdu_Name": "بخل"
     },
     {
       "Attribute_ID": 25,
@@ -775,7 +799,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Give a small gift daily; smile at neighbors; pay zakat on time.",
-      "Daily_Action_Source": "Quran 59:9; Bukhari 3798"
+      "Daily_Action_Source": "Quran 59:9; Bukhari 3798",
+      "Urdu_Name": "شح"
     },
     {
       "Attribute_ID": 26,
@@ -806,7 +831,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni as'aluka al-qana'ata...\" after Fajr.",
-      "Daily_Action_Source": "Muslim 1051"
+      "Daily_Action_Source": "Muslim 1051",
+      "Urdu_Name": "طمع"
     },
     {
       "Attribute_ID": 27,
@@ -837,7 +863,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Hadid 57:20 daily; fast Monday and Thursday.",
-      "Daily_Action_Source": "Quran 57:20"
+      "Daily_Action_Source": "Quran 57:20",
+      "Urdu_Name": "حبِّ دنیا"
     },
     {
       "Attribute_ID": 28,
@@ -868,7 +895,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Takathur at least once; reflect on death often.",
-      "Daily_Action_Source": "Quran 102:1; Bukhari 6436"
+      "Daily_Action_Source": "Quran 102:1; Bukhari 6436",
+      "Urdu_Name": "تکاثر"
     },
     {
       "Attribute_ID": 29,
@@ -899,7 +927,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Always speak truth; never lie, even in jokes.",
-      "Daily_Action_Source": "Bukhari 6094"
+      "Daily_Action_Source": "Bukhari 6094",
+      "Urdu_Name": "کذب"
     },
     {
       "Attribute_ID": 30,
@@ -930,7 +959,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Be punctual and trustworthy in all contracts; return trusts immediately.",
-      "Daily_Action_Source": "Quran 8:27"
+      "Daily_Action_Source": "Quran 8:27",
+      "Urdu_Name": "خیانت"
     },
     {
       "Attribute_ID": 31,
@@ -961,7 +991,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Before mentioning anyone, recite dhikr; guard the tongue.",
-      "Daily_Action_Source": "Quran 49:12; Muslim 2589"
+      "Daily_Action_Source": "Quran 49:12; Muslim 2589",
+      "Urdu_Name": "غیبت"
     },
     {
       "Attribute_ID": 32,
@@ -992,7 +1023,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Walk away from gossip; if approached, change the subject.",
-      "Daily_Action_Source": "Quran 68:11"
+      "Daily_Action_Source": "Quran 68:11",
+      "Urdu_Name": "نمیمی"
     },
     {
       "Attribute_ID": 33,
@@ -1023,7 +1055,8 @@
       "Cause_Type": "Shaytani",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Hujurat 49:12; assume the best of others.",
-      "Daily_Action_Source": "Bukhari 6066"
+      "Daily_Action_Source": "Bukhari 6066",
+      "Urdu_Name": "سوءِ ظنّ"
     },
     {
       "Attribute_ID": 34,
@@ -1054,7 +1087,8 @@
       "Cause_Type": "Shaytani",
       "Source_Emphasis": "",
       "Daily_Action": "Refrain from following people's private matters; lower the gaze.",
-      "Daily_Action_Source": "Quran 49:12; Muslim 2564"
+      "Daily_Action_Source": "Quran 49:12; Muslim 2564",
+      "Urdu_Name": "تجسس"
     },
     {
       "Attribute_ID": 35,
@@ -1085,7 +1119,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Speak softly; say \"AfaduAllah\" to lower the gaze.",
-      "Daily_Action_Source": "Quran 7:33"
+      "Daily_Action_Source": "Quran 7:33",
+      "Urdu_Name": "فحش"
     },
     {
       "Attribute_ID": 36,
@@ -1116,7 +1151,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni a'udhu bika minal-sabb wal-la'n\" daily.",
-      "Daily_Action_Source": "Quran 49:11; Bukhari 6044"
+      "Daily_Action_Source": "Quran 49:11; Bukhari 6044",
+      "Urdu_Name": "سَبّ"
     },
     {
       "Attribute_ID": 37,
@@ -1147,7 +1183,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Make abundant du'a for the absent and the dead.",
-      "Daily_Action_Source": "Quran 33:58"
+      "Daily_Action_Source": "Quran 33:58",
+      "Urdu_Name": "لعن"
     },
     {
       "Attribute_ID": 38,
@@ -1178,7 +1215,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Walk away from dispute; recite \"La khayra fi hadhihil-jadl\".",
-      "Daily_Action_Source": "Quran 16:125; Tirmidhi 1993"
+      "Daily_Action_Source": "Quran 16:125; Tirmidhi 1993",
+      "Urdu_Name": "جدال"
     },
     {
       "Attribute_ID": 39,
@@ -1209,7 +1247,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Listen first, then speak. Recite Surah Al-Kahf verse 54.",
-      "Daily_Action_Source": "Quran 18:54"
+      "Daily_Action_Source": "Quran 18:54",
+      "Urdu_Name": "مراء"
     },
     {
       "Attribute_ID": 40,
@@ -1240,7 +1279,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Honor those who differ from you; reflect on Surah Al-Hujurat.",
-      "Daily_Action_Source": "Quran 49:11"
+      "Daily_Action_Source": "Quran 49:11",
+      "Urdu_Name": "استہزاء"
     },
     {
       "Attribute_ID": 41,
@@ -1271,7 +1311,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Speak only witnessed truth; never fabricate evidence.",
-      "Daily_Action_Source": "Quran 22:30; Bukhari 2654"
+      "Daily_Action_Source": "Quran 22:30; Bukhari 2654",
+      "Urdu_Name": "شہادتِ زور"
     },
     {
       "Attribute_ID": 42,
@@ -1302,7 +1343,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Renew every promise immediately; never delay or alter a covenant.",
-      "Daily_Action_Source": "Quran 17:34"
+      "Daily_Action_Source": "Quran 17:34",
+      "Urdu_Name": "اِخلافِ وعدہ"
     },
     {
       "Attribute_ID": 43,
@@ -1333,7 +1375,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Speak softly; smile at others; say \"AfaduAllah\".",
-      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593",
+      "Urdu_Name": "قَسوۃ فی المعاملہ"
     },
     {
       "Attribute_ID": 44,
@@ -1364,7 +1407,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Begin each day with the intention to be of good character.",
-      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321",
+      "Urdu_Name": "سوءِ خُلق"
     },
     {
       "Attribute_ID": 45,
@@ -1395,7 +1439,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Greet a Muslim you have avoided; reconcile within 3 days.",
-      "Daily_Action_Source": "Quran 49:10; Bukhari 6077"
+      "Daily_Action_Source": "Quran 49:10; Bukhari 6077",
+      "Urdu_Name": "ہجرِ مسلم"
     },
     {
       "Attribute_ID": 46,
@@ -1426,7 +1471,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Kahf verses 1-3 when praised.",
-      "Daily_Action_Source": "Quran 53:32; Muslim 3001"
+      "Daily_Action_Source": "Quran 53:32; Muslim 3001",
+      "Urdu_Name": "حبِّ مدح"
     },
     {
       "Attribute_ID": 47,
@@ -1457,7 +1503,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Subhana Allahi wa bihamdihi\" 100x daily.",
-      "Daily_Action_Source": "Quran 102:1; Muslim 2865"
+      "Daily_Action_Source": "Quran 102:1; Muslim 2865",
+      "Urdu_Name": "تفاخر"
     },
     {
       "Attribute_ID": 48,
@@ -1488,7 +1535,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Sit with the poor; greet the one you know and the one you don't.",
-      "Daily_Action_Source": "Quran 49:13"
+      "Daily_Action_Source": "Quran 49:13",
+      "Urdu_Name": "تعالی"
     },
     {
       "Attribute_ID": 49,
@@ -1519,7 +1567,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"La hawla wa la quwwata illa billah\" 100x daily.",
-      "Daily_Action_Source": "Quran 57:20; Bukhari 6416"
+      "Daily_Action_Source": "Quran 57:20; Bukhari 6416",
+      "Urdu_Name": "رغبت فی دنیا"
     },
     {
       "Attribute_ID": 50,
@@ -1550,7 +1599,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Conceal your good deeds; fast 3 days a month (White Days).",
-      "Daily_Action_Source": "Quran 53:32; Muslim 2818"
+      "Daily_Action_Source": "Quran 53:32; Muslim 2818",
+      "Urdu_Name": "عُجب بِالعمل"
     },
     {
       "Attribute_ID": 51,
@@ -1581,7 +1631,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Wake for Fajr; recite Ayat al-Kursi after each prayer.",
-      "Daily_Action_Source": "Quran 53:39; Bukhari 6369"
+      "Daily_Action_Source": "Quran 53:39; Bukhari 6369",
+      "Urdu_Name": "کسل"
     },
     {
       "Attribute_ID": 52,
@@ -1612,7 +1663,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma la tufzini wa la tansuni\"; rely on Allah.",
-      "Daily_Action_Source": "Quran 8:60"
+      "Daily_Action_Source": "Quran 8:60",
+      "Urdu_Name": "عجز"
     },
     {
       "Attribute_ID": 53,
@@ -1643,7 +1695,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Imran 3:139; face fear with tawakkul.",
-      "Daily_Action_Source": "Quran 3:175; Bukhari 6374"
+      "Daily_Action_Source": "Quran 3:175; Bukhari 6374",
+      "Urdu_Name": "جبن"
     },
     {
       "Attribute_ID": 54,
@@ -1674,7 +1727,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni as'aluka al-qana'ata\" — practice contentment.",
-      "Daily_Action_Source": "Quran 102:1; Muslim 1051"
+      "Daily_Action_Source": "Quran 102:1; Muslim 1051",
+      "Urdu_Name": "حرص"
     },
     {
       "Attribute_ID": 55,
@@ -1705,7 +1759,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Eat in moderation; reflect on \"do not be wasteful.\"",
-      "Daily_Action_Source": "Quran 7:31; Bukhari 6091"
+      "Daily_Action_Source": "Quran 7:31; Bukhari 6091",
+      "Urdu_Name": "اسراف"
     },
     {
       "Attribute_ID": 56,
@@ -1736,7 +1791,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Give sadaqah secretly; track daily spending.",
-      "Daily_Action_Source": "Quran 17:26-27"
+      "Daily_Action_Source": "Quran 17:26-27",
+      "Urdu_Name": "تبذیر"
     },
     {
       "Attribute_ID": 57,
@@ -1767,7 +1823,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "Visit a janazah weekly; recite Surah Al-Mulk.",
-      "Daily_Action_Source": "Quran 62:8; Tirmidhi 2307"
+      "Daily_Action_Source": "Quran 62:8; Tirmidhi 2307",
+      "Urdu_Name": "غفلت از موت"
     },
     {
       "Attribute_ID": 58,
@@ -1798,7 +1855,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Call a relative daily; visit parents on Eid.",
-      "Daily_Action_Source": "Quran 47:22-23; Bukhari 5984"
+      "Daily_Action_Source": "Quran 47:22-23; Bukhari 5984",
+      "Urdu_Name": "قطعِ رحم"
     },
     {
       "Attribute_ID": 59,
@@ -1829,7 +1887,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "Be just even against yourself; help the wronged.",
-      "Daily_Action_Source": "Quran 42:42"
+      "Daily_Action_Source": "Quran 42:42",
+      "Urdu_Name": "ظلم"
     },
     {
       "Attribute_ID": 60,
@@ -1860,7 +1919,8 @@
       "Cause_Type": "Shaytani",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Zumar 39:53 daily; istighfar 100x.",
-      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877",
+      "Urdu_Name": "قنوط از رحمتِ الٰہی"
     },
     {
       "Attribute_ID": 61,
@@ -1891,7 +1951,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "ostentation in worship",
       "Daily_Action": "Renew intention before each act of worship (wudu, salah, dhikr); recite \"Allahumma inni a'udhu bika an ushrika bika shay'an wa ana a'lam, wa astaghfiruka lima la a'lam\".",
-      "Daily_Action_Source": "Musnad Ahmad 19606"
+      "Daily_Action_Source": "Musnad Ahmad 19606",
+      "Urdu_Name": "شک"
     },
     {
       "Attribute_ID": 62,
@@ -1922,7 +1983,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "of argumentation",
       "Daily_Action": "Recite \"La ilaha illa Allah\" 100x daily; perform two raka'at of humility after Fajr.",
-      "Daily_Action_Source": "Quran 31:18; Bukhari 6114"
+      "Daily_Action_Source": "Quran 31:18; Bukhari 6114",
+      "Urdu_Name": "تسویف"
     },
     {
       "Attribute_ID": 63,
@@ -1953,7 +2015,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "of worldly life",
       "Daily_Action": "Replace false hopes with Quran 14:7; trust in Allah's promise.",
-      "Daily_Action_Source": "Quran 14:7"
+      "Daily_Action_Source": "Quran 14:7",
+      "Urdu_Name": "قلّتِ شکر"
     },
     {
       "Attribute_ID": 64,
@@ -1984,7 +2047,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "of heedlessness toward the Hour",
       "Daily_Action": "Establish 5 daily adhkar (morning/evening); recite Surah Al-Kahf on Friday.",
-      "Daily_Action_Source": "Quran 7:205; Bukhari 6407"
+      "Daily_Action_Source": "Quran 7:205; Bukhari 6407",
+      "Urdu_Name": "قلّتِ صبر"
     },
     {
       "Attribute_ID": 65,
@@ -2015,7 +2079,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "as a chronic state",
       "Daily_Action": "Soften the heart through tafakkur over death, dhikr, and visiting the graves.",
-      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750",
+      "Urdu_Name": "توبہ"
     },
     {
       "Attribute_ID": 66,
@@ -2046,7 +2111,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "اخلاص"
     },
     {
       "Attribute_ID": 67,
@@ -2077,7 +2143,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "of outward/inward split",
       "Daily_Action": "Renew shahada daily with sincerity; examine each deed for ikhlas.",
-      "Daily_Action_Source": "Quran 2:8-9"
+      "Daily_Action_Source": "Quran 2:8-9",
+      "Urdu_Name": "صدق"
     },
     {
       "Attribute_ID": 68,
@@ -2108,7 +2175,8 @@
       "Cause_Type": "Nafsi",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "تقویٰ"
     },
     {
       "Attribute_ID": 69,
@@ -2139,7 +2207,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "صبر"
     },
     {
       "Attribute_ID": 70,
@@ -2170,7 +2239,8 @@
       "Cause_Type": "Mixed",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "شکر"
     },
     {
       "Attribute_ID": 71,
@@ -2201,7 +2271,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Repent sincerely at dawn; renew tawbah before each prayer.",
-      "Daily_Action_Source": "Quran 66:8; Muslim 2749"
+      "Daily_Action_Source": "Quran 66:8; Muslim 2749",
+      "Urdu_Name": "توکّل"
     },
     {
       "Attribute_ID": 72,
@@ -2232,7 +2303,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Examine each intention three times daily.",
-      "Daily_Action_Source": "Quran 98:5; Bukhari 1"
+      "Daily_Action_Source": "Quran 98:5; Bukhari 1",
+      "Urdu_Name": "خوفِ الٰہی"
     },
     {
       "Attribute_ID": 73,
@@ -2263,7 +2335,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Speak truth even if bitter; never lie, even in jokes.",
-      "Daily_Action_Source": "Quran 9:119; Bukhari 6094"
+      "Daily_Action_Source": "Quran 9:119; Bukhari 6094",
+      "Urdu_Name": "رجاء"
     },
     {
       "Attribute_ID": 74,
@@ -2294,7 +2367,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Begin each task with Bismillah; fear Allah privately.",
-      "Daily_Action_Source": "Quran 2:197; Muslim 2564"
+      "Daily_Action_Source": "Quran 2:197; Muslim 2564",
+      "Urdu_Name": "یقین"
     },
     {
       "Attribute_ID": 75,
@@ -2325,7 +2399,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"HasbunAllah wa ni'mal-wakeel\" in difficulty.",
-      "Daily_Action_Source": "Quran 2:153; Muslim 1053"
+      "Daily_Action_Source": "Quran 2:153; Muslim 1053",
+      "Urdu_Name": "زہد"
     },
     {
       "Attribute_ID": 76,
@@ -2356,7 +2431,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Alhamdulillah\" 100x daily; count blessings before sleep.",
-      "Daily_Action_Source": "Quran 14:7; Muslim 2819"
+      "Daily_Action_Source": "Quran 14:7; Muslim 2819",
+      "Urdu_Name": "قناعت"
     },
     {
       "Attribute_ID": 77,
@@ -2387,7 +2463,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Talaq 65:3; rely on Allah in all affairs.",
-      "Daily_Action_Source": "Quran 3:159; Bukhari 6470"
+      "Daily_Action_Source": "Quran 3:159; Bukhari 6470",
+      "Urdu_Name": "ورع"
     },
     {
       "Attribute_ID": 78,
@@ -2418,7 +2495,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite the morning and evening adhkar in full.",
-      "Daily_Action_Source": "Quran 3:175; Muslim 2758"
+      "Daily_Action_Source": "Quran 3:175; Muslim 2758",
+      "Urdu_Name": "حیاء"
     },
     {
       "Attribute_ID": 79,
@@ -2449,7 +2527,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "End each day with hope: \"Ya Rabbu, inni ra'ftu al-jannah...\".",
-      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877",
+      "Urdu_Name": "رفق"
     },
     {
       "Attribute_ID": 80,
@@ -2480,7 +2559,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite the morning dua of yaqeen: \"Allahumma inni as'aluka al-yaqeen...\".",
-      "Daily_Action_Source": "Quran 2:2; Muslim 8"
+      "Daily_Action_Source": "Quran 2:2; Muslim 8",
+      "Urdu_Name": "حِلم"
     },
     {
       "Attribute_ID": 81,
@@ -2511,7 +2591,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"La hawla wa la quwwata illa billah\" after Fajr.",
-      "Daily_Action_Source": "Quran 57:20; Ibn Majah 4102"
+      "Daily_Action_Source": "Quran 57:20; Ibn Majah 4102",
+      "Urdu_Name": "رحم"
     },
     {
       "Attribute_ID": 82,
@@ -2542,7 +2623,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Taha 20:131 before each meal.",
-      "Daily_Action_Source": "Quran 20:131; Muslim 1051"
+      "Daily_Action_Source": "Quran 20:131; Muslim 1051",
+      "Urdu_Name": "عفو"
     },
     {
       "Attribute_ID": 83,
@@ -2573,7 +2655,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Avoid doubtful matters; eat only what is plainly halal.",
-      "Daily_Action_Source": "Quran 2:168; Bukhari 52"
+      "Daily_Action_Source": "Quran 2:168; Bukhari 52",
+      "Urdu_Name": "صفح"
     },
     {
       "Attribute_ID": 84,
@@ -2604,7 +2687,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Lower the gaze; speak softly; cover the head in humility.",
-      "Daily_Action_Source": "Quran 7:26; Bukhari 6117"
+      "Daily_Action_Source": "Quran 7:26; Bukhari 6117",
+      "Urdu_Name": "احسان"
     },
     {
       "Attribute_ID": 85,
@@ -2635,7 +2719,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Speak 20% slower than usual; use gentle words with family.",
-      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593",
+      "Urdu_Name": "محبت"
     },
     {
       "Attribute_ID": 86,
@@ -2666,7 +2751,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni as'aluka al-hilm\" after Fajr.",
-      "Daily_Action_Source": "Quran 3:134; Bukhari 6114"
+      "Daily_Action_Source": "Quran 3:134; Bukhari 6114",
+      "Urdu_Name": "خشوع"
     },
     {
       "Attribute_ID": 87,
@@ -2697,7 +2783,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Send blessings upon the Prophet ﷺ 100x daily.",
-      "Daily_Action_Source": "Quran 21:107; Bukhari 6013"
+      "Daily_Action_Source": "Quran 21:107; Bukhari 6013",
+      "Urdu_Name": "انابت"
     },
     {
       "Attribute_ID": 88,
@@ -2728,7 +2815,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Ash-Shura 42:40-43; forgive before sleep.",
-      "Daily_Action_Source": "Quran 42:40; Muslim 2588"
+      "Daily_Action_Source": "Quran 42:40; Muslim 2588",
+      "Urdu_Name": "اُنس بِاللہ"
     },
     {
       "Attribute_ID": 89,
@@ -2759,7 +2847,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Forgive 3 people daily; let go of grudges.",
-      "Daily_Action_Source": "Quran 24:22; Muslim 2588"
+      "Daily_Action_Source": "Quran 24:22; Muslim 2588",
+      "Urdu_Name": "محاسبہ"
     },
     {
       "Attribute_ID": 90,
@@ -2790,7 +2879,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Worship Allah as though you see Him; excel in every act.",
-      "Daily_Action_Source": "Quran 16:90; Muslim 8"
+      "Daily_Action_Source": "Quran 16:90; Muslim 8",
+      "Urdu_Name": "مراقبہ"
     },
     {
       "Attribute_ID": 91,
@@ -2821,7 +2911,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni as'aluka hubbaka...\" daily.",
-      "Daily_Action_Source": "Quran 2:165; Bukhari 6502"
+      "Daily_Action_Source": "Quran 2:165; Bukhari 6502",
+      "Urdu_Name": "اخبات"
     },
     {
       "Attribute_ID": 92,
@@ -2852,7 +2943,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Pray with presence; recite Surah Al-Mu'minun 23:1-2 with focus.",
-      "Daily_Action_Source": "Quran 23:1-2; Muslim 489"
+      "Daily_Action_Source": "Quran 23:1-2; Muslim 489",
+      "Urdu_Name": "تواضع"
     },
     {
       "Attribute_ID": 93,
@@ -2883,7 +2975,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Return to Allah after every slip; renew tawbah daily.",
-      "Daily_Action_Source": "Quran 39:54; Muslim 2702"
+      "Daily_Action_Source": "Quran 39:54; Muslim 2702",
+      "Urdu_Name": "سکینہ"
     },
     {
       "Attribute_ID": 94,
@@ -2914,7 +3007,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite morning and evening adhkar with full presence.",
-      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675",
+      "Urdu_Name": "رضا"
     },
     {
       "Attribute_ID": 95,
@@ -2945,7 +3039,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Account yourself each night; write 3 mistakes to correct.",
-      "Daily_Action_Source": "Quran 59:18; Muslim 2816"
+      "Daily_Action_Source": "Quran 59:18; Muslim 2816",
+      "Urdu_Name": "شوقِ الٰہی"
     },
     {
       "Attribute_ID": 96,
@@ -2976,7 +3071,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recall that Allah watches; recite \"Ya Muqeeb al-hayr...\" before sleep.",
-      "Daily_Action_Source": "Quran 50:16; Muslim 8"
+      "Daily_Action_Source": "Quran 50:16; Muslim 8",
+      "Urdu_Name": "محبتِ رسول ﷺ"
     },
     {
       "Attribute_ID": 97,
@@ -3007,7 +3103,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Subhana Rabbiyal-A'la\" in ruku' with presence.",
-      "Daily_Action_Source": "Quran 22:34; Muslim 2865"
+      "Daily_Action_Source": "Quran 22:34; Muslim 2865",
+      "Urdu_Name": "تفکّر"
     },
     {
       "Attribute_ID": 98,
@@ -3038,7 +3135,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Sit with the less fortunate; greet all people equally.",
-      "Daily_Action_Source": "Quran 25:63; Muslim 2588"
+      "Daily_Action_Source": "Quran 25:63; Muslim 2588",
+      "Urdu_Name": "تذکّر"
     },
     {
       "Attribute_ID": 99,
@@ -3069,7 +3167,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"La ilaha illa Allah\" 100x after Maghrib.",
-      "Daily_Action_Source": "Quran 48:4; Bukhari 3614"
+      "Daily_Action_Source": "Quran 48:4; Bukhari 3614",
+      "Urdu_Name": "تفویض"
     },
     {
       "Attribute_ID": 100,
@@ -3100,7 +3199,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Radhitu billahi Rabban...\" after each prayer.",
-      "Daily_Action_Source": "Quran 98:8; Muslim 2815"
+      "Daily_Action_Source": "Quran 98:8; Muslim 2815",
+      "Urdu_Name": "ہیبت"
     },
     {
       "Attribute_ID": 101,
@@ -3131,7 +3231,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Ankabut 29:5; yearn for jumu'ah.",
-      "Daily_Action_Source": "Quran 29:5; Bukhari 6507"
+      "Daily_Action_Source": "Quran 29:5; Bukhari 6507",
+      "Urdu_Name": "بصیرت"
     },
     {
       "Attribute_ID": 102,
@@ -3162,7 +3263,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Send durood upon the Prophet ﷺ in abundance; study his seerah.",
-      "Daily_Action_Source": "Quran 9:24; Bukhari 15"
+      "Daily_Action_Source": "Quran 9:24; Bukhari 15",
+      "Urdu_Name": "فراست"
     },
     {
       "Attribute_ID": 103,
@@ -3193,7 +3295,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Reflect on creation: sunrise, sunset, your own body.",
-      "Daily_Action_Source": "Quran 3:191; Muslim 2699"
+      "Daily_Action_Source": "Quran 3:191; Muslim 2699",
+      "Urdu_Name": "صمت"
     },
     {
       "Attribute_ID": 104,
@@ -3224,7 +3327,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Ra'd 13:28; remember Allah often.",
-      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675",
+      "Urdu_Name": "حُسنِ ظنّ بِاللہ"
     },
     {
       "Attribute_ID": 105,
@@ -3255,7 +3359,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Say \"Allahumma inni tawakkaltu 'alaika...\" when overwhelmed.",
-      "Daily_Action_Source": "Quran 40:44; Bukhari 6369"
+      "Daily_Action_Source": "Quran 40:44; Bukhari 6369",
+      "Urdu_Name": "حکمت"
     },
     {
       "Attribute_ID": 106,
@@ -3286,7 +3391,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Subhana Rabbiyal-A'la\" with presence of Allah's majesty.",
-      "Daily_Action_Source": "Quran 59:21; Muslim 2356"
+      "Daily_Action_Source": "Quran 59:21; Muslim 2356",
+      "Urdu_Name": "عدل"
     },
     {
       "Attribute_ID": 107,
@@ -3317,7 +3423,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Reflect deeply on Quran; seek knowledge of the unseen.",
-      "Daily_Action_Source": "Quran 12:108; Muslim 2699"
+      "Daily_Action_Source": "Quran 12:108; Muslim 2699",
+      "Urdu_Name": "امانت"
     },
     {
       "Attribute_ID": 108,
@@ -3348,7 +3455,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Observe faces and actions of the righteous; learn from them.",
-      "Daily_Action_Source": "Quran 15:75; Tirmidhi 3127"
+      "Daily_Action_Source": "Quran 15:75; Tirmidhi 3127",
+      "Urdu_Name": "وفاء بِالعہد"
     },
     {
       "Attribute_ID": 109,
@@ -3379,7 +3487,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"HasbunAllah wa ni'mal-wakeel\"; speak less.",
-      "Daily_Action_Source": "Quran 50:18; Bukhari 6475"
+      "Daily_Action_Source": "Quran 50:18; Bukhari 6475",
+      "Urdu_Name": "شجاعت"
     },
     {
       "Attribute_ID": 110,
@@ -3410,7 +3519,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Ya Rabbu, la taqzi' al-jannah...\" (hope in Allah).",
-      "Daily_Action_Source": "Quran 39:53; Muslim 2877"
+      "Daily_Action_Source": "Quran 39:53; Muslim 2877",
+      "Urdu_Name": "عفّت"
     },
     {
       "Attribute_ID": 111,
@@ -3441,7 +3551,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Reflect before each decision; ask scholars for guidance.",
-      "Daily_Action_Source": "Quran 2:269; Bukhari 73"
+      "Daily_Action_Source": "Quran 2:269; Bukhari 73",
+      "Urdu_Name": "سخاوت"
     },
     {
       "Attribute_ID": 112,
@@ -3472,7 +3583,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Establish fairness in all dealings; never favor one over another unjustly.",
-      "Daily_Action_Source": "Quran 16:90; Muslim 1827"
+      "Daily_Action_Source": "Quran 16:90; Muslim 1827",
+      "Urdu_Name": "ایثار"
     },
     {
       "Attribute_ID": 113,
@@ -3503,7 +3615,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Honour all trusts; return what is borrowed promptly.",
-      "Daily_Action_Source": "Quran 4:58"
+      "Daily_Action_Source": "Quran 4:58",
+      "Urdu_Name": "حُسنِ خُلق"
     },
     {
       "Attribute_ID": 114,
@@ -3534,7 +3647,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Document all promises; fulfill them within 24 hours.",
-      "Daily_Action_Source": "Quran 17:34"
+      "Daily_Action_Source": "Quran 17:34",
+      "Urdu_Name": "حیاء مِن اللہ"
     },
     {
       "Attribute_ID": 115,
@@ -3565,7 +3679,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Stand for truth even alone; defend the oppressed.",
-      "Daily_Action_Source": "Quran 3:175; Bukhari 2820"
+      "Daily_Action_Source": "Quran 3:175; Bukhari 2820",
+      "Urdu_Name": "استقامت"
     },
     {
       "Attribute_ID": 116,
@@ -3596,7 +3711,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah An-Nur 24:33 before leaving home.",
-      "Daily_Action_Source": "Quran 24:33"
+      "Daily_Action_Source": "Quran 24:33",
+      "Urdu_Name": "مُجاہدہ"
     },
     {
       "Attribute_ID": 117,
@@ -3627,7 +3743,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Give sadaqah daily; open doors to opportunity for others.",
-      "Daily_Action_Source": "Quran 2:261; Bukhari 6035"
+      "Daily_Action_Source": "Quran 2:261; Bukhari 6035",
+      "Urdu_Name": "مُرابطہ"
     },
     {
       "Attribute_ID": 118,
@@ -3658,7 +3775,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Prefer others in food, drink, and time; serve guests first.",
-      "Daily_Action_Source": "Quran 59:9; Bukhari 3798"
+      "Daily_Action_Source": "Quran 59:9; Bukhari 3798",
+      "Urdu_Name": "فقر الی اللہ"
     },
     {
       "Attribute_ID": 119,
@@ -3689,7 +3807,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Begin each day with the intention to be of good character.",
-      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321",
+      "Urdu_Name": "عبودیّت"
     },
     {
       "Attribute_ID": 120,
@@ -3720,7 +3839,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni astahyika...\" with presence.",
-      "Daily_Action_Source": "Quran 7:26"
+      "Daily_Action_Source": "Quran 7:26",
+      "Urdu_Name": "تفرُّغ لِلعبادہ"
     },
     {
       "Attribute_ID": 121,
@@ -3751,7 +3871,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Fussilat 41:30 daily; hold firm to the Sunnah.",
-      "Daily_Action_Source": "Quran 41:30; Muslim 38"
+      "Daily_Action_Source": "Quran 41:30; Muslim 38",
+      "Urdu_Name": "صدقِ محبّت"
     },
     {
       "Attribute_ID": 122,
@@ -3782,7 +3903,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Strive against your lower desires; fast regularly.",
-      "Daily_Action_Source": "Quran 29:69; Muslim 2664"
+      "Daily_Action_Source": "Quran 29:69; Muslim 2664",
+      "Urdu_Name": "تقرُّب الی اللہ"
     },
     {
       "Attribute_ID": 123,
@@ -3813,7 +3935,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Imran 3:200; stand guard over your faith.",
-      "Daily_Action_Source": "Quran 3:200; Muslim 251"
+      "Daily_Action_Source": "Quran 3:200; Muslim 251",
+      "Urdu_Name": "ثبات"
     },
     {
       "Attribute_ID": 124,
@@ -3844,7 +3967,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni as'aluka al-faqr...\" daily.",
-      "Daily_Action_Source": "Quran 35:15; Muslim 2577"
+      "Daily_Action_Source": "Quran 35:15; Muslim 2577",
+      "Urdu_Name": "تجرید"
     },
     {
       "Attribute_ID": 125,
@@ -3875,7 +3999,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Submit fully to Allah in every matter; say \"sami'na wa ata'na.\"",
-      "Daily_Action_Source": "Quran 51:56; Muslim 8"
+      "Daily_Action_Source": "Quran 51:56; Muslim 8",
+      "Urdu_Name": "اخلاصِ قصد"
     },
     {
       "Attribute_ID": 126,
@@ -3906,7 +4031,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Reserve time daily for fresh worship; reduce distractions.",
-      "Daily_Action_Source": "Quran 62:10"
+      "Daily_Action_Source": "Quran 62:10",
+      "Urdu_Name": "فتوّت"
     },
     {
       "Attribute_ID": 127,
@@ -3937,7 +4063,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Love the Prophet ﷺ sincerely; follow his sunnah with ikhlas.",
-      "Daily_Action_Source": "Quran 3:31; Bukhari 15"
+      "Daily_Action_Source": "Quran 3:31; Bukhari 15",
+      "Urdu_Name": "توکّلِ کامل"
     },
     {
       "Attribute_ID": 128,
@@ -3968,7 +4095,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Perform extra worship in the last third of the night.",
-      "Daily_Action_Source": "Quran 5:35; Bukhari 6502"
+      "Daily_Action_Source": "Quran 5:35; Bukhari 6502",
+      "Urdu_Name": "جمعیّتِ قلب"
     },
     {
       "Attribute_ID": 129,
@@ -3999,7 +4127,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Ibrahim 14:27 daily; renew intention often.",
-      "Daily_Action_Source": "Quran 14:27"
+      "Daily_Action_Source": "Quran 14:27",
+      "Urdu_Name": "حُضورِ قلب"
     },
     {
       "Attribute_ID": 130,
@@ -4030,7 +4159,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Strip your deeds of all but Allah's pleasure.",
-      "Daily_Action_Source": "Quran 39:11; Bukhari 1"
+      "Daily_Action_Source": "Quran 39:11; Bukhari 1",
+      "Urdu_Name": "مشارکت فی خیر"
     },
     {
       "Attribute_ID": 131,
@@ -4061,7 +4191,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Renew intention before each act with \"Lillah.\"",
-      "Daily_Action_Source": "Quran 98:5; Bukhari 1"
+      "Daily_Action_Source": "Quran 98:5; Bukhari 1",
+      "Urdu_Name": "نصیحت"
     },
     {
       "Attribute_ID": 132,
@@ -4092,7 +4223,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Honor the young, respect the elders; excel in generosity.",
-      "Daily_Action_Source": "Quran 59:9"
+      "Daily_Action_Source": "Quran 59:9",
+      "Urdu_Name": "اصلاح"
     },
     {
       "Attribute_ID": 133,
@@ -4123,7 +4255,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni tawakkaltu 'alaika...\" after Fajr.",
-      "Daily_Action_Source": "Quran 65:3; Bukhari 6470"
+      "Daily_Action_Source": "Quran 65:3; Bukhari 6470",
+      "Urdu_Name": "ہمّتِ عالیہ"
     },
     {
       "Attribute_ID": 134,
@@ -4154,7 +4287,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Gather the heart before each prayer; banish distraction.",
-      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675",
+      "Urdu_Name": "مشاہدہ"
     },
     {
       "Attribute_ID": 135,
@@ -4185,7 +4319,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Pray with the heart present; slow each raka'.",
-      "Daily_Action_Source": "Quran 23:1-2; Muslim 489"
+      "Daily_Action_Source": "Quran 23:1-2; Muslim 489",
+      "Urdu_Name": "یُسر"
     },
     {
       "Attribute_ID": 136,
@@ -4216,7 +4351,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Join a circle of remembrance weekly; volunteer.",
-      "Daily_Action_Source": "Quran 5:2; Muslim 2699"
+      "Daily_Action_Source": "Quran 5:2; Muslim 2699",
+      "Urdu_Name": "بشاشت"
     },
     {
       "Attribute_ID": 137,
@@ -4247,7 +4383,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Advise sincerely and privately; never for show.",
-      "Daily_Action_Source": "Quran 103:3; Muslim 55"
+      "Daily_Action_Source": "Quran 103:3; Muslim 55",
+      "Urdu_Name": "تفاؤل"
     },
     {
       "Attribute_ID": 138,
@@ -4278,7 +4415,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Reconcile estranged believers; mediate disputes.",
-      "Daily_Action_Source": "Quran 49:10; Bukhari 2692"
+      "Daily_Action_Source": "Quran 49:10; Bukhari 2692",
+      "Urdu_Name": "حُسنِ ظنّ بِالناس"
     },
     {
       "Attribute_ID": 139,
@@ -4309,7 +4447,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Set a daily Quran goal; track your hifz.",
-      "Daily_Action_Source": "Quran 94:7-8; Muslim 2664"
+      "Daily_Action_Source": "Quran 94:7-8; Muslim 2664",
+      "Urdu_Name": "آداب"
     },
     {
       "Attribute_ID": 140,
@@ -4340,7 +4479,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Worship with the presence of Ihsan; recite the hadith of Jibreel.",
-      "Daily_Action_Source": "Quran 50:16; Muslim 8"
+      "Daily_Action_Source": "Quran 50:16; Muslim 8",
+      "Urdu_Name": "حفظِ لسان"
     },
     {
       "Attribute_ID": 141,
@@ -4371,7 +4511,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma la sahla illa ma ja'altahu sahla\" in difficulty.",
-      "Daily_Action_Source": "Quran 2:185; Bukhari 39"
+      "Daily_Action_Source": "Quran 2:185; Bukhari 39",
+      "Urdu_Name": "سماحت"
     },
     {
       "Attribute_ID": 142,
@@ -4402,7 +4543,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Smile at the mirror before leaving home.",
-      "Daily_Action_Source": "Quran 80:1-2; Muslim 2626"
+      "Daily_Action_Source": "Quran 80:1-2; Muslim 2626",
+      "Urdu_Name": "وقار"
     },
     {
       "Attribute_ID": 143,
@@ -4433,7 +4575,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Khayrul-amal al-aqwamu\" — begin with optimism.",
-      "Daily_Action_Source": "Quran 39:53; Bukhari 5776"
+      "Daily_Action_Source": "Quran 39:53; Bukhari 5776",
+      "Urdu_Name": "جود"
     },
     {
       "Attribute_ID": 144,
@@ -4464,7 +4607,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Assume good of others until proven otherwise.",
-      "Daily_Action_Source": "Quran 49:12; Muslim 2563"
+      "Daily_Action_Source": "Quran 49:12; Muslim 2563",
+      "Urdu_Name": "توازن"
     },
     {
       "Attribute_ID": 145,
@@ -4495,7 +4639,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Speak with the elderly first; greet everyone.",
-      "Daily_Action_Source": "Quran 68:4; Muslim 2321"
+      "Daily_Action_Source": "Quran 68:4; Muslim 2321",
+      "Urdu_Name": "اَناة"
     },
     {
       "Attribute_ID": 146,
@@ -4526,7 +4671,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Guard the tongue: recite \"A'udhu billahi min al-shaytan\" before speaking.",
-      "Daily_Action_Source": "Quran 50:18; Bukhari 6475"
+      "Daily_Action_Source": "Quran 50:18; Bukhari 6475",
+      "Urdu_Name": "سِتر"
     },
     {
       "Attribute_ID": 147,
@@ -4557,7 +4703,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Be lenient in transactions; forgive debts.",
-      "Daily_Action_Source": "Quran 7:199; Bukhari 2076"
+      "Daily_Action_Source": "Quran 7:199; Bukhari 2076",
+      "Urdu_Name": "رحمتِ لِلخلق"
     },
     {
       "Attribute_ID": 148,
@@ -4588,7 +4735,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Walk with dignity; lower your voice.",
-      "Daily_Action_Source": "Quran 25:63; Bukhari 6118"
+      "Daily_Action_Source": "Quran 25:63; Bukhari 6118",
+      "Urdu_Name": "تواضع فی العلم"
     },
     {
       "Attribute_ID": 149,
@@ -4619,7 +4767,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Give beyond your means; outdo others in generosity.",
-      "Daily_Action_Source": "Quran 2:261; Bukhari 6035"
+      "Daily_Action_Source": "Quran 2:261; Bukhari 6035",
+      "Urdu_Name": "زہد فی دنیا"
     },
     {
       "Attribute_ID": 150,
@@ -4650,7 +4799,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Balance dunya and akhirah; schedule worship equally with work.",
-      "Daily_Action_Source": "Quran 28:77; Bukhari 6139"
+      "Daily_Action_Source": "Quran 28:77; Bukhari 6139",
+      "Urdu_Name": "یقظہ"
     },
     {
       "Attribute_ID": 151,
@@ -4681,7 +4831,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "in speech and action",
       "Daily_Action": "Speak 20% slower than usual; use gentle words with family.",
-      "Daily_Action_Source": "Quran 3:159; Muslim 2593"
+      "Daily_Action_Source": "Quran 3:159; Muslim 2593",
+      "Urdu_Name": "فراستِ ایمانیّہ"
     },
     {
       "Attribute_ID": 152,
@@ -4712,7 +4863,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "in restraining self",
       "Daily_Action": "Recite \"Allahumma inni as'aluka al-hilm\" after Fajr.",
-      "Daily_Action_Source": "Quran 3:134; Bukhari 6114"
+      "Daily_Action_Source": "Quran 3:134; Bukhari 6114",
+      "Urdu_Name": "اِعتصام بِاللہ"
     },
     {
       "Attribute_ID": 153,
@@ -4743,7 +4895,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma ahini ma kanat al-hayatu khayran li...\" daily.",
-      "Daily_Action_Source": "Quran 17:11; Muslim 17"
+      "Daily_Action_Source": "Quran 17:11; Muslim 17",
+      "Urdu_Name": "انابتِ کاملہ"
     },
     {
       "Attribute_ID": 154,
@@ -4774,7 +4927,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "with lawful provision",
       "Daily_Action": "Recite Surah Taha 20:131 before each meal.",
-      "Daily_Action_Source": "Quran 20:131; Muslim 1051"
+      "Daily_Action_Source": "Quran 20:131; Muslim 1051",
+      "Urdu_Name": "صبرِ جمیل"
     },
     {
       "Attribute_ID": 155,
@@ -4805,7 +4959,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Conceal the faults of others; never expose a Muslim.",
-      "Daily_Action_Source": "Quran 24:19; Muslim 2590"
+      "Daily_Action_Source": "Quran 24:19; Muslim 2590",
+      "Urdu_Name": "ہجرت الی اللہ"
     },
     {
       "Attribute_ID": 156,
@@ -4836,7 +4991,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Visit the sick; feed the hungry; comfort the grieving.",
-      "Daily_Action_Source": "Quran 21:107; Bukhari 6013"
+      "Daily_Action_Source": "Quran 21:107; Bukhari 6013",
+      "Urdu_Name": "تذلّل"
     },
     {
       "Attribute_ID": 157,
@@ -4867,7 +5023,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Allahumma inni a'udhu bika min ilmin la yanfa'\" daily.",
-      "Daily_Action_Source": "Quran 18:66; Muslim 2865"
+      "Daily_Action_Source": "Quran 18:66; Muslim 2865",
+      "Urdu_Name": "خشیت"
     },
     {
       "Attribute_ID": 158,
@@ -4898,7 +5055,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "avoiding doubtful matters",
       "Daily_Action": "Avoid doubtful matters; eat only what is plainly halal.",
-      "Daily_Action_Source": "Quran 2:168; Bukhari 52"
+      "Daily_Action_Source": "Quran 2:168; Bukhari 52",
+      "Urdu_Name": "وَجَل"
     },
     {
       "Attribute_ID": 159,
@@ -4929,7 +5087,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite \"Ma'a al-'usri yusra\" — trust in Allah's relief.",
-      "Daily_Action_Source": "Quran 57:20"
+      "Daily_Action_Source": "Quran 57:20",
+      "Urdu_Name": "رغبت و رہبت"
     },
     {
       "Attribute_ID": 160,
@@ -4960,7 +5119,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "in remembrance",
       "Daily_Action": "Recite morning and evening adhkar with full presence.",
-      "Daily_Action_Source": "Quran 13:28; Muslim 2675"
+      "Daily_Action_Source": "Quran 13:28; Muslim 2675",
+      "Urdu_Name": "اُنس بِالقرآن"
     },
     {
       "Attribute_ID": 161,
@@ -4991,7 +5151,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite morning and evening adhkar with full presence.",
-      "Daily_Action_Source": "Quran 57:16; Muslim 2750"
+      "Daily_Action_Source": "Quran 57:16; Muslim 2750",
+      "Urdu_Name": "تعظیمِ الٰہی"
     },
     {
       "Attribute_ID": 162,
@@ -5022,7 +5183,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "تعظیمِ شعائرِ الٰہی"
     },
     {
       "Attribute_ID": 163,
@@ -5053,7 +5215,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Hold firmly to the Quran and Sunnah; seek refuge in Allah from doubt.",
-      "Daily_Action_Source": "Quran 3:103; Muslim 867"
+      "Daily_Action_Source": "Quran 3:103; Muslim 867",
+      "Urdu_Name": "مراقبۂ کاملہ"
     },
     {
       "Attribute_ID": 164,
@@ -5084,7 +5247,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "صدقِ توکّل"
     },
     {
       "Attribute_ID": 165,
@@ -5115,7 +5279,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Face trials with \"HasbunAllah wa ni'mal-wakeel\".",
-      "Daily_Action_Source": "Quran 12:18"
+      "Daily_Action_Source": "Quran 12:18",
+      "Urdu_Name": "رضا بِالقضاء"
     },
     {
       "Attribute_ID": 166,
@@ -5146,7 +5311,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Make hijrah from sin to obedience daily.",
-      "Daily_Action_Source": "Quran 51:50"
+      "Daily_Action_Source": "Quran 51:50",
+      "Urdu_Name": "محبّت فی اللہ"
     },
     {
       "Attribute_ID": 167,
@@ -5177,7 +5343,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Prostrate with humility; make abundant du'a.",
-      "Daily_Action_Source": "Quran 25:63; Muslim 2865"
+      "Daily_Action_Source": "Quran 25:63; Muslim 2865",
+      "Urdu_Name": "بُغض فی اللہ"
     },
     {
       "Attribute_ID": 168,
@@ -5208,7 +5375,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Hashr 59:21 with presence of Allah's majesty.",
-      "Daily_Action_Source": "Quran 35:28; Bukhari 6482"
+      "Daily_Action_Source": "Quran 35:28; Bukhari 6482",
+      "Urdu_Name": "اخلاصِ محبّت"
     },
     {
       "Attribute_ID": 169,
@@ -5239,7 +5407,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Anfal 8:2; reflect on Allah's signs.",
-      "Daily_Action_Source": "Quran 8:2"
+      "Daily_Action_Source": "Quran 8:2",
+      "Urdu_Name": "استقامتِ کاملہ"
     },
     {
       "Attribute_ID": 170,
@@ -5270,7 +5439,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Balance hope and fear: \"Ya man yaqbil al-tawwabin, taqabbal minni.\"",
-      "Daily_Action_Source": "Quran 21:90"
+      "Daily_Action_Source": "Quran 21:90",
+      "Urdu_Name": "شُکرِ خَلق"
     },
     {
       "Attribute_ID": 171,
@@ -5301,7 +5471,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite one page of Quran with reflection daily.",
-      "Daily_Action_Source": "Quran 43:36; Muslim 804"
+      "Daily_Action_Source": "Quran 43:36; Muslim 804",
+      "Urdu_Name": "فلاح"
     },
     {
       "Attribute_ID": 172,
@@ -5332,7 +5503,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Hajj 22:74; magnify Allah in every prayer.",
-      "Daily_Action_Source": "Quran 22:74"
+      "Daily_Action_Source": "Quran 22:74",
+      "Urdu_Name": "حُسنِ خاتمہ"
     },
     {
       "Attribute_ID": 173,
@@ -5363,7 +5535,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Honor the symbols of Islam: masjid, Quran, prayer.",
-      "Daily_Action_Source": "Quran 22:32"
+      "Daily_Action_Source": "Quran 22:32",
+      "Urdu_Name": "رفق بِاللہ"
     },
     {
       "Attribute_ID": 174,
@@ -5394,7 +5567,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "constant watchfulness",
       "Daily_Action": "Recall that Allah watches; recite \"Ya Muqeeb al-hayr...\" before sleep.",
-      "Daily_Action_Source": "Quran 50:16; Muslim 8"
+      "Daily_Action_Source": "Quran 50:16; Muslim 8",
+      "Urdu_Name": "فوزِ عظیم"
     },
     {
       "Attribute_ID": 175,
@@ -5425,7 +5599,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "in every act",
       "Daily_Action": "Worship Allah as though you see Him; excel in every act.",
-      "Daily_Action_Source": "Quran 16:90; Muslim 8"
+      "Daily_Action_Source": "Quran 16:90; Muslim 8",
+      "Urdu_Name": "لِقاءُ اللہ"
     },
     {
       "Attribute_ID": 176,
@@ -5456,7 +5631,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Recite Surah Al-Talaq 65:3 with full tawakkul.",
-      "Daily_Action_Source": "Quran 65:3; Bukhari 6470"
+      "Daily_Action_Source": "Quran 65:3; Bukhari 6470",
+      "Urdu_Name": "رضوانِ الٰہی"
     },
     {
       "Attribute_ID": 177,
@@ -5487,7 +5663,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "",
-      "Daily_Action_Source": ""
+      "Daily_Action_Source": "",
+      "Urdu_Name": "درجاتِ احسان"
     },
     {
       "Attribute_ID": 178,
@@ -5518,7 +5695,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Love for Allah's sake; hate for Allah's sake.",
-      "Daily_Action_Source": "Quran 59:10"
+      "Daily_Action_Source": "Quran 59:10",
+      "Urdu_Name": "عبودیّتِ کاملہ"
     },
     {
       "Attribute_ID": 179,
@@ -5549,7 +5727,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Disavow disbelief in the heart; love the righteous.",
-      "Daily_Action_Source": "Quran 60:4"
+      "Daily_Action_Source": "Quran 60:4",
+      "Urdu_Name": "توحیدِ کامل"
     },
     {
       "Attribute_ID": 180,
@@ -5580,7 +5759,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Renew love for Allah through night worship.",
-      "Daily_Action_Source": "Quran 2:165"
+      "Daily_Action_Source": "Quran 2:165",
+      "Urdu_Name": "صدیقیّت"
     },
     {
       "Attribute_ID": 181,
@@ -5611,7 +5791,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "",
       "Daily_Action": "Be truthful in love for Allah and His Messenger ﷺ.",
-      "Daily_Action_Source": "Quran 3:31; Bukhari 15"
+      "Daily_Action_Source": "Quran 3:31; Bukhari 15",
+      "Urdu_Name": "ولایت"
     },
     {
       "Attribute_ID": 182,
@@ -5642,7 +5823,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "for the meeting with Allah",
       "Daily_Action": "Recite Surah Al-Ankabut 29:5; yearn for jumu'ah.",
-      "Daily_Action_Source": "Quran 29:5; Bukhari 6507"
+      "Daily_Action_Source": "Quran 29:5; Bukhari 6507",
+      "Urdu_Name": "طلبِ فردوسِ اعلیٰ"
     },
     {
       "Attribute_ID": 183,
@@ -5673,7 +5855,8 @@
       "Cause_Type": "Positive",
       "Source_Emphasis": "in all affairs",
       "Daily_Action": "Say \"Allahumma inni tawakkaltu 'alaika...\" when overwhelmed.",
-      "Daily_Action_Source": "Quran 40:44; Bukhari 6369"
+      "Daily_Action_Source": "Quran 40:44; Bukhari 6369",
+      "Urdu_Name": "توجّہ الی جنّتِ نعیم"
     }
   ]
 }
