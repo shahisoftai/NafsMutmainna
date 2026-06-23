@@ -38,60 +38,71 @@ class SettingsScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(title: const Text('Settings')),
-      body: ListView(
-        padding: const EdgeInsets.only(bottom: 24),
-        children: [
-          // ---- Data ----
-          const _SectionLabel('Data'),
-          const _DeleteDataTile(),
-          const _SectionDivider(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+                children: [
+                  // ---- Data ----
+                  const _SectionLabel('Data'),
+                  const _DeleteDataTile(),
+                  const _SectionDivider(),
 
-          // ---- Privacy & Security ----
-          const _SectionLabel('Privacy & Security'),
-          const _PrivacyLockTile(),
-          const _SectionDivider(),
+                  // ---- Privacy & Security ----
+                  const _SectionLabel('Privacy & Security'),
+                  const _PrivacyLockTile(),
+                  const _SectionDivider(),
 
-          // ---- Legal ----
-          const _SectionLabel('Legal'),
-          const _LinkTile(
-            icon: Icons.privacy_tip_outlined,
-            title: 'Privacy Policy',
-            url: kPrivacyUrl,
-          ),
-          const _LinkTile(
-            icon: Icons.gavel_outlined,
-            title: 'Terms of Service',
-            url: kTermsUrl,
-          ),
-          const _DisclaimerTile(),
-          const _SectionDivider(),
+                  // ---- Legal ----
+                  const _SectionLabel('Legal'),
+                  const _LinkTile(
+                    icon: Icons.privacy_tip_outlined,
+                    title: 'Privacy Policy',
+                    url: kPrivacyUrl,
+                  ),
+                  const _LinkTile(
+                    icon: Icons.gavel_outlined,
+                    title: 'Terms of Service',
+                    url: kTermsUrl,
+                  ),
+                  const _DisclaimerTile(),
+                  const _SectionDivider(),
 
-          // ---- About ----
-          const _SectionLabel('About'),
-          const _AboutHeader(),
-          const _ReplayOnboardingTile(),
-          const _LinkTile(
-            icon: Icons.language_outlined,
-            title: 'Website',
-            subtitle: kAppWebsite,
-            url: kAppWebsite,
-          ),
-          const _ContactUsTile(),
-          const _SourcesTile(),
-          const _RateAppTile(),
-          const _SectionDivider(),
+                  // ---- About ----
+                  const _SectionLabel('About'),
+                  const _AboutHeader(),
+                  const _ReplayOnboardingTile(),
+                  const _LinkTile(
+                    icon: Icons.language_outlined,
+                    title: 'Website',
+                    subtitle: kAppWebsite,
+                    url: kAppWebsite,
+                  ),
+                  const _ContactUsTile(),
+                  const _SourcesTile(),
+                  const _RateAppTile(),
+                  const _SectionDivider(),
 
-          // ---- Disclaimer banner ----
-          const _DisclaimerBanner(),
-          const SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: OutlinedButton(
-              onPressed: () => context.go(AppRouter.home),
-              child: const Text('Back to Home'),
+                  // ---- Disclaimer banner ----
+                  const _DisclaimerBanner(),
+                  const SizedBox(height: 16),
+                ],
+              ),
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 16 + MediaQuery.of(context).padding.bottom),
+              child: SizedBox(
+                width: double.infinity,
+                child: OutlinedButton(
+                  onPressed: () => context.go(AppRouter.home),
+                  child: const Text('Back to Home'),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

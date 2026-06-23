@@ -48,8 +48,9 @@ class _HabitsScreenState extends ConsumerState<HabitsScreen> {
       appBar: AppBar(title: const Text('Habits')),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : ListView(
-              padding: const EdgeInsets.all(16),
+          : SafeArea(
+            child: ListView(
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.of(context).padding.bottom + 16),
               children: [
                 if (_habits.isEmpty)
                   const Padding(
@@ -82,12 +83,16 @@ class _HabitsScreenState extends ConsumerState<HabitsScreen> {
                   label: const Text('Add habit'),
                 ),
                 const SizedBox(height: 24),
-                OutlinedButton(
-                  onPressed: () => context.go(AppRouter.home),
-                  child: const Text('Back to Home'),
+                Padding(
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom),
+                  child: OutlinedButton(
+                    onPressed: () => context.go(AppRouter.home),
+                    child: const Text('Back to Home'),
+                  ),
                 ),
               ],
             ),
+          ),
     );
   }
 

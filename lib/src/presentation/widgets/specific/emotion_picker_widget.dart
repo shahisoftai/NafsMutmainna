@@ -68,29 +68,54 @@ class _EmotionPickerWidgetState extends State<EmotionPickerWidget> {
           onChanged: (v) => setState(() => _query = v),
         ),
         const SizedBox(height: 12),
-        if (negative.isNotEmpty) _section('Negative', negative),
-        if (positive.isNotEmpty) _section('Positive', positive),
+        InteractiveViewer(
+          constrained: false,
+          minScale: 1.0,
+          maxScale: 3.0,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              if (negative.isNotEmpty) _section('Negative', negative),
+              if (positive.isNotEmpty) _section('Positive', positive),
+            ],
+          ),
+        ),
       ],
     );
   }
 
   Widget _section(String title, List<Emotion> items) {
+    final isNegative = title == 'Negative';
+    final bgColor = isNegative
+        ? Colors.red.withValues(alpha: 0.06)
+        : Colors.green.withValues(alpha: 0.06);
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            title,
-            style: const TextStyle(fontSize: 12, color: AppColors.textSecondary, fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 6),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: items.map((e) => _chip(e)).toList(),
-          ),
-        ],
+      child: Container(
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(8),
+        ),
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(
+                fontSize: 12,
+                color: isNegative ? Colors.red.shade700 : Colors.green.shade700,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 6),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: items.map((e) => _chip(e)).toList(),
+            ),
+          ],
+        ),
       ),
     );
   }

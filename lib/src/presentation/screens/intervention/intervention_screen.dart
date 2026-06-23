@@ -86,52 +86,53 @@ class _InterventionScreenState extends ConsumerState<InterventionScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Personal Prescription')),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 8),
-        children: [
-          // RI-4.7: Tazkiya-safe disclaimer — every remedy is general;
-          // consult a qualified scholar for treatment specific to your state.
-          const InterventionDisclaimerBanner(),
-          for (final card in widget.result.cards)
-            InterventionCardWidget(
-              card: card,
-              done: _done.contains(card.hashCode),
-              onDone: _done.contains(card.hashCode) ? null : () => _markDone(card),
-              onSkip: _skipped.contains(card.hashCode) ? null : () => _markSkip(card),
-              onTap: () => _openDetail(card),
-            ),
-          if (widget.result.cards.isEmpty)
-            const Padding(
-              padding: EdgeInsets.all(24),
-              child: Center(
-                child: Text('No interventions available right now.',
-                    style: TextStyle(color: AppColors.textSecondary)),
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.fromLTRB(16, 8, 16, 16 + MediaQuery.of(context).padding.bottom + 16),
+          children: [
+            // RI-4.7: Tazkiya-safe disclaimer — every remedy is general;
+            // consult a qualified scholar for treatment specific to your state.
+            const InterventionDisclaimerBanner(),
+            for (final card in widget.result.cards)
+              InterventionCardWidget(
+                card: card,
+                done: _done.contains(card.hashCode),
+                onDone: _done.contains(card.hashCode) ? null : () => _markDone(card),
+                onSkip: _skipped.contains(card.hashCode) ? null : () => _markSkip(card),
+                onTap: () => _openDetail(card),
               ),
-            ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton(
-                onPressed: () => context.push(
-                  AppRouter.reflect,
-                  extra: widget.result,
-                ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                ),
-                child: const Text(
-                  'How did this make you feel?',
-                  style: TextStyle(fontSize: 16, color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
+            if (widget.result.cards.isEmpty)
+              const Padding(
+                padding: EdgeInsets.all(24),
+                child: Center(
+                  child: Text('No interventions available right now.',
+                      style: TextStyle(color: AppColors.textSecondary)),
                 ),
               ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+              child: SizedBox(
+                width: double.infinity,
+                height: 52,
+                child: ElevatedButton(
+                  onPressed: () => context.push(
+                    AppRouter.reflect,
+                    extra: widget.result,
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  ),
+                  child: const Text(
+                    'How did this make you feel?',
+                    style: TextStyle(fontSize: 16, color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
+                  ),
+                ),
+              ),
             ),
-          ),
-          const SizedBox(height: 24),
-        ],
+          ],
+        ),
       ),
     );
   }

@@ -104,61 +104,63 @@ class _ReflectScreenState extends ConsumerState<ReflectScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('How do you feel now?')),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        children: [
-          const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            child: Text(
-              'Reflecting on the prescription and emotions you just recorded will help refine your next check-in.',
-              style: TextStyle(color: AppColors.textSecondary, fontSize: 14),
-            ),
-          ),
-          // RI-5.2 + RI-3.5: Muhasabah prompts + Cause-Whisper anchored to
-          // the dominant Cause_Type of the detected attributes.
-          ReflectPromptsCard(
-            detectedAttributes: widget.result.detected,
-            resolveAttribute: (id) async {
-              try {
-                return await ref.read(attributeRepositoryProvider).getById(id);
-              } catch (_) {
-                return null;
-              }
-            },
-          ),
-          for (final f in InterventionFeedback.values)
-            FeedbackButtonWidget(
-              feedback: f,
-              onTap: () {
-                if (!_saving) setState(() => _selected = f);
-              },
-              selected: _selected == f,
-            ),
-          const SizedBox(height: 16),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton(
-                onPressed: (_selected == null || _saving) ? null : _save,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.primary,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-                ),
-                child: _saving
-                    ? const SizedBox(
-                        width: 22, height: 22,
-                        child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.textOnPrimary),
-                      )
-                    : const Text(
-                        'Save and return',
-                        style: TextStyle(fontSize: 16, color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
-                      ),
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.of(context).padding.bottom + 16),
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              child: Text(
+                'Reflecting on the prescription and emotions you just recorded will help refine your next check-in.',
+                style: TextStyle(color: AppColors.textSecondary, fontSize: 14),
               ),
             ),
-          ),
-        ],
+            // RI-5.2 + RI-3.5: Muhasabah prompts + Cause-Whisper anchored to
+            // the dominant Cause_Type of the detected attributes.
+            ReflectPromptsCard(
+              detectedAttributes: widget.result.detected,
+              resolveAttribute: (id) async {
+                try {
+                  return await ref.read(attributeRepositoryProvider).getById(id);
+                } catch (_) {
+                  return null;
+                }
+              },
+            ),
+            for (final f in InterventionFeedback.values)
+              FeedbackButtonWidget(
+                feedback: f,
+                onTap: () {
+                  if (!_saving) setState(() => _selected = f);
+                },
+                selected: _selected == f,
+              ),
+            const SizedBox(height: 16),
+            Padding(
+              padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
+              child: SizedBox(
+                width: double.infinity,
+                height: 52,
+                child: ElevatedButton(
+                  onPressed: (_selected == null || _saving) ? null : _save,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColors.primary,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                  ),
+                  child: _saving
+                      ? const SizedBox(
+                          width: 22, height: 22,
+                          child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.textOnPrimary),
+                        )
+                      : const Text(
+                          'Save and return',
+                          style: TextStyle(fontSize: 16, color: AppColors.textOnPrimary, fontWeight: FontWeight.w600),
+                        ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

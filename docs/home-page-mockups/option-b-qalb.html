@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Option B — Qalb: The Calm Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  @supports (font-variation-settings: normal) {
+    :root { font-family: 'Inter var', system-ui; }
+  }
+  :root {
+    --surface: #FAFAF7;
+    --card: #FFFFFF;
+    --ink: #1F2421;
+    --ink-soft: #4A524C;
+    --muted: #8B938D;
+    --line: #ECEEEC;
+    --teal: #0F766E;
+    --teal-dark: #115E59;
+    --teal-soft: #E0F2F1;
+    --saffron: #F59E0B;
+    --saffron-soft: #FEF3C7;
+    --red: #E53935;
+    --orange: #FB8C00;
+    --green: #66BB6A;
+    --dark-green: #2E7D32;
+    --bg: #F4F4F1;
+  }
+  * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0;
+    background: #2a2a2a;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  .phone {
+    width: 390px;
+    min-height: 844px;
+    background: var(--bg);
+    border-radius: 48px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    overflow: visible;
+    position: relative;
+    border: 8px solid #111;
+    padding-bottom: 110px;
+  }
+  .screen {
+    height: auto;
+    overflow: visible;
+    padding: 0 20px 40px;
+  }
+  /* AppBar — slim */
+  .appbar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 0 6px;
+  }
+  .greet-block .ar {
+    font-family: 'Amiri', serif;
+    font-size: 22px; font-weight: 700; color: var(--teal-dark);
+    line-height: 1.2;
+  }
+  .greet-block .meta {
+    font-size: 11.5px; color: var(--muted); margin-top: 2px;
+    font-variant-numeric: tabular-nums; letter-spacing: .2px;
+  }
+  .appbar-acts { display: flex; gap: 12px; color: var(--ink-soft); }
+  .appbar-acts .pill {
+    width: 34px; height: 34px; border-radius: 50%;
+    background: var(--card); border: 1px solid var(--line);
+    display: grid; place-items: center;
+  }
+  .appbar-acts svg { width: 16px; height: 16px; }
+  /* Time window segmented */
+  .seg {
+    display: flex; background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px; padding: 4px; margin: 8px 0 14px;
+  }
+  .seg-it {
+    flex: 1; text-align: center; padding: 7px 0;
+    font-size: 12px; font-weight: 600;
+    color: var(--muted); border-radius: 8px;
+  }
+  .seg-it.active {
+    background: var(--teal); color: white;
+    box-shadow: 0 2px 6px rgba(15,118,110,.3);
+  }
+  /* Hero radial */
+  .hero {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    padding: 18px 18px 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.03);
+  }
+  .hero-head {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  .hero-title {
+    font-size: 10.5px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--muted); font-weight: 700;
+  }
+  .trend {
+    background: #DCFCE7; color: #166534;
+    font-size: 10.5px; font-weight: 700;
+    padding: 4px 8px; border-radius: 14px;
+    display: flex; align-items: center; gap: 4px;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-body {
+    display: flex; align-items: center; gap: 16px;
+    padding: 6px 0 4px;
+  }
+  .radial { position: relative; flex-shrink: 0; }
+  .score-center {
+    position: absolute; inset: 0;
+    display: grid; place-items: center; text-align: center;
+  }
+  .score-n {
+    font-size: 34px; font-weight: 700; color: var(--teal-dark);
+    line-height: 1; font-variant-numeric: tabular-nums;
+  }
+  .score-d {
+    font-size: 9px; color: var(--muted); margin-top: 2px;
+    letter-spacing: .6px; font-weight: 600;
+  }
+  .hero-side { flex: 1; }
+  .station-name {
+    font-size: 18px; font-weight: 700; color: var(--orange);
+    letter-spacing: .8px;
+  }
+  .station-desc {
+    font-size: 12px; color: var(--ink-soft); line-height: 1.4;
+    margin-top: 4px;
+  }
+  .station-action {
+    font-size: 12px; color: var(--teal); font-weight: 600;
+    margin-top: 6px;
+  }
+  .station-track {
+    display: flex; align-items: center; justify-content: space-between;
+    margin: 8px 0 4px; padding: 0 6px;
+    position: relative;
+  }
+  .station-track::before {
+    content: ''; position: absolute; left: 18px; right: 18px;
+    top: 50%; height: 1px; background: var(--line);
+  }
+  .st-l {
+    position: relative; z-index: 2; background: var(--card);
+    padding: 0 4px; font-size: 9px; font-weight: 600;
+    color: var(--muted); letter-spacing: .3px;
+  }
+  .st-l.active { color: var(--orange); }
+  .st-l .d {
+    display: block; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--line); margin: 0 auto 3px;
+  }
+  .st-l.active .d { background: var(--orange); box-shadow: 0 0 0 3px rgba(251,140,0,.18); }
+  .whisper {
+    font-size: 10.5px; color: var(--muted); font-style: italic;
+    text-align: center; margin-top: 8px;
+    padding-top: 8px; border-top: 1px solid var(--line);
+  }
+  /* Section header */
+  .sec-h {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 16px 0 8px;
+  }
+  .sec-h h3 {
+    margin: 0; font-size: 10.5px; letter-spacing: 1.4px;
+    text-transform: uppercase; color: var(--ink-soft); font-weight: 700;
+  }
+  .sec-h .sub { font-size: 11px; color: var(--teal); font-weight: 600; }
+  /* Prayer strip */
+  .prayer-strip {
+    display: grid; grid-template-columns: repeat(5, 1fr);
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 10px 6px;
+  }
+  .prayer {
+    text-align: center; padding: 4px 2px;
+    border-radius: 10px;
+  }
+  .prayer.current {
+    background: var(--teal-soft);
+    border: 1px solid var(--teal);
+    box-shadow: inset 0 0 0 1px rgba(15,118,110,.15);
+  }
+  .prayer .pname {
+    font-size: 11px; font-weight: 700; color: var(--ink-soft);
+    margin-bottom: 4px;
+  }
+  .prayer.current .pname { color: var(--teal); }
+  .prayer .ptime {
+    font-size: 10.5px; color: var(--muted); font-variant-numeric: tabular-nums;
+  }
+  .prayer .pdot {
+    width: 6px; height: 6px; border-radius: 50%; margin: 4px auto 0;
+    background: var(--line);
+  }
+  .prayer.done .pdot { background: var(--teal); }
+  .prayer.current .pdot { background: var(--saffron); box-shadow: 0 0 0 3px rgba(245,158,11,.25); }
+  /* Prescription card */
+  .rx {
+    background: linear-gradient(135deg, var(--card), var(--teal-soft));
+    border: 1px solid var(--teal);
+    border-radius: 16px;
+    padding: 16px 14px;
+  }
+  .rx-label {
+    display: flex; align-items: center; gap: 6px; margin-bottom: 8px;
+    font-size: 10px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: var(--teal); font-weight: 700;
+  }
+  .rx-label .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+  .rx .ar {
+    font-family: 'Amiri', serif;
+    font-size: 22px; color: var(--teal-dark);
+    line-height: 1.7; text-align: center; margin: 4px 0 8px;
+  }
+  .rx .en {
+    font-size: 12px; color: var(--ink-soft);
+    font-style: italic; text-align: center; margin-bottom: 10px;
+    line-height: 1.4;
+  }
+  .rx-foot {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 8px; border-top: 1px solid rgba(15,118,110,.15);
+  }
+  .rx-freq {
+    font-size: 10.5px; color: var(--ink-soft); line-height: 1.3;
+    max-width: 60%;
+  }
+  .rx-count {
+    background: var(--teal); color: white;
+    padding: 8px 14px; border-radius: 10px;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .rx-count .sp { font-size: 10px; opacity: .7; font-weight: 500; }
+  /* Quick log grid */
+  .qgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .qcard {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 12px 12px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .qcard .ico {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: var(--teal-soft); color: var(--teal);
+    display: grid; place-items: center; flex-shrink: 0;
+  }
+  .qcard .ico svg { width: 18px; height: 18px; }
+  .qcard .qt {
+    font-size: 13px; font-weight: 700; color: var(--ink);
+  }
+  .qcard .qs {
+    font-size: 10.5px; color: var(--muted); margin-top: 2px;
+  }
+  /* Habits row */
+  .habits-row {
+    display: flex; align-items: center; gap: 14px;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 12px 14px;
+  }
+  .hdot {
+    width: 22px; height: 22px; border-radius: 50%;
+    border: 1.5px solid var(--line); display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .hdot.done { background: var(--teal); border-color: var(--teal); }
+  .hdot.done svg { width: 11px; height: 11px; color: white; }
+  .hlabel { font-size: 12px; color: var(--ink); font-weight: 500; }
+  .hlabel.done { color: var(--teal); font-weight: 600; }
+  .hspacer { flex: 1; }
+  .hcount { font-size: 10px; color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+  /* Streak bar */
+  .streak {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 14px; padding: 12px 14px;
+    display: flex; align-items: center; gap: 12px;
+    margin-top: 10px;
+  }
+  .streak .flame {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: var(--saffron-soft);
+    display: grid; place-items: center;
+    font-size: 20px;
+  }
+  .streak .info { flex: 1; }
+  .streak .n {
+    font-size: 20px; font-weight: 700; color: var(--ink);
+    font-variant-numeric: tabular-nums; line-height: 1;
+  }
+  .streak .l {
+    font-size: 10px; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .8px;
+    margin-top: 2px;
+  }
+  .spark-mini { display: flex; gap: 2px; align-items: end; height: 22px; }
+  .spark-mini div { width: 3px; border-radius: 1.5px; background: var(--saffron); }
+  /* FAB */
+  .fab {
+    position: relative;
+    width: 56px; height: 56px; border-radius: 50%;
+    background: var(--teal); color: white;
+    display: grid; place-items: center;
+    box-shadow: 0 8px 20px rgba(15,118,110,.4);
+    margin: 20px 0 0 auto;
+  }
+  .fab svg { width: 24px; height: 24px; }
+  .fab-wrap { display: flex; justify-content: flex-end; padding-right: 8px; }
+  /* Bottom nav */
+  .bnav {
+    position: relative;
+    height: 76px;
+    background: var(--card);
+    border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 0 8px 14px;
+    margin: 24px -20px -40px;
+    z-index: 20;
+    border-radius: 0 0 40px 40px;
+  }
+  .nav-it {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    color: var(--muted); font-size: 10px; font-weight: 600;
+  }
+  .nav-it.active { color: var(--teal); }
+  .nav-it svg { width: 22px; height: 22px; }
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="screen">
+
+  <div class="appbar">
+    <div class="greet-block">
+      <div class="ar">السلام عليكم, Ahmad</div>
+      <div class="meta">14 Rajab 1447 · Good evening</div>
+    </div>
+    <div class="appbar-acts">
+      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+      <div class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+    </div>
+  </div>
+
+  <!-- Time window -->
+  <div class="seg">
+    <div class="seg-it active">Today</div>
+    <div class="seg-it">Week</div>
+    <div class="seg-it">Month</div>
+  </div>
+
+  <!-- Hero radial -->
+  <div class="hero">
+    <div class="hero-head">
+      <div class="hero-title">Your Nafs</div>
+      <div class="trend">▲ +4 (7d)</div>
+    </div>
+    <div class="hero-body">
+      <div class="radial" style="width:108px;height:108px;">
+        <svg width="108" height="108" viewBox="0 0 108 108">
+          <defs>
+            <linearGradient id="rgrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E53935"/>
+              <stop offset="0.33" stop-color="#FB8C00"/>
+              <stop offset="0.66" stop-color="#66BB6A"/>
+              <stop offset="1" stop-color="#2E7D32"/>
+            </linearGradient>
+          </defs>
+          <!-- Track -->
+          <circle cx="54" cy="54" r="44" fill="none" stroke="#F1F1EE" stroke-width="10"/>
+          <!-- Sweep arc — 72% of full circle -->
+          <circle cx="54" cy="54" r="44" fill="none" stroke="url(#rgrad)" stroke-width="10"
+            stroke-linecap="round" stroke-dasharray="276.46" stroke-dashoffset="77.4"
+            transform="rotate(-90 54 54)"/>
+          <!-- Inner faint ring -->
+          <circle cx="54" cy="54" r="36" fill="none" stroke="#F7F7F4" stroke-width="1"/>
+          <!-- Tick marks at stations -->
+          <g stroke="#bbb" stroke-width="1.2">
+            <line x1="54" y1="6" x2="54" y2="11"/>
+            <line x1="102" y1="54" x2="97" y2="54"/>
+            <line x1="54" y1="102" x2="54" y2="97"/>
+            <line x1="6" y1="54" x2="11" y2="54"/>
+          </g>
+        </svg>
+        <div class="score-center">
+          <div>
+            <div class="score-n">72</div>
+            <div class="score-d">/ 100</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="station-name">LAWWAMAH</div>
+        <div class="station-desc">Conscience is alive. Keep going.</div>
+        <div class="station-action">One dhikr moves you. →</div>
+      </div>
+    </div>
+    <div class="station-track">
+      <div class="st-l"><span class="d"></span>AMM.</div>
+      <div class="st-l active"><span class="d"></span>LAW.</div>
+      <div class="st-l"><span class="d"></span>MUL.</div>
+      <div class="st-l"><span class="d"></span>MUT.</div>
+    </div>
+    <div class="whisper">ⓘ Pattern indicator, not a judgment of your soul.</div>
+  </div>
+
+  <!-- Prayer strip -->
+  <div class="sec-h"><h3>Next Prayer</h3><span class="sub">Maghrib in 1h 12m</span></div>
+  <div class="prayer-strip">
+    <div class="prayer done">
+      <div class="pname">Fajr</div>
+      <div class="ptime">05:12</div>
+      <div class="pdot"></div>
+    </div>
+    <div class="prayer done">
+      <div class="pname">Dhuhr</div>
+      <div class="ptime">13:00</div>
+      <div class="pdot"></div>
+    </div>
+    <div class="prayer">
+      <div class="pname">Asr</div>
+      <div class="ptime">16:45</div>
+      <div class="pdot"></div>
+    </div>
+    <div class="prayer current">
+      <div class="pname">Maghrib</div>
+      <div class="ptime">19:08</div>
+      <div class="pdot"></div>
+    </div>
+    <div class="prayer">
+      <div class="pname">Isha</div>
+      <div class="ptime">20:32</div>
+      <div class="pdot"></div>
+    </div>
+  </div>
+
+  <!-- Prescription -->
+  <div class="sec-h"><h3>Today's Prescription</h3><span class="sub">For Lawwamah</span></div>
+  <div class="rx">
+    <div class="rx-label"><span class="dot"></span>Dhikr · SubhanAllahi wa bihamdihi</div>
+    <div class="ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ</div>
+    <div class="en">"Glory be to Allah and praise be to Him"</div>
+    <div class="rx-foot">
+      <div class="rx-freq">Allah has guided you to this dhikr 6× in the last 15 days.</div>
+      <div class="rx-count">+ Count <span class="sp">0 / 100</span></div>
+    </div>
+  </div>
+
+  <!-- Quick log grid -->
+  <div class="sec-h" style="margin-top:14px;"><h3>Quick Log</h3></div>
+  <div class="qgrid">
+    <div class="qcard">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
+      <div>
+        <div class="qt">Check in</div>
+        <div class="qs">2h ago</div>
+      </div>
+    </div>
+    <div class="qcard">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h12a4 4 0 0 1 4 4v14H8a4 4 0 0 1-4-4z"/><path d="M4 4v14a4 4 0 0 0 4 4"/></svg></div>
+      <div>
+        <div class="qt">Quran</div>
+        <div class="qs">Ash-Sharh 94:6</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Anchors -->
+  <div class="sec-h"><h3>Anchors</h3><span class="sub">2 / 4 done</span></div>
+  <div class="habits-row">
+    <div class="hdot done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="m5 12 5 5 9-11"/></svg></div>
+    <div class="hlabel done">Fajr</div>
+    <div class="hdot done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5"><path d="m5 12 5 5 9-11"/></svg></div>
+    <div class="hlabel done">Dhuhr</div>
+    <div class="hdot"></div>
+    <div class="hlabel">Asr</div>
+    <div class="hdot"></div>
+    <div class="hlabel">Quran</div>
+    <div class="hspacer"></div>
+    <div class="hcount">50%</div>
+  </div>
+
+  <!-- Streak -->
+  <div class="streak">
+    <div class="flame">🔥</div>
+    <div class="info">
+      <div class="n">7-day streak</div>
+      <div class="l">▲ +3 vs last week</div>
+    </div>
+    <div class="spark-mini">
+      <div style="height:4px;background:#eee"></div>
+      <div style="height:8px;background:#eee"></div>
+      <div style="height:12px;background:#eee"></div>
+      <div style="height:16px;background:#eee"></div>
+      <div style="height:12px;background:#eee"></div>
+      <div style="height:18px;background:#eee"></div>
+      <div style="height:22px"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FAB -->
+<div class="fab-wrap"><div class="fab">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+</div></div>
+
+<!-- Bottom nav -->
+<div class="bnav">
+  <div class="nav-it active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg>Home</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h12a4 4 0 0 1 4 4v14H8a4 4 0 0 1-4-4z"/></svg>Quran</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>Dhikr</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg>Insights</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>You</div>
+</div>
+
+</div>
+</body>
+</html>

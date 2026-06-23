@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Option A — Suluk: The Tazkiya Journey</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1B5E20;
+    --primary-dark: #0D3D12;
+    --primary-light: #4CAF50;
+    --gold: #C9A227;
+    --gold-soft: #F4E9C8;
+    --parchment: #FAF7F0;
+    --ink: #1F2421;
+    --ink-soft: #4A524C;
+    --muted: #8B938D;
+    --line: #E8E4D8;
+    --bg: #F5F1E6;
+    --ammarah: #E53935;
+    --lawwamah: #FB8C00;
+    --mulhamah: #66BB6A;
+    --mutmainnah: #2E7D32;
+  }
+  * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+  body {
+    margin: 0;
+    background: #2a2a2a;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: var(--ink);
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+  .phone {
+    width: 390px;
+    min-height: 844px;
+    background: var(--bg);
+    border-radius: 48px;
+    box-shadow: 0 30px 80px rgba(0,0,0,.5);
+    overflow: visible;
+    position: relative;
+    border: 8px solid #111;
+    padding-bottom: 90px;
+  }
+  .screen {
+    height: auto;
+    overflow: visible;
+    padding: 0 18px 40px;
+  }
+  /* AppBar */
+  .appbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 4px 10px;
+    background: linear-gradient(180deg, var(--bg) 60%, transparent);
+    position: sticky; top: 0; z-index: 10;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 8px;
+    font-weight: 700; font-size: 16px; color: var(--primary);
+  }
+  .brand-gem {
+    width: 22px; height: 22px;
+    background: var(--primary);
+    transform: rotate(45deg);
+    border: 2px solid var(--gold);
+  }
+  .brand-gem::after {
+    content: ''; display: block; width: 6px; height: 6px;
+    background: var(--gold); margin: 6px auto 0;
+  }
+  .appbar-icons { display: flex; gap: 14px; color: var(--ink-soft); }
+  .appbar-icons svg { width: 22px; height: 22px; }
+  /* Greeting */
+  .greeting { padding: 8px 4px 0; }
+  .greeting .ar {
+    font-family: 'Amiri', serif;
+    font-size: 28px; font-weight: 700; color: var(--primary-dark);
+    line-height: 1.2;
+  }
+  .greeting .meta {
+    font-size: 12px; color: var(--muted); margin-top: 4px;
+    letter-spacing: .2px;
+  }
+  /* Hijri event chip */
+  .event-strip {
+    margin: 14px 0 6px;
+    background: linear-gradient(90deg, var(--gold-soft), #fff8e1);
+    border: 1px solid var(--gold);
+    border-radius: 14px;
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 10px;
+    font-size: 12.5px; color: var(--ink); font-weight: 500;
+  }
+  .event-strip .moon { font-size: 16px; }
+  /* Nafs journey */
+  .journey {
+    margin: 14px 0 6px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 22px;
+    padding: 16px 18px 18px;
+    color: white;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(27,94,32,.35);
+  }
+  .journey::before {
+    content: ''; position: absolute; inset: 1px;
+    border-radius: 21px;
+    border: 1.5px solid var(--gold);
+    pointer-events: none;
+  }
+  .journey-head {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 8px;
+  }
+  .journey-title {
+    font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase;
+    color: rgba(255,255,255,.7); font-weight: 600;
+  }
+  .station-badge {
+    background: var(--lawwamah); color: white;
+    font-size: 11px; font-weight: 700; padding: 4px 10px;
+    border-radius: 20px; letter-spacing: .4px;
+  }
+  .arc-svg { display: block; margin: 4px auto -6px; }
+  .station-track {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 6px; padding: 0 4px;
+    position: relative;
+  }
+  .station-track::before {
+    content: ''; position: absolute;
+    left: 14px; right: 14px; top: 50%;
+    height: 1.5px; background: rgba(255,255,255,.25);
+  }
+  .st {
+    position: relative; z-index: 2;
+    background: var(--primary-dark);
+    padding: 0 4px;
+    font-size: 9.5px; font-weight: 600; letter-spacing: .3px;
+    color: rgba(255,255,255,.55);
+    text-align: center; width: 70px;
+  }
+  .st.active { color: var(--gold); font-weight: 700; }
+  .st .dot {
+    display: block; width: 8px; height: 8px; border-radius: 50%;
+    background: rgba(255,255,255,.3); margin: 0 auto 4px;
+  }
+  .st.active .dot { background: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,.3); }
+  .whisper {
+    margin-top: 10px; padding-top: 10px;
+    border-top: 1px dashed rgba(201,162,39,.4);
+    font-size: 11px; color: rgba(255,255,255,.78);
+    font-style: italic; text-align: center;
+  }
+  /* Section header */
+  .sec-h {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin: 18px 4px 8px;
+  }
+  .sec-h h3 {
+    margin: 0; font-size: 11px; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--ink-soft); font-weight: 700;
+  }
+  .sec-h .sub { font-size: 11px; color: var(--muted); font-weight: 500; }
+  /* Prescription tabs */
+  .tabs {
+    display: flex; background: var(--parchment);
+    border-radius: 12px; padding: 4px;
+    border: 1px solid var(--line);
+  }
+  .tab {
+    flex: 1; text-align: center; padding: 8px 0;
+    font-size: 12px; font-weight: 600;
+    color: var(--muted); border-radius: 9px;
+    cursor: pointer;
+  }
+  .tab.active {
+    background: var(--primary); color: white;
+    box-shadow: 0 2px 6px rgba(27,94,32,.3);
+  }
+  .rx-card {
+    background: var(--parchment);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 18px 16px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .rx-card .ar {
+    font-family: 'Amiri', serif;
+    font-size: 24px; color: var(--primary-dark);
+    line-height: 1.8; margin-bottom: 8px;
+  }
+  .rx-card .en {
+    font-family: 'Source Serif 4', serif;
+    font-style: italic; font-size: 13px; color: var(--ink-soft);
+    line-height: 1.5; margin-bottom: 10px;
+  }
+  .rx-card .ref {
+    font-size: 11px; color: var(--gold);
+    font-weight: 700; letter-spacing: .5px; text-transform: uppercase;
+  }
+  .rx-card .hint {
+    margin-top: 10px;
+    font-size: 11px; color: var(--ink-soft);
+  }
+  /* Habits vertical */
+  .habits {
+    background: white; border: 1px solid var(--line);
+    border-radius: 14px; padding: 4px 0;
+  }
+  .habit-row {
+    display: flex; align-items: center; padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    gap: 12px;
+  }
+  .habit-row:last-child { border-bottom: none; }
+  .ring {
+    width: 30px; height: 30px; border-radius: 50%;
+    border: 2px solid var(--line); display: grid; place-items: center;
+    flex-shrink: 0;
+  }
+  .ring.done { background: var(--primary); border-color: var(--primary); color: white; }
+  .ring svg { width: 14px; height: 14px; }
+  .habit-row .name { flex: 1; font-size: 14px; font-weight: 500; color: var(--ink); }
+  .habit-row .time { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  /* Dhikr */
+  .dhikr-card {
+    background: linear-gradient(135deg, var(--parchment), white);
+    border: 1.5px solid var(--gold);
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 6px;
+    box-shadow: 0 4px 14px rgba(201,162,39,.12);
+  }
+  .dhikr-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .dhikr-head .em { font-size: 18px; }
+  .dhikr-head .ttl {
+    font-size: 11px; letter-spacing: 1.3px; text-transform: uppercase;
+    color: var(--gold); font-weight: 700;
+  }
+  .dhikr-card .ar {
+    font-family: 'Amiri', serif;
+    font-size: 20px; color: var(--primary-dark);
+    line-height: 1.7; text-align: center; margin: 6px 0 10px;
+  }
+  .dhikr-foot {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 8px;
+  }
+  .count-btn {
+    background: var(--primary); color: white;
+    border-radius: 10px; padding: 8px 14px;
+    font-size: 13px; font-weight: 700;
+    display: flex; align-items: center; gap: 6px;
+    font-variant-numeric: tabular-nums;
+  }
+  .count-btn span { font-size: 11px; opacity: .8; font-weight: 500; }
+  .freq {
+    font-size: 11px; color: var(--ink-soft); font-style: italic;
+    line-height: 1.3; max-width: 55%;
+  }
+  .names-chip-row {
+    display: flex; gap: 8px; margin-top: 10px; overflow: hidden;
+  }
+  .name-chip {
+    flex-shrink: 0;
+    padding: 6px 12px;
+    background: var(--gold-soft);
+    border: 1px solid var(--gold);
+    border-radius: 20px;
+    font-size: 11px; font-weight: 600;
+    color: var(--ink);
+  }
+  .name-chip .ar {
+    font-family: 'Amiri', serif; font-size: 13px; font-weight: 700;
+    color: var(--primary-dark); margin-right: 4px;
+  }
+  /* Reflection CTA */
+  .reflect {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 14px;
+    padding: 14px 16px;
+    color: white;
+    display: flex; align-items: center; justify-content: space-between;
+    margin-top: 14px;
+    box-shadow: 0 6px 16px rgba(27,94,32,.3);
+  }
+  .reflect .l { display: flex; align-items: center; gap: 12px; }
+  .reflect .ico {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: rgba(255,255,255,.15);
+    display: grid; place-items: center;
+  }
+  .reflect .ico svg { width: 18px; height: 18px; color: var(--gold); }
+  .reflect .ttl { font-size: 14px; font-weight: 700; }
+  .reflect .sub { font-size: 11px; opacity: .8; margin-top: 2px; }
+  .reflect .go {
+    background: white; color: var(--primary);
+    padding: 8px 14px; border-radius: 10px;
+    font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; gap: 4px;
+  }
+  /* Streak */
+  .streak {
+    background: white; border: 1px solid var(--line);
+    border-radius: 14px; padding: 14px 16px;
+    display: flex; align-items: center; gap: 14px;
+    margin-top: 12px;
+  }
+  .streak .flame {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: linear-gradient(135deg, #FFA000, #F57C00);
+    display: grid; place-items: center;
+    color: white; font-size: 22px;
+    box-shadow: 0 4px 12px rgba(245,124,0,.4);
+  }
+  .streak .info { flex: 1; }
+  .streak .n { font-size: 22px; font-weight: 700; color: var(--ink); font-variant-numeric: tabular-nums; }
+  .streak .l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .8px; }
+  .spark { display: flex; gap: 2px; align-items: end; height: 28px; }
+  .spark div {
+    width: 3px; background: var(--gold); border-radius: 1.5px;
+  }
+  /* Sheikh whisper */
+  .sheikh {
+    margin-top: 14px;
+    background: var(--parchment);
+    border-left: 3px solid var(--gold);
+    padding: 10px 12px;
+    border-radius: 0 10px 10px 0;
+    font-size: 11.5px; color: var(--ink-soft); line-height: 1.5;
+    display: flex; gap: 8px;
+  }
+  .sheikh .i { color: var(--gold); flex-shrink: 0; font-weight: 700; }
+  /* Bottom nav */
+  .bnav {
+    position: sticky; bottom: 0; left: 0; right: 0;
+    height: 76px;
+    background: white;
+    border-top: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-around;
+    padding: 0 8px 14px;
+    margin: 0 -18px -40px;
+    z-index: 20;
+  }
+  .nav-it {
+    display: flex; flex-direction: column; align-items: center; gap: 3px;
+    color: var(--muted); font-size: 10px; font-weight: 600;
+  }
+  .nav-it.active { color: var(--primary); }
+  .nav-it svg { width: 22px; height: 22px; }
+</style>
+</head>
+<body>
+<div class="phone">
+<div class="screen">
+
+  <div class="appbar">
+    <div class="brand">
+      <div class="brand-gem"></div>
+      NafsMutmainna
+    </div>
+    <div class="appbar-icons">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+    </div>
+  </div>
+
+  <div class="greeting">
+    <div class="ar">السلام عليكم, Ahmad</div>
+    <div class="meta">Good evening · 14 Rajab 1447 AH · 20 Jun 2026</div>
+  </div>
+
+  <!-- Reflection CTA (moved to top — replaces event-strip) -->
+  <div class="reflect">
+    <div class="l">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2 2"/></svg></div>
+      <div>
+        <div class="ttl">Reflection — check in</div>
+        <div class="sub">Last: 2h ago</div>
+      </div>
+    </div>
+    <div class="go">Begin →</div>
+  </div>
+
+  <!-- Nafs journey -->
+  <div class="journey">
+    <div class="journey-head">
+      <div class="journey-title">Nafs Journey</div>
+      <div class="station-badge">LAWWAMAH</div>
+    </div>
+
+    <!-- Arc meter -->
+    <svg class="arc-svg" width="320" height="120" viewBox="0 0 320 120">
+      <defs>
+        <linearGradient id="arc-grad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#E53935"/>
+          <stop offset="0.33" stop-color="#FB8C00"/>
+          <stop offset="0.66" stop-color="#66BB6A"/>
+          <stop offset="1" stop-color="#2E7D32"/>
+        </linearGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Track -->
+      <path d="M 25 105 A 135 135 0 0 1 295 105" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="22" stroke-linecap="round"/>
+      <!-- Gradient arc -->
+      <path d="M 25 105 A 135 135 0 0 1 295 105" fill="none" stroke="url(#arc-grad)" stroke-width="26" stroke-linecap="round"/>
+      <!-- Tick marks -->
+      <g stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round">
+        <line x1="25" y1="80" x2="25" y2="90"/>
+        <line x1="92.5" y1="32" x2="92.5" y2="42"/>
+        <line x1="160" y1="15" x2="160" y2="25"/>
+        <line x1="227.5" y1="32" x2="227.5" y2="42"/>
+        <line x1="295" y1="80" x2="295" y2="90"/>
+      </g>
+      <!-- Needle pointing to ~33% (Lawwamah) -->
+      <g filter="url(#glow)">
+        <line x1="160" y1="105" x2="100" y2="40" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="100" cy="40" r="7" fill="#fff"/>
+        <circle cx="100" cy="40" r="3" fill="rgba(0,0,0,0.3)"/>
+      </g>
+      <!-- Pivot -->
+      <circle cx="160" cy="105" r="9" fill="#fff"/>
+      <circle cx="160" cy="105" r="4" fill="rgba(0,0,0,0.4)"/>
+      <!-- Station labels on arc -->
+      <text x="20" y="118" fill="rgba(255,255,255,0.6)" font-size="9" font-weight="600">AMMARAH</text>
+      <text x="300" y="118" fill="rgba(255,255,255,0.6)" font-size="9" font-weight="600" text-anchor="end">MUTMAINNAH</text>
+    </svg>
+
+    <div class="station-track">
+      <div class="st"><span class="dot"></span>AMMARAH</div>
+      <div class="st active"><span class="dot"></span>LAWWAMAH</div>
+      <div class="st"><span class="dot"></span>MULHAMAH</div>
+      <div class="st"><span class="dot"></span>MUTMAINNAH</div>
+    </div>
+
+    <div class="whisper">
+      ⓘ You stand at Lawwamah — conscience is alive. One dhikr moves you. <em>This is a pattern, not a judgment of your soul.</em>
+    </div>
+  </div>
+
+  <!-- Prescription tabs -->
+  <div class="sec-h"><h3>Today's Prescription</h3><span class="sub">for Lawwamah</span></div>
+  <div class="tabs">
+    <div class="tab active">Ayah</div>
+    <div class="tab">Hadith</div>
+    <div class="tab">Dhikr</div>
+  </div>
+  <div class="rx-card">
+    <div class="ar">إِنَّ مَعَ الْعُسْرِ يُسْرًا</div>
+    <div class="en">"Indeed, with hardship comes ease."</div>
+    <div class="ref">Qur'an · Ash-Sharh 94:6</div>
+    <div class="hint">For Lawwamah: patience + trust. Tap to reflect →</div>
+  </div>
+
+  <!-- Habits vertical -->
+  <div class="sec-h"><h3>Today's Anchors</h3><span class="sub">2 / 4 done</span></div>
+  <div class="habits">
+    <div class="habit-row">
+      <div class="ring done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"/></svg></div>
+      <div class="name">Fajr</div>
+      <div class="time">05:12 ✓</div>
+    </div>
+    <div class="habit-row">
+      <div class="ring done"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="m5 12 5 5 9-11"/></svg></div>
+      <div class="name">Dhuhr</div>
+      <div class="time">13:00 ✓</div>
+    </div>
+    <div class="habit-row">
+      <div class="ring"><div style="width:6px;height:6px;border-radius:50%;background:#bbb;"></div></div>
+      <div class="name">Asr</div>
+      <div class="time">16:45</div>
+    </div>
+    <div class="habit-row">
+      <div class="ring"><div style="width:6px;height:6px;border-radius:50%;background:#bbb;"></div></div>
+      <div class="name">Quran · 1 page</div>
+      <div class="time">today</div>
+    </div>
+  </div>
+
+  <!-- Dhikr compact -->
+  <div class="sec-h"><h3>Your Daily Dhikr</h3></div>
+  <div class="dhikr-card">
+    <div class="dhikr-head">
+      <span class="em">📿</span>
+      <span class="ttl">Dua of Yunus · For Lawwamah</span>
+    </div>
+    <div class="ar">لَا إِلَهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ</div>
+    <div class="dhikr-foot">
+      <div class="freq">↳ Suggested 6× in last 15 days</div>
+      <div class="count-btn">+ Count <span>0 / 100</span></div>
+    </div>
+    <div class="names-chip-row">
+      <div class="name-chip"><span class="ar">السَّمِيعُ</span>Al-Samee'</div>
+      <div class="name-chip"><span class="ar">الْقَرِيبُ</span>Al-Qarib</div>
+      <div class="name-chip"><span class="ar">الْحَلِيمُ</span>Al-Halim</div>
+    </div>
+  </div>
+
+  <!-- Streak -->
+  <div class="streak">
+    <div class="flame">🔥</div>
+    <div class="info">
+      <div class="n">7</div>
+      <div class="l">day positive streak</div>
+    </div>
+    <div class="spark">
+      <div style="height:6px;background:#eee"></div>
+      <div style="height:10px;background:#eee"></div>
+      <div style="height:14px;background:#eee"></div>
+      <div style="height:18px;background:#eee"></div>
+      <div style="height:14px;background:#eee"></div>
+      <div style="height:20px;background:#eee"></div>
+      <div style="height:24px;background:#eee"></div>
+      <div style="height:18px;background:#eee"></div>
+      <div style="height:22px"></div>
+      <div style="height:26px"></div>
+      <div style="height:20px"></div>
+      <div style="height:24px"></div>
+      <div style="height:28px"></div>
+      <div style="height:24px"></div>
+    </div>
+  </div>
+
+  <!-- Sheikh whisper -->
+  <div class="sheikh">
+    <span class="i">ⓘ</span>
+    <span>Tazkiya traditionally requires a living teacher. This app is a companion, not a replacement.</span>
+  </div>
+
+</div>
+
+<!-- Bottom nav -->
+<div class="bnav">
+  <div class="nav-it active"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h5v-6h4v6h5v-8h3z"/></svg>Home</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h12a4 4 0 0 1 4 4v14H8a4 4 0 0 1-4-4z"/><path d="M4 4v14a4 4 0 0 0 4 4"/></svg>Quran</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg>Dhikr</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-5"/></svg>Insights</div>
+  <div class="nav-it"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>You</div>
+</div>
+
+</div>
+</body>
+</html>

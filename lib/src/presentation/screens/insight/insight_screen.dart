@@ -46,8 +46,9 @@ class _InsightScreenState extends ConsumerState<InsightScreen> {
       appBar: AppBar(title: const Text('Heart Analysis')),
       body: _loading
           ? const Center(child: CircularProgressIndicator())
-          : ListView(
-              padding: const EdgeInsets.symmetric(vertical: 16),
+          : SafeArea(
+            child: ListView(
+              padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.of(context).padding.bottom + 16),
               children: [
                 if (result.detected.isEmpty)
                   const Padding(
@@ -84,7 +85,7 @@ class _InsightScreenState extends ConsumerState<InsightScreen> {
                 ],
                 const SizedBox(height: 16),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
                   child: SizedBox(
                     width: double.infinity,
                     height: 52,
@@ -106,6 +107,7 @@ class _InsightScreenState extends ConsumerState<InsightScreen> {
                 ),
               ],
             ),
+          ),
     );
   }
 }
