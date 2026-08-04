@@ -90,9 +90,9 @@ class _NafsDetailScreenState extends ConsumerState<NafsDetailScreen> {
               title: '7-day progress',
               subtitle: 'Distribution and heart-health trajectory.',
               child: NafsWeeklyRing(
-                vector: state.meter,
-                dominant: state.dominant,
-                heartHealthScore: state.heartHealthScore,
+                vector: state.weeklyMeter,
+                dominant: state.weeklyMeter.dominant,
+                heartHealthScore: state.weeklyHeartHealthScore,
                 trend: state.trend,
               ),
             ),

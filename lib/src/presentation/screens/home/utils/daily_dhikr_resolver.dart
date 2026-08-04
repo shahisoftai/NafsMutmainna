@@ -18,7 +18,7 @@ enum NafsTrendDirection { up, down, flat }
 
 /// 15-day Nafs trend data for the chart.
 class NafsTrendData {
-  /// Positive score per day (mutmainnah + mulhamah) * 100, for chart plotting.
+  /// Positive score per day (canonical 0-100 heart-health), for chart plotting.
   final List<int> dailyScores;
 
   /// Trend direction compared to 7 days ago.
@@ -454,7 +454,9 @@ class DailyDhikrResolver {
 
       final dominantNafs = _dominantFromHistory(history);
       final positiveScore = history != null
-          ? ((history.mutmainnah + history.mulhamah) * 100).round()
+          ? Vector4(history.ammarah, history.lawwamah, history.mulhamah,
+                  history.mutmainnah)
+              .heartHealthScore
           : 0;
 
       final dhikrItems = <JourneyDhikrItem>[];
@@ -599,10 +601,11 @@ class DailyDhikrResolver {
     final sorted = recent.toList()..sort((a, b) => a.date.compareTo(b.date));
     final dailyScores = <int>[];
     for (final h in sorted) {
-      final score = ((h.mutmainnah + h.mulhamah) * 100).round();
+      final score = Vector4(h.ammarah, h.lawwamah, h.mulhamah, h.mutmainnah)
+          .heartHealthScore;
       dailyScores.add(score);
     }
-    if (dailyScores.length < 7) {
+    if (dailyScores.length < 14) {
       return NafsTrendData(
         dailyScores: dailyScores,
         direction: NafsTrendDirection.flat,
@@ -610,11 +613,25 @@ class DailyDhikrResolver {
         hasEnoughData: false,
       );
     }
-    final last7 = dailyScores.sublist(dailyScores.length - 7);
-    final prev7 = dailyScores.sublist(dailyScores.length - 14, dailyScores.length - 7);
-    final last7Avg = last7.reduce((a, b) => a + b) / 7;
-    final prev7Avg = prev7.reduce((a, b) => a + b) / 7;
-    final delta = (last7Avg - prev7Avg).round();
+    // Bucket rows by calendar week (last 7 vs the 7 days before that), averaging
+    // only the rows actually present so missing days don't skew the average.
+    final dayScores = <String, int>{
+      for (final h in sorted)
+        _dateOnly(h.date).toIso8601String(): Vector4(
+                h.ammarah, h.lawwamah, h.mulhamah, h.mutmainnah)
+            .heartHealthScore,
+    };
+    final thisWeek = _avgWeek(dayScores, today, 1);
+    final prevWeek = _avgWeek(dayScores, today, 2);
+    if (thisWeek == null || prevWeek == null) {
+      return NafsTrendData(
+        dailyScores: dailyScores,
+        direction: NafsTrendDirection.flat,
+        deltaPercent: 0,
+        hasEnoughData: false,
+      );
+    }
+    final delta = (thisWeek - prevWeek).round();
     NafsTrendDirection direction;
     if (delta > 2) {
       direction = NafsTrendDirection.up;
@@ -629,6 +646,25 @@ class DailyDhikrResolver {
       deltaPercent: delta,
       hasEnoughData: true,
     );
+  }
+
+  /// Average the canonical scores over the [weekOffset] calendar week counting
+  /// back from [today] (1 = most recent 7 days, 2 = the 7 days before). Returns
+  /// null when fewer than 5 of the 7 days have data.
+  double? _avgWeek(
+    Map<String, int> dayScores,
+    DateTime today,
+    int weekOffset,
+  ) {
+    final values = <int>[];
+    for (var i = 0; i < 7; i++) {
+      final day = today.subtract(
+          Duration(days: (weekOffset - 1) * 7 + i + 1));
+      final v = dayScores[_dateOnly(day).toIso8601String()];
+      if (v != null) values.add(v);
+    }
+    if (values.length < 5) return null;
+    return values.fold<int>(0, (a, b) => a + b) / values.length;
   }
 }
 

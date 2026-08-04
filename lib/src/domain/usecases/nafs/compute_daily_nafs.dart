@@ -246,17 +246,39 @@ class Meter15Day {
     final n = rows.length;
     final weights = <double>[];
     for (var i = 0; i < n; i++) {
-      // Newer rows weigh more. The most recent row is at index n-1.
-      final ageInDays = (n - 1) - i;
-      weights.add(1.0 - (ageInDays * 0.8 / (NafsConstants.meterWindowDays - 1)));
+      // Weight by the row's actual calendar distance from [date], so days with
+      // gaps still receive the weight their true age deserves.
+      final ageInDays =
+          (date.difference(rows[i].date).inDays).clamp(0, NafsConstants.meterWindowDays - 1);
+      final w = 1.0 - (ageInDays * 0.8 / (NafsConstants.meterWindowDays - 1));
+      weights.add(w < 0.2 ? 0.2 : w);
     }
     final sumW = weights.fold<double>(0, (a, b) => a + b);
     if (sumW == 0) return Vector4.ammarahStartup;
 
-    final v = rows
-        .map((r) => r.vector * weights[rows.indexOf(r)])
-        .reduce((a, b) => a + b);
+    var v = const Vector4(0, 0, 0, 0);
+    for (var i = 0; i < n; i++) {
+      v = v + rows[i].vector * weights[i];
+    }
     return (v * (1.0 / sumW)).normalised;
+  }
+}
+
+/// Computes the unweighted arithmetic average of the last [NafsConstants.weekWindowDays]
+/// daily Nafs vectors. Distinct from [Meter15Day] which uses a recency-weighted
+/// moving average: this produces the plain vector that backs the "7-day progress"
+/// ring.
+class WeeklyNafs {
+  static const int windowDays = 7;
+
+  final NafsHistoryRepositoryInterface _history;
+  WeeklyNafs(this._history);
+
+  Future<Vector4> call(DateTime date) async {
+    final start = date.subtract(const Duration(days: windowDays - 1));
+    final rows = await _history.findBetween(start, date);
+    if (rows.isEmpty) return Vector4.ammarahStartup;
+    return Vector4.average(rows.map((r) => r.vector));
   }
 }
 

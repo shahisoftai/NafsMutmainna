@@ -113,6 +113,9 @@ final computeDailyNafsProvider = Provider<ComputeDailyNafs>(
 final meter15DayProvider = Provider<Meter15Day>(
   (ref) => Meter15Day(ref.watch(nafsHistoryRepositoryProvider)),
 );
+final weeklyNafsProvider = Provider<WeeklyNafs>(
+  (ref) => WeeklyNafs(ref.watch(nafsHistoryRepositoryProvider)),
+);
 final streakProvider = Provider<Streak>(
   (ref) => Streak(ref.watch(nafsHistoryRepositoryProvider)),
 );

@@ -69,9 +69,9 @@ class _EmotionPickerWidgetState extends State<EmotionPickerWidget> {
         ),
         const SizedBox(height: 12),
         InteractiveViewer(
-          constrained: false,
           minScale: 1.0,
           maxScale: 3.0,
+          boundaryMargin: const EdgeInsets.all(double.infinity),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [

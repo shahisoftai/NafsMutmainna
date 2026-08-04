@@ -1,4 +1,3 @@
-import '../../../../domain/entities/nafs_history.dart';
 import '../../../../domain/entities/vector4.dart';
 
 /// Direction of the user's Nafs movement vs the previous day.
@@ -8,7 +7,7 @@ enum NafsTrendDirection { up, down, flat }
 /// spectrum (toward Mutmainnah = up, toward Ammarah = down).
 class NafsTrend {
   final NafsTrendDirection direction;
-  /// Delta in percentage points of (Mutmainnah + Mulhamah).
+  /// Delta in canonical heart-health points (0-100).
   final int deltaPercent;
   const NafsTrend({
     required this.direction,
@@ -29,38 +28,33 @@ class NafsTrend {
 class NafsTrendHelper {
   const NafsTrendHelper();
 
-  /// Compute the trend between [today] and [yesterday].
+  /// Compute the trend between [today] and [yesterday] vectors.
   ///
-  /// The "score" we track is the share of (Mutmainnah + Mulhamah) — i.e. the
-  /// share of the user's soul that is *above* the Lawwamah baseline. An
-  /// increase in that share is movement toward Mutmainnah.
+  /// Uses the canonical full-spectrum heart-health score (0-100): an increase
+  /// is movement toward Mutmainnah. Thresholds (|delta| > 2) match the
+  /// ring-style trend rendering.
   NafsTrend compute({
-    required NafsHistory? today,
-    required NafsHistory? yesterday,
+    required Vector4? today,
+    required Vector4? yesterday,
   }) {
     if (today == null || yesterday == null) return NafsTrend.none;
-    final todayScore = today.mutmainnah + today.mulhamah;
-    final yesterdayScore = yesterday.mutmainnah + yesterday.mulhamah;
-    final delta = todayScore - yesterdayScore;
-    final deltaPercent = (delta * 100).round();
+    final delta = today.heartHealthScore - yesterday.heartHealthScore;
     final NafsTrendDirection direction;
-    if (delta > 0.005) {
+    if (delta > 2) {
       direction = NafsTrendDirection.up;
-    } else if (delta < -0.005) {
+    } else if (delta < -2) {
       direction = NafsTrendDirection.down;
     } else {
       direction = NafsTrendDirection.flat;
     }
-    return NafsTrend(direction: direction, deltaPercent: deltaPercent);
+    return NafsTrend(direction: direction, deltaPercent: delta);
   }
 
-  /// Convert a series of NafsHistory rows to a series of heart-health scores
+  /// Convert a series of vectors to a series of canonical heart-health scores
   /// for a sparkline. Returns an empty list if no rows.
-  List<int> sparklineScores(List<NafsHistory> rows) {
-    if (rows.isEmpty) return const [];
+  List<int> sparklineScores(Iterable<Vector4> vectors) {
     final out = <int>[];
-    for (final r in rows) {
-      final v = Vector4(r.ammarah, r.lawwamah, r.mulhamah, r.mutmainnah);
+    for (final v in vectors) {
       out.add(v.heartHealthScore);
     }
     return out;

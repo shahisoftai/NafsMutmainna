@@ -53,6 +53,15 @@ class Vector4 extends Equatable {
     return Vector4(ammarah / s, lawwamah / s, mulhamah / s, mutmainnah / s);
   }
 
+  /// Component-wise arithmetic average of an iterable of vectors, normalised.
+  /// Returns [neutral] for an empty iterable. Useful for N-day aggregations.
+  static Vector4 average(Iterable<Vector4> vectors) {
+    final iter = vectors.where((v) => v.sum.isFinite);
+    if (iter.isEmpty) return neutral;
+    final total = iter.reduce((a, b) => a + b);
+    return (total * (1.0 / iter.length)).normalised;
+  }
+
   /// The dominant Nafs station (highest value wins ties by enum index).
   NafsType get dominant {
     final values = [ammarah, lawwamah, mulhamah, mutmainnah];
@@ -63,9 +72,16 @@ class Vector4 extends Equatable {
     return _order[maxIdx];
   }
 
-  /// Heart Health Score: 0-100. Derived from Mutmainnah (dominant) and Mulhamah.
-  int get heartHealthScore =>
-      ((mutmainnah * 0.7 + mulhamah * 0.3) * 100).round().clamp(0, 100);
+  /// Heart Health Score: 0-100. Full-spectrum ladder score using all four
+  /// stations, weighted by their position on the spiritual hierarchy
+  /// (Ammarah=0, Lawwamah=1, Mulhamah=2, Mutmainnah=3). Because the vector is
+  /// normalised to sum to 1.0, this yields a single canonical 0-100 metric.
+  int get heartHealthScore => (((ammarah * 0 + lawwamah * 1 + mulhamah * 2 +
+              mutmainnah * 3) /
+          3) *
+          100)
+      .round()
+      .clamp(0, 100);
 
   Map<NafsType, double> toMap() => {
         NafsType.ammarah: ammarah,

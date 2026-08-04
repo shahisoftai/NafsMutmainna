@@ -15,6 +15,8 @@ class HomeState extends Equatable {
   final Vector4 meter;
   final NafsType dominant;
   final int heartHealthScore;
+  final Vector4 weeklyMeter;
+  final int weeklyHeartHealthScore;
   final Checkin? lastCheckin;
   final int positiveStreak;
   final bool isLoading;
@@ -27,6 +29,8 @@ class HomeState extends Equatable {
     required this.meter,
     required this.dominant,
     required this.heartHealthScore,
+    this.weeklyMeter = Vector4.neutral,
+    this.weeklyHeartHealthScore = 0,
     this.lastCheckin,
     this.positiveStreak = 0,
     this.isLoading = false,
@@ -40,6 +44,8 @@ class HomeState extends Equatable {
     Vector4? meter,
     NafsType? dominant,
     int? heartHealthScore,
+    Vector4? weeklyMeter,
+    int? weeklyHeartHealthScore,
     Checkin? lastCheckin,
     int? positiveStreak,
     bool? isLoading,
@@ -52,6 +58,9 @@ class HomeState extends Equatable {
         meter: meter ?? this.meter,
         dominant: dominant ?? this.dominant,
         heartHealthScore: heartHealthScore ?? this.heartHealthScore,
+        weeklyMeter: weeklyMeter ?? this.weeklyMeter,
+        weeklyHeartHealthScore:
+            weeklyHeartHealthScore ?? this.weeklyHeartHealthScore,
         lastCheckin: lastCheckin ?? this.lastCheckin,
         positiveStreak: positiveStreak ?? this.positiveStreak,
         isLoading: isLoading ?? this.isLoading,
@@ -66,6 +75,8 @@ class HomeState extends Equatable {
         meter,
         dominant,
         heartHealthScore,
+        weeklyMeter,
+        weeklyHeartHealthScore,
         lastCheckin,
         positiveStreak,
         isLoading,
@@ -78,6 +89,8 @@ class HomeState extends Equatable {
 
 class HomeViewModel extends StateNotifier<HomeState> {
   final Meter15Day _meter;
+  final WeeklyNafs _weekly;
+  final ComputeDailyNafs _dailyNafs;
   final CheckinRepositoryInterface _checkinRepo;
   final NafsHistoryRepositoryInterface _historyRepo;
   final Streak _streak;
@@ -86,12 +99,16 @@ class HomeViewModel extends StateNotifier<HomeState> {
 
   HomeViewModel({
     required Meter15Day meter,
+    required WeeklyNafs weekly,
+    required ComputeDailyNafs dailyNafs,
     required CheckinRepositoryInterface checkinRepo,
     required NafsHistoryRepositoryInterface historyRepo,
     required Streak streak,
     NafsTrendHelper trendHelper = const NafsTrendHelper(),
     NextActionResolver actionResolver = const NextActionResolver(),
   })  : _meter = meter,
+        _weekly = weekly,
+        _dailyNafs = dailyNafs,
         _checkinRepo = checkinRepo,
         _historyRepo = historyRepo,
         _streak = streak,
@@ -122,35 +139,49 @@ class HomeViewModel extends StateNotifier<HomeState> {
       final last = await _checkinRepo.findLatest();
       final streak = await _streak.positiveStreakAsOf(today);
 
-      // Persist today's row if missing (preserves existing behavior).
+      // Persist today's row if missing. We compute today's real Nafs rather
+      // than writing the ammarahStartup placeholder, so an un-earned
+      // pessimistic baseline doesn't drag the 15-day meter down.
       final existingToday = await _historyRepo.findForDate(today);
-        if (existingToday == null) {
+      Vector4? todayVec;
+      if (existingToday != null) {
+        todayVec = existingToday.vector;
+      } else {
+        final nafsVector = await _dailyNafs(today);
+        todayVec = nafsVector;
         await _historyRepo.upsert(NafsHistory(
           id: 0,
           date: today,
-          ammarah: Vector4.ammarahStartup.ammarah,
-          lawwamah: Vector4.ammarahStartup.lawwamah,
-          mulhamah: Vector4.ammarahStartup.mulhamah,
-          mutmainnah: Vector4.ammarahStartup.mutmainnah,
+          ammarah: nafsVector.ammarah,
+          lawwamah: nafsVector.lawwamah,
+          mulhamah: nafsVector.mulhamah,
+          mutmainnah: nafsVector.mutmainnah,
         ));
       }
 
-      // Trend vs yesterday.
+      // Trend vs yesterday — uses the just-resolved today vector rather than
+      // re-reading the DB so the trend reflects the value we just persisted.
       final yesterdayRow = await _historyRepo.findForDate(yesterday);
       final trend = _trendHelper.compute(
-        today: existingToday,
-        yesterday: yesterdayRow,
+        today: todayVec,
+        yesterday: yesterdayRow?.vector,
       );
 
       // 7-day sparkline of heart-health scores.
       final sparkStart = today.subtract(const Duration(days: 6));
       final sparkRows = await _historyRepo.findBetween(sparkStart, today);
-      final spark = _trendHelper.sparklineScores(sparkRows);
+      final spark = _trendHelper.sparklineScores(sparkRows.map((r) => r.vector));
+
+      // Real 7-day weekly average vector (not the 15-day meter).
+      final weeklyMeter = await _weekly(today);
+      final weeklyHeartHealthScore = weeklyMeter.heartHealthScore;
 
       state = state.copyWith(
         meter: meterVec,
         dominant: meterVec.dominant,
         heartHealthScore: meterVec.heartHealthScore,
+        weeklyMeter: weeklyMeter,
+        weeklyHeartHealthScore: weeklyHeartHealthScore,
         lastCheckin: last,
         positiveStreak: streak,
         trend: trend,
@@ -186,6 +217,8 @@ final homeViewModelProvider =
     StateNotifierProvider<HomeViewModel, HomeState>((ref) {
   return HomeViewModel(
     meter: ref.watch(meter15DayProvider),
+    weekly: ref.watch(weeklyNafsProvider),
+    dailyNafs: ref.watch(computeDailyNafsProvider),
     checkinRepo: ref.watch(checkinRepositoryProvider),
     historyRepo: ref.watch(nafsHistoryRepositoryProvider),
     streak: ref.watch(streakProvider),
