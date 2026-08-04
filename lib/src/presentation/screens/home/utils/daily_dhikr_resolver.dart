@@ -3,6 +3,7 @@ import '../../../../domain/entities/vector4.dart';
 import '../../../../domain/repositories/checkin_repository.dart';
 import '../../../../domain/repositories/emotion_repository.dart';
 import '../../../../domain/repositories/nafs_history_repository.dart';
+import '../../../../domain/usecases/nafs/constants.dart';
 
 /// Source of the dhikr shown in the "Today's Practice" hero card.
 enum DhikrSource {
@@ -281,8 +282,6 @@ const Map<String, String> _englishNameToKey = {
 };
 
 /// A single dhikr / remembrance item.
-
-/// A single dhikr / remembrance item.
 class DhikrItem {
   final String arabic;
   final String transliteration;
@@ -290,12 +289,18 @@ class DhikrItem {
   final DhikrSource source;
   final String sourceLabel;
 
+  /// Optional recommended daily count (e.g. 101). When set, the counter sheet
+  /// shows progress against this target and the remaining count. Null means
+  /// no target is tracked (legacy / open-ended counter).
+  final int? target;
+
   const DhikrItem({
     required this.arabic,
     required this.transliteration,
     required this.meaning,
     required this.source,
     required this.sourceLabel,
+    this.target,
   });
 }
 
@@ -529,6 +534,7 @@ class DailyDhikrResolver {
           meaning: _meaningFromEmotion(emotion),
           source: DhikrSource.todayCheckin,
           sourceLabel: 'From ${emotion.name.toLowerCase()}',
+          target: NafsConstants.defaultDhikrTarget,
         );
       }
     }
@@ -783,6 +789,7 @@ DhikrItem nafsStateDhikr(NafsType nafs) {
         meaning: 'I seek forgiveness from Allah',
         source: DhikrSource.nafsStateBased,
         sourceLabel: 'For Ammarah (turning back)',
+        target: NafsConstants.defaultDhikrTarget,
       );
     case NafsType.lawwamah:
       return const DhikrItem(
@@ -791,6 +798,7 @@ DhikrItem nafsStateDhikr(NafsType nafs) {
         meaning: 'There is no deity except You; glory be to You; I was among the wrongdoers',
         source: DhikrSource.nafsStateBased,
         sourceLabel: 'For Lawwamah (Dua of Yunus)',
+        target: NafsConstants.defaultDhikrTarget,
       );
     case NafsType.mulhamah:
       return const DhikrItem(
@@ -799,6 +807,7 @@ DhikrItem nafsStateDhikr(NafsType nafs) {
         meaning: 'All praise is for Allah, Lord of all worlds',
         source: DhikrSource.nafsStateBased,
         sourceLabel: 'For Mulhamah (gratitude)',
+        target: NafsConstants.defaultDhikrTarget,
       );
     case NafsType.mutmainnah:
       return const DhikrItem(
@@ -807,6 +816,7 @@ DhikrItem nafsStateDhikr(NafsType nafs) {
         meaning: 'Glory be to Allah and praise be to Him',
         source: DhikrSource.nafsStateBased,
         sourceLabel: 'For Mutmainnah (tranquility)',
+        target: NafsConstants.defaultDhikrTarget,
       );
   }
 }

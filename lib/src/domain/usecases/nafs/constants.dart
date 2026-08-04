@@ -52,6 +52,14 @@ class NafsConstants {
   static const int habitWindowDays = 7;
   static const double trendNudgeSize = 0.05;
 
+  /// Default daily target surfaced in the Dhikr counter when a specific
+  /// emotion / Nafs state hasn't been assigned a more precise count. The value
+  /// of 101 is a commonly used prophetic figure (the *salat* upon the Prophet
+  /// ﷺ; cf. Bukhari 3370). The counter shows "X / 101" and a remaining count
+  /// against this target. Override per [DhikrItem] when a different count is
+  /// recommended.
+  static const int defaultDhikrTarget = 101;
+
   // ---------------------------------------------------------------------------
   // Waswasa baseline (RI-3.6).
   //

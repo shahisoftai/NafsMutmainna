@@ -36,14 +36,13 @@ class _DailyDhikrSectionState extends ConsumerState<DailyDhikrSection> {
     final state = ref.watch(dailyDhikrViewModelProvider);
     final dhikr = state.dhikr;
 
+    // Initial state: VM has not yet produced a result. Show a small skeleton
+    // so the section doesn't appear to "vanish" while the resolver runs.
     if (state.isLoading && !dhikr.hasAnyCheckins && dhikr.today == null) {
-      return const _SectionHeader(
-        title: 'Your Daily Dhikr',
-        subtitle: '',
-      );
+      return const _SectionSkeleton();
     }
 
-    // Empty state: no check-in ever + no today.
+    // No check-ins ever and no fallback item — full empty state.
     if (dhikr.today == null && !dhikr.hasAnyCheckins) {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -59,6 +58,11 @@ class _DailyDhikrSectionState extends ConsumerState<DailyDhikrSection> {
         ],
       );
     }
+
+    final hasNames = dhikr.history.isNotEmpty;
+    final hasTrend =
+        dhikr.nafsTrend.hasEnoughData || dhikr.nafsTrend.dailyScores.isNotEmpty;
+    final hasAnyAggregate = hasNames || hasTrend;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -79,17 +83,18 @@ class _DailyDhikrSectionState extends ConsumerState<DailyDhikrSection> {
           ),
           const SizedBox(height: 10),
         ],
-        if (dhikr.history.isNotEmpty) ...[
-          const _SubsectionHeader(
-            text: 'From your last 15 days',
+        // The 15-day subsection is always shown once the user has at least one
+        // check-in. The trend chart and the names list render independently
+        // so a sparse history doesn't hide one or the other.
+        const _SubsectionHeader(text: 'From your last 15 days'),
+        const SizedBox(height: 8),
+        if (hasTrend) ...[
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12),
+            child: _NafsTrendChart(trend: dhikr.nafsTrend),
           ),
-          const SizedBox(height: 8),
-          if (dhikr.nafsTrend.hasEnoughData ||
-              dhikr.nafsTrend.dailyScores.isNotEmpty)
-            Padding(
-              padding: const EdgeInsets.only(bottom: 12),
-              child: _NafsTrendChart(trend: dhikr.nafsTrend),
-            ),
+        ],
+        if (hasNames) ...[
           ...dhikr.history.map((item) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 10),
@@ -128,7 +133,18 @@ class _DailyDhikrSectionState extends ConsumerState<DailyDhikrSection> {
               ),
             ),
           ),
-        ] else ...[
+        ] else if (hasTrend) ...[
+          const SizedBox(height: 4),
+          const Text(
+            'Suggested Names will appear here as you check in.',
+            style: TextStyle(
+              fontSize: 11,
+              color: AppColors.textSecondary,
+              fontStyle: FontStyle.italic,
+            ),
+          ),
+        ],
+        if (!hasAnyAggregate) ...[
           const SizedBox(height: 4),
           const Text(
             'Your 15-day pattern will build as you check in.',
@@ -338,6 +354,35 @@ class _SectionHeader extends StatelessWidget {
               color: AppColors.textSecondary,
             ),
           ),
+      ],
+    );
+  }
+}
+
+/// Shown while the [DailyDhikrViewModel] is producing its first result. Keeps
+/// the section visually present (header + small spinner) instead of collapsing
+/// to a bare heading — the previous behaviour was easily mistaken for a
+/// missing section.
+class _SectionSkeleton extends StatelessWidget {
+  const _SectionSkeleton();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: const [
+        _SectionHeader(title: 'Your Daily Dhikr', subtitle: ''),
+        SizedBox(height: 12),
+        Center(
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 16),
+            child: SizedBox(
+              width: 22,
+              height: 22,
+              child: CircularProgressIndicator(strokeWidth: 2.4),
+            ),
+          ),
+        ),
       ],
     );
   }

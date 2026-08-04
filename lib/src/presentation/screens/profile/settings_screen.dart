@@ -1,14 +1,14 @@
-import 'dart:io' show Platform;
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../infrastructure/di/providers.dart';
+import '../../../../core/constants/store_urls.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
 import '../../viewmodels/privacy_lock_view_model.dart';
+import '../../widgets/rating/rate_this_app_tile.dart';
 import 'authentic_sources_data.dart';
 import 'delete_data_service.dart';
 
@@ -16,16 +16,9 @@ import 'delete_data_service.dart';
 // App metadata constants
 // ============================================================================
 const String kAppVersion = '1.1.14';
-const String kAppWebsite = 'https://shahisoftware.com/products/heartos';
 const String kSupportEmail = 'support@shahisoftware.com';
 const String kPrivacyUrl = 'https://shahisoftware.com/products/heartos/privacy';
 const String kTermsUrl = 'https://shahisoftware.com/products/heartos/terms';
-
-// Store listing URLs (placeholders until the apps are published).
-const String kPlayStoreUrl =
-    'https://play.google.com/store/apps/details?id=com.shahisoftware.heartos';
-const String kAppStoreUrl =
-    'https://apps.apple.com/app/id000000000'; // TODO: replace with real Apple ID
 
 const String kDisclaimerText =
     'All precautions have been taken to use only authentic sources, but user '
@@ -45,6 +38,11 @@ class SettingsScreen extends ConsumerWidget {
               child: ListView(
                 padding: EdgeInsets.only(bottom: MediaQuery.of(context).padding.bottom + 16),
                 children: [
+                  // ---- Enjoying HeartOS? (Rate this app, pinned to top) ----
+                  const _SectionLabel('Enjoying HeartOS?'),
+                  const RateThisAppTile(),
+                  const _SectionDivider(),
+
                   // ---- Data ----
                   const _SectionLabel('Data'),
                   const _DeleteDataTile(),
@@ -82,7 +80,6 @@ class SettingsScreen extends ConsumerWidget {
                   ),
                   const _ContactUsTile(),
                   const _SourcesTile(),
-                  const _RateAppTile(),
                   const _SectionDivider(),
 
                   // ---- Disclaimer banner ----
@@ -383,31 +380,6 @@ class _SourcesTile extends StatelessWidget {
           ),
       ],
     );
-  }
-}
-
-class _RateAppTile extends StatelessWidget {
-  const _RateAppTile();
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      leading: const Icon(Icons.star_rate_outlined),
-      title: const Text('Rate this app'),
-      trailing: const Icon(Icons.open_in_new, size: 18),
-      onTap: () {
-        final url = _storeUrl();
-        _open(context, url);
-      },
-    );
-  }
-
-  String _storeUrl() {
-    try {
-      if (Platform.isIOS) return kAppStoreUrl;
-    } catch (_) {
-      // Platform not available (web/tests) — fall through.
-    }
-    return kPlayStoreUrl;
   }
 }
 

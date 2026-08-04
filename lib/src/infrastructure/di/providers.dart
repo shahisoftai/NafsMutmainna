@@ -18,6 +18,7 @@ import '../../data/repositories/intervention_history_repository_impl.dart';
 import '../../data/repositories/nafs_history_repository_impl.dart';
 import '../../data/repositories/nafs_state_repository_impl.dart';
 import '../../data/repositories/quran_ayat_repository_impl.dart';
+import '../../data/services/rating/platform_store_rating_service.dart';
 import '../../domain/repositories/attribute_link_repository.dart';
 import '../../domain/repositories/attribute_repository.dart';
 import '../../domain/repositories/auth_repository.dart';
@@ -33,6 +34,7 @@ import '../../domain/repositories/quran_ayat_repository.dart';
 import '../../domain/repositories/nafs_history_repository.dart';
 import '../../domain/repositories/nafs_state_repository.dart';
 import '../../domain/services/foundational_habits_seeder.dart';
+import '../../domain/services/rating/store_rating_service.dart';
 import '../../domain/usecases/graph/detect_attributes.dart';
 import '../../domain/usecases/graph/growth_path.dart';
 import '../../domain/usecases/nafs/compute_daily_nafs.dart';
@@ -118,6 +120,9 @@ final weeklyNafsProvider = Provider<WeeklyNafs>(
 );
 final streakProvider = Provider<Streak>(
   (ref) => Streak(ref.watch(nafsHistoryRepositoryProvider)),
+);
+final storeRatingServiceProvider = Provider<StoreRatingService>(
+  (ref) => const PlatformStoreRatingService(),
 );
 final growthPathProvider = Provider<GrowthPath>(
   (ref) => GrowthPath(
