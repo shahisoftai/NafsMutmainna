@@ -24,7 +24,19 @@ HeartOS is a privacy-first spiritual self-improvement app based on Islamic princ
 
 ## Version History
 
-### 1.1.15+10 — 2026-08-04
+### 1.1.16+12 — 2026-08-05
+
+**Check-In UX Overhaul** ("How Do You Feel?" screen)
+- Replaced `InteractiveViewer` pinch-to-zoom with A− / A+ font-size buttons (1.0–1.6x scale), scoped to the emotion picker
+- Intensity slider: descriptive labels (Mild / Moderate / Strong / Severe) + emoji indicators (😌 / 😟 / 😰)
+- Emotion search: added "No results" empty state with helpful hint about translating by feeling
+- Notes field: added hint + helper text guiding the user to reflect on triggers
+- Continue button: explanatory hint when disabled, distinct disabled background colour
+- Added "Step 1 of 2" progress indicator + 50% linear progress bar at the top
+- Category sections: stronger background alpha (0.06 → 0.10) + border + darker header for WCAG-friendly contrast
+- Bilingual chip line: bumped font 11→12, wrapped in `Flexible` + ellipsis to prevent overflow on small screens
+
+### 1.1.15+11 — 2026-08-04
 
 **Nafs Scoring Engine**
 - Full-spectrum ladder `heartHealthScore` using all 4 Nafs stations (Ammarah=0 → Mutmainnah=3) with weighted average, neutral baseline scores 50/100

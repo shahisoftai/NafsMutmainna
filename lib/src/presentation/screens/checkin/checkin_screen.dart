@@ -60,10 +60,10 @@ class _CheckinScreenState extends ConsumerState<CheckinScreen> {
   Future<bool> _showReflectionDialog(String category) async {
     final isNegative = category == 'Negative';
     final text = isNegative ? _negativeReflection : _positiveReflection;
-    final headerColor = isNegative ? Colors.red.shade700 : Colors.green.shade700;
+    final headerColor = isNegative ? Colors.red.shade800 : Colors.green.shade800;
     final bgColor = isNegative
-        ? Colors.red.withValues(alpha: 0.06)
-        : Colors.green.withValues(alpha: 0.06);
+        ? Colors.red.withValues(alpha: 0.10)
+        : Colors.green.withValues(alpha: 0.10);
 
     final result = await showDialog<bool>(
       context: context,
@@ -157,8 +157,8 @@ class _CheckinScreenState extends ConsumerState<CheckinScreen> {
     final primary = s.primary;
     if (primary == null || _submitting) return;
 
-    final confirmed = await _showReflectionDialog(primary.category);
-    if (!confirmed || !mounted) return;
+    await _showReflectionDialog(primary.category);
+    if (!mounted) return;
 
     setState(() => _submitting = true);
     try {
@@ -202,6 +202,27 @@ class _CheckinScreenState extends ConsumerState<CheckinScreen> {
             child: ListView(
               padding: EdgeInsets.fromLTRB(16, 16, 16, 16 + MediaQuery.of(context).padding.bottom + 16),
               children: [
+                Row(
+                  children: [
+                    Expanded(
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(4),
+                        child: const LinearProgressIndicator(
+                          value: 0.5,
+                          minHeight: 4,
+                          backgroundColor: Color(0xFFE0E0E0),
+                          valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    const Text(
+                      'Step 1 of 2',
+                      style: TextStyle(fontSize: 11, color: AppColors.textSecondary),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 16),
                 const Text('Pick the primary emotion',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
                 const SizedBox(height: 8),
@@ -222,12 +243,23 @@ class _CheckinScreenState extends ConsumerState<CheckinScreen> {
                   maxLength: 500,
                   decoration: InputDecoration(
                     labelText: 'Notes (optional)',
+                    hintText: 'What triggered this feeling? What is on your heart?',
+                    helperText: 'Used by the insight to recommend more relevant content.',
                     border: OutlineInputBorder(borderRadius: BorderRadius.circular(12)),
                     filled: true,
                     fillColor: AppColors.surfaceVariant,
                   ),
                 ),
                 const SizedBox(height: 16),
+                if (state.primary == null)
+                  const Padding(
+                    padding: EdgeInsets.only(bottom: 8),
+                    child: Text(
+                      'Select an emotion above to continue.',
+                      style: TextStyle(fontSize: 12, color: AppColors.textSecondary),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                 SizedBox(
                   width: double.infinity,
                   height: 52,
@@ -235,6 +267,7 @@ class _CheckinScreenState extends ConsumerState<CheckinScreen> {
                     onPressed: state.primary == null || _submitting ? null : _submit,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: AppColors.primary,
+                      disabledBackgroundColor: AppColors.primary.withValues(alpha: 0.4),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
                     ),
                     child: _submitting
