@@ -15,7 +15,7 @@ import 'delete_data_service.dart';
 // ============================================================================
 // App metadata constants
 // ============================================================================
-const String kAppVersion = '1.1.14';
+const String kAppVersion = '1.1.17';
 const String kSupportEmail = 'support@shahisoftware.com';
 const String kPrivacyUrl = 'https://shahisoftware.com/products/heartos/privacy';
 const String kTermsUrl = 'https://shahisoftware.com/products/heartos/terms';

@@ -1,9 +1,11 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:path/path.dart' as p;
 import 'package:path_provider/path_provider.dart';
 import 'package:sqflite/sqflite.dart';
+import 'package:sqflite_common_ffi_web/sqflite_ffi_web.dart';
 
 import '../../../../core/logger/logger.dart';
 import 'seed_loader.dart';
@@ -11,20 +13,26 @@ import 'seed_loader.dart';
 /// The 16-table HeartOS database.
 class AppDatabase {
   static const _dbName = 'heartos.db';
-  static const _schemaVersion = 13;
+  static const _schemaVersion = 14;
 
   Database? _db;
 
   Database get db {
     final d = _db;
-    if (d == null) throw StateError('AppDatabase not opened. Call open() first.');
+    if (d == null)
+      throw StateError('AppDatabase not opened. Call open() first.');
     return d;
   }
 
   Future<Database> open() async {
     if (_db != null) return _db!;
-    final dir = await getApplicationDocumentsDirectory();
-    final path = p.join(dir.path, _dbName);
+    if (kIsWeb) {
+      // Web: SQLite runs via WASM and persists to IndexedDB. path_provider
+      // has no web implementation, so we cannot use getApplicationDocumentsDirectory.
+      databaseFactory = databaseFactoryFfiWeb;
+    }
+    final dir = kIsWeb ? null : await getApplicationDocumentsDirectory();
+    final path = kIsWeb ? _dbName : p.join(dir!.path, _dbName);
     Logger.info('Opening HeartOS database at $path');
     _db = await openDatabase(
       path,
@@ -42,7 +50,9 @@ class AppDatabase {
             Logger.info('[DB] onOpen: critical table(s) empty — re-seeding');
             await SeedLoader.seedAll(db);
           } else {
-            Logger.info('[DB] onOpen: seed check passed, all critical tables populated');
+            Logger.info(
+              '[DB] onOpen: seed check passed, all critical tables populated',
+            );
           }
         } catch (e) {
           Logger.error('[DB] onOpen re-seed failed: $e');
@@ -73,7 +83,9 @@ class AppDatabase {
         SELECT Record_ID, Date, Attribute_ID, Score FROM detected_attributes
       ''');
       await db.execute('DROP TABLE detected_attributes');
-      await db.execute('ALTER TABLE detected_attributes_new RENAME TO detected_attributes');
+      await db.execute(
+        'ALTER TABLE detected_attributes_new RENAME TO detected_attributes',
+      );
       await db.execute(
         'CREATE INDEX IF NOT EXISTS idx_detected_date ON detected_attributes(Date)',
       );
@@ -92,19 +104,27 @@ class AppDatabase {
     // v3 -> v4: make Attribute_ID nullable for Dhikr/Action cards
     if (oldVersion < 4) {
       try {
-        // First, set rows with Attribute_ID = 0 to NULL (those are Dhikr/Action from old data)
-        await db.rawUpdate(
-          'UPDATE interventions_history SET Attribute_ID = NULL WHERE Attribute_ID = 0',
-        );
-        // Then alter the column to be nullable
-        await db.execute(
-          'ALTER TABLE interventions_history ADD COLUMN Attribute_ID_new INTEGER DEFAULT NULL REFERENCES attributes(Attribute_ID)',
-        );
-        await db.rawUpdate('''
-          UPDATE interventions_history SET Attribute_ID_new = Attribute_ID
+        await db.execute('''CREATE TABLE interventions_history_v4 (
+            Record_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+            Date TEXT NOT NULL,
+            Emotion_ID INTEGER NOT NULL REFERENCES emotions(Emotion_ID),
+            Attribute_ID INTEGER DEFAULT NULL,
+            Intervention_Type TEXT NOT NULL CHECK (Intervention_Type IN ('Quran','Hadith','Dua','Allah_Names','Dhikr','Action')),
+            Completed INTEGER NOT NULL DEFAULT 0 CHECK (Completed IN (0,1)),
+            Feedback TEXT
+          )''');
+        await db.execute('''
+          INSERT INTO interventions_history_v4
+            (Record_ID, Date, Emotion_ID, Attribute_ID, Intervention_Type, Completed, Feedback)
+          SELECT Record_ID, Date, Emotion_ID,
+                 CASE WHEN Attribute_ID = 0 THEN NULL ELSE Attribute_ID END,
+                 Intervention_Type, Completed, Feedback
+          FROM interventions_history
         ''');
         await db.execute('DROP TABLE interventions_history');
-        await db.execute('ALTER TABLE interventions_history_new RENAME TO interventions_history');
+        await db.execute(
+          'ALTER TABLE interventions_history_v4 RENAME TO interventions_history',
+        );
         Logger.info('Made Attribute_ID nullable in interventions_history');
       } catch (e) {
         Logger.error('Failed to make Attribute_ID nullable: $e');
@@ -155,10 +175,18 @@ class AppDatabase {
     // v5 -> v6: add multilingual dua columns to emotions (aligns seed JSON with schema)
     if (oldVersion < 6) {
       try {
-        await db.execute("ALTER TABLE emotions ADD COLUMN Recommended_Dua_Arabic TEXT DEFAULT NULL");
-        await db.execute("ALTER TABLE emotions ADD COLUMN Recommended_Dua_Reference TEXT DEFAULT NULL");
-        await db.execute("ALTER TABLE emotions ADD COLUMN Recommended_Dua_English TEXT DEFAULT NULL");
-        await db.execute("ALTER TABLE emotions ADD COLUMN Recommended_Dua_Urdu TEXT DEFAULT NULL");
+        await db.execute(
+          "ALTER TABLE emotions ADD COLUMN Recommended_Dua_Arabic TEXT DEFAULT NULL",
+        );
+        await db.execute(
+          "ALTER TABLE emotions ADD COLUMN Recommended_Dua_Reference TEXT DEFAULT NULL",
+        );
+        await db.execute(
+          "ALTER TABLE emotions ADD COLUMN Recommended_Dua_English TEXT DEFAULT NULL",
+        );
+        await db.execute(
+          "ALTER TABLE emotions ADD COLUMN Recommended_Dua_Urdu TEXT DEFAULT NULL",
+        );
         Logger.info('Added multilingual dua columns to emotions');
       } catch (e) {
         Logger.error('Failed to add dua columns to emotions: $e');
@@ -193,7 +221,9 @@ class AppDatabase {
           SELECT Record_ID, Date, Attribute_ID, Score, 'Disease' FROM detected_attributes
         ''');
         await db.execute('DROP TABLE detected_attributes');
-        await db.execute('ALTER TABLE detected_attributes_v8 RENAME TO detected_attributes');
+        await db.execute(
+          'ALTER TABLE detected_attributes_v8 RENAME TO detected_attributes',
+        );
         await db.execute(
           'CREATE INDEX IF NOT EXISTS idx_detected_date ON detected_attributes(Date)',
         );
@@ -208,7 +238,9 @@ class AppDatabase {
     // in Dart. Bump the version so _needsReseed can detect databases that
     // pre-date the new fields and trigger a re-seed if the columns are empty.
     if (oldVersion < 9) {
-      Logger.info('v9: upgraded to recommend v2 (no DDL change; data integrity re-check)');
+      Logger.info(
+        'v9: upgraded to recommend v2 (no DDL change; data integrity re-check)',
+      );
     }
     // v9 -> v10: quran_ayat seed v1.1.0 — replaces the three broken entries
     // (ID 39 was a misquoted 2:102 fragment, ID 45 had wrong Arabic for 24:47,
@@ -217,7 +249,9 @@ class AppDatabase {
     // Jalandhari translations. No DDL change; _needsReseed detects the old
     // data via a content check and triggers a re-seed.
     if (oldVersion < 10) {
-      Logger.info('v10: upgraded to quran_ayat seed v1.1.0 (no DDL change; content re-seed)');
+      Logger.info(
+        'v10: upgraded to quran_ayat seed v1.1.0 (no DDL change; content re-seed)',
+      );
     }
     // ===========================================================================
     // v10 -> v11: Scholar Audit Remediation (Tazkiya Nafs)
@@ -231,7 +265,7 @@ class AppDatabase {
     //   - Daily_Action_Source (RI-4.2): Quran/Hadith/Classical ref for the action
     //
     // The re-seed at the bottom of this method populates these columns from the
-    // updated attributes_seed.json (SeedLoader uses INSERT OR REPLACE).
+    // updated attributes_seed.json (SeedLoader performs FK-safe upserts).
     // ===========================================================================
     if (oldVersion < 11) {
       try {
@@ -269,7 +303,7 @@ class AppDatabase {
     // (English on top, Arabic + Urdu underneath) regardless of the active
     // locale. The re-seed at the bottom of this method populates the new
     // column from the updated emotions_seed.json (SeedLoader uses
-    // INSERT OR REPLACE, so existing rows are updated in place).
+    // FK-safe upserts, so existing rows are updated in place).
     // ===========================================================================
     if (oldVersion < 12) {
       try {
@@ -288,7 +322,7 @@ class AppDatabase {
     // matches the convention used everywhere else in the knowledge layer
     // (Quran/Hadith translations already carry Urdu). The re-seed at the
     // bottom of this method populates the new column from the updated
-    // attributes_seed.json (SeedLoader uses INSERT OR REPLACE, so existing
+    // attributes_seed.json (SeedLoader uses FK-safe upserts, so existing
     // rows are updated in place).
     // ===========================================================================
     if (oldVersion < 13) {
@@ -300,6 +334,35 @@ class AppDatabase {
       } catch (e) {
         Logger.error('v13 migration failed: $e');
       }
+    }
+    // v13 -> v14: intervention cards use this value as the referenced Quran,
+    // Hadith, or attribute row ID depending on Intervention_Type. It is not
+    // always an attributes.Attribute_ID, so the old foreign key rejected valid
+    // Quran/Hadith completions (SQLite error 787). Rebuild without that invalid
+    // polymorphic foreign key while preserving all history.
+    if (oldVersion < 14) {
+      await db.execute('''
+        CREATE TABLE interventions_history_v14 (
+          Record_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+          Date TEXT NOT NULL,
+          Emotion_ID INTEGER NOT NULL REFERENCES emotions(Emotion_ID),
+          Attribute_ID INTEGER DEFAULT NULL,
+          Intervention_Type TEXT NOT NULL CHECK (Intervention_Type IN ('Quran','Hadith','Dua','Allah_Names','Dhikr','Action')),
+          Completed INTEGER NOT NULL DEFAULT 0 CHECK (Completed IN (0,1)),
+          Feedback TEXT
+        )
+      ''');
+      await db.execute('''
+        INSERT INTO interventions_history_v14
+          (Record_ID, Date, Emotion_ID, Attribute_ID, Intervention_Type, Completed, Feedback)
+        SELECT Record_ID, Date, Emotion_ID, Attribute_ID, Intervention_Type, Completed, Feedback
+        FROM interventions_history
+      ''');
+      await db.execute('DROP TABLE interventions_history');
+      await db.execute(
+        'ALTER TABLE interventions_history_v14 RENAME TO interventions_history',
+      );
+      Logger.info('v14: removed invalid polymorphic Attribute_ID foreign key');
     }
     // ===========================================================================
     // UNIVERSAL RE-SEED (runs after all version-specific migrations)
@@ -322,12 +385,28 @@ class AppDatabase {
   ///
   /// The second check catches databases that were seeded from an older version
   /// of [emotions_seed.json] that did not contain the Allah Names data. Since
-  /// [SeedLoader._insertBatch] uses [ConflictAlgorithm.replace], running
-  /// seedAll again will UPDATE those rows with the current seed values.
+  /// [SeedLoader] performs update-or-insert upserts, so running seedAll again
+  /// updates those rows without deleting referenced parent records.
   Future<bool> _needsReseed(Database db) async {
-    for (final table in ['emotions', 'attributes', 'emotion_attribute_links']) {
-      final c = Sqflite.firstIntValue(await db.rawQuery('SELECT COUNT(*) FROM $table'));
-      if (c == null || c == 0) return true;
+    // Counts catch partially seeded databases, not just completely empty ones.
+    // In affected releases all 113 positive attributes were rejected while the
+    // first 70 rows remained, so a simple `count > 0` check reported healthy.
+    const expectedRows = <String, int>{
+      'emotions': 50,
+      'attributes': 183,
+      'emotion_attribute_links': 295,
+    };
+    for (final entry in expectedRows.entries) {
+      final table = entry.key;
+      final c = Sqflite.firstIntValue(
+        await db.rawQuery('SELECT COUNT(*) FROM $table'),
+      );
+      if (c == null || c < entry.value) {
+        Logger.info(
+          '[DB] $table has ${c ?? 0}/${entry.value} expected rows — triggering re-seed',
+        );
+        return true;
+      }
     }
     // Check for stale seed data: any emotion missing its Allah Names.
     try {
@@ -337,7 +416,9 @@ class AppDatabase {
         ),
       );
       if (emptyNames != null && emptyNames > 0) {
-        Logger.info('[DB] Found $emptyNames emotion(s) with empty Recommended_Allah_Names — triggering re-seed');
+        Logger.info(
+          '[DB] Found $emptyNames emotion(s) with empty Recommended_Allah_Names — triggering re-seed',
+        );
         return true;
       }
     } catch (e) {
@@ -353,7 +434,9 @@ class AppDatabase {
         ),
       );
       if (emptyDua != null && emptyDua > 0) {
-        Logger.info('[DB] Found $emptyDua emotion(s) with empty Recommended_Dua_Arabic — triggering re-seed');
+        Logger.info(
+          '[DB] Found $emptyDua emotion(s) with empty Recommended_Dua_Arabic — triggering re-seed',
+        );
         return true;
       }
     } catch (e) {
@@ -365,16 +448,20 @@ class AppDatabase {
     // still carries the old content, re-seed the whole knowledge layer so
     // the user gets the corrected Quranic references.
     try {
-      final stale = Sqflite.firstIntValue(await db.rawQuery('''
+      final stale = Sqflite.firstIntValue(
+        await db.rawQuery('''
         SELECT COUNT(*) FROM quran_ayat
         WHERE (Ayat_ID = 39 AND Surah_Name != 'Al-Isra')
            OR (Ayat_ID = 45 AND Surah_Name != 'Al-Baqarah')
            OR (Ayat_ID = 49 AND Verse_Number != 112)
            OR (Ayat_ID IN (4, 6, 9, 10, 12, 15, 17, 19, 20, 21, 22, 24, 25, 26, 27, 28, 29, 30, 31, 33, 34, 36, 37, 40, 41, 42, 47)
                AND length(Arabic_Text) < 50)
-      '''));
+      '''),
+      );
       if (stale != null && stale > 0) {
-        Logger.info('[DB] Found $stale stale quran_ayat row(s) from the pre-v1.1.0 seed — triggering re-seed');
+        Logger.info(
+          '[DB] Found $stale stale quran_ayat row(s) from the pre-v1.1.0 seed — triggering re-seed',
+        );
         return true;
       }
     } catch (e) {
@@ -391,7 +478,9 @@ class AppDatabase {
         ),
       );
       if (emptyUrdu != null && emptyUrdu > 0) {
-        Logger.info('[DB] Found $emptyUrdu emotion(s) with empty Urdu_Name — triggering re-seed');
+        Logger.info(
+          '[DB] Found $emptyUrdu emotion(s) with empty Urdu_Name — triggering re-seed',
+        );
         return true;
       }
     } catch (e) {
@@ -408,7 +497,9 @@ class AppDatabase {
         ),
       );
       if (emptyAttrUrdu != null && emptyAttrUrdu > 0) {
-        Logger.info('[DB] Found $emptyAttrUrdu attribute(s) with empty Urdu_Name — triggering re-seed');
+        Logger.info(
+          '[DB] Found $emptyAttrUrdu attribute(s) with empty Urdu_Name — triggering re-seed',
+        );
         return true;
       }
     } catch (e) {
@@ -619,7 +710,9 @@ class AppDatabase {
       Record_ID INTEGER PRIMARY KEY AUTOINCREMENT,
       Date TEXT NOT NULL,
       Emotion_ID INTEGER NOT NULL REFERENCES emotions(Emotion_ID),
-      Attribute_ID INTEGER DEFAULT NULL REFERENCES attributes(Attribute_ID),
+      -- Polymorphic reference: Quran/Hadith IDs for normalized cards,
+      -- Attribute_ID for attribute fallbacks, NULL for emotion-level cards.
+      Attribute_ID INTEGER DEFAULT NULL,
       Intervention_Type TEXT NOT NULL CHECK (Intervention_Type IN ('Quran','Hadith','Dua','Allah_Names','Dhikr','Action')),
       Completed INTEGER NOT NULL DEFAULT 0 CHECK (Completed IN (0,1)),
       Feedback TEXT
@@ -677,7 +770,11 @@ String isoDate(DateTime d) {
 /// Helper to parse an ISO date string to DateTime.
 DateTime parseIsoDate(String s) {
   final parts = s.split('-');
-  return DateTime(int.parse(parts[0]), int.parse(parts[1]), int.parse(parts[2]));
+  return DateTime(
+    int.parse(parts[0]),
+    int.parse(parts[1]),
+    int.parse(parts[2]),
+  );
 }
 
 /// Map a Database row to a typed map.

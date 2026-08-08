@@ -6,10 +6,27 @@ import 'package:sqflite/sqflite.dart';
 import '../../../../core/logger/logger.dart';
 
 /// Reads the 10 bundled JSON seed files and inserts into the SQLite database.
-/// All inserts are idempotent (INSERT OR IGNORE) so this is safe to run on
-/// every cold start.
+/// All writes are idempotent, foreign-key-safe upserts, so this is safe to run
+/// on every cold start even after user history references knowledge rows.
 class SeedLoader {
   static const _base = 'assets/data';
+
+  static const _primaryKeyByTable = <String, String>{
+    'nafs_states': 'Nafs_ID',
+    'emotions': 'Emotion_ID',
+    'attributes': 'Attribute_ID',
+    'domains': 'Domain_ID',
+    'emotion_nafs_weights': 'Emotion_ID',
+    'attribute_nafs_weights': 'Attribute_ID',
+    'emotion_attribute_links': 'Link_ID',
+    'attribute_links': 'Link_ID',
+    'domain_attribute_links': 'Link_ID',
+    'domain_emotion_links': 'Link_ID',
+    'hadees': 'Hadees_ID',
+    'quran_ayat': 'Ayat_ID',
+    'emotion_hadees_links': 'Link_ID',
+    'emotion_quran_links': 'Link_ID',
+  };
 
   static Future<void> seedAll(Database db) async {
     // Order matches HeartOS seed order from 00_index.md.
@@ -42,7 +59,11 @@ class SeedLoader {
   /// row poisons the whole table AND every subsequent table in [seedAll],
   /// leaving the database in a broken state (e.g. no emotion→attribute
   /// links → "no attributes detected" on Heart Analysis).
-  static Future<void> _insertBatch(DatabaseExecutor db, String table, List<Map<String, Object?>> rows) async {
+  static Future<void> _insertBatch(
+    DatabaseExecutor db,
+    String table,
+    List<Map<String, Object?>> rows,
+  ) async {
     if (rows.isEmpty) return;
     var inserted = 0;
     var skipped = 0;
@@ -50,11 +71,43 @@ class SeedLoader {
       final cleaned = <String, Object?>{};
       for (final e in row.entries) {
         if (e.value == null) continue;
-        if (e.value is double && (e.value as double).isNaN) continue;
-        cleaned[e.key] = e.value;
+        final v = e.value;
+        // Cause_Type models the source of a harmful trait. Positive traits in
+        // the seed use the descriptive value "Positive", which is outside the
+        // persisted cause taxonomy. Store the neutral/default classification
+        // so all positive attributes (IDs 71+) are inserted instead of being
+        // silently rejected by the CHECK constraint.
+        if (table == 'attributes' && e.key == 'Cause_Type' && v == 'Positive') {
+          cleaned[e.key] = 'Mixed';
+          continue;
+        }
+        if (v is bool) {
+          // sqflite's mobile channel coerces bool->int, but the ffi/web
+          // binding does not and rejects 'bool' as an SQL arg type. Coerce
+          // explicitly so attributes seed (Quran_Primary) works on web.
+          cleaned[e.key] = v ? 1 : 0;
+          continue;
+        }
+        if (v is double && v.isNaN) continue;
+        cleaned[e.key] = v;
       }
       try {
-        await db.insert(table, cleaned, conflictAlgorithm: ConflictAlgorithm.replace);
+        // UPDATE + INSERT avoids SQLite's INSERT OR REPLACE semantics. REPLACE
+        // deletes the parent row first, which fails as soon as user tables
+        // (checkins/history/detected attributes) reference seeded knowledge.
+        final primaryKey = _primaryKeyByTable[table];
+        if (primaryKey == null || !cleaned.containsKey(primaryKey)) {
+          throw StateError('No seed primary key configured for $table');
+        }
+        final updated = await db.update(
+          table,
+          cleaned,
+          where: '$primaryKey = ?',
+          whereArgs: [cleaned[primaryKey]],
+        );
+        if (updated == 0) {
+          await db.insert(table, cleaned);
+        }
         inserted++;
       } catch (e) {
         skipped++;
@@ -62,7 +115,9 @@ class SeedLoader {
       }
     }
     if (skipped > 0) {
-      Logger.info('Seed $table: $inserted inserted, $skipped skipped (likely FK violations)');
+      Logger.info(
+        'Seed $table: $inserted inserted, $skipped skipped (likely FK violations)',
+      );
     } else {
       Logger.info('Seeded $table: $inserted');
     }
@@ -167,7 +222,12 @@ class SeedLoader {
     try {
       final emotionRows = await db.query(
         'emotions',
-        columns: ['Emotion_ID', 'Core_Emotion', 'Growth_Path', 'Primary_Positive_Attributes'],
+        columns: [
+          'Emotion_ID',
+          'Core_Emotion',
+          'Growth_Path',
+          'Primary_Positive_Attributes',
+        ],
       );
       final attributeNames = <String>{
         for (final r in await db.query('attributes', columns: ['Attribute']))
@@ -246,8 +306,11 @@ class SeedLoader {
       final an = a
           .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
           .replaceAll(RegExp(r'\s+'), '');
-      final astripped = an.startsWith('al') && an.length > 2 ? an.substring(2) : an;
-      if (an == normalized || an == stripped || astripped == stripped) return true;
+      final astripped = an.startsWith('al') && an.length > 2
+          ? an.substring(2)
+          : an;
+      if (an == normalized || an == stripped || astripped == stripped)
+        return true;
     }
     return false;
   }
@@ -259,7 +322,10 @@ class SeedLoader {
     final normalized = lower
         .replaceAll(RegExp(r"['\u2018\u2019\u02BC\-_]"), '')
         .replaceAll(RegExp(r'\s+'), '');
-    final rows = await db.query('attributes', columns: ['Attribute_ID', 'Attribute']);
+    final rows = await db.query(
+      'attributes',
+      columns: ['Attribute_ID', 'Attribute'],
+    );
     for (final r in rows) {
       final an = (r['Attribute'] as String).toLowerCase();
       if (an == lower) return r['Attribute_ID'] as int;
