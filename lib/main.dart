@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 import 'src/infrastructure/di/providers.dart' as di;
@@ -9,6 +10,9 @@ import 'src/presentation/theme/colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  // Android 15+ enforces edge-to-edge for target SDK 35. Opt in explicitly
+  // on older Android versions too so one inset-aware layout is used everywhere.
+  await SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
   await Hive.initFlutter();
   final authBox = await Hive.openBox<String>('auth');
   di.setAuthBox(authBox);

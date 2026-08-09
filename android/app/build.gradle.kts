@@ -49,6 +49,8 @@ android {
 }
 
 dependencies {
+    // Keep the embedding on AndroidX's current edge-to-edge implementation.
+    implementation("androidx.activity:activity-ktx:1.13.0")
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
 }
 

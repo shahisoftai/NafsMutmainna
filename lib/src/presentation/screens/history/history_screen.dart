@@ -28,8 +28,12 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
   Future<void> _load() async {
     final today = DateTime.now();
     final start = today.subtract(const Duration(days: 30));
-    final h = await ref.read(nafsHistoryRepositoryProvider).findBetween(start, today);
-    final r = await ref.read(checkinRepositoryProvider).findBetween(start, today);
+    final h = await ref
+        .read(nafsHistoryRepositoryProvider)
+        .findBetween(start, today);
+    final r = await ref
+        .read(checkinRepositoryProvider)
+        .findBetween(start, today);
     if (!mounted) return;
     setState(() {
       _history = h;
@@ -42,45 +46,59 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('History')),
-      body: _loading
-          ? const Center(child: CircularProgressIndicator())
-          : ListView(
-              padding: const EdgeInsets.all(16),
-              children: [
-                const Text('30-day Nafs trend',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                const SizedBox(height: 8),
-                SizedBox(
-                  height: 220,
-                  child: _history.length < 2
-                      ? const Center(child: Text('Not enough data yet', style: TextStyle(color: AppColors.textSecondary)))
-                      : _buildChart(),
-                ),
-                const SizedBox(height: 16),
-                const Text('Recent check-ins',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
-                const SizedBox(height: 8),
-                if (_recent.isEmpty)
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 24),
-                    child: Center(
-                      child: Text('No check-ins yet', style: TextStyle(color: AppColors.textSecondary)),
-                    ),
-                  )
-                else
-                  ..._recent.reversed.take(20).map((c) => _checkinTile(c)),
-              ],
-            ),
+      body: SafeArea(
+        top: false,
+        child: _loading
+            ? const Center(child: CircularProgressIndicator())
+            : ListView(
+                padding: const EdgeInsets.all(16),
+                children: [
+                  const Text(
+                    '30-day Nafs trend',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 220,
+                    child: _history.length < 2
+                        ? const Center(
+                            child: Text(
+                              'Not enough data yet',
+                              style: TextStyle(color: AppColors.textSecondary),
+                            ),
+                          )
+                        : _buildChart(),
+                  ),
+                  const SizedBox(height: 16),
+                  const Text(
+                    'Recent check-ins',
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(height: 8),
+                  if (_recent.isEmpty)
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 24),
+                      child: Center(
+                        child: Text(
+                          'No check-ins yet',
+                          style: TextStyle(color: AppColors.textSecondary),
+                        ),
+                      ),
+                    )
+                  else
+                    ..._recent.reversed.take(20).map((c) => _checkinTile(c)),
+                ],
+              ),
+      ),
     );
   }
 
   Widget _buildChart() {
     final spots = <FlSpot>[];
     for (var i = 0; i < _history.length; i++) {
-      spots.add(FlSpot(
-        i.toDouble(),
-        _history[i].mutmainnah + _history[i].mulhamah,
-      ));
+      spots.add(
+        FlSpot(i.toDouble(), _history[i].mutmainnah + _history[i].mulhamah),
+      );
     }
     return LineChart(
       LineChartData(
@@ -114,7 +132,10 @@ class _HistoryScreenState extends ConsumerState<HistoryScreen> {
           title: Text(name),
           subtitle: Text(
             '${DateFormat.yMMMd().add_jm().format(c.date)} • Intensity ${c.intensity}/10',
-            style: const TextStyle(fontSize: 12, color: AppColors.textSecondary),
+            style: const TextStyle(
+              fontSize: 12,
+              color: AppColors.textSecondary,
+            ),
           ),
         );
       },

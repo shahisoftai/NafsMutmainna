@@ -53,58 +53,61 @@ class _NafsDetailScreenState extends ConsumerState<NafsDetailScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       appBar: AppBar(title: const Text('Nafs detail')),
-      body: RefreshIndicator(
-        onRefresh: () => ref.read(homeViewModelProvider.notifier).load(),
-        child: ListView(
-          padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
-          children: [
-            _section(
-              title: 'Today',
-              subtitle: 'Where your heart stands right now.',
-              child: NafsArcMeter(
-                vector: state.meter,
-                dominant: state.dominant,
-              ),
-            ),
-            const SizedBox(height: 20),
-            _section(
-              title: 'Detailed breakdown',
-              subtitle: 'Percentage share of each station.',
-              child: NafsMeterWidget(
-                vector: state.meter,
-                dominant: state.dominant,
-              ),
-            ),
-            const SizedBox(height: 20),
-            _section(
-              title: 'Your journey',
-              subtitle: 'Ammarah → Lawwamah → Mulhamah → Mutmainnah.',
-              child: NafsJourneyCard(
-                vector: state.meter,
-                dominant: state.dominant,
-                sparkline: state.sparkline,
-              ),
-            ),
-            const SizedBox(height: 20),
-            _section(
-              title: '7-day progress',
-              subtitle: 'Distribution and heart-health trajectory.',
-              child: NafsWeeklyRing(
-                vector: state.weeklyMeter,
-                dominant: state.weeklyMeter.dominant,
-                heartHealthScore: state.weeklyHeartHealthScore,
-                trend: state.trend,
-              ),
-            ),
-            if (state.sparkline.length >= 2) ...[
-              const SizedBox(height: 16),
+      body: SafeArea(
+        top: false,
+        child: RefreshIndicator(
+          onRefresh: () => ref.read(homeViewModelProvider.notifier).load(),
+          child: ListView(
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 32),
+            children: [
               _section(
-                title: 'Heart-health over the last 7 days',
-                subtitle: 'Higher means closer to Mutmainnah.',
-                child: _TrendLineCard(values: state.sparkline),
+                title: 'Today',
+                subtitle: 'Where your heart stands right now.',
+                child: NafsArcMeter(
+                  vector: state.meter,
+                  dominant: state.dominant,
+                ),
               ),
+              const SizedBox(height: 20),
+              _section(
+                title: 'Detailed breakdown',
+                subtitle: 'Percentage share of each station.',
+                child: NafsMeterWidget(
+                  vector: state.meter,
+                  dominant: state.dominant,
+                ),
+              ),
+              const SizedBox(height: 20),
+              _section(
+                title: 'Your journey',
+                subtitle: 'Ammarah → Lawwamah → Mulhamah → Mutmainnah.',
+                child: NafsJourneyCard(
+                  vector: state.meter,
+                  dominant: state.dominant,
+                  sparkline: state.sparkline,
+                ),
+              ),
+              const SizedBox(height: 20),
+              _section(
+                title: '7-day progress',
+                subtitle: 'Distribution and heart-health trajectory.',
+                child: NafsWeeklyRing(
+                  vector: state.weeklyMeter,
+                  dominant: state.weeklyMeter.dominant,
+                  heartHealthScore: state.weeklyHeartHealthScore,
+                  trend: state.trend,
+                ),
+              ),
+              if (state.sparkline.length >= 2) ...[
+                const SizedBox(height: 16),
+                _section(
+                  title: 'Heart-health over the last 7 days',
+                  subtitle: 'Higher means closer to Mutmainnah.',
+                  child: _TrendLineCard(values: state.sparkline),
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
@@ -129,10 +132,7 @@ class _NafsDetailScreenState extends ConsumerState<NafsDetailScreen> {
         const SizedBox(height: 2),
         Text(
           subtitle,
-          style: const TextStyle(
-            fontSize: 12,
-            color: AppColors.textSecondary,
-          ),
+          style: const TextStyle(fontSize: 12, color: AppColors.textSecondary),
         ),
         const SizedBox(height: 12),
         child,
@@ -165,10 +165,8 @@ class _TrendLineCard extends StatelessWidget {
               show: true,
               drawVerticalLine: false,
               horizontalInterval: 25,
-              getDrawingHorizontalLine: (_) => FlLine(
-                color: AppColors.surfaceVariant,
-                strokeWidth: 1,
-              ),
+              getDrawingHorizontalLine: (_) =>
+                  FlLine(color: AppColors.surfaceVariant, strokeWidth: 1),
             ),
             titlesData: FlTitlesData(
               show: true,

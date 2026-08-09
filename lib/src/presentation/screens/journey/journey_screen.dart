@@ -17,9 +17,7 @@ class _JourneyScreenState extends ConsumerState<JourneyScreen> {
   @override
   void initState() {
     super.initState();
-    Future.microtask(
-      () => ref.read(journeyViewModelProvider.notifier).load(),
-    );
+    Future.microtask(() => ref.read(journeyViewModelProvider.notifier).load());
   }
 
   @override
@@ -35,16 +33,19 @@ class _JourneyScreenState extends ConsumerState<JourneyScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: state.isLoading
-          ? const Center(child: CircularProgressIndicator())
-          : state.error != null
-              ? Center(
-                  child: Text(
-                    'Error: ${state.error}',
-                    style: const TextStyle(color: AppColors.textSecondary),
-                  ),
-                )
-              : _buildBody(state.data),
+      body: SafeArea(
+        top: false,
+        child: state.isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : state.error != null
+            ? Center(
+                child: Text(
+                  'Error: ${state.error}',
+                  style: const TextStyle(color: AppColors.textSecondary),
+                ),
+              )
+            : _buildBody(state.data),
+      ),
     );
   }
 
@@ -80,10 +81,12 @@ class _JourneyScreenState extends ConsumerState<JourneyScreen> {
             ),
           ),
         ),
-        ...data.days.reversed.map((day) => Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: _JourneyDayCard(day: day),
-            )),
+        ...data.days.reversed.map(
+          (day) => Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: _JourneyDayCard(day: day),
+          ),
+        ),
         const SizedBox(height: 12),
       ],
     );
@@ -102,15 +105,18 @@ class _NafsTrendCard extends StatelessWidget {
     final trendColor = isUp
         ? AppColors.nafsMutmainna
         : isDown
-            ? AppColors.nafsAmmarah
-            : AppColors.textSecondary;
-    final trendLabel =
-        isUp ? 'Moving toward peace' : isDown ? 'Drifting away' : 'Holding steady';
+        ? AppColors.nafsAmmarah
+        : AppColors.textSecondary;
+    final trendLabel = isUp
+        ? 'Moving toward peace'
+        : isDown
+        ? 'Drifting away'
+        : 'Holding steady';
     final trendIcon = isUp
         ? Icons.trending_up
         : isDown
-            ? Icons.trending_down
-            : Icons.trending_flat;
+        ? Icons.trending_down
+        : Icons.trending_flat;
 
     return Container(
       decoration: BoxDecoration(
@@ -370,7 +376,10 @@ class _JourneyDayCard extends StatelessWidget {
               if (isToday) ...[
                 const SizedBox(width: 6),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
                   decoration: BoxDecoration(
                     color: AppColors.primary.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(6),
@@ -419,60 +428,59 @@ class _JourneyDayCard extends StatelessWidget {
             const SizedBox(height: 4),
             const Text(
               'Checked in',
-              style: TextStyle(
-                fontSize: 11,
-                color: AppColors.textSecondary,
-              ),
+              style: TextStyle(fontSize: 11, color: AppColors.textSecondary),
             ),
           ] else ...[
             const SizedBox(height: 8),
-            ...day.dhikrItems.map((item) => Padding(
-                  padding: const EdgeInsets.only(bottom: 6),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        item.arabic,
-                        style: const TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: AppColors.textPrimary,
-                        ),
+            ...day.dhikrItems.map(
+              (item) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      item.arabic,
+                      style: const TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.textPrimary,
                       ),
-                      const SizedBox(height: 2),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              '${item.transliteration} · from ${item.emotionName}',
-                              style: const TextStyle(
-                                fontSize: 11,
-                                color: AppColors.textSecondary,
-                              ),
-                            ),
-                          ),
-                          Text(
-                            '×${item.intensity}',
+                    ),
+                    const SizedBox(height: 2),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            '${item.transliteration} · from ${item.emotionName}',
                             style: const TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w600,
-                              color: AppColors.accent,
+                              fontSize: 11,
+                              color: AppColors.textSecondary,
                             ),
                           ),
-                        ],
-                      ),
-                      if (item.meaning.isNotEmpty)
+                        ),
                         Text(
-                          item.meaning,
+                          '×${item.intensity}',
                           style: const TextStyle(
                             fontSize: 10,
-                            color: AppColors.textSecondary,
-                            fontStyle: FontStyle.italic,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.accent,
                           ),
                         ),
-                    ],
-                  ),
-                )),
+                      ],
+                    ),
+                    if (item.meaning.isNotEmpty)
+                      Text(
+                        item.meaning,
+                        style: const TextStyle(
+                          fontSize: 10,
+                          color: AppColors.textSecondary,
+                          fontStyle: FontStyle.italic,
+                        ),
+                      ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ],
       ),

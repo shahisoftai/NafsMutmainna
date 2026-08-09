@@ -59,53 +59,52 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           ),
         ],
       ),
-      body: RefreshIndicator(
-        onRefresh: () => ref.read(homeViewModelProvider.notifier).load(),
-        child: showFullLoader
-            ? const LoadingIndicator()
-            : ListView(
-                padding: const EdgeInsets.all(16),
-                children: [
-                  HomeGreetingWidget(
-                    displayName: null,
-                    now: DateTime.now(),
-                  ),
-                  const SizedBox(height: 12),
-                  _primaryCta(context),
-                  const SizedBox(height: 14),
-                  // Nafs Meter at the top — it's the app's core visual.
-                  NafsArcMeter(
-                    vector: state.meter,
-                    dominant: state.dominant,
-                    onTap: () => context.push(AppRouter.nafsDetail),
-                  ),
-                  // RI-5.1: Tazkiya-safe banner — reminds the user the meter
-                  // reflects patterns, never judgment of the soul.
-                  const TazkiyaSafeBanner(),
-                  const SizedBox(height: 14),
-                  HeartHealthScoreWidget(
-                    score: state.heartHealthScore,
-                    trend: state.trend,
-                    tip: _heartHealthTip(state.heartHealthScore),
-                  ),
-                  const SizedBox(height: 16),
-                  // RI-5.3: Quran of the Day — anchors the user in Quran
-                  // independent of any emotion.
-                  const QuranOfTheDayCard(),
-                  const SizedBox(height: 16),
-                  TodayHabitsStrip(
-                    onManageTap: () => context.push(AppRouter.habits),
-                  ),
-                  const SizedBox(height: 16),
-                  const DailyDhikrSection(),
-                  const SizedBox(height: 16),
-                  if (state.lastCheckin != null)
-                    _lastCheckinRow(state),
-                  if (state.positiveStreak > 0)
-                    _streakRow(state.positiveStreak),
-                  const SizedBox(height: 12),
-                ],
-              ),
+      body: SafeArea(
+        top: false,
+        child: RefreshIndicator(
+          onRefresh: () => ref.read(homeViewModelProvider.notifier).load(),
+          child: showFullLoader
+              ? const LoadingIndicator()
+              : ListView(
+                  padding: const EdgeInsets.all(16),
+                  children: [
+                    HomeGreetingWidget(displayName: null, now: DateTime.now()),
+                    const SizedBox(height: 12),
+                    _primaryCta(context),
+                    const SizedBox(height: 14),
+                    // Nafs Meter at the top — it's the app's core visual.
+                    NafsArcMeter(
+                      vector: state.meter,
+                      dominant: state.dominant,
+                      onTap: () => context.push(AppRouter.nafsDetail),
+                    ),
+                    // RI-5.1: Tazkiya-safe banner — reminds the user the meter
+                    // reflects patterns, never judgment of the soul.
+                    const TazkiyaSafeBanner(),
+                    const SizedBox(height: 14),
+                    HeartHealthScoreWidget(
+                      score: state.heartHealthScore,
+                      trend: state.trend,
+                      tip: _heartHealthTip(state.heartHealthScore),
+                    ),
+                    const SizedBox(height: 16),
+                    // RI-5.3: Quran of the Day — anchors the user in Quran
+                    // independent of any emotion.
+                    const QuranOfTheDayCard(),
+                    const SizedBox(height: 16),
+                    TodayHabitsStrip(
+                      onManageTap: () => context.push(AppRouter.habits),
+                    ),
+                    const SizedBox(height: 16),
+                    const DailyDhikrSection(),
+                    const SizedBox(height: 16),
+                    if (state.lastCheckin != null) _lastCheckinRow(state),
+                    if (state.positiveStreak > 0)
+                      _streakRow(state.positiveStreak),
+                    const SizedBox(height: 12),
+                  ],
+                ),
+        ),
       ),
     );
   }
@@ -161,8 +160,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
       child: Row(
         children: [
-          const Icon(Icons.access_time,
-              size: 16, color: AppColors.textSecondary),
+          const Icon(
+            Icons.access_time,
+            size: 16,
+            color: AppColors.textSecondary,
+          ),
           const SizedBox(width: 8),
           Text(
             'Last check-in: ${DateFormat.yMMMd().add_jm().format(c.date)}',
@@ -183,14 +185,15 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       decoration: BoxDecoration(
         color: AppColors.accent.withValues(alpha: 0.10),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: AppColors.accent.withValues(alpha: 0.3),
-        ),
+        border: Border.all(color: AppColors.accent.withValues(alpha: 0.3)),
       ),
       child: Row(
         children: [
-          const Icon(Icons.local_fire_department,
-              color: AppColors.accent, size: 18),
+          const Icon(
+            Icons.local_fire_department,
+            color: AppColors.accent,
+            size: 18,
+          ),
           const SizedBox(width: 8),
           Text(
             '$streak-day positive streak',
