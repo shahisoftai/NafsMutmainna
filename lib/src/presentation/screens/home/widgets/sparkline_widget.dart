@@ -79,12 +79,13 @@ class _SparklinePainter extends CustomPainter {
       ..strokeJoin = StrokeJoin.round;
     canvas.drawPath(path, stroke);
 
-    // Last-point dot for emphasis.
-    final lastNorm = range == 0 ? 0.5 : (values.last - minV) / range;
-    final lastX = (values.length - 1) * stepX;
-    final lastY = size.height - (lastNorm * size.height);
     final dot = Paint()..color = color;
-    canvas.drawCircle(Offset(lastX, lastY), 2.5, dot);
+    for (var i = 0; i < values.length; i++) {
+      final norm = range == 0 ? 0.5 : (values[i] - minV) / range;
+      final x = i * stepX;
+      final y = size.height - (norm * size.height);
+      canvas.drawCircle(Offset(x, y), 2, dot);
+    }
   }
 
   @override

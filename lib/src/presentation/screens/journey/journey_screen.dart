@@ -210,10 +210,9 @@ class _NafsTrendPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     if (scores.isEmpty) return;
 
-    final padded = List<int>.filled(15, 0);
-    final offset = 15 - scores.length;
+    final padded = List<int>.filled(scores.length, 0);
     for (var i = 0; i < scores.length; i++) {
-      padded[offset + i] = scores[i];
+      padded[i] = scores[i];
     }
 
     const maxV = 100.0;
@@ -254,7 +253,7 @@ class _NafsTrendPainter extends CustomPainter {
     canvas.drawPath(linePath, strokePaint);
 
     final dotPaint = Paint()..color = lineColor;
-    for (var i = offset; i < padded.length; i++) {
+    for (var i = 0; i < padded.length; i++) {
       final norm = (padded[i] - minV) / range;
       final x = i * stepX;
       final y = size.height - (norm * size.height);

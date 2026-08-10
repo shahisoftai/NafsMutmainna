@@ -619,7 +619,7 @@ class DailyDhikrResolver {
       dayScoreMap[_dateOnly(h.date).toIso8601String()] = score;
     }
     final dailyScores = <int>[];
-    for (var i = 0; i <= historyWindowDays; i++) {
+    for (var i = 0; i < historyWindowDays; i++) {
       final d = _dateOnly(start.add(Duration(days: i)));
       dailyScores.add(dayScoreMap[d.toIso8601String()] ?? 0);
     }
