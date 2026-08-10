@@ -106,7 +106,7 @@ class NafsMeterWidget extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            width: 90,
+            width: 100,
             child: Text(
               label,
               style: TextStyle(
@@ -114,8 +114,11 @@ class NafsMeterWidget extends StatelessWidget {
                 fontSize: 13,
                 fontWeight: isDominant ? FontWeight.bold : FontWeight.normal,
               ),
+              overflow: TextOverflow.ellipsis,
+              maxLines: 1,
             ),
           ),
+          const SizedBox(width: 8),
           Expanded(
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
@@ -129,7 +132,7 @@ class NafsMeterWidget extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 8),
           SizedBox(
             width: 44,
             child: Text(
