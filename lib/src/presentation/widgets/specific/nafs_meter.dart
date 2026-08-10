@@ -28,77 +28,79 @@ class NafsMeterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final screenWidth = MediaQuery.of(context).size.width;
+    final screenWidth = MediaQuery.sizeOf(context).width;
     final meterWidth = screenWidth - 32;
-    final hasSparkline = sparkline != null && sparkline!.isNotEmpty;
-    final meterHeight = meterWidth * 0.50 + (hasSparkline ? 36 : 0);
-    return Container(
-      width: meterWidth,
-      height: meterHeight,
-      padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            AppColors.primary,
-            AppColors.primaryDark,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      alignment: Alignment.topLeft,
+      child: Container(
+        width: meterWidth,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [
+              AppColors.primary,
+              AppColors.primaryDark,
+            ],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(20),
         ),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Nafs Meter',
-                style: TextStyle(
-                  color: AppColors.textOnPrimary,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  letterSpacing: 1.2,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                const Text(
+                  'Nafs Meter',
+                  style: TextStyle(
+                    color: AppColors.textOnPrimary,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    letterSpacing: 1.2,
+                  ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (trend != null && trend!.direction != NafsTrendDirection.flat) ...[
+                      _trendChip(trend!),
+                      const SizedBox(width: 8),
+                    ],
+                    _dominantBadge(),
+                  ],
+                ),
+              ],
+            ),
+            const SizedBox(height: 4),
+            _segmentBar(NafsType.ammarah, vector.ammarah, AppColors.nafsAmmarah),
+            _segmentBar(NafsType.lawwamah, vector.lawwamah, AppColors.nafsLawwamah),
+            _segmentBar(NafsType.mulhamah, vector.mulhamah, AppColors.nafsMulhamah),
+            _segmentBar(NafsType.mutmainnah, vector.mutmainnah, AppColors.secondary),
+            if (sparkline != null && sparkline!.isNotEmpty) ...[
+              const SizedBox(height: 6),
+              Align(
+                alignment: Alignment.centerRight,
+                child: SparklineWidget(
+                  values: sparkline!,
+                  width: meterWidth - 60,
+                  height: 22,
+                  lineColor: AppColors.textOnPrimary,
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  if (trend != null && trend!.direction != NafsTrendDirection.flat) ...[
-                    _trendChip(trend!),
-                    const SizedBox(width: 8),
-                  ],
-                  _dominantBadge(),
-                ],
-              ),
             ],
-          ),
-          const SizedBox(height: 4),
-          _segmentBar('Ammarah', vector.ammarah, AppColors.nafsAmmarah),
-          _segmentBar('Lawwamah', vector.lawwamah, AppColors.nafsLawwamah),
-          _segmentBar('Mulhamah‡', vector.mulhamah, AppColors.nafsMulhamah),
-          _segmentBar('Mutmainnah', vector.mutmainnah, AppColors.secondary),
-          if (hasSparkline) ...[
-            const SizedBox(height: 6),
-            Align(
-              alignment: Alignment.centerRight,
-              child: SparklineWidget(
-                values: sparkline!,
-                width: meterWidth - 60,
-                height: 22,
-                lineColor: AppColors.textOnPrimary,
-              ),
-            ),
           ],
-        ],
+        ),
       ),
     );
   }
 
-  Widget _segmentBar(String label, double value, Color color) {
-    final dominantLabel = _labelFor(dominant);
-    final isDominant = dominantLabel == label;
+  Widget _segmentBar(NafsType type, double value, Color color) {
+    final isDominant = dominant == type;
+    final label = type.label;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 2),
       child: Row(
