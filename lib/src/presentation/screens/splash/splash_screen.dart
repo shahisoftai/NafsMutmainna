@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/logger/logger.dart';
+import 'package:nafsmutmainna/src/core/services/app_update_service.dart';
 import '../../../infrastructure/di/providers.dart';
 import '../../navigation/app_router.dart';
 import '../../theme/colors.dart';
@@ -41,6 +42,14 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
         Logger.error('Second database init failed: $e2');
       }
     }
+    if (!mounted) return;
+
+    // Complete any pending flexible update from a prior session, then check
+    // for a new Play Store update. Both are fire-and-forget — failures are
+    // silently swallowed so update issues never block the user from using the app.
+    AppUpdateService.instance.completeFlexibleUpdate();
+    AppUpdateService.instance.checkAndStartFlexibleUpdate();
+
     if (!mounted) return;
 
     // Route to onboarding on first launch; home on every subsequent launch.
