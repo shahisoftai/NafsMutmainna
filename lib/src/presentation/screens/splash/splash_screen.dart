@@ -44,13 +44,15 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
     }
     if (!mounted) return;
 
-    // Complete any pending flexible update from a prior session, then check
-    // for a new Play Store update. Both are fire-and-forget — failures are
-    // silently swallowed so update issues never block the user from using the app.
-    AppUpdateService.instance.completeFlexibleUpdate();
-    AppUpdateService.instance.checkAndStartFlexibleUpdate();
+    // Complete any pending flexible update from a prior session first.
+    // This MUST be awaited — it may trigger a Play Store install dialog.
+    await AppUpdateService.instance.completeFlexibleUpdate();
 
     if (!mounted) return;
+
+    // Check for a new Play Store update. Fire-and-forget: we never block
+    // the user on a background download. Failures are logged internally.
+    AppUpdateService.instance.checkAndStartFlexibleUpdate();
 
     // Route to onboarding on first launch; home on every subsequent launch.
     // The `hasSeenOnboardingProvider` reads from the prefs Hive box opened
