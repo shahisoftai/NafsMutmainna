@@ -439,7 +439,8 @@ class DailyDhikrResolver {
 
   /// Build the full 15-day [JourneyData] for the journey screen.
   Future<JourneyData> resolveJourney({required DateTime today}) async {
-    final start = today.subtract(Duration(days: historyWindowDays));
+    // historyWindowDays-1 to get exactly historyWindowDays days in the window.
+    final start = today.subtract(Duration(days: historyWindowDays - 1));
     final checkins = await _checkins.findBetween(start, today);
     List<NafsHistory> histories;
     if (_history == null) {
@@ -452,7 +453,7 @@ class DailyDhikrResolver {
     final allNames = <String, int>{};
     final days = <JourneyDay>[];
 
-    for (var i = historyWindowDays; i >= 0; i--) {
+    for (var i = historyWindowDays - 1; i >= 0; i--) {
       final date = _dateOnly(today.subtract(Duration(days: i)));
       final dayCheckins = checkins.where((c) => _dateOnly(c.date) == date).toList();
       final history = histMap[date];
@@ -549,7 +550,7 @@ class DailyDhikrResolver {
   Future<(List<DhikrHistoryItem>, bool)> _resolveHistory({
     required DateTime today,
   }) async {
-    final start = today.subtract(Duration(days: historyWindowDays));
+    final start = today.subtract(Duration(days: historyWindowDays - 1));
     final recent = await _checkins.findBetween(start, today);
     if (recent.isEmpty) {
       return (const <DhikrHistoryItem>[], false);
@@ -601,17 +602,29 @@ class DailyDhikrResolver {
 
   Future<NafsTrendData> _resolveNafsTrend({required DateTime today}) async {
     if (_history == null) return NafsTrendData.empty;
-    final start = today.subtract(Duration(days: historyWindowDays));
+    // Subtract (historyWindowDays - 1) to get exactly historyWindowDays days.
+    // e.g. today=Aug 10, historyWindowDays=15 → start=Jul 27 (14 days back),
+    // findBetween(Jul 27, Aug 10) = 15 days (Jul 27 through Aug 10).
+    final start = today.subtract(Duration(days: historyWindowDays - 1));
     final recent = await _history.findBetween(start, today);
     if (recent.isEmpty) return NafsTrendData.empty;
     final sorted = recent.toList()..sort((a, b) => a.date.compareTo(b.date));
-    final dailyScores = <int>[];
+
+    // Build a full 15-element array aligned to correct calendar positions so
+    // the sparkline painter draws each score at its true day position.
+    final dayScoreMap = <String, int>{};
     for (final h in sorted) {
       final score = Vector4(h.ammarah, h.lawwamah, h.mulhamah, h.mutmainnah)
           .heartHealthScore;
-      dailyScores.add(score);
+      dayScoreMap[_dateOnly(h.date).toIso8601String()] = score;
     }
-    if (dailyScores.length < 14) {
+    final dailyScores = <int>[];
+    for (var i = 0; i <= historyWindowDays; i++) {
+      final d = _dateOnly(start.add(Duration(days: i)));
+      dailyScores.add(dayScoreMap[d.toIso8601String()] ?? 0);
+    }
+
+    if (dailyScores.where((s) => s > 0).length < 2) {
       return NafsTrendData(
         dailyScores: dailyScores,
         direction: NafsTrendDirection.flat,
@@ -621,8 +634,7 @@ class DailyDhikrResolver {
     }
     // Bucket rows by calendar week (last 7 vs the 7 days before that), averaging
     // only the rows actually present so missing days don't skew the average.
-    final dayScores = <String, int>{
-      for (final h in sorted)
+    final dayScores = <String, int>{for (final h in sorted)
         _dateOnly(h.date).toIso8601String(): Vector4(
                 h.ammarah, h.lawwamah, h.mulhamah, h.mutmainnah)
             .heartHealthScore,
