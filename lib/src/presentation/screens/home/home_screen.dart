@@ -9,6 +9,7 @@ import '../../viewmodels/home_view_model.dart';
 import '../../widgets/common/loading_indicator.dart';
 import '../../widgets/specific/heart_health_score_widget.dart';
 import '../../widgets/specific/nafs_arc_meter.dart';
+import '../../widgets/specific/nafs_station_origin_dialog.dart';
 import '../../widgets/specific/quran_of_the_day_card.dart';
 import '../../widgets/specific/tazkiya_safe_banner.dart';
 import 'widgets/daily_dhikr_section.dart';
@@ -77,6 +78,8 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       vector: state.meter,
                       dominant: state.dominant,
                       onTap: () => context.push(AppRouter.nafsDetail),
+                      onLearnMore: () =>
+                          NafsStationOriginDialog.show(context),
                     ),
                     // RI-5.1: Tazkiya-safe banner — reminds the user the meter
                     // reflects patterns, never judgment of the soul.

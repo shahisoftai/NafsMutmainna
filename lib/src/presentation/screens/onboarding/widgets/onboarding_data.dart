@@ -105,10 +105,13 @@ const List<OnboardingCardData> kOnboardingCards = [
     headline: 'Track Your Soul\'s Progress',
     body:
         'The four stations of the soul in Islam:\n\n'
-        'Ammarah  →  Lawwamah  →  Mulhamah  →  Mutmainnah\n\n'
+        'Ammarah  →  Lawwamah  →  Mulhamah‡  →  Mutmainnah\n\n'
         'Your daily check-in moves the meter. Watch the trend —\n'
         'a quiet nudge toward peace, or a warning when you drift.\n\n'
-        'Think of it as a fitness tracker, but for your heart.',
+        'Think of it as a fitness tracker, but for your heart.\n\n'
+        '‡ Ammarah, Lawwamah and Mutmainnah are explicitly Qur\'anic.\n'
+        'Mulhamah (the inspired soul) is adopted from classical\n'
+        'scholarship (al-Tirmidhī, al-Ghazālī).',
     icon: Icons.speed_rounded,
     accentIcon: Icons.show_chart_rounded,
     gradientColors: [Color(0xFFE53935), Color(0xFFFB8C00), Color(0xFF43A047)],

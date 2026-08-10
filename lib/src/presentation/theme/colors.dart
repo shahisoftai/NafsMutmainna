@@ -36,6 +36,7 @@ class AppColors {
   // Nafs type colors
   static const Color nafsAmmarah = Color(0xFFE53935);
   static const Color nafsLawwamah = Color(0xFFFB8C00);
+  static const Color nafsMulhamah = Color(0xFF658A65);
   static const Color nafsMutmainna = Color(0xFF43A047);
 
   // Emotion colors

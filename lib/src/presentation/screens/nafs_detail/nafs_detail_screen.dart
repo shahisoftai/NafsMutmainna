@@ -6,6 +6,7 @@ import '../../theme/colors.dart';
 import '../../viewmodels/home_view_model.dart';
 import '../../widgets/specific/nafs_arc_meter.dart';
 import '../../widgets/specific/nafs_journey_card.dart';
+import '../../widgets/specific/nafs_station_origin_dialog.dart';
 import '../../widgets/specific/nafs_weekly_ring.dart';
 import '../../widgets/specific/nafs_meter.dart';
 
@@ -66,6 +67,8 @@ class _NafsDetailScreenState extends ConsumerState<NafsDetailScreen> {
                 child: NafsArcMeter(
                   vector: state.meter,
                   dominant: state.dominant,
+                  onLearnMore: () =>
+                      NafsStationOriginDialog.show(context),
                 ),
               ),
               const SizedBox(height: 20),

@@ -495,7 +495,8 @@ class _JourneyDayCard extends StatelessWidget {
   }
 
   Color _scoreColor(int score) {
-    if (score >= 60) return AppColors.nafsMutmainna;
+    if (score >= 80) return AppColors.secondary;
+    if (score >= 60) return AppColors.nafsMulhamah;
     if (score >= 30) return AppColors.nafsLawwamah;
     return AppColors.nafsAmmarah;
   }
@@ -517,7 +518,7 @@ class _NafsBadge extends StatelessWidget {
     final color = switch (nafs) {
       NafsType.ammarah => AppColors.nafsAmmarah,
       NafsType.lawwamah => AppColors.nafsLawwamah,
-      NafsType.mulhamah => const Color(0xFF7B1FA2),
+      NafsType.mulhamah => AppColors.nafsMulhamah,
       NafsType.mutmainnah => AppColors.nafsMutmainna,
     };
 

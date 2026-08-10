@@ -22,12 +22,14 @@ class NafsArcMeter extends StatelessWidget {
   final Vector4 vector;
   final NafsType dominant;
   final VoidCallback? onTap;
+  final VoidCallback? onLearnMore;
 
   const NafsArcMeter({
     super.key,
     required this.vector,
     required this.dominant,
     this.onTap,
+    this.onLearnMore,
   });
 
   /// Composite position of the soul on the 0..1 arc, where 0 = pure
@@ -48,18 +50,22 @@ class NafsArcMeter extends StatelessWidget {
 
   /// Local arc gradient stops — independent of the wider app palette so
   /// the meter reads as a smooth "bad → good" red → green ramp.
+  /// Mulhamah uses a muted sage-green to visually signal its classical
+  /// scholarly origin (not explicitly Qur'anic).
   static const _gradientStops = <Color>[
     Color(0xFFE53935), // Ammarah — red
     Color(0xFFFB8C00), // Lawwamah — orange
-    Color(0xFF66BB6A), // Mulhamah — green
+    Color(0xFF658A65), // Mulhamah — muted sage (scholarly)
     Color(0xFF2E7D32), // Mutmainnah — dark green
   ];
 
   /// Station label set used by the row beneath the arc.
+  /// Mulhamah carries a ‡ marker to indicate classical scholarly origin
+  /// (not explicitly named in the Qur'an).
   static const _stationLabels = <(NafsType, String)>[
     (NafsType.ammarah, 'Ammarah'),
     (NafsType.lawwamah, 'Lawwamah'),
-    (NafsType.mulhamah, 'Mulhamah'),
+    (NafsType.mulhamah, 'Mulhamah‡'),
     (NafsType.mutmainnah, 'Mutmainnah'),
   ];
 
@@ -70,7 +76,7 @@ class NafsArcMeter extends StatelessWidget {
       case NafsType.lawwamah:
         return _gradientStops[1];
       case NafsType.mulhamah:
-        return _gradientStops[2];
+        return AppColors.nafsMulhamah;
       case NafsType.mutmainnah:
         return _gradientStops[3];
     }
@@ -210,6 +216,45 @@ class NafsArcMeter extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 8),
+              Text(
+                '‡ Mulhamah — classical scholarship origin. '
+                'Learn more about Nafs stages.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: AppColors.textOnPrimary.withValues(alpha: 0.55),
+                  fontSize: 10,
+                  height: 1.3,
+                ),
+              ),
+              if (onLearnMore != null) ...[
+                const SizedBox(height: 4),
+                GestureDetector(
+                  onTap: onLearnMore,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.info_outline,
+                        size: 12,
+                        color: AppColors.nafsMulhamah.withValues(alpha: 0.80),
+                      ),
+                      const SizedBox(width: 4),
+                      Text(
+                        'Learn about Nafs stages',
+                        style: TextStyle(
+                          color: AppColors.nafsMulhamah.withValues(alpha: 0.85),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          letterSpacing: 0.3,
+                          decoration: TextDecoration.underline,
+                          decorationColor: AppColors.nafsMulhamah.withValues(alpha: 0.50),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ],
           ),
         );
@@ -289,6 +334,7 @@ class _ArcPainter extends CustomPainter {
     );
 
     // 4) Five tick marks at 0%, 25%, 50%, 75%, 100% — band boundaries.
+    // Tick at 50% (Mulhamah) is dashed to signal classical scholarly origin.
     for (var i = 0; i <= 4; i++) {
       final t = i / 4.0;
       final angle = math.pi + (t * math.pi);
@@ -302,15 +348,45 @@ class _ArcPainter extends CustomPainter {
         centre.dx + outer * math.cos(angle),
         centre.dy + outer * math.sin(angle),
       );
-      final paint = Paint()
-        ..color = Colors.white.withValues(alpha: i == 0 || i == 4 ? 0.55 : 0.30)
-        ..strokeWidth = i == 0 || i == 4 ? 2.0 : 1.2
-        ..strokeCap = StrokeCap.round;
-      canvas.drawLine(startPt, endPt, paint);
+      if (i == 2) {
+        _drawDashedLine(canvas, startPt, endPt, 3, 4.0);
+      } else {
+        final paint = Paint()
+          ..color = Colors.white.withValues(alpha: i == 0 || i == 4 ? 0.55 : 0.30)
+          ..strokeWidth = i == 0 || i == 4 ? 2.0 : 1.2
+          ..strokeCap = StrokeCap.round;
+        canvas.drawLine(startPt, endPt, paint);
+      }
     }
 
     // 5) Meter arm (needle) — main line, counter-weight, tip, pivot.
     _drawArm(canvas, centre, radius, strokeW);
+  }
+
+  void _drawDashedLine(
+    Canvas canvas,
+    Offset from,
+    Offset to,
+    int segments,
+    double gap,
+  ) {
+    final dx = (to.dx - from.dx) / (segments * 2 - 1);
+    final dy = (to.dy - from.dy) / (segments * 2 - 1);
+    final paint = Paint()
+      ..color = Colors.white.withValues(alpha: 0.35)
+      ..strokeWidth = 1.2
+      ..strokeCap = StrokeCap.round;
+    for (var i = 0; i < segments; i++) {
+      final segStart = Offset(
+        from.dx + dx * (i * 2),
+        from.dy + dy * (i * 2),
+      );
+      final segEnd = Offset(
+        segStart.dx + dx,
+        segStart.dy + dy,
+      );
+      canvas.drawLine(segStart, segEnd, paint);
+    }
   }
 
   void _drawArm(Canvas canvas, Offset centre, double radius, double strokeW) {

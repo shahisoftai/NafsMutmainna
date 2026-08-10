@@ -77,7 +77,7 @@ class NafsMeterWidget extends StatelessWidget {
           const SizedBox(height: 4),
           _segmentBar('Ammarah', vector.ammarah, AppColors.nafsAmmarah),
           _segmentBar('Lawwamah', vector.lawwamah, AppColors.nafsLawwamah),
-          _segmentBar('Mulhamah', vector.mulhamah, AppColors.nafsMutmainna),
+          _segmentBar('Mulhamah‡', vector.mulhamah, AppColors.nafsMulhamah),
           _segmentBar('Mutmainnah', vector.mutmainnah, AppColors.secondary),
           if (hasSparkline) ...[
             const SizedBox(height: 6),
@@ -189,16 +189,5 @@ class NafsMeterWidget extends StatelessWidget {
     );
   }
 
-  String _labelFor(NafsType t) {
-    switch (t) {
-      case NafsType.ammarah:
-        return 'Ammarah';
-      case NafsType.lawwamah:
-        return 'Lawwamah';
-      case NafsType.mulhamah:
-        return 'Mulhamah';
-      case NafsType.mutmainnah:
-        return 'Mutmainnah';
-    }
-  }
+  String _labelFor(NafsType t) => t.label;
 }

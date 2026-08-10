@@ -137,7 +137,7 @@ class NafsJourneyCard extends StatelessWidget {
       case NafsType.lawwamah:
         return AppColors.nafsLawwamah;
       case NafsType.mulhamah:
-        return AppColors.nafsMutmainna;
+        return AppColors.nafsMulhamah;
       case NafsType.mutmainnah:
         return AppColors.secondary;
     }
@@ -151,7 +151,7 @@ class _JourneyTrail extends StatelessWidget {
   static const _stops = <(NafsType, String, Color)>[
     (NafsType.ammarah, 'Ammarah', AppColors.nafsAmmarah),
     (NafsType.lawwamah, 'Lawwamah', AppColors.nafsLawwamah),
-    (NafsType.mulhamah, 'Mulhamah', AppColors.nafsMutmainna),
+    (NafsType.mulhamah, 'Mulhamah‡', AppColors.nafsMulhamah),
     (NafsType.mutmainnah, 'Mutmainnah', AppColors.secondary),
   ];
 

@@ -101,7 +101,7 @@ extension NafsTypeX on NafsType {
   String get label => switch (this) {
         NafsType.ammarah => 'Ammarah',
         NafsType.lawwamah => 'Lawwamah',
-        NafsType.mulhamah => 'Mulhamah',
+        NafsType.mulhamah => 'Mulhamah\u{2021}',
         NafsType.mutmainnah => 'Mutmainnah',
       };
 
@@ -112,10 +112,5 @@ extension NafsTypeX on NafsType {
         NafsType.mutmainnah => 'المطمئنة',
       };
 
-  String get labelName => switch (this) {
-        NafsType.ammarah => 'Ammarah',
-        NafsType.lawwamah => 'Lawwamah',
-        NafsType.mulhamah => 'Mulhamah',
-        NafsType.mutmainnah => 'Mutmainnah',
-      };
+  String get labelName => label;
 }

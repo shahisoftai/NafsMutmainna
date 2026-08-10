@@ -41,9 +41,9 @@ class NafsWeeklyRing extends StatelessWidget {
       ),
       _Sector(
         NafsType.mulhamah,
-        'Mulhamah',
+        'Mulhamah‡',
         v.mulhamah,
-        AppColors.nafsMutmainna,
+        AppColors.nafsMulhamah,
       ),
       _Sector(
         NafsType.mutmainnah,
@@ -131,7 +131,7 @@ class NafsWeeklyRing extends StatelessWidget {
       case NafsType.lawwamah:
         return AppColors.nafsLawwamah;
       case NafsType.mulhamah:
-        return AppColors.nafsMutmainna;
+        return AppColors.nafsMulhamah;
       case NafsType.mutmainnah:
         return AppColors.secondary;
     }

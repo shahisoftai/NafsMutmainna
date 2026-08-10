@@ -167,8 +167,8 @@ class HeartHealthScoreWidget extends StatelessWidget {
   }
 
   Color _colorFor(int s) {
-    if (s >= 80) return AppColors.nafsMutmainna;
-    if (s >= 60) return AppColors.primaryLight;
+    if (s >= 80) return AppColors.secondary;
+    if (s >= 60) return AppColors.nafsMulhamah;
     if (s >= 40) return AppColors.nafsLawwamah;
     if (s >= 20) return AppColors.accent;
     return AppColors.nafsAmmarah;
